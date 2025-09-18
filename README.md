@@ -1,1 +1,1 @@
-Hello, nice to meet you, my collaborators. I hope we will be the greatest team in this term, so let's try hard together. 
+Hello, nice to meet you, my collaborators. I hope we will be the greatest team now and ever, so let's try hard together. 
