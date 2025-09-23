@@ -3,7 +3,7 @@ on: push
 
 jobs:
   build:
-    name: Hello world action
+    name: Group1DevOpsCoursework action
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
