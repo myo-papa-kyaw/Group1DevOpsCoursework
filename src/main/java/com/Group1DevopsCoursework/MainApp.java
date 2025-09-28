@@ -1,4 +1,4 @@
 package com.Group1DevopsCoursework;
 
-public class Country {
+public class MainApp {
 }
