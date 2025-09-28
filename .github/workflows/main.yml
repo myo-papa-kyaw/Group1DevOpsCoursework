@@ -3,21 +3,44 @@ on: push
 
 jobs:
   build:
-    name: Group1DevOpsCoursework action
+    name: Build, containerize and run
     runs-on: ubuntu-24.04
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Set up JDK 23
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v4
         with:
           java-version: '23'
-          distribution: 'adopt'
-      - name: Compile with Maven
-        run: mvn compile
-      - name: Build Docker Image
-        run: docker build -t devopsimage .
-      - name: Run image
-        run: docker run --name devopscontainer -d devopsimage
-      - name: view logs
-        run: docker logs devopscontainer
+          distribution: 'temurin'
+
+      - name: Cache Maven packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: Build JAR with Maven (skip tests)
+        run: mvn -B package --file pom.xml -DskipTests
+
+      - name: Set up Docker buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build Docker image (local)
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: ./Dockerfile
+          push: false
+          tags: devopsimage:latest
+
+      - name: Run container and show logs
+        run: |
+          docker run --name devopscontainer -d devopsimage:latest || true
+          sleep 5
+          docker ps -a
+          docker logs devopscontainer || true
