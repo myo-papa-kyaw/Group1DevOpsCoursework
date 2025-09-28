@@ -3,7 +3,7 @@ on: push
 
 jobs:
   build:
-    name: Build, containerize and run
+    name: Group1DevOpsCoursework action
     runs-on: ubuntu-24.04
 
     steps:
@@ -16,31 +16,14 @@ jobs:
           java-version: '23'
           distribution: 'temurin'
 
-      - name: Cache Maven packages
-        uses: actions/cache@v4
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
+      - name: Build JAR with Maven
+        run: mvn -B package -DskipTests
 
-      - name: Build JAR with Maven (skip tests)
-        run: mvn -B package --file pom.xml -DskipTests
+      - name: Build Docker Image
+        run: docker build -t devopsimage .
 
-      - name: Set up Docker buildx
-        uses: docker/setup-buildx-action@v2
+      - name: Run container
+        run: docker run --name devopscontainer -d devopsimage || true
 
-      - name: Build Docker image (local)
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          file: ./Dockerfile
-          push: false
-          tags: devopsimage:latest
-
-      - name: Run container and show logs
-        run: |
-          docker run --name devopscontainer -d devopsimage:latest || true
-          sleep 5
-          docker ps -a
-          docker logs devopscontainer || true
+      - name: View logs
+        run: docker logs devopscontainer || true
