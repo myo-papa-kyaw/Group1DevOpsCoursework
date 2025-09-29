@@ -23,7 +23,7 @@ jobs:
         run: docker build -t devopsimage .
 
       - name: Run container
-        run: docker run --name devopscontainer -d devopsimage  true
+        run: docker run --name devopscontainer -d devopsimage || true
 
       - name: View logs
-        run: docker logs devopscontainer  true
+        run: docker logs devopscontainer || true
