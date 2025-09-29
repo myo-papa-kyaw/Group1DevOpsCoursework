@@ -62,12 +62,12 @@ public class MainApp {
                 reports.getAllCountries();
                 break;
             case 2:
-                System.out.print("Enter continent name (e.g., Asia): ");
+                System.out.print("Enter continent name (e.g., Asia) : ");
                 String continent = scanner.nextLine();
                 reports.getCountriesByContinent(continent);
                 break;
             case 3:
-                System.out.print("Enter region name (e.g., Western Europe): ");
+                System.out.print("Enter region name (e.g., Western Europe) : ");
                 String region = scanner.nextLine();
                 reports.getCountriesByRegion(region);
                 break;
@@ -102,26 +102,26 @@ public class MainApp {
                     reports.getCapitalCitiesByContinent(continent);
                     break;
                 case 3:
-                    System.out.print("Enter region name (e.g., Western Europe): ");
+                    System.out.print("Enter region name (e.g., Western Europe) : ");
                     String region = scanner.nextLine();
                     reports.getCapitalCitiesByRegion(region);
                     break;
                 case 4:
-                    System.out.print("Enter number of cities (N): ");
+                    System.out.print("Enter number of cities (N) : ");
                     int nWorld = getValidInt(scanner);
                     reports.getTopNPopulatedCapitalCitiesWorld(nWorld);
                     break;
                 case 5:
-                    System.out.print("Enter continent name (e.g., Asia): ");
+                    System.out.print("Enter continent name (e.g., Asia) : ");
                     String continentN = scanner.nextLine();
-                    System.out.print("Enter number of cities (N): ");
+                    System.out.print("Enter number of cities (N) : ");
                     int nContinent = getValidInt(scanner);
                     reports.getTopNPopulatedCapitalCitiesContinent(continentN, nContinent);
                     break;
                 case 6:
-                    System.out.print("Enter region name (e.g., Western Europe): ");
+                    System.out.print("Enter region name (e.g., Western Europe) : ");
                     String regionN = scanner.nextLine();
-                    System.out.print("Enter number of cities (N): ");
+                    System.out.print("Enter number of cities (N) : ");
                     int nRegion = getValidInt(scanner);
                     reports.getTopNPopulatedCapitalCitiesRegion(regionN, nRegion);
                     break;

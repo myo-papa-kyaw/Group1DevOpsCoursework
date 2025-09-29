@@ -100,7 +100,7 @@ public class Reports {
                 "WHERE country.Continent = ? " +
                 "ORDER BY city.Population DESC";
 
-        executeCapitalCityQuery(sql, "Capital Cities in Continent: " + continent, continent, null);
+        executeCapitalCityQuery(sql, "Capital Cities in Continent : " + continent, continent, null);
     }
 
     // 3. All capital cities in a region organised by largest population to smallest
@@ -111,7 +111,7 @@ public class Reports {
                 "WHERE country.Region = ? " +
                 "ORDER BY city.Population DESC";
 
-        executeCapitalCityQuery(sql, "Capital Cities in Region: " + region, null, region);
+        executeCapitalCityQuery(sql, "Capital Cities in Region : " + region, null, region);
     }
 
     // 4. The top N populated capital cities in the world
