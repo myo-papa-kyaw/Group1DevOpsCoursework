@@ -35,7 +35,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.Group1DevopsCoursework.Database_Connection</mainClass>
+                            <mainClass>com.Group1DevopsCoursework.MainApp</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

@@ -16,6 +16,14 @@
 
 version: '3'
 services:
+  app:
+    build: .
+    depends_on:
+      - world-db
+    environment:
+      - DB_HOST=world-db
+      - DB_PORT=3306
+
   world-db:
     build: ./world-db
     restart: always

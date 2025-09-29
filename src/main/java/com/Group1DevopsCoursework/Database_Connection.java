@@ -14,13 +14,14 @@ public class Database_Connection {
             System.exit(-1);
         }
 
-        int retries = 15;  // increase retries
+        int retries = 15;
         for (int i = 0; i < retries; i++) {
             System.out.println("Connecting to database... attempt " + i);
             try {
-                Thread.sleep(10000);  // wait 15 seconds for MySQL
+                Thread.sleep(10000);
+                // Use the Docker service name and internal port 3306
                 con = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:33061/world?useSSL=false&allowPublicKeyRetrieval=true",
+                        "jdbc:mysql://localhost:3306/world?useSSL=false&allowPublicKeyRetrieval=true",
                         "root",
                         "example"
                 );
@@ -43,7 +44,4 @@ public class Database_Connection {
             }
         }
     }
-
-
-
 }
