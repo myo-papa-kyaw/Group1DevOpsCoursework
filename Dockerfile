@@ -1,4 +1,4 @@
 FROM openjdk:23
-COPY ./target/classes/com /tmp/com
+COPY ./target/Group1DevopsCoursework-1.0-SNAPSHOT-jar-with-dependencies.jar /tmp
 WORKDIR /tmp
-ENTRYPOINT ["java", "com.Group1DevopsCoursework.Main"]
+ENTRYPOINT ["java", "-jar", "Group1DevopsCoursework-1.0-SNAPSHOT-jar-with-dependencies.jar"]
