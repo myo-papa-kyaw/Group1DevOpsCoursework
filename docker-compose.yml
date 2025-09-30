@@ -1,7 +1,7 @@
 version: '3'
 services:
   world-db:
-    build: ../../../../Downloads/world-db
+    build: ./world-db
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: example
@@ -9,4 +9,3 @@ services:
       MYSQL_ROOT_HOST: '%'
     ports:
       - "33061:3306"
-
