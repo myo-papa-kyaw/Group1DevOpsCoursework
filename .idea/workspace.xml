@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Commiting Develop Build - ThinzarPhyoWai">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Dockerfile for Database Part">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +52,7 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "Docker.Dockerfile.executor": "Run",
+    "Docker.world-db/Dockerfile.executor": "Run",
     "Maven.Group1DevopsCoursework [package].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -75,7 +74,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Docker.Dockerfile">
+  <component name="RunManager" selected="Docker.world-db/Dockerfile">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.Main" />
       <module name="Group1DevopsCoursework" />
@@ -103,13 +102,21 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="world-db/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="world-db/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.world-db/Dockerfile" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Docker.Dockerfile" />
       </list>
     </recent_temporary>
   </component>
@@ -135,7 +142,7 @@
       <workItem from="1758700074528" duration="1432000" />
       <workItem from="1758857557603" duration="384000" />
       <workItem from="1759243548813" duration="325000" />
-      <workItem from="1759244003123" duration="2261000" />
+      <workItem from="1759244003123" duration="8214000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - ThinzarPhyoWai">
       <option name="closed" value="true" />
@@ -177,7 +184,23 @@
       <option name="project" value="LOCAL" />
       <updated>1758639195987</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Creating a Self-contained JAR - EPSK">
+      <option name="closed" value="true" />
+      <created>1759246336367</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1759246336367</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Dockerfile for Database Part">
+      <option name="closed" value="true" />
+      <created>1759251789148</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1759251789150</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +212,8 @@
     <MESSAGE value="Third Commit - ThinzarPhyoWai" />
     <MESSAGE value="Fourth Commit - ThinzarPhyoWai" />
     <MESSAGE value="Commiting Develop Build - ThinzarPhyoWai" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commiting Develop Build - ThinzarPhyoWai" />
+    <MESSAGE value="Creating a Self-contained JAR - EPSK" />
+    <MESSAGE value="Dockerfile for Database Part" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dockerfile for Database Part" />
   </component>
 </project>
