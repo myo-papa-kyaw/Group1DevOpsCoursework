@@ -1,263 +1,131 @@
 package com.Group1DevopsCoursework;
 
-import java.util.Scanner;
-
 public class MainApp {
     public static void main(String[] args) {
         Database_Connection db = new Database_Connection();
         db.connect();
         Reports reports = new Reports(db);
-        Scanner scanner = new Scanner(System.in);
 
-        int choice = -1;
-        while (choice != 0) {
-            System.out.println("\n--- Reports Menu ---");
-            System.out.println("0. Exit");
-            System.out.println("1. All countries (world) by population");
-            System.out.println("2. All countries in a continent by population");
-            System.out.println("3. All countries in a region by population");
-            System.out.println("4. Top N countries (world)");
-            System.out.println("5. Top N countries in a continent");
-            System.out.println("6. Top N countries in a region");
-            System.out.println("7. All cities (world) by population");
-            System.out.println("8. All cities in a continent by population");
-            System.out.println("9. All cities in a region by population");
-            System.out.println("10. All cities in a country by population");
-            System.out.println("11. All cities in a district by population");
-            System.out.println("12. Top N cities (world)");
-            System.out.println("13. Top N cities in a continent");
-            System.out.println("14. Top N cities in a region");
-            System.out.println("15. Top N cities in a country");
-            System.out.println("16. Top N cities in a district");
-            System.out.println("17. All capital cities (world) by population");
-            System.out.println("18. All capital cities in a continent by population");
-            System.out.println("19. All capital cities in a region by population");
-            System.out.println("20. Top N capital cities (world)");
-            System.out.println("21. Top N capital cities in a continent");
-            System.out.println("22. Top N capital cities in a region");
-            System.out.println("23. Population summary by continent");
-            System.out.println("24. Population summary by region");
-            System.out.println("25. Population summary by country");
-            System.out.println("26. Get population of world/continent/region/country/district/city");
-            System.out.println("27. Top languages speakers (Chinese, English, Hindi, Spanish, Arabic)");
-            System.out.println("28. Country Report");
-            System.out.println("29. City Report");
-            System.out.println("30. Capital City Report");
-            System.out.println("31. Population Report (Continent / Region / Country)");
-            System.out.print("Enter choice: ");
+        System.out.println("\n========== WORLD POPULATION SYSTEM ==========\n");
 
-            choice = readInt(scanner); // safe integer input
+        System.out.println("\n1 - All countries (world) by population");
+        reports.getAllCountries();
 
-            switch (choice) {
-                case 0:
-                    System.out.println("Exiting...");
-                    break;
-                case 1:
-                    reports.getAllCountries();
-                    break;
-                case 2:
-                    System.out.print("Enter continent name (e.g., Asia): ");
-                    reports.getCountriesByContinent(readLine(scanner));
-                    break;
-                case 3:
-                    System.out.print("Enter region name (e.g., Southern Europe): ");
-                    reports.getCountriesByRegion(readLine(scanner));
-                    break;
-                case 4:
-                    System.out.print("Enter N: ");
-                    reports.getTopNCountries(readInt(scanner));
-                    break;
-                case 5:
-                    System.out.print("Enter continent name: ");
-                    String cont = readLine(scanner);
-                    System.out.print("Enter N: ");
-                    reports.getTopNCountriesByContinent(cont, readInt(scanner));
-                    break;
-                case 6:
-                    System.out.print("Enter region name: ");
-                    String reg = readLine(scanner);
-                    System.out.print("Enter N: ");
-                    reports.getTopNCountriesByRegion(reg, readInt(scanner));
-                    break;
-                case 7:
-                    reports.getAllCities();
-                    break;
-                case 8:
-                    System.out.print("Enter continent name: ");
-                    reports.getCitiesByContinent(readLine(scanner));
-                    break;
-                case 9:
-                    System.out.print("Enter region name: ");
-                    reports.getCitiesByRegion(readLine(scanner));
-                    break;
-                case 10:
-                    System.out.print("Enter country code (e.g., USA): ");
-                    reports.getCitiesByCountry(readLine(scanner));
-                    break;
-                case 11:
-                    System.out.print("Enter district name: ");
-                    reports.getCitiesByDistrict(readLine(scanner));
-                    break;
-                case 12:
-                    System.out.print("Enter N: ");
-                    reports.getTopNCities(readInt(scanner));
-                    break;
-                case 13:
-                    System.out.print("Enter continent name: ");
-                    cont = readLine(scanner);
-                    System.out.print("Enter N: ");
-                    reports.getTopNCitiesByContinent(cont, readInt(scanner));
-                    break;
-                case 14:
-                    System.out.print("Enter region name: ");
-                    reg = readLine(scanner);
-                    System.out.print("Enter N: ");
-                    reports.getTopNCitiesByRegion(reg, readInt(scanner));
-                    break;
-                case 15:
-                    System.out.print("Enter country code (e.g., USA): ");
-                    String countryCode = readLine(scanner);
-                    System.out.print("Enter N: ");
-                    reports.getTopNCitiesByCountry(countryCode, readInt(scanner));
-                    break;
-                case 16:
-                    System.out.print("Enter district name: ");
-                    String district = readLine(scanner);
-                    System.out.print("Enter N: ");
-                    reports.getTopNCitiesByDistrict(district, readInt(scanner));
-                    break;
-                case 17:
-                    reports.getAllCapitalCities();
-                    break;
-                case 18:
-                    System.out.print("Enter continent name: ");
-                    reports.getCapitalCitiesByContinent(readLine(scanner));
-                    break;
-                case 19:
-                    System.out.print("Enter region name: ");
-                    reports.getCapitalCitiesByRegion(readLine(scanner));
-                    break;
-                case 20:
-                    System.out.print("Enter N: ");
-                    reports.getTopNCapitalCities(readInt(scanner));
-                    break;
-                case 21:
-                    System.out.print("Enter continent name: ");
-                    cont = readLine(scanner);
-                    System.out.print("Enter N: ");
-                    reports.getTopNCapitalCitiesByContinent(cont, readInt(scanner));
-                    break;
-                case 22:
-                    System.out.print("Enter region name: ");
-                    reg = readLine(scanner);
-                    System.out.print("Enter N: ");
-                    reports.getTopNCapitalCitiesByRegion(reg, readInt(scanner));
-                    break;
-                case 23:
-                    reports.getPopulationSummaryByContinent();
-                    break;
-                case 24:
-                    reports.getPopulationSummaryByRegion();
-                    break;
-                case 25:
-                    reports.getPopulationSummaryByCountry();
-                    break;
-                case 26:
-                    System.out.print("Choose: world/continent/region/country/district/city : ");
-                    String choiceType = readLine(scanner).trim().toLowerCase();
-                    switch (choiceType) {
-                        case "world":
-                            System.out.println("World population: " + reports.getWorldPopulation());
-                            break;
-                        case "continent":
-                            System.out.print("Enter continent name: ");
-                            System.out.println(reports.getPopulationOfContinent(readLine(scanner)));
-                            break;
-                        case "region":
-                            System.out.print("Enter region name: ");
-                            System.out.println(reports.getPopulationOfRegion(readLine(scanner)));
-                            break;
-                        case "country":
-                            System.out.print("Enter country code: ");
-                            System.out.println(reports.getPopulationOfCountry(readLine(scanner)));
-                            break;
-                        case "district":
-                            System.out.print("Enter district name: ");
-                            System.out.println(reports.getPopulationOfDistrict(readLine(scanner)));
-                            break;
-                        case "city":
-                            System.out.print("Enter city name: ");
-                            System.out.println(reports.getPopulationOfCity(readLine(scanner)));
-                            break;
-                        default:
-                            System.out.println("Unknown type");
-                    }
-                    break;
-                case 27:
-                    reports.getTopLanguages();
-                    break;
-                case 28:
-                    reports.getCountryReport();
-                    break;
-                case 29:
-                    reports.getCityReport();
-                    break;
-                case 30:
-                    reports.getCapitalCityReport();
-                    break;
-                case 31:
-                    // ---- FIXED: robust handling for Population Report (user types a number then text)
-                    System.out.println("Population Reports:");
-                    System.out.println("1. By Continent (enter continent name)");
-                    System.out.println("2. By Region (enter region name)");
-                    System.out.println("3. By Country (enter country name)");
-                    System.out.print("Enter choice (1/2/3): ");
-                    int sub = readInt(scanner);
-                    if (sub == 1) {
-                        System.out.print("Enter Continent Name (e.g., Asia): ");
-                        String continent = readLine(scanner);
-                        reports.getPopulationReportForContinent(continent);
-                    } else if (sub == 2) {
-                        System.out.print("Enter Region Name (e.g., Caribbean): ");
-                        String region = readLine(scanner);
-                        reports.getPopulationReportForRegion(region);
-                    } else if (sub == 3) {
-                        System.out.print("Enter Country Name (e.g., France): ");
-                        String country = readLine(scanner);
-                        reports.getPopulationReportForCountry(country);
-                    } else {
-                        System.out.println("Invalid choice for population report.");
-                    }
-                    break;
-                default:
-                    System.out.println("Invalid choice. Try again.");
-            }
-        }
+        System.out.println("\n2 - All countries in a continent by population (Asia)");
+        reports.getCountriesByContinent("Asia");
+
+        System.out.println("\n3 - All countries in a region by population (Example: Southern Europe)");
+        reports.getCountriesByRegion("Southern Europe");
+
+        System.out.println("\n4 - Top 10 countries (world)");
+        reports.getTopNCountries(10);
+
+        System.out.println("\n5 - Top 10 countries in a continent (Asia)");
+        reports.getTopNCountriesByContinent("Asia", 10);
+
+        System.out.println("\n6 - Top 10 countries in a region (Example: Western Africa)");
+        reports.getTopNCountriesByRegion("Western Africa", 10);
+
+        System.out.println("\n7 - All cities (world) by population");
+        reports.getAllCities();
+
+        System.out.println("\n8 - All cities in a continent by population (Europe)");
+        reports.getCitiesByContinent("Europe");
+
+        System.out.println("\n9 - All cities in a region by population (Caribbean)");
+        reports.getCitiesByRegion("Caribbean");
+
+        System.out.println("\n10 - All cities in a country by population (USA)");
+        reports.getCitiesByCountry("USA");
+
+        System.out.println("\n11 - All cities in a district by population (California)");
+        reports.getCitiesByDistrict("California");
+
+        System.out.println("\n12 - Top 10 cities (world)");
+        reports.getTopNCities(10);
+
+        System.out.println("\n13 - Top 10 cities in a continent (Asia)");
+        reports.getTopNCitiesByContinent("Asia", 10);
+
+        System.out.println("\n14 - Top 10 populated cities in a region (Caribbean)");
+        reports.getTopNCitiesByRegion("Caribbean", 10);
+
+        System.out.println("\n15 - Top 10 populated cities in a country (USA)");
+        reports.getTopNCitiesByCountry("USA", 10);
+
+        System.out.println("\n16 - Top 10 populated cities in a district (California)");
+        reports.getTopNCitiesByDistrict("California", 10);
+
+        System.out.println("\n17 - All capital cities (world) by population");
+        reports.getAllCapitalCities();
+
+        System.out.println("\n18 - All capital cities in a continent by population (Asia)");
+        reports.getCapitalCitiesByContinent("Asia");
+
+        System.out.println("\n19 - All capital cities in a region by population (Eastern Africa)");
+        reports.getCapitalCitiesByRegion("Eastern Africa");
+
+        System.out.println("\n20 - Top 10 capital cities (world)");
+        reports.getTopNCapitalCities(10);
+
+        System.out.println("\n21 - Top 10 capital cities in a continent (Europe)");
+        reports.getTopNCapitalCitiesByContinent("Europe", 10);
+
+        System.out.println("\n22 - Top 10 capital cities in a region (Caribbean)");
+        reports.getTopNCapitalCitiesByRegion("Caribbean", 10);
+
+        System.out.println("\n23 - Population of people, people living in cities, and people not living in cities in each continent");
+        reports.getPopulationSplitByContinent();
+
+        System.out.println("\n24 - Population of people, people living in cities, and people not living in cities in each region");
+        reports.getPopulationSplitByRegion();
+
+        System.out.println("\n25 - Population of people, people living in cities, and people not living in cities in each country");
+        reports.getPopulationSplitByCountry();
+
+        System.out.println("\n26 - Population of the world");
+        System.out.println(reports.getWorldPopulation());
+
+        System.out.println("\n26b - Population of a continent (Asia)");
+        System.out.println(reports.getPopulationOfContinent("Asia"));
+
+        System.out.println("\n26c - Population of a region (Caribbean)");
+        System.out.println(reports.getPopulationOfRegion("Caribbean"));
+
+        System.out.println("\n26d - Population of a country (USA)");
+        System.out.println(reports.getPopulationOfCountry("USA"));
+
+        System.out.println("\n26e - Population of a district (California)");
+        System.out.println(reports.getPopulationOfDistrict("California"));
+
+        System.out.println("\n26f - Population of a city (New York)");
+        System.out.println(reports.getPopulationOfCity("New York"));
+
+        System.out.println("\n27 - Top languages by speakers (Chinese, English, Hindi, Spanish, Arabic)");
+        reports.getTopLanguages();
+
+        System.out.println("\n28 - Country Report");
+        reports.getCountryReport();
+
+        System.out.println("\n29 - City Report");
+        reports.getCityReport();
+
+        System.out.println("\n30 - Capital City Report");
+        reports.getCapitalCityReport();
+        System.out.println("\n31 - Population Reports");
+        System.out.println("=== Population Report by Continent ===");
+        reports.getPopulationReportForContinent();
+
+        System.out.println("=== Population Report by Region ===");
+        reports.getPopulationReportForRegion();
+
+        System.out.println("=== Population Report by Country ===");
+        reports.getPopulationReportForCountry();
+
+
+        System.out.println("\n========== END OF ALL REPORTS ==========\n");
 
         db.disconnect();
-        scanner.close();
-        System.out.println("Program terminated.");
-    }
-
-    // helper that keeps asking until a valid integer is supplied
-    private static int readInt(Scanner sc) {
-        while (true) {
-            String line = sc.nextLine().trim();
-            if (line.isEmpty()) {
-                System.out.print("Please enter a number: ");
-                continue;
-            }
-            try {
-                return Integer.parseInt(line);
-            } catch (NumberFormatException e) {
-                System.out.print("Invalid number. Try again: ");
-            }
-        }
-    }
-
-    // helper that reads a non-empty trimmed line (returns empty if user allows it)
-    private static String readLine(Scanner sc) {
-        String line = sc.nextLine();
-        return line == null ? "" : line.trim();
+        System.out.println("Program terminated successfully.");
     }
 }
