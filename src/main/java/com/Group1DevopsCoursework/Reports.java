@@ -7,12 +7,14 @@ import java.sql.SQLException;
 
 public class Reports {
 
-    private final Database_Connection db;
     private final Connection con;
 
     public Reports(Database_Connection db) {
-        this.db = db;
         this.con = db.getConnection(); // use one shared connection
+    }
+
+    private void handleSQLException(SQLException e) {
+        System.err.println("Database error: " + e.getMessage());
     }
 
     // 1. World Population
@@ -30,7 +32,7 @@ public class Reports {
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            handleSQLException(e);
         }
     }
 
@@ -51,7 +53,7 @@ public class Reports {
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            handleSQLException(e);
         }
     }
 
@@ -72,7 +74,7 @@ public class Reports {
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            handleSQLException(e);
         }
     }
 
@@ -92,7 +94,7 @@ public class Reports {
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            handleSQLException(e);
         }
     }
 
@@ -113,7 +115,7 @@ public class Reports {
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            handleSQLException(e);
         }
     }
 
@@ -133,7 +135,7 @@ public class Reports {
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            handleSQLException(e);
         }
     }
 }
