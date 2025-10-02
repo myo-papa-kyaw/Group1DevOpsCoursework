@@ -14,7 +14,7 @@ public class MainApp {
         System.out.println("\n2 - All countries in a continent by population (Asia)");
         reports.getCountriesByContinent("Asia");
 
-        System.out.println("\n3 - All countries in a region by population (Example: Southern Europe)");
+        System.out.println("\n3 - All countries in a region by population (Southern Europe)");
         reports.getCountriesByRegion("Southern Europe");
 
         System.out.println("\n4 - Top 10 countries (world)");

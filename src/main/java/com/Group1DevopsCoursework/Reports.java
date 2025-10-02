@@ -3,7 +3,7 @@ package com.Group1DevopsCoursework;
 import java.sql.*;
 
 public class Reports {
-    private final Database_Connection db;
+    private  Database_Connection db;
 
     public Reports(Database_Connection db) {
         this.db = db;
@@ -235,7 +235,7 @@ public class Reports {
                         "ORDER BY Speakers DESC";
 
         try {
-            Statement stmt = db.con.createStatement();
+            Statement stmt = db.getConnection().createStatement();
             ResultSet rs = stmt.executeQuery(sql);
 
             // First, get world population
@@ -312,7 +312,7 @@ public class Reports {
 
     private void runCountryQuery(String sql) {
         try {
-            Statement stmt = db.con.createStatement();
+            Statement stmt = db.getConnection().createStatement();
             ResultSet rs = stmt.executeQuery(sql);
             System.out.printf("%-5s %-40s %-20s %-25s %-15s%n", "Code", "Name", "Continent", "Region", "Population");
             while (rs.next()) {
@@ -330,7 +330,7 @@ public class Reports {
 
     private void runCityQuery(String sql) {
         try {
-            Statement stmt = db.con.createStatement();
+            Statement stmt = db.getConnection().createStatement();
             ResultSet rs = stmt.executeQuery(sql);
             System.out.printf("%-25s %-10s %-20s %-15s%n", "Name", "Country", "District", "Population");
             while (rs.next()) {
@@ -347,7 +347,7 @@ public class Reports {
 
     private void runCapitalCityQuery(String sql) {
         try {
-            Statement stmt = db.con.createStatement();
+            Statement stmt = db.getConnection().createStatement();
             ResultSet rs = stmt.executeQuery(sql);
             System.out.printf("%-25s %-30s %-15s%n", "Capital City", "Country", "Population");
             while (rs.next()) {
@@ -364,7 +364,7 @@ public class Reports {
 
     private long getSinglePopulation(String sql) {
         try {
-            Statement stmt = db.con.createStatement();
+            Statement stmt = db.getConnection().createStatement();
             ResultSet rs = stmt.executeQuery(sql);
             if (rs.next()) {
                 return rs.getLong("pop");
@@ -377,7 +377,7 @@ public class Reports {
 
     private void runPopulationSplitQuery(String sql, String type) {
         try {
-            Statement stmt = db.con.createStatement();
+            Statement stmt = db.getConnection().createStatement();
             ResultSet rs = stmt.executeQuery(sql);
 
             System.out.printf("%-20s %-15s %-15s %-15s%n", type, "Total", "City", "Non-City");
@@ -396,7 +396,7 @@ public class Reports {
 
     public long getWorldPopulations() {
         try {
-            Statement stmt = db.con.createStatement();
+            Statement stmt = db.getConnection().createStatement();
             ResultSet rs = stmt.executeQuery("SELECT SUM(Population) AS WorldPop FROM country");
             if (rs.next()) {
                 return rs.getLong("WorldPop");
@@ -408,7 +408,7 @@ public class Reports {
     }
     private void runPopulationReport(String sql, String type) {
         try {
-            Statement stmt = db.con.createStatement();
+            Statement stmt = db.getConnection().createStatement();
             ResultSet rs = stmt.executeQuery(sql);
 
             System.out.printf("%-20s %-15s %-20s %-20s %-20s %-20s%n",
