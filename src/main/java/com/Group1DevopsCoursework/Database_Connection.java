@@ -1,11 +1,10 @@
 package com.Group1DevopsCoursework;
 
 import java.sql.*;
-import java.util.ArrayList;
 
 public class Database_Connection {
 
-    Connection con = null;
+    private Connection con = null;
 
     public void connect() {
         try {
@@ -15,13 +14,13 @@ public class Database_Connection {
             System.exit(-1);
         }
 
-        int retries = 15;  // increase retries
+        int retries = 20;
         for (int i = 0; i < retries; i++) {
-            System.out.println("Connecting to database... attempt " + i);
+            System.out.println("Connecting to database... attempt " + (i+1));
             try {
                 Thread.sleep(10000);
                 con = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:33061/world?useSSL=false&allowPublicKeyRetrieval=true",
+                        "jdbc:mysql://world-db:3306/world?useSSL=false&allowPublicKeyRetrieval=true",
                         "root",
                         "example"
                 );
@@ -35,6 +34,10 @@ public class Database_Connection {
         }
     }
 
+    public Connection getConnection() {
+        return con;
+    }
+
     public void disconnect() {
         if (con != null) {
             try {
@@ -44,6 +47,4 @@ public class Database_Connection {
             }
         }
     }
-
-
 }

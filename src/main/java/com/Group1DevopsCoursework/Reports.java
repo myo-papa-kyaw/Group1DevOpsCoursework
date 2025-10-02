@@ -1,592 +1,435 @@
 package com.Group1DevopsCoursework;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class Reports {
-
-    private final Database_Connection db;
+    private  Database_Connection db;
 
     public Reports(Database_Connection db) {
         this.db = db;
     }
 
-    // -------------------------
-    // Country Reports (1-6)
-    // -------------------------
+    // ====================== COUNTRY REPORTS ======================
 
-    // 1. All countries in the world ordered by population descending
+    // UC1: All countries in the world by population
     public void getAllCountries() {
-        String sql = "SELECT c.Code, c.Name, c.Continent, c.Region, c.Population, ci.Name AS CapitalName " +
-                "FROM country c LEFT JOIN city ci ON c.Capital = ci.ID " +
-                "ORDER BY c.Population DESC";
-        printCountryReport(sql);
+        runCountryQuery("SELECT Code, Name, Continent, Region, Population FROM country ORDER BY Population DESC");
     }
 
-    // 2. All countries in a continent ordered by population descending
+    // UC2: All countries in a continent
     public void getCountriesByContinent(String continent) {
-        String sql = "SELECT c.Code, c.Name, c.Continent, c.Region, c.Population, ci.Name AS CapitalName " +
-                "FROM country c LEFT JOIN city ci ON c.Capital = ci.ID " +
-                "WHERE c.Continent = ? ORDER BY c.Population DESC";
-        printCountryReport(sql, continent);
+        runCountryQuery("SELECT Code, Name, Continent, Region, Population FROM country WHERE Continent = '" + continent + "' ORDER BY Population DESC");
     }
 
-    // 3. All countries in a region ordered by population descending
+    // UC3: All countries in a region
     public void getCountriesByRegion(String region) {
-        String sql = "SELECT c.Code, c.Name, c.Continent, c.Region, c.Population, ci.Name AS CapitalName " +
-                "FROM country c LEFT JOIN city ci ON c.Capital = ci.ID " +
-                "WHERE c.Region = ? ORDER BY c.Population DESC";
-        printCountryReport(sql, region);
+        runCountryQuery("SELECT Code, Name, Continent, Region, Population FROM country WHERE Region = '" + region + "' ORDER BY Population DESC");
     }
 
-    // 4. Top N populated countries in the world
+    // UC4: Top N countries (world)
     public void getTopNCountries(int n) {
-        String sql = "SELECT c.Code, c.Name, c.Continent, c.Region, c.Population, ci.Name AS CapitalName " +
-                "FROM country c LEFT JOIN city ci ON c.Capital = ci.ID " +
-                "ORDER BY c.Population DESC LIMIT ?";
-        printCountryReportWithLimit(sql, n);
+        runCountryQuery("SELECT Code, Name, Continent, Region, Population FROM country ORDER BY Population DESC LIMIT " + n);
     }
 
-    // 5. Top N populated countries in a continent
+    // UC5: Top N countries in a continent
     public void getTopNCountriesByContinent(String continent, int n) {
-        String sql = "SELECT c.Code, c.Name, c.Continent, c.Region, c.Population, ci.Name AS CapitalName " +
-                "FROM country c LEFT JOIN city ci ON c.Capital = ci.ID " +
-                "WHERE c.Continent = ? ORDER BY c.Population DESC LIMIT ?";
-        printCountryReportWithLimit(sql, continent, n);
+        runCountryQuery("SELECT Code, Name, Continent, Region, Population FROM country WHERE Continent = '" + continent + "' ORDER BY Population DESC LIMIT " + n);
     }
 
-    // 6. Top N populated countries in a region
+    // UC6: Top N countries in a region
     public void getTopNCountriesByRegion(String region, int n) {
-        String sql = "SELECT c.Code, c.Name, c.Continent, c.Region, c.Population, ci.Name AS CapitalName " +
-                "FROM country c LEFT JOIN city ci ON c.Capital = ci.ID " +
-                "WHERE c.Region = ? ORDER BY c.Population DESC LIMIT ?";
-        printCountryReportWithLimit(sql, region, n);
+        runCountryQuery("SELECT Code, Name, Continent, Region, Population FROM country WHERE Region = '" + region + "' ORDER BY Population DESC LIMIT " + n);
     }
 
-    // -------------------------
-    // City Reports (7-16)
-    // -------------------------
+    // ====================== CITY REPORTS ======================
 
-    // 7. All the cities in the world organised by largest population to smallest.
+    // UC7: All cities in the world
     public void getAllCities() {
-        String sql = "SELECT ci.ID, ci.Name AS CityName, ci.District, c.Name AS CountryName, ci.Population " +
-                "FROM city ci JOIN country c ON ci.CountryCode = c.Code " +
-                "ORDER BY ci.Population DESC";
-        printCityReport(sql);
+        runCityQuery("SELECT Name, CountryCode, District, Population FROM city ORDER BY Population DESC");
     }
 
-    // 8. All the cities in a continent organised by largest population to smallest.
+    // UC8: All cities in a continent
     public void getCitiesByContinent(String continent) {
-        String sql = "SELECT ci.ID, ci.Name AS CityName, ci.District, c.Name AS CountryName, ci.Population " +
-                "FROM city ci JOIN country c ON ci.CountryCode = c.Code " +
-                "WHERE c.Continent = ? ORDER BY ci.Population DESC";
-        printCityReport(sql, continent);
+        runCityQuery("SELECT city.Name, city.CountryCode, city.District, city.Population " +
+                "FROM city JOIN country ON city.CountryCode = country.Code " +
+                "WHERE country.Continent = '" + continent + "' ORDER BY city.Population DESC");
     }
 
-    // 9. All the cities in a region organised by largest population to smallest.
+    // UC9: All cities in a region
     public void getCitiesByRegion(String region) {
-        String sql = "SELECT ci.ID, ci.Name AS CityName, ci.District, c.Name AS CountryName, ci.Population " +
-                "FROM city ci JOIN country c ON ci.CountryCode = c.Code " +
-                "WHERE c.Region = ? ORDER BY ci.Population DESC";
-        printCityReport(sql, region);
+        runCityQuery("SELECT city.Name, city.CountryCode, city.District, city.Population " +
+                "FROM city JOIN country ON city.CountryCode = country.Code " +
+                "WHERE country.Region = '" + region + "' ORDER BY city.Population DESC");
     }
 
-    // 10. All the cities in a country organised by largest population to smallest.
-    public void getCitiesByCountry(String countryCode) {
-        String sql = "SELECT ci.ID, ci.Name AS CityName, ci.District, c.Name AS CountryName, ci.Population " +
-                "FROM city ci JOIN country c ON ci.CountryCode = c.Code " +
-                "WHERE ci.CountryCode = ? ORDER BY ci.Population DESC";
-        printCityReport(sql, countryCode);
+    // UC10: All cities in a country
+    public void getCitiesByCountry(String country) {
+        runCityQuery("SELECT city.Name, city.CountryCode, city.District, city.Population " +
+                "FROM city JOIN country ON city.CountryCode = country.Code " +
+                "WHERE country.Name = '" + country + "' ORDER BY city.Population DESC");
     }
 
-    // 11. All the cities in a district organised by largest population to smallest.
+    // UC11: All cities in a district
     public void getCitiesByDistrict(String district) {
-        String sql = "SELECT ci.ID, ci.Name AS CityName, ci.District, c.Name AS CountryName, ci.Population " +
-                "FROM city ci JOIN country c ON ci.CountryCode = c.Code " +
-                "WHERE ci.District = ? ORDER BY ci.Population DESC";
-        printCityReport(sql, district);
+        runCityQuery("SELECT Name, CountryCode, District, Population FROM city " +
+                "WHERE District = '" + district + "' ORDER BY Population DESC");
     }
 
-    // 12. Top N populated cities in the world
+    // UC12: Top N cities (world)
     public void getTopNCities(int n) {
-        String sql = "SELECT ci.ID, ci.Name AS CityName, ci.District, c.Name AS CountryName, ci.Population " +
-                "FROM city ci JOIN country c ON ci.CountryCode = c.Code " +
-                "ORDER BY ci.Population DESC LIMIT ?";
-        printCityReportWithLimit(sql, n);
+        runCityQuery("SELECT Name, CountryCode, District, Population FROM city ORDER BY Population DESC LIMIT " + n);
     }
 
-    // 13. Top N populated cities in a continent
+    // UC13: Top N cities in a continent
     public void getTopNCitiesByContinent(String continent, int n) {
-        String sql = "SELECT ci.ID, ci.Name AS CityName, ci.District, c.Name AS CountryName, " +
-                "c.Continent, ci.Population " +
-                "FROM city ci JOIN country c ON ci.CountryCode = c.Code " +
-                "WHERE c.Continent = ? " +
-                "ORDER BY ci.Population DESC LIMIT ?";
-        printCityReportWithLimit(sql, continent, n);
+        runCityQuery("SELECT city.Name, city.CountryCode, city.District, city.Population " +
+                "FROM city JOIN country ON city.CountryCode = country.Code " +
+                "WHERE country.Continent = '" + continent + "' ORDER BY city.Population DESC LIMIT " + n);
     }
 
-    // 14. Top N populated cities in a region
+    // UC14: Top N cities in a region
     public void getTopNCitiesByRegion(String region, int n) {
-        String sql = "SELECT ci.ID, ci.Name AS CityName, ci.District, c.Name AS CountryName, ci.Population " +
-                "FROM city ci JOIN country c ON ci.CountryCode = c.Code " +
-                "WHERE c.Region = ? ORDER BY ci.Population DESC LIMIT ?";
-        printCityReportWithLimit(sql, region, n);
+        runCityQuery("SELECT city.Name, city.CountryCode, city.District, city.Population " +
+                "FROM city JOIN country ON city.CountryCode = country.Code " +
+                "WHERE country.Region = '" + region + "' ORDER BY city.Population DESC LIMIT " + n);
     }
 
-    // 15. Top N populated cities in a country
-    public void getTopNCitiesByCountry(String countryCode, int n) {
-        String sql = "SELECT ci.ID, ci.Name AS CityName, ci.District, c.Name AS CountryName, ci.Population " +
-                "FROM city ci JOIN country c ON ci.CountryCode = c.Code " +
-                "WHERE ci.CountryCode = ? ORDER BY ci.Population DESC LIMIT ?";
-        printCityReportWithLimit(sql, countryCode, n);
+    // UC15: Top N cities in a country
+    public void getTopNCitiesByCountry(String country, int n) {
+        runCityQuery("SELECT city.Name, city.CountryCode, city.District, city.Population " +
+                "FROM city JOIN country ON city.CountryCode = country.Code " +
+                "WHERE country.Name = '" + country + "' ORDER BY city.Population DESC LIMIT " + n);
     }
 
-    // 16. Top N populated cities in a district
+    // UC16: Top N cities in a district
     public void getTopNCitiesByDistrict(String district, int n) {
-        String sql = "SELECT ci.ID, ci.Name AS CityName, ci.District, c.Name AS CountryName, ci.Population " +
-                "FROM city ci JOIN country c ON ci.CountryCode = c.Code " +
-                "WHERE ci.District = ? ORDER BY ci.Population DESC LIMIT ?";
-        printCityReportWithLimit(sql, district, n);
+        runCityQuery("SELECT Name, CountryCode, District, Population FROM city " +
+                "WHERE District = '" + district + "' ORDER BY Population DESC LIMIT " + n);
     }
 
-    // -------------------------
-    // Capital City Reports (17-22)
-    // -------------------------
+    // ====================== CAPITAL CITY REPORTS ======================
 
-    // 17. All the capital cities in the world organised by largest population to smallest.
+    // UC17: All capital cities (world)
     public void getAllCapitalCities() {
-        String sql = "SELECT ci.Name AS CapitalName, c.Name AS CountryName, ci.Population " +
-                "FROM country c JOIN city ci ON c.Capital = ci.ID " +
-                "ORDER BY ci.Population DESC";
-        printCapitalReport(sql);
+        runCapitalCityQuery("SELECT city.Name, country.Name AS Country, city.Population " +
+                "FROM city JOIN country ON country.Capital = city.ID " +
+                "ORDER BY city.Population DESC");
     }
 
-    // 18. All the capital cities in a continent organised by largest population to smallest.
+    // UC18: All capital cities in a continent
     public void getCapitalCitiesByContinent(String continent) {
-        String sql = "SELECT ci.Name AS CapitalName, c.Name AS CountryName, ci.Population " +
-                "FROM country c JOIN city ci ON c.Capital = ci.ID " +
-                "WHERE c.Continent = ? ORDER BY ci.Population DESC";
-        printCapitalReport(sql, continent);
+        runCapitalCityQuery("SELECT city.Name, country.Name AS Country, city.Population " +
+                "FROM city JOIN country ON country.Capital = city.ID " +
+                "WHERE country.Continent = '" + continent + "' ORDER BY city.Population DESC");
     }
 
-    // 19. All the capital cities in a region organised by largest to smallest.
+    // UC19: All capital cities in a region
     public void getCapitalCitiesByRegion(String region) {
-        String sql = "SELECT ci.Name AS CapitalName, c.Name AS CountryName, ci.Population " +
-                "FROM country c JOIN city ci ON c.Capital = ci.ID " +
-                "WHERE c.Region = ? ORDER BY ci.Population DESC";
-        printCapitalReport(sql, region);
+        runCapitalCityQuery("SELECT city.Name, country.Name AS Country, city.Population " +
+                "FROM city JOIN country ON country.Capital = city.ID " +
+                "WHERE country.Region = '" + region + "' ORDER BY city.Population DESC");
     }
 
-    // 20. Top N populated capital cities in the world
+    // UC20: Top N capital cities (world)
     public void getTopNCapitalCities(int n) {
-        String sql = "SELECT ci.Name AS CapitalName, c.Name AS CountryName, ci.Population " +
-                "FROM country c JOIN city ci ON c.Capital = ci.ID " +
-                "ORDER BY ci.Population DESC LIMIT ?";
-        printCapitalReportWithLimit(sql, n);
+        runCapitalCityQuery("SELECT city.Name, country.Name AS Country, city.Population " +
+                "FROM city JOIN country ON country.Capital = city.ID " +
+                "ORDER BY city.Population DESC LIMIT " + n);
     }
 
-    // 21. Top N populated capital cities in a continent
+    // UC21: Top N capital cities in a continent
     public void getTopNCapitalCitiesByContinent(String continent, int n) {
-        String sql = "SELECT ci.Name AS CapitalName, c.Name AS CountryName, ci.Population " +
-                "FROM country c JOIN city ci ON c.Capital = ci.ID " +
-                "WHERE c.Continent = ? ORDER BY ci.Population DESC LIMIT ?";
-        printCapitalReportWithLimit(sql, continent, n);
+        runCapitalCityQuery("SELECT city.Name, country.Name AS Country, city.Population " +
+                "FROM city JOIN country ON country.Capital = city.ID " +
+                "WHERE country.Continent = '" + continent + "' ORDER BY city.Population DESC LIMIT " + n);
     }
 
-    // 22. Top N populated capital cities in a region
+    // UC22: Top N capital cities in a region
     public void getTopNCapitalCitiesByRegion(String region, int n) {
-        String sql = "SELECT ci.Name AS CapitalName, c.Name AS CountryName, ci.Population " +
-                "FROM country c JOIN city ci ON c.Capital = ci.ID " +
-                "WHERE c.Region = ? ORDER BY ci.Population DESC LIMIT ?";
-        printCapitalReportWithLimit(sql, region, n);
+        runCapitalCityQuery("SELECT city.Name, country.Name AS Country, city.Population " +
+                "FROM city JOIN country ON country.Capital = city.ID " +
+                "WHERE country.Region = '" + region + "' ORDER BY city.Population DESC LIMIT " + n);
     }
 
-    // -------------------------
-    // Population summaries (23-26)
-    // -------------------------
+    // ====================== POPULATION REPORTS ======================
 
-    // 23. The population of people, people living in cities, and people not living in cities in each continent.
-    public void getPopulationSummaryByContinent() {
-        String sql = "SELECT Continent, SUM(Population) AS TotalPopulation FROM country GROUP BY Continent";
-        try (PreparedStatement ps = db.con.prepareStatement(sql);
-             ResultSet rs = ps.executeQuery()) {
-            System.out.printf("%-20s %-15s %-20s %-20s%n", "Continent", "TotalPop", "InCities (num, %)", "NotInCities (num, %)");
-            while (rs.next()) {
-                String continent = rs.getString("Continent");
-                long total = rs.getLong("TotalPopulation");
-                long inCities = getCityPopulationForContinent(continent);
-                long notInCities = total - inCities;
-                double inPct = total == 0 ? 0 : (inCities * 100.0 / total);
-                double notPct = total == 0 ? 0 : (notInCities * 100.0 / total);
-                System.out.printf("%-20s %-15d %-10d (%.2f%%) %-10d (%.2f%%)%n", continent, total, inCities, inPct, notInCities, notPct);
-            }
-        } catch (SQLException e) {
-            System.out.println("Error fetching continent population summary: " + e.getMessage());
-        }
+    // 23. Population of people, people living in cities, and not in cities in each continent
+    public void getPopulationSplitByContinent() {
+        String sql =
+                "SELECT c.Continent AS Name, " +
+                        "SUM(c.Population) AS TotalPop, " +
+                        "SUM(ci.Population) AS CityPop, " +
+                        "SUM(c.Population) - SUM(ci.Population) AS NonCityPop " +
+                        "FROM country c " +
+                        "LEFT JOIN city ci ON c.Code = ci.CountryCode " +
+                        "GROUP BY c.Continent ORDER BY TotalPop DESC";
+        runPopulationSplitQuery(sql, "Continent");
     }
 
-    // 24. By region
-    public void getPopulationSummaryByRegion() {
-        String sql = "SELECT Region, SUM(Population) AS TotalPopulation FROM country GROUP BY Region";
-        try (PreparedStatement ps = db.con.prepareStatement(sql);
-             ResultSet rs = ps.executeQuery()) {
-            System.out.printf("%-40s %-15s %-20s %-20s%n", "Region", "TotalPop", "InCities (num, %)", "NotInCities (num, %)");
-            while (rs.next()) {
-                String region = rs.getString("Region");
-                long total = rs.getLong("TotalPopulation");
-                long inCities = getCityPopulationForRegion(region);
-                long notInCities = total - inCities;
-                double inPct = total == 0 ? 0 : (inCities * 100.0 / total);
-                double notPct = total == 0 ? 0 : (notInCities * 100.0 / total);
-                System.out.printf("%-40s %-15d %-10d (%.2f%%) %-10d (%.2f%%)%n", region, total, inCities, inPct, notInCities, notPct);
-            }
-        } catch (SQLException e) {
-            System.out.println("Error fetching region population summary: " + e.getMessage());
-        }
+    //24. Population of people, people living in cities, and not in cities in each region
+    public void getPopulationSplitByRegion() {
+        String sql =
+                "SELECT c.Region AS Name, " +
+                        "SUM(c.Population) AS TotalPop, " +
+                        "SUM(ci.Population) AS CityPop, " +
+                        "SUM(c.Population) - SUM(ci.Population) AS NonCityPop " +
+                        "FROM country c " +
+                        "LEFT JOIN city ci ON c.Code = ci.CountryCode " +
+                        "GROUP BY c.Region ORDER BY TotalPop DESC";
+        runPopulationSplitQuery(sql, "Region");
     }
 
-    // 25. By country
-    public void getPopulationSummaryByCountry() {
-        String sql = "SELECT Code, Name, Population FROM country ORDER BY Population DESC";
-        try (PreparedStatement ps = db.con.prepareStatement(sql);
-             ResultSet rs = ps.executeQuery()) {
-            System.out.printf("%-10s %-40s %-15s %-20s %-20s%n", "Code", "Country", "TotalPop", "InCities (num, %)", "NotInCities (num, %)");
-            while (rs.next()) {
-                String code = rs.getString("Code");
-                String name = rs.getString("Name");
-                long total = rs.getLong("Population");
-                long inCities = getCityPopulationForCountry(code);
-                long notInCities = total - inCities;
-                double inPct = total == 0 ? 0 : (inCities * 100.0 / total);
-                double notPct = total == 0 ? 0 : (notInCities * 100.0 / total);
-                System.out.printf("%-10s %-40s %-15d %-10d (%.2f%%) %-10d (%.2f%%)%n", code, name, total, inCities, inPct, notInCities, notPct);
-            }
-        } catch (SQLException e) {
-            System.out.println("Error fetching country population summary: " + e.getMessage());
-        }
+    //25. Population of people, people living in cities, and not in cities in each country
+    public void getPopulationSplitByCountry() {
+        String sql =
+                "SELECT c.Name AS Name, " +
+                        "c.Population AS TotalPop, " +
+                        "SUM(ci.Population) AS CityPop, " +
+                        "c.Population - SUM(ci.Population) AS NonCityPop " +
+                        "FROM country c " +
+                        "LEFT JOIN city ci ON c.Code = ci.CountryCode " +
+                        "GROUP BY c.Code, c.Name, c.Population " +
+                        "ORDER BY TotalPop DESC";
+        runPopulationSplitQuery(sql, "Country");
     }
 
-    // 26. Additional single-entity population fetches
+    // UC26a: Population of the world
     public long getWorldPopulation() {
-        String sql = "SELECT SUM(Population) AS WorldPop FROM country";
-        try (PreparedStatement ps = db.con.prepareStatement(sql);
-             ResultSet rs = ps.executeQuery()) {
-            if (rs.next()) return rs.getLong("WorldPop");
-        } catch (SQLException e) {
-            System.out.println("Error getting world population: " + e.getMessage());
-        }
-        return 0;
+        return getSinglePopulation("SELECT SUM(Population) AS pop FROM country");
     }
 
+    // UC26b: Population of a continent
     public long getPopulationOfContinent(String continent) {
-        String sql = "SELECT SUM(Population) AS Pop FROM country WHERE Continent = ?";
-        try (PreparedStatement ps = db.con.prepareStatement(sql)) {
-            ps.setString(1, continent);
-            try (ResultSet rs = ps.executeQuery()) {
-                if (rs.next()) return rs.getLong("Pop");
-            }
-        } catch (SQLException e) {
-            System.out.println("Error getting continent population: " + e.getMessage());
-        }
-        return 0;
+        return getSinglePopulation("SELECT SUM(Population) AS pop FROM country WHERE Continent = '" + continent + "'");
     }
 
+    // UC26c: Population of a region
     public long getPopulationOfRegion(String region) {
-        String sql = "SELECT SUM(Population) AS Pop FROM country WHERE Region = ?";
-        try (PreparedStatement ps = db.con.prepareStatement(sql)) {
-            ps.setString(1, region);
-            try (ResultSet rs = ps.executeQuery()) {
-                if (rs.next()) return rs.getLong("Pop");
-            }
-        } catch (SQLException e) {
-            System.out.println("Error getting region population: " + e.getMessage());
-        }
-        return 0;
+        return getSinglePopulation("SELECT SUM(Population) AS pop FROM country WHERE Region = '" + region + "'");
     }
 
-    public long getPopulationOfCountry(String countryCode) {
-        String sql = "SELECT Population FROM country WHERE Code = ?";
-        try (PreparedStatement ps = db.con.prepareStatement(sql)) {
-            ps.setString(1, countryCode);
-            try (ResultSet rs = ps.executeQuery()) {
-                if (rs.next()) return rs.getLong("Population");
-            }
-        } catch (SQLException e) {
-            System.out.println("Error getting country population: " + e.getMessage());
-        }
-        return 0;
+    // UC26d: Population of a country
+    public long getPopulationOfCountry(String country) {
+        return getSinglePopulation("SELECT Population AS pop FROM country WHERE Name = '" + country + "'");
     }
 
+    // UC26e: Population of a district
     public long getPopulationOfDistrict(String district) {
-        String sql = "SELECT SUM(Population) AS Pop FROM city WHERE District = ?";
-        try (PreparedStatement ps = db.con.prepareStatement(sql)) {
-            ps.setString(1, district);
-            try (ResultSet rs = ps.executeQuery()) {
-                if (rs.next()) return rs.getLong("Pop");
-            }
-        } catch (SQLException e) {
-            System.out.println("Error getting district population: " + e.getMessage());
-        }
-        return 0;
+        return getSinglePopulation("SELECT SUM(Population) AS pop FROM city WHERE District = '" + district + "'");
     }
 
-    public long getPopulationOfCity(String cityName) {
-        String sql = "SELECT Population FROM city WHERE Name = ?";
-        try (PreparedStatement ps = db.con.prepareStatement(sql)) {
-            ps.setString(1, cityName);
-            try (ResultSet rs = ps.executeQuery()) {
-                if (rs.next()) return rs.getLong("Population");
-            }
-        } catch (SQLException e) {
-            System.out.println("Error getting city population: " + e.getMessage());
-        }
-        return 0;
+    // UC26f: Population of a city
+    public long getPopulationOfCity(String city) {
+        return getSinglePopulation("SELECT Population AS pop FROM city WHERE Name = '" + city + "'");
     }
 
-    // -------------------------
-    // Language speaker counts (27)
-    // -------------------------
+    //27 Population of top  languages (Chinese, English, Hindi, Spanish, Arabic)
     public void getTopLanguages() {
-        String[] languages = {"Chinese", "English", "Hindi", "Spanish", "Arabic"};
-        long worldPop = getWorldPopulation();
-        System.out.printf("%-10s %-20s %-10s%n", "Language", "Speakers", "% of World");
-        for (String lang : languages) {
-            String sql = "SELECT SUM(c.Population * (cl.Percentage/100.0)) AS Speakers " +
-                    "FROM countrylanguage cl JOIN country c ON cl.CountryCode = c.Code " +
-                    "WHERE cl.Language = ?";
-            try (PreparedStatement ps = db.con.prepareStatement(sql)) {
-                ps.setString(1, lang);
-                try (ResultSet rs = ps.executeQuery()) {
-                    if (rs.next()) {
-                        long speakers = Math.round(rs.getDouble("Speakers"));
-                        double pct = worldPop == 0 ? 0 : (speakers * 100.0 / worldPop);
-                        System.out.printf("%-10s %-20d %-10.2f%%%n", lang, speakers, pct);
-                    }
-                }
-            } catch (SQLException e) {
-                System.out.println("Error fetching language data for " + lang + ": " + e.getMessage());
+        String sql =
+                "SELECT cl.Language, " +
+                        "       SUM(c.Population * cl.Percentage / 100) AS Speakers " +
+                        "FROM countrylanguage cl " +
+                        "JOIN country c ON cl.CountryCode = c.Code " +
+                        "WHERE cl.Language IN ('Chinese', 'English', 'Hindi', 'Spanish', 'Arabic') " +
+                        "GROUP BY cl.Language " +
+                        "ORDER BY Speakers DESC";
+
+        try {
+            Statement stmt = db.getConnection().createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+
+            // First, get world population
+            long worldPop = getWorldPopulations();
+
+            System.out.printf("%-10s %-20s %-20s%n", "Language", "Speakers", "% of World Population");
+            while (rs.next()) {
+                String language = rs.getString("Language");
+                long speakers = rs.getLong("Speakers");
+                double percent = (speakers * 100.0) / worldPop;
+
+                System.out.printf("%-10s %-20d %-20.2f%n",
+                        language, speakers, percent);
             }
+            System.out.println();
+
+        } catch (SQLException e) {
+            System.out.println("Error: " + e.getMessage());
         }
     }
 
-    // -------------------------
-    // Additional Reports (28-31)
-    // -------------------------
+    // UC28: Country report
     public void getCountryReport() {
-        String sql = "SELECT c.Code, c.Name, c.Continent, c.Region, c.Population, ci.Name AS Capital " +
-                "FROM country c LEFT JOIN city ci ON c.Capital = ci.ID " +
-                "ORDER BY c.Population DESC";
-        try (PreparedStatement ps = db.con.prepareStatement(sql);
-             ResultSet rs = ps.executeQuery()) {
+        getAllCountries();
+    }
 
-            System.out.printf("%-8s %-35s %-15s %-25s %-15s %-30s%n",
-                    "Code", "Name", "Continent", "Region", "Population", "Capital");
+    // UC29: City report
+    public void getCityReport() {
+        getAllCities();
+    }
 
+    // UC30: Capital city report
+    public void getCapitalCityReport() {
+        getAllCapitalCities();
+    }
+    // Population report for each continent
+    public void getPopulationReportForContinent() {
+        String sql =
+                "SELECT c.Continent AS Name, " +
+                        "       SUM(c.Population) AS TotalPop, " +
+                        "       SUM(ci.Population) AS CityPop " +
+                        "FROM country c " +
+                        "LEFT JOIN city ci ON c.Code = ci.CountryCode " +
+                        "GROUP BY c.Continent ORDER BY TotalPop DESC";
+        runPopulationReport(sql, "Continent");
+    }
+
+    // Population report for each region
+    public void getPopulationReportForRegion() {
+        String sql =
+                "SELECT c.Region AS Name, " +
+                        "       SUM(c.Population) AS TotalPop, " +
+                        "       SUM(ci.Population) AS CityPop " +
+                        "FROM country c " +
+                        "LEFT JOIN city ci ON c.Code = ci.CountryCode " +
+                        "GROUP BY c.Region ORDER BY TotalPop DESC";
+        runPopulationReport(sql, "Region");
+    }
+
+    // Population report for each country
+    public void getPopulationReportForCountry() {
+        String sql =
+                "SELECT c.Name AS Name, " +
+                        "       c.Population AS TotalPop, " +
+                        "       SUM(ci.Population) AS CityPop " +
+                        "FROM country c " +
+                        "LEFT JOIN city ci ON c.Code = ci.CountryCode " +
+                        "GROUP BY c.Code, c.Name, c.Population " +
+                        "ORDER BY TotalPop DESC";
+        runPopulationReport(sql, "Country");
+    }
+
+    // ====================== HELPER METHODS ======================
+
+    private void runCountryQuery(String sql) {
+        try {
+            Statement stmt = db.getConnection().createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            System.out.printf("%-5s %-40s %-20s %-25s %-15s%n", "Code", "Name", "Continent", "Region", "Population");
             while (rs.next()) {
-                System.out.printf("%-8s %-35s %-15s %-25s %-15d %-30s%n",
+                System.out.printf("%-5s %-40s %-20s %-25s %-15d%n",
                         rs.getString("Code"),
                         rs.getString("Name"),
                         rs.getString("Continent"),
                         rs.getString("Region"),
-                        rs.getInt("Population"),
-                        rs.getString("Capital"));
+                        rs.getInt("Population"));
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Error: " + e.getMessage());
         }
     }
 
-    public void getCityReport() {
-        String sql = "SELECT ci.Name AS CityName, c.Name AS CountryName, ci.District, ci.Population " +
-                "FROM city ci JOIN country c ON ci.CountryCode = c.Code " +
-                "ORDER BY ci.Population DESC";
-        try (PreparedStatement ps = db.con.prepareStatement(sql);
-             ResultSet rs = ps.executeQuery()) {
-
-            System.out.printf("%-35s %-30s %-25s %-15s%n",
-                    "City", "Country", "District", "Population");
-
+    private void runCityQuery(String sql) {
+        try {
+            Statement stmt = db.getConnection().createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            System.out.printf("%-25s %-10s %-20s %-15s%n", "Name", "Country", "District", "Population");
             while (rs.next()) {
-                System.out.printf("%-35s %-30s %-25s %-15d%n",
-                        rs.getString("CityName"),
-                        rs.getString("CountryName"),
+                System.out.printf("%-25s %-10s %-20s %-15d%n",
+                        rs.getString("Name"),
+                        rs.getString("CountryCode"),
                         rs.getString("District"),
                         rs.getInt("Population"));
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Error: " + e.getMessage());
         }
     }
 
-    public void getCapitalCityReport() {
-        String sql = "SELECT ci.Name AS CapitalName, c.Name AS CountryName, ci.Population " +
-                "FROM country c JOIN city ci ON c.Capital = ci.ID " +
-                "ORDER BY ci.Population DESC";
-        try (PreparedStatement ps = db.con.prepareStatement(sql);
-             ResultSet rs = ps.executeQuery()) {
-
-            System.out.printf("%-35s %-30s %-15s%n",
-                    "Capital City", "Country", "Population");
-
+    private void runCapitalCityQuery(String sql) {
+        try {
+            Statement stmt = db.getConnection().createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            System.out.printf("%-25s %-30s %-15s%n", "Capital City", "Country", "Population");
             while (rs.next()) {
-                System.out.printf("%-35s %-30s %-15d%n",
-                        rs.getString("CapitalName"),
-                        rs.getString("CountryName"),
+                System.out.printf("%-25s %-30s %-15d%n",
+                        rs.getString("Name"),
+                        rs.getString("Country"),
                         rs.getInt("Population"));
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Error: " + e.getMessage());
         }
     }
 
-    // Population report for a single continent
-    // Population report for a single continent
-    public void getPopulationReportForContinent(String continent) {
-        long total = getPopulationOfContinent(continent);
-        long inCities = getCityPopulationForContinent(continent);
-        long notInCities = total - inCities;
-        double inPct = total == 0 ? 0 : (inCities * 100.0 / total);
-        double notPct = total == 0 ? 0 : (notInCities * 100.0 / total);
 
-        System.out.printf("%-20s %-15s %-25s %-25s%n", "Continent", "TotalPop", "CityPop (% of total)", "NonCityPop (% of total)");
-        System.out.printf("%-20s %-15d %-25s %-25s%n",
-                continent,
-                total,
-                inCities + " (" + String.format("%.2f", inPct) + "%)",
-                notInCities + " (" + String.format("%.2f", notPct) + "%)");
-    }
-
-    // -------------------------
-    // Helper methods for population calculations
-    // -------------------------
-
-    private long getCityPopulationForContinent(String continent) {
-        String sql = "SELECT SUM(ci.Population) AS CityPop " +
-                "FROM city ci JOIN country c ON ci.CountryCode = c.Code " +
-                "WHERE c.Continent = ?";
-        try (PreparedStatement ps = db.con.prepareStatement(sql)) {
-            ps.setString(1, continent);
-            try (ResultSet rs = ps.executeQuery()) {
-                if (rs.next()) return rs.getLong("CityPop");
+    private long getSinglePopulation(String sql) {
+        try {
+            Statement stmt = db.getConnection().createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            if (rs.next()) {
+                return rs.getLong("pop");
             }
         } catch (SQLException e) {
-            System.out.println("Error getting city population for continent: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
         }
         return 0;
     }
 
-    private long getCityPopulationForRegion(String region) {
-        String sql = "SELECT SUM(ci.Population) AS CityPop " +
-                "FROM city ci JOIN country c ON ci.CountryCode = c.Code " +
-                "WHERE c.Region = ?";
-        try (PreparedStatement ps = db.con.prepareStatement(sql)) {
-            ps.setString(1, region);
-            try (ResultSet rs = ps.executeQuery()) {
-                if (rs.next()) return rs.getLong("CityPop");
+    private void runPopulationSplitQuery(String sql, String type) {
+        try {
+            Statement stmt = db.getConnection().createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+
+            System.out.printf("%-20s %-15s %-15s %-15s%n", type, "Total", "City", "Non-City");
+            while (rs.next()) {
+                System.out.printf("%-20s %-15d %-15d %-15d%n",
+                        rs.getString("Name"),
+                        rs.getLong("TotalPop"),
+                        rs.getLong("CityPop"),
+                        rs.getLong("NonCityPop"));
+            }
+            System.out.println();
+        } catch (SQLException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+
+    public long getWorldPopulations() {
+        try {
+            Statement stmt = db.getConnection().createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT SUM(Population) AS WorldPop FROM country");
+            if (rs.next()) {
+                return rs.getLong("WorldPop");
             }
         } catch (SQLException e) {
-            System.out.println("Error getting city population for region: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
         }
         return 0;
     }
+    private void runPopulationReport(String sql, String type) {
+        try {
+            Statement stmt = db.getConnection().createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
 
-    private long getCityPopulationForCountry(String countryCode) {
-        String sql = "SELECT SUM(Population) AS CityPop FROM city WHERE CountryCode = ?";
-        try (PreparedStatement ps = db.con.prepareStatement(sql)) {
-            ps.setString(1, countryCode);
-            try (ResultSet rs = ps.executeQuery()) {
-                if (rs.next()) return rs.getLong("CityPop");
+            System.out.printf("%-20s %-15s %-20s %-20s %-20s %-20s%n",
+                    type, "TotalPop", "CityPop", "City %", "NonCityPop", "NonCity %");
+
+            while (rs.next()) {
+                String name = rs.getString("Name");
+                long total = rs.getLong("TotalPop");
+                long city = rs.getLong("CityPop");
+                long nonCity = total - city;
+
+                double cityPct = (total > 0) ? (city * 100.0 / total) : 0.0;
+                double nonCityPct = (total > 0) ? (nonCity * 100.0 / total) : 0.0;
+
+                System.out.printf("%-20s %-15d %-20d %-20.2f %-20d %-20.2f%n",
+                        name, total, city, cityPct, nonCity, nonCityPct);
             }
+            System.out.println();
+
         } catch (SQLException e) {
-            System.out.println("Error getting city population for country: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
         }
-        return 0;
-    }
-
-    // -------------------------
-    // Print helper methods
-    // -------------------------
-
-    private void printCountryReport(String sql, Object... params) {
-        try (PreparedStatement ps = db.con.prepareStatement(sql)) {
-            for (int i = 0; i < params.length; i++) {
-                ps.setObject(i + 1, params[i]);
-            }
-            try (ResultSet rs = ps.executeQuery()) {
-                System.out.printf("%-8s %-35s %-15s %-25s %-15s %-30s%n",
-                        "Code", "Name", "Continent", "Region", "Population", "Capital");
-                while (rs.next()) {
-                    System.out.printf("%-8s %-35s %-15s %-25s %-15d %-30s%n",
-                            rs.getString("Code"),
-                            rs.getString("Name"),
-                            rs.getString("Continent"),
-                            rs.getString("Region"),
-                            rs.getLong("Population"),
-                            rs.getString("CapitalName"));
-                }
-            }
-        } catch (SQLException e) {
-            System.out.println("Error fetching country report: " + e.getMessage());
-        }
-    }
-
-    private void printCountryReportWithLimit(String sql, Object... params) {
-        printCountryReport(sql, params);
-    }
-
-    private void printCityReport(String sql, Object... params) {
-        try (PreparedStatement ps = db.con.prepareStatement(sql)) {
-            for (int i = 0; i < params.length; i++) {
-                ps.setObject(i + 1, params[i]);
-            }
-            try (ResultSet rs = ps.executeQuery()) {
-                System.out.printf("%-5s %-35s %-25s %-30s %-15s%n",
-                        "ID", "City Name", "District", "Country", "Population");
-                while (rs.next()) {
-                    System.out.printf("%-5d %-35s %-25s %-30s %-15d%n",
-                            rs.getInt("ID"),
-                            rs.getString("CityName"),
-                            rs.getString("District"),
-                            rs.getString("CountryName"),
-                            rs.getLong("Population"));
-                }
-            }
-        } catch (SQLException e) {
-            System.out.println("Error fetching city report: " + e.getMessage());
-        }
-    }
-
-    private void printCityReportWithLimit(String sql, Object... params) {
-        printCityReport(sql, params);
-    }
-
-    private void printCapitalReport(String sql, Object... params) {
-        try (PreparedStatement ps = db.con.prepareStatement(sql)) {
-            for (int i = 0; i < params.length; i++) {
-                ps.setObject(i + 1, params[i]);
-            }
-            try (ResultSet rs = ps.executeQuery()) {
-                System.out.printf("%-35s %-30s %-15s%n",
-                        "Capital City", "Country", "Population");
-                while (rs.next()) {
-                    System.out.printf("%-35s %-30s %-15d%n",
-                            rs.getString("CapitalName"),
-                            rs.getString("CountryName"),
-                            rs.getLong("Population"));
-                }
-            }
-        } catch (SQLException e) {
-            System.out.println("Error fetching capital city report: " + e.getMessage());
-        }
-    }
-
-    private void printCapitalReportWithLimit(String sql, Object... params) {
-        printCapitalReport(sql, params);
     }
 }
-
-
-
-
