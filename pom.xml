@@ -31,7 +31,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.Group1DevopsCoursework.Main</mainClass>
+                            <mainClass>com.Group1DevopsCoursework.MainApp</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
