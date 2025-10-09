@@ -21,7 +21,7 @@ A Git workflow is a defined process that guides how developers collaborate, mana
 [![codecov](https://codecov.io/github/myo-papa-kyaw/Group1DevOpsCoursework/branch/master/graph/badge.svg?token=CRC7UAM7HH)](https://codecov.io/github/myo-papa-kyaw/Group1DevOpsCoursework)
 
 
-[![codecov](https://codecov.io/github/myo-papa-kyaw/Group1DevOpsCoursework/branch/master/graph/badge.svg?token=CRC7UAM7HH)](https://codecov.io/github/myo-papa-kyaw/Group1DevOpsCoursework)
+
 
 
 # Requirements Checklist
