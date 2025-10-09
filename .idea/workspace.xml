@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Update Dockerfiles">
-      <change afterPath="$PROJECT_DIR$/use-cases/Get All Countries By Continent.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/use-cases/Get All Countries By Region.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/use-cases/Get All Countries.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/use-cases/Top N Populated Countries in World.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/use-cases/wholesystem.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/use-cases/wholesystem_world.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
+    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Update main.yml and reports">
+      <change afterPath="$PROJECT_DIR$/Code_of_conduct.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/use-cases/world_population_system.drawio" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Database_Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Database_Connection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" afterDir="false" />
@@ -28,6 +24,8 @@
       <list>
         <option value="Class" />
         <option value="UML Use Case" />
+        <option value="editable-svg" />
+        <option value="xml" />
       </list>
     </option>
   </component>
@@ -53,7 +51,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/myo-papa-kyaw/Group1DevOpsCoursework&quot;,
-    &quot;accountId&quot;: &quot;43c9c637-0455-484b-8d3f-acb62e7e0893&quot;
+    &quot;accountId&quot;: &quot;20a9230c-13ea-4857-a2bc-c041d46035b4&quot;
   }
 }</component>
   <component name="KubernetesApiProvider">{
@@ -70,45 +68,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Database_Connection.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainApp.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Reports.executor&quot;: &quot;Run&quot;,
-    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Use Case&quot;,
-    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.world-db/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Group1DevopsCoursework [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Group1DevopsCoursework [package].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/thinzarphyowai&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/ENUni/DevOps/Group1DevopsCoursework&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;E:/ENUni/DevOps/Group1DevopsCoursework/src/main/java/com/Group1DevopsCoursework/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Database_Connection.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MainApp.executor": "Run",
+    "Application.Reports.executor": "Run",
+    "DefaultPlantUmlFileTemplate": "UML Use Case",
+    "Docker.Dockerfile.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "Docker.world-db/Dockerfile.executor": "Run",
+    "Maven.Group1DevopsCoursework [clean].executor": "Run",
+    "Maven.Group1DevopsCoursework [compile].executor": "Run",
+    "Maven.Group1DevopsCoursework [package].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "feature/thinzarphyowai",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/ENUni/DevOps/Group1DevopsCoursework",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "E:/ENUni/DevOps/Group1DevopsCoursework/src/main/java/com/Group1DevopsCoursework/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ENUni\DevOps\Group1DevopsCoursework" />
       <recent name="E:\ENUni\DevOps\Group1DevopsCoursework\use-cases" />
       <recent name="E:\ENUni\DevOps\Group1DevopsCoursework\src\main\java\com\Group1DevopsCoursework" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainApp">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
     <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.MainApp" />
       <module name="Group1DevopsCoursework" />
@@ -173,10 +173,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainApp" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Docker.world-db/Dockerfile" />
+        <item itemvalue="Application.MainApp" />
         <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="Docker.world-db/Dockerfile" />
         <item itemvalue="Application.Reports" />
       </list>
     </recent_temporary>
@@ -214,7 +214,13 @@
       <workItem from="1759242967911" duration="3821000" />
       <workItem from="1759291138740" duration="11250000" />
       <workItem from="1759327244052" duration="476000" />
-      <workItem from="1759327756338" duration="4222000" />
+      <workItem from="1759327756338" duration="7845000" />
+      <workItem from="1759376917737" duration="4329000" />
+      <workItem from="1759415758609" duration="2922000" />
+      <workItem from="1759479216682" duration="1579000" />
+      <workItem from="1759724682177" duration="11808000" />
+      <workItem from="1759915884535" duration="2645000" />
+      <workItem from="1759981768123" duration="8931000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - ThinzarPhyoWai">
       <option name="closed" value="true" />
@@ -272,7 +278,23 @@
       <option name="project" value="LOCAL" />
       <updated>1759061440192</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Update main.yml and reports">
+      <option name="closed" value="true" />
+      <created>1759332112371</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1759332112371</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Update main.yml and reports">
+      <option name="closed" value="true" />
+      <created>1759380007494</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1759380007494</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,17 +319,7 @@
     <MESSAGE value="Commiting Develop Build - ThinzarPhyoWai" />
     <MESSAGE value="Reports and other files - Thinzar Phyo Wai" />
     <MESSAGE value="Update Dockerfiles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Dockerfiles" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/MainApp.java</url>
-          <line>122</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Update main.yml and reports" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update main.yml and reports" />
   </component>
 </project>
