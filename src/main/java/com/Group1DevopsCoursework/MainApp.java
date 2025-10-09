@@ -49,7 +49,6 @@ public class MainApp {
         System.out.println("\n11. All cities in Maharashtra district (largest to smallest population):");
         reports.getCitiesByDistrict("Maharashtra");
 
-
         System.out.println("\n12. Top 10 populated cities in the world:");
         reports.getTopNCitiesInWorld(10);
 
