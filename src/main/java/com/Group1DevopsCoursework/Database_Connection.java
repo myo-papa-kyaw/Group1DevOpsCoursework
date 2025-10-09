@@ -1,7 +1,6 @@
 package com.Group1DevopsCoursework;
 
 import java.sql.*;
-import java.util.ArrayList;
 
 public class Database_Connection {
 
