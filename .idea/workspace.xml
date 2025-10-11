@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Commit to Master">
+    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Commit to My Own Branch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Individual_Contribution.md" beforeDir="false" afterPath="$PROJECT_DIR$/Individual_Contribution.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +26,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="myo-papa-kyaw &lt;40804635@live.napier.ac.uk&gt;" />
         <option value="Thinzar-Phyo-Wai &lt;40804632@live.napier.ac.uk&gt;" />
       </list>
     </option>
@@ -82,6 +84,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "feature/myopapakyaw",
+    "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "E:/ENUni/DevOps/Group1DevopsCoursework/use-cases",
     "node.js.detected.package.eslint": "true",
@@ -94,6 +97,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -218,6 +222,7 @@
       <workItem from="1759915884535" duration="2645000" />
       <workItem from="1759981768123" duration="13491000" />
       <workItem from="1760004549082" duration="10371000" />
+      <workItem from="1760194323122" duration="1091000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - ThinzarPhyoWai">
       <option name="closed" value="true" />
@@ -323,7 +328,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760007324349</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Commit to My Own Branch">
+      <option name="closed" value="true" />
+      <created>1760194555724</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1760194555724</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,6 +365,7 @@
     <MESSAGE value="Update reports" />
     <MESSAGE value="Update usecase" />
     <MESSAGE value="Update main class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update main class" />
+    <MESSAGE value="Commit to My Own Branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit to My Own Branch" />
   </component>
 </project>
