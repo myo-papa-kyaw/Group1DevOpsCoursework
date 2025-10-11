@@ -43,11 +43,11 @@ public class MainApp {
         System.out.println("\n9. All cities in Eastern Asia (largest to smallest population):");
         reports.getCitiesByRegion("Eastern Asia");
 
-        System.out.println("\n10. All cities in India (largest to smallest population):");
-        reports.getCitiesByCountry("India");
+        System.out.println("\n10. All cities in Japan (largest to smallest population):");
+        reports.getCitiesByCountry("Japan");
 
-        System.out.println("\n11. All cities in Maharashtra district (largest to smallest population):");
-        reports.getCitiesByDistrict("Maharashtra");
+        System.out.println("\n11. All cities in Tokyo district (largest to smallest population):");
+        reports.getCitiesByDistrict("Tokyo");
 
         System.out.println("\n12. Top 10 populated cities in the world:");
         reports.getTopNCitiesInWorld(10);
@@ -61,9 +61,8 @@ public class MainApp {
         System.out.println("\n15. Top 5 populated cities in Japan:");
         reports.getTopNCitiesInCountry("Japan", 5);
 
-        System.out.println("\n16. Top 5 populated cities in São Paulo district:");
-        reports.getTopNCitiesInDistrict("São Paulo", 5);
-
+        System.out.println("\n16. Top 5 populated cities in Tokyo district:");
+        reports.getTopNCitiesInDistrict("Tokyo", 5);
 
         // ================== CAPITAL CITY REPORTS ==================
         System.out.println("\n================== CAPITAL CITY REPORTS ==================\n");
@@ -107,15 +106,14 @@ public class MainApp {
         System.out.println("\n28. Population of Eastern Asia:");
         System.out.println(reports.getPopulationOfRegion("Eastern Asia"));
 
-        System.out.println("\n29. Population of Brazil:");
-        System.out.println(reports.getPopulationOfCountry("Brazil"));
+        System.out.println("\n29. Population of Japan:");
+        System.out.println(reports.getPopulationOfCountry("Japan"));
 
-        System.out.println("\n30. Population of São Paulo district:");
-        System.out.println(reports.getPopulationOfDistrict("São Paulo"));
+        System.out.println("\n30. Population of Tokyo district:");
+        System.out.println(reports.getPopulationOfDistrict("Tokyo"));
 
-        System.out.println("\n31. Population of São Paulo city:");
-        System.out.println(reports.getPopulationOfCity("São Paulo"));
-
+        System.out.println("\n31. Population of Tokyo city:");
+        System.out.println(reports.getPopulationOfCity("Tokyo"));
         // ================== LANGUAGE REPORTS ==================
         System.out.println("\n================== LANGUAGE REPORTS ==================\n");
 
