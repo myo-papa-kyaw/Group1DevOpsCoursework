@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Commit to My Own Branch">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Individual_Contribution.md" beforeDir="false" afterPath="$PROJECT_DIR$/Individual_Contribution.md" afterDir="false" />
+      <changelist_data name="myo-papa-kyaw" email="40804635@live.napier.ac.uk" automatic="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +82,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/myopapakyaw",
+    "git-widget-placeholder": "master",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "E:/ENUni/DevOps/Group1DevopsCoursework/use-cases",
