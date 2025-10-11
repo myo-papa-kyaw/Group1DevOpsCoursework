@@ -1,6 +1,6 @@
 # Code of Conduct & Team Ethics
 
-**Team:** `Group 1`
+**Team:** `Group 1`  
 
 ---
 
