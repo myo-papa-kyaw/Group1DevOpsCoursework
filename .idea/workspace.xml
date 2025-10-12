@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Adding the imgs" />
+    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Adding use-cases">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -331,7 +333,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760169868417</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Adding use-cases">
+      <option name="closed" value="true" />
+      <created>1760170244853</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1760170244853</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,6 +387,7 @@
     <MESSAGE value="Update README files" />
     <MESSAGE value="Update files" />
     <MESSAGE value="Adding the imgs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding the imgs" />
+    <MESSAGE value="Adding use-cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding use-cases" />
   </component>
 </project>
