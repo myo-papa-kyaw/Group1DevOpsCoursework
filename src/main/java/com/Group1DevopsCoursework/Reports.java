@@ -71,7 +71,7 @@ public class Reports {
      */
     public void getTopNCountriesInWorld(int n) {
         String query = """
-            SELECT country.Code, country.Name, country.Continent, 
+            SELECT country.Code, country.Name, country.Continent,
                    country.Region, country.Population, city.Name AS Capital
             FROM country
             LEFT JOIN city ON country.Capital = city.ID
@@ -86,7 +86,7 @@ public class Reports {
      */
     public void getTopNCountriesInContinent(String continent, int n) {
         String query = """
-            SELECT country.Code, country.Name, country.Continent, 
+            SELECT country.Code, country.Name, country.Continent,
                    country.Region, country.Population, city.Name AS Capital
             FROM country
             LEFT JOIN city ON country.Capital = city.ID
@@ -102,7 +102,7 @@ public class Reports {
      */
     public void getTopNCountriesInRegion(String region, int n) {
         String query = """
-            SELECT country.Code, country.Name, country.Continent, 
+            SELECT country.Code, country.Name, country.Continent,
                    country.Region, country.Population, city.Name AS Capital
             FROM country
             LEFT JOIN city ON country.Capital = city.ID
@@ -122,7 +122,7 @@ public class Reports {
      */
     public void getAllCitiesInWorld() {
         String query = """
-            SELECT city.Name AS CityName, country.Name AS CountryName, 
+            SELECT city.Name AS CityName, country.Name AS CountryName,
                    city.District, city.Population
             FROM city
             JOIN country ON city.CountryCode = country.Code
@@ -136,7 +136,7 @@ public class Reports {
      */
     public void getCitiesByContinent(String continent) {
         String query = """
-            SELECT city.Name AS CityName, country.Name AS CountryName, 
+            SELECT city.Name AS CityName, country.Name AS CountryName,
                    city.District, city.Population
             FROM city
             JOIN country ON city.CountryCode = country.Code
@@ -151,7 +151,7 @@ public class Reports {
      */
     public void getCitiesByRegion(String region) {
         String query = """
-            SELECT city.Name AS CityName, country.Name AS CountryName, 
+            SELECT city.Name AS CityName, country.Name AS CountryName,
                    city.District, city.Population
             FROM city
             JOIN country ON city.CountryCode = country.Code
@@ -166,7 +166,7 @@ public class Reports {
      */
     public void getCitiesByCountry(String country) {
         String query = """
-            SELECT city.Name AS CityName, country.Name AS CountryName, 
+            SELECT city.Name AS CityName, country.Name AS CountryName,
                    city.District, city.Population
             FROM city
             JOIN country ON city.CountryCode = country.Code
@@ -181,7 +181,7 @@ public class Reports {
      */
     public void getCitiesByDistrict(String district) {
         String query = """
-            SELECT city.Name AS CityName, country.Name AS CountryName, 
+            SELECT city.Name AS CityName, country.Name AS CountryName,
                    city.District, city.Population
             FROM city
             JOIN country ON city.CountryCode = country.Code
@@ -196,7 +196,7 @@ public class Reports {
      */
     public void getTopNCitiesInWorld(int n) {
         String query = """
-            SELECT city.Name AS CityName, country.Name AS CountryName, 
+            SELECT city.Name AS CityName, country.Name AS CountryName,
                    city.District, city.Population
             FROM city
             JOIN country ON city.CountryCode = country.Code
@@ -211,7 +211,7 @@ public class Reports {
      */
     public void getTopNCitiesInContinent(String continent, int n) {
         String query = """
-            SELECT city.Name AS CityName, country.Name AS CountryName, 
+            SELECT city.Name AS CityName, country.Name AS CountryName,
                    city.District, city.Population
             FROM city
             JOIN country ON city.CountryCode = country.Code
@@ -227,7 +227,7 @@ public class Reports {
      */
     public void getTopNCitiesInRegion(String region, int n) {
         String query = """
-            SELECT city.Name AS CityName, country.Name AS CountryName, 
+            SELECT city.Name AS CityName, country.Name AS CountryName,
                    city.District, city.Population
             FROM city
             JOIN country ON city.CountryCode = country.Code
@@ -243,7 +243,7 @@ public class Reports {
      */
     public void getTopNCitiesInCountry(String country, int n) {
         String query = """
-            SELECT city.Name AS CityName, country.Name AS CountryName, 
+            SELECT city.Name AS CityName, country.Name AS CountryName,
                    city.District, city.Population
             FROM city
             JOIN country ON city.CountryCode = country.Code
@@ -259,7 +259,7 @@ public class Reports {
      */
     public void getTopNCitiesInDistrict(String district, int n) {
         String query = """
-            SELECT city.Name AS CityName, country.Name AS CountryName, 
+            SELECT city.Name AS CityName, country.Name AS CountryName,
                    city.District, city.Population
             FROM city
             JOIN country ON city.CountryCode = country.Code
