@@ -1,81 +1,42 @@
 package com.Group1DevopsCoursework;
 
-import java.util.Scanner;
-
 public class MainApp {
     public static void main(String[] args) {
         Database_Connection db = new Database_Connection();
+
+        // Try connecting to the database
         db.connect();
 
+        if (db.con == null) {
+            System.err.println("Could not establish a database connection. Exiting...");
+            return;
+        }
+
         Reports reports = new Reports(db);
-        Scanner scanner = new Scanner(System.in);
+        int N = 10; // Fixed value for all Top N reports
 
-        while (true) {
-            System.out.println("\n===== REPORT MENU =====");
-            System.out.println("1. Population in cities vs non-cities by Continent");
-            System.out.println("2. Population in cities vs non-cities by Region");
-            System.out.println("3. Population in cities vs non-cities by Country");
-            System.out.println("4. Top N populated cities in the World");
-            System.out.println("5. Top N populated cities in a Continent");
-            System.out.println("6. Top N populated cities in a Region");
-            System.out.println("7. Top N populated cities in a Country");
-            System.out.println("8. Top N populated cities in a District");
-            System.out.println("0. Exit");
-            System.out.print("Choose a report: ");
+        System.out.println("\n========== AUTO REPORT RUN ==========");
+        System.out.println("All reports will use N = " + N + "\n");
 
-            int choice = -1;
-            try {
-                choice = Integer.parseInt(scanner.nextLine());
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid input. Please enter a number.");
-                continue;
-            }
+        try {
+            // Run all reports automatically
+            reports.getCityVsNonCityPopulationByContinent();
+            reports.getCityVsNonCityPopulationByRegion();
+            reports.getCityVsNonCityPopulationByCountry();
 
-            switch (choice) {
-                case 1 -> reports.getCityVsNonCityPopulationByContinent();
-                case 2 -> reports.getCityVsNonCityPopulationByRegion();
-                case 3 -> reports.getCityVsNonCityPopulationByCountry();
-                case 4 -> {
-                    System.out.print("Enter N: ");
-                    int n = Integer.parseInt(scanner.nextLine());
-                    reports.getTopNPopulatedCitiesWorld(n);
-                }
-                case 5 -> {
-                    System.out.print("Enter Continent: ");
-                    String continent = scanner.nextLine();
-                    System.out.print("Enter N: ");
-                    int n = Integer.parseInt(scanner.nextLine());
-                    reports.getTopNPopulatedCitiesContinent(continent, n);
-                }
-                case 6 -> {
-                    System.out.print("Enter Region: ");
-                    String region = scanner.nextLine();
-                    System.out.print("Enter N: ");
-                    int n = Integer.parseInt(scanner.nextLine());
-                    reports.getTopNPopulatedCitiesRegion(region, n);
-                }
-                case 7 -> {
-                    System.out.print("Enter Country: ");
-                    String country = scanner.nextLine();
-                    System.out.print("Enter N: ");
-                    int n = Integer.parseInt(scanner.nextLine());
-                    reports.getTopNPopulatedCitiesCountry(country, n);
-                }
-                case 8 -> {
-                    System.out.print("Enter District: ");
-                    String district = scanner.nextLine();
-                    System.out.print("Enter N: ");
-                    int n = Integer.parseInt(scanner.nextLine());
-                    reports.getTopNPopulatedCitiesDistrict(district, n);
-                }
-                case 0 -> {
-                    System.out.println("Exiting...");
-                    db.disconnect();
-                    scanner.close();
-                    return;
-                }
-                default -> System.out.println("Invalid choice. Try again.");
-            }
+            reports.getTopNPopulatedCitiesWorld(N);
+            reports.getTopNPopulatedCitiesContinent("Asia", N);
+            reports.getTopNPopulatedCitiesRegion("Western Europe", N);
+            reports.getTopNPopulatedCitiesCountry("United Kingdom", N);
+            reports.getTopNPopulatedCitiesDistrict("California", N);
+
+            System.out.println("\n All reports generated successfully.\n");
+
+        } catch (Exception e) {
+            System.err.println(" Error running reports: " + e.getMessage());
+        } finally {
+            db.disconnect();
+            System.out.println("Database connection closed.");
         }
     }
 }
