@@ -78,3 +78,4 @@ A Git workflow is a defined process that guides how developers collaborate, mana
 |---|-------------|-----|--------------------------------|
 | 32 | The number of people who speak Chinese, English, Hindi, Spanish, Arabic from greatest number to smallest, including the percentage of the world population. | Yes | ![Report 32](img/report32.png) |
 
+ 

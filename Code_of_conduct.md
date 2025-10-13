@@ -53,14 +53,13 @@ As a team member, I will:
 *   **Constructive Feedback:**
     *   Give feedback that is specific, actionable, and kind. Focus on the work, not the person.
     *   Receive feedback with an open mind, as an opportunity for growth. Do not take it personally.
-*   **Tool Usage:** We will use `[e.g., Slack for chat, Trello for tasks, Google Drive for files]` as our primary platforms to keep work organized and accessible.
+*   **Tool Usage:** We will use `GitHub` as our primary platform to keep work organized and accessible.
 
 ## 5. Unacceptable Behavior
 
 The following behaviors are considered unacceptable and will not be tolerated:
 
-*   Harassment, bullying, or intimidation of any kind.
-*   Discrimination based on race, gender, sexual orientation, religion, age, or any other personal characteristic.
+*   Bullying, or intimidation of any kind.
 *   Public or private humiliation of a team member.
 *   Malicious, disruptive, or obstructive behavior.
 *   Gossiping or spreading rumors about other team members.
