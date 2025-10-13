@@ -1,42 +1,126 @@
 package com.Group1DevopsCoursework;
 
 public class MainApp {
+
     public static void main(String[] args) {
-        Database_Connection db = new Database_Connection();
 
-        // Try connecting to the database
-        db.connect();
+        // Connect to the database
+        Database_Connection dbConnection = new Database_Connection();
+        dbConnection.connect();
 
-        if (db.con == null) {
-            System.err.println("Could not establish a database connection. Exiting...");
-            return;
-        }
+        Reports reports = new Reports(dbConnection);
 
-        Reports reports = new Reports(db);
-        int N = 10; // Fixed value for all Top N reports
+        // ================== COUNTRY REPORTS ==================
+        System.out.println("\n================== COUNTRY REPORTS ==================\n");
 
-        System.out.println("\n========== AUTO REPORT RUN ==========");
-        System.out.println("All reports will use N = " + N + "\n");
+        System.out.println("1. All countries in the world (largest to smallest population):");
+        reports.getAllCountriesInWorld();
 
-        try {
-            // Run all reports automatically
-            reports.getCityVsNonCityPopulationByContinent();
-            reports.getCityVsNonCityPopulationByRegion();
-            reports.getCityVsNonCityPopulationByCountry();
+        System.out.println("\n2. All countries in Asia (largest to smallest population):");
+        reports.getCountriesByContinent("Asia");
 
-            reports.getTopNPopulatedCitiesWorld(N);
-            reports.getTopNPopulatedCitiesContinent("Asia", N);
-            reports.getTopNPopulatedCitiesRegion("Western Europe", N);
-            reports.getTopNPopulatedCitiesCountry("United Kingdom", N);
-            reports.getTopNPopulatedCitiesDistrict("California", N);
+        System.out.println("\n3. All countries in Eastern Asia (largest to smallest population):");
+        reports.getCountriesByRegion("Eastern Asia");
 
-            System.out.println("\n All reports generated successfully.\n");
+        System.out.println("\n4. Top 10 populated countries in the world:");
+        reports.getTopNCountriesInWorld(10);
 
-        } catch (Exception e) {
-            System.err.println(" Error running reports: " + e.getMessage());
-        } finally {
-            db.disconnect();
-            System.out.println("Database connection closed.");
-        }
+        System.out.println("\n5. Top 5 populated countries in Asia:");
+        reports.getTopNCountriesInContinent("Asia", 5);
+
+        System.out.println("\n6. Top 5 populated countries in Eastern Asia:");
+        reports.getTopNCountriesInRegion("Eastern Asia", 5);
+
+        // ================== CITY REPORTS ==================
+        System.out.println("\n================== CITY REPORTS ==================\n");
+
+        System.out.println("7. All cities in the world (largest to smallest population):");
+        reports.getAllCitiesInWorld();
+
+        System.out.println("\n8. All cities in Asia (largest to smallest population):");
+        reports.getCitiesByContinent("Asia");
+
+        System.out.println("\n9. All cities in Eastern Asia (largest to smallest population):");
+        reports.getCitiesByRegion("Eastern Asia");
+
+        System.out.println("\n10. All cities in Japan (largest to smallest population):");
+        reports.getCitiesByCountry("Japan");
+
+        System.out.println("\n11. All cities in Tokyo district (largest to smallest population):");
+        reports.getCitiesByDistrict("Tokyo");
+
+        System.out.println("\n12. Top 10 populated cities in the world:");
+        reports.getTopNCitiesInWorld(10);
+
+        System.out.println("\n13. Top 5 populated cities in Asia:");
+        reports.getTopNCitiesInContinent("Asia", 5);
+
+        System.out.println("\n14. Top 5 populated cities in Eastern Asia:");
+        reports.getTopNCitiesInRegion("Eastern Asia", 5);
+
+        System.out.println("\n15. Top 5 populated cities in Japan:");
+        reports.getTopNCitiesInCountry("Japan", 5);
+
+        System.out.println("\n16. Top 5 populated cities in Tokyo district:");
+        reports.getTopNCitiesInDistrict("Tokyo", 5);
+
+        // ================== CAPITAL CITY REPORTS ==================
+        System.out.println("\n================== CAPITAL CITY REPORTS ==================\n");
+
+        System.out.println("17. All capital cities in the world (largest to smallest population):");
+        reports.getAllCapitalCitiesInWorld();
+
+        System.out.println("\n18. All capital cities in Asia (largest to smallest population):");
+        reports.getCapitalCitiesByContinent("Asia");
+
+        System.out.println("\n19. All capital cities in Eastern Asia (largest to smallest population):");
+        reports.getCapitalCitiesByRegion("Eastern Asia");
+
+        System.out.println("\n20. Top 10 populated capital cities in the world:");
+        reports.getTopNCapitalCitiesInWorld(10);
+
+        System.out.println("\n21. Top 5 populated capital cities in Asia:");
+        reports.getTopNCapitalCitiesInContinent("Asia", 5);
+
+        System.out.println("\n22. Top 5 populated capital cities in Eastern Asia:");
+        reports.getTopNCapitalCitiesInRegion("Eastern Asia", 5);
+
+        // ================== POPULATION REPORTS ==================
+        System.out.println("\n================== POPULATION REPORTS ==================\n");
+
+        System.out.println("23. Population by continent:");
+        reports.getPopulationByContinent();
+
+        System.out.println("\n24. Population by region:");
+        reports.getPopulationByRegion();
+
+        System.out.println("\n25. Population by country:");
+        reports.getPopulationByCountry();
+
+        System.out.println("\n26. Total population of the world:");
+        System.out.println(reports.getWorldPopulation());
+
+        System.out.println("\n27. Population of Asia:");
+        System.out.println(reports.getPopulationOfContinent("Asia"));
+
+        System.out.println("\n28. Population of Eastern Asia:");
+        System.out.println(reports.getPopulationOfRegion("Eastern Asia"));
+
+        System.out.println("\n29. Population of Japan:");
+        System.out.println(reports.getPopulationOfCountry("Japan"));
+
+        System.out.println("\n30. Population of Tokyo district:");
+        System.out.println(reports.getPopulationOfDistrict("Tokyo"));
+
+        System.out.println("\n31. Population of Tokyo city:");
+        System.out.println(reports.getPopulationOfCity("Tokyo"));
+        // ================== LANGUAGE REPORTS ==================
+        System.out.println("\n================== LANGUAGE REPORTS ==================\n");
+
+        System.out.println("32. Number of speakers of selected languages (Chinese, English, Hindi, Spanish, Arabic):");
+        reports.getLanguageSpeakersReport();
+
+        // Disconnect from the database
+        dbConnection.disconnect();
     }
 }
