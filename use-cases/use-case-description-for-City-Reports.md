@@ -28,10 +28,10 @@ Scheduled system execution of city reports.
 1. System automatically executes the city reports' module.
 2. For "All Cities in the World" report:
     - Retrieves all cities and populations from joining `city` and `countries` tables on `city.CountryCode = country.Code`
-     - Sorts by population descending
+    - Sorts by population descending
     - Outputs formatted report
 3. For "All Cities in Asia" report:
-    - Joins `city` and `country` tables on `city.CountryCode = country.Code` 
+    - Joins `city` and `country` tables on `city.CountryCode = country.Code`
     - Filters where continent = 'Asia'
     - Sorts by population descending
     - Outputs formatted report
