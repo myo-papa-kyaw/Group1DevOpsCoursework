@@ -53,7 +53,7 @@ As a team member, I will:
 *   **Constructive Feedback:**
     *   Give feedback that is specific, actionable, and kind. Focus on the work, not the person.
     *   Receive feedback with an open mind, as an opportunity for growth. Do not take it personally.
-*   **Tool Usage:** We will use `[e.g., Slack for chat, Trello for tasks, Google Drive for files]` as our primary platforms to keep work organized and accessible.
+*   **Tool Usage:** We will use `GitHub` as our primary platform to keep work organized and accessible.
 
 ## 5. Unacceptable Behavior
 
