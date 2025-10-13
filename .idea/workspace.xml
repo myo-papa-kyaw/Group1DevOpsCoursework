@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Adding Original Files">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Database_Connection.java" afterDir="false" />
+    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Adding commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/CountryLanguage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/CountryLanguage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/DatabaseConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/test_db" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,13 +26,14 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="sandaraung35 &lt;40794409@live.napier.ac.uk&gt;" />
         <option value="Swe-Zin-Ei &lt;40804631@live.napier.ac.uk&gt;" />
         <option value="Thinzar-Phyo-Wai &lt;40804632@live.napier.ac.uk&gt;" />
       </list>
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/myopapakyaw" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,7 +75,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/swezinei&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/sandaraung&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -96,7 +91,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MainApp">
     <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.MainApp" />
       <module name="Group1DevopsCoursework" />
@@ -246,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759047346917</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Adding commit">
+      <option name="closed" value="true" />
+      <created>1760341266667</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1760341266667</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +262,7 @@
     <MESSAGE value="Fourth Commit - ThinzarPhyoWai" />
     <MESSAGE value="Commiting Develop Build - ThinzarPhyoWai" />
     <MESSAGE value="Adding Original Files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Original Files" />
+    <MESSAGE value="Adding commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding commit" />
   </component>
 </project>
