@@ -4,42 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Commiting Develop Build">
-      <change afterPath="$PROJECT_DIR$/img/report1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report27.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report30.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/report9.png" afterDir="false" />
+    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Adding commit">
+      <change afterPath="$PROJECT_DIR$/use-cases/use-case-description-for-Capital-City-Reports.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/use-cases/use-case-description-for-City-Reports.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/use-cases/use-case-description-for-Country-Reports.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/use-cases/use-case-description-for-Language-Reports.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/use-cases/use-case-description-for-Overall-System-Reports.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/use-cases/use-case-description-for-Population-Reports.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/world-db/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code_of_conduct.md" beforeDir="false" afterPath="$PROJECT_DIR$/Code_of_conduct.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Database_Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Database_Connection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Group1DevopsCoursework/Main.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +48,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -74,12 +56,12 @@
     &quot;assignee&quot;: &quot;Thinzar-Phyo-Wai&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/myo-papa-kyaw/Group1DevOpsCoursework&quot;,
-    &quot;accountId&quot;: &quot;cef891b1-fd8b-4801-b4bb-739004f09db5&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/myo-papa-kyaw/Group1DevOpsCoursework",
+    "accountId": "8028d39c-19ca-4641-8271-a34c01368c54"
   }
-}</component>
+}]]></component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
@@ -91,40 +73,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Database_Connection.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.world-db/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Group1DevopsCoursework [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Group1DevopsCoursework [package].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/sandaraung&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Group1DevopsCoursework&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;E:/ENUni/DevOps/Group1DevopsCoursework/src/main/java/com/Group1DevopsCoursework/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Database_Connection.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MainApp.executor": "Run",
+    "Docker.Dockerfile.executor": "Run",
+    "Docker.docker-compose.yml.app: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.world-db: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "Docker.world-db/Dockerfile.executor": "Run",
+    "Maven.Group1DevopsCoursework [clean].executor": "Run",
+    "Maven.Group1DevopsCoursework [deploy].executor": "Run",
+    "Maven.Group1DevopsCoursework [package].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "feature/sandaraung",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Group1DevopsCoursework",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "E:/ENUni/DevOps/Group1DevopsCoursework/src/main/java/com/Group1DevopsCoursework/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.Main" />
+}]]></component>
+  <component name="RunManager">
+    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.MainApp" />
       <module name="Group1DevopsCoursework" />
       <extension name="coverage">
         <pattern>
@@ -156,9 +142,27 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yml.app: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
+          <option name="services">
+            <list>
+              <option value="app" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.world-db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="world-db" />
+            </list>
+          </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
         </settings>
       </deployment>
@@ -167,7 +171,6 @@
     <configuration name="world-db/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
-          <option name="contextFolderPath" value="$PROJECT_DIR$" />
           <option name="sourceFilePath" value="world-db/Dockerfile" />
         </settings>
       </deployment>
@@ -175,11 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Docker.world-db/Dockerfile" />
-        <item itemvalue="Docker.Dockerfile" />
-        <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="Application.MainApp" />
+        <item itemvalue="Docker.docker-compose.yml.world-db: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.app: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759138657488</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Adding commit">
+      <option name="closed" value="true" />
+      <created>1760202309652</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1760202309652</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +279,7 @@
     <MESSAGE value="Fourth Commit - ThinzarPhyoWai" />
     <MESSAGE value="Commiting Develop Build - ThinzarPhyoWai" />
     <MESSAGE value="Commiting Develop Build" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commiting Develop Build" />
+    <MESSAGE value="Adding commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding commit" />
   </component>
 </project>
