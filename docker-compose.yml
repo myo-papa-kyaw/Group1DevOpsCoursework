@@ -1,16 +1,16 @@
-#version: '3'
+version: '3'
 services:
+  # Application Dockerfile is in same folder which is .
   app:
     build: .
-    depends_on:
-      - world-db
 
   world-db:
-    build: ./world-db
+    build: world-db/.  # context is the folder where world.sql lives
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: example
       MYSQL_DATABASE: world
       MYSQL_ROOT_HOST: '%'
     ports:
-      - "33061:3306"
+      - "33060:3306"
+
