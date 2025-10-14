@@ -32,9 +32,9 @@ Scheduled execution of summary reports.
     - Outputs formatted table
 
 3. For "Population by region" report:
-   - System retrieves region names, total populations, city populations and percentages
-   - Calculates non-city populations and percentages
-   - Outputs formatted table
+    - System retrieves region names, total populations, city populations and percentages
+    - Calculates non-city populations and percentages
+    - Outputs formatted table
 
 4. For "Population by country" report:
     - System retrieves country names, total populations, city populations and percentages
