@@ -344,6 +344,10 @@ public class Reports {
         executeAndDisplayCapital(query, region, n);
     }
 
+
+    // ================== POPULATION REPORTS ==================
+
+
     /** Population report for each continent */
     public void getPopulationByContinent() {
         String query = """
