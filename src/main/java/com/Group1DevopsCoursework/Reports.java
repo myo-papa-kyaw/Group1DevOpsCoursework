@@ -269,6 +269,8 @@ public class Reports {
         """;
         executeAndDisplayCity(query, district, n);
     }
+
+
     // ==================== CAPITAL CITY REPORTS ====================
 
     /** All capital cities in the world organised by largest population to smallest */
@@ -344,6 +346,9 @@ public class Reports {
         executeAndDisplayCapital(query, region, n);
     }
 
+
+    // ================== POPULATION REPORTS ==================
+
     /** Population report for each continent */
     public void getPopulationByContinent() {
         String query = """
@@ -416,7 +421,9 @@ public class Reports {
         return getSinglePopulation("SELECT Population AS pop FROM city WHERE Name = '" + city + "'");
     }
 
+
     // ==================== LANGUAGE REPORTS ====================
+
     /**
      * Displays the number of speakers for selected languages and their percentage of the world population.
      */
