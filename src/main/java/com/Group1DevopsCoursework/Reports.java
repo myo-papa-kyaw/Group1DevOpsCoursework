@@ -1,3 +1,12 @@
+
+
+package com.Group1DevopsCoursework;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 /**
  * --------------------------------------------------------------
  * File: Reports.java
@@ -6,12 +15,6 @@
  * --------------------------------------------------------------
  */
 
-package com.Group1DevopsCoursework;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 public class Reports {
 

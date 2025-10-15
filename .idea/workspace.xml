@@ -4,20 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Reports by Aye Chan Maw">
+    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Merge in Develop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Individual_Contribution.md" beforeDir="false" afterPath="$PROJECT_DIR$/Individual_Contribution.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Database_Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Database_Connection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/use-cases/world_population_system.drawio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="develop" />
+  </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="myo-papa-kyaw &lt;40804635@live.napier.ac.uk&gt;" />
         <option value="aye-chan-maw04 &lt;40804623@live.napier.ac.uk&gt;" />
         <option value="Thinzar-Phyo-Wai &lt;40804632@live.napier.ac.uk&gt;" />
       </list>
@@ -38,7 +42,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/myo-papa-kyaw/Group1DevOpsCoursework&quot;,
-    &quot;accountId&quot;: &quot;38ff1126-2a34-450c-8a15-515a56855635&quot;
+    &quot;accountId&quot;: &quot;cef891b1-fd8b-4801-b4bb-739004f09db5&quot;
   }
 }</component>
   <component name="KubernetesApiProvider">{
@@ -69,6 +73,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "feature/myopapakyaw",
+    "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/ayechanmaw/ENU/DevOps/DevOps_Labs/Group1DevopsCoursework/src/main/java/com/Group1DevopsCoursework",
     "node.js.detected.package.eslint": "true",
@@ -81,6 +86,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
+    "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -165,8 +171,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
-        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-IU-252.25557.131" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
       </set>
     </attachedChunks>
   </component>
@@ -200,6 +206,7 @@
       <workItem from="1760339119540" duration="152000" />
       <workItem from="1760339283782" duration="227000" />
       <workItem from="1760339517746" duration="3016000" />
+      <workItem from="1760426275954" duration="151000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - ThinzarPhyoWai">
       <option name="closed" value="true" />
@@ -457,7 +464,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760342712538</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Merge in Develop">
+      <option name="closed" value="true" />
+      <created>1760415516274</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1760415516274</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Commit Updated files">
+      <option name="closed" value="true" />
+      <created>1760424621469</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1760424621469</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,7 +494,9 @@
     <MESSAGE value="Commiting Develop Build - ThinzarPhyoWai" />
     <MESSAGE value="Updating in develop - Aye Chan Maw" />
     <MESSAGE value="Reports by Aye Chan Maw" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reports by Aye Chan Maw" />
+    <MESSAGE value="Merge in Develop" />
+    <MESSAGE value="Commit Updated files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit Updated files" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

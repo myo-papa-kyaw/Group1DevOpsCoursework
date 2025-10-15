@@ -1,3 +1,10 @@
+
+package com.Group1DevopsCoursework;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 /**
  * --------------------------------------------------------------
  * File: Database_Connection.java
@@ -6,11 +13,6 @@
  * --------------------------------------------------------------
  */
 
-package com.Group1DevopsCoursework;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 
 public class Database_Connection {
 
