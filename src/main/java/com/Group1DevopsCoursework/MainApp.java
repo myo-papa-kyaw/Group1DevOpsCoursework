@@ -24,7 +24,7 @@ public class MainApp {
         System.out.println("\n================== COUNTRY REPORTS ==================\n");
 
         // 1. Display all countries in the world, ordered by population (descending)
-        System.out.println("1. All countries in world (largest to smallest population):");
+        System.out.println("1. All countries in the world (largest to smallest population):");
         reports.getAllCountriesInWorld();
 
         // 2. Display all countries in Asia, ordered by population (descending)
