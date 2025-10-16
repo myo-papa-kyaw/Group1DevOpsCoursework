@@ -4,9 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Update main File">
-      <change beforePath="$PROJECT_DIR$/Code_of_conduct.md" beforeDir="false" afterPath="$PROJECT_DIR$/Code_of_conduct.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Database_Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Database_Connection.java" afterDir="false" />
+    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Update main class">
+      <change afterPath="$PROJECT_DIR$/img/report1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report28.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report29.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report30.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report31.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/report9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/MainApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +50,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="UML Use Case" />
+        <option value="editable-svg" />
+        <option value="xml" />
       </list>
     </option>
   </component>
@@ -29,7 +64,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,7 +78,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/myo-papa-kyaw/Group1DevOpsCoursework&quot;,
-    &quot;accountId&quot;: &quot;d92d3430-746b-4d6d-94a4-4b2517126b47&quot;
+    &quot;accountId&quot;: &quot;20a9230c-13ea-4857-a2bc-c041d46035b4&quot;
   }
 }</component>
   <component name="KubernetesApiProvider">{
@@ -56,42 +91,56 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="335kScl4OsS4CQf9gjqVI9JUXTR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.Database_Connection.executor&quot;: &quot;Run&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.MainApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Reports.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Use Case&quot;,
     &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
     &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
     &quot;Docker.world-db/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Group1DevopsCoursework [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Group1DevopsCoursework [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Group1DevopsCoursework [compile].executor&quot;: &quot;Run&quot;,
     &quot;Maven.Group1DevopsCoursework [package].executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/eiphyusinnkyaing&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/thinzarphyowai&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/LENOVO/IdeaProjects/Group1DevopsCoursework&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/ENUni/DevOps/Group1DevopsCoursework/use-cases&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;E:/ENUni/DevOps/Group1DevopsCoursework/src/main/java/com/Group1DevopsCoursework/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.MainApp">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.Main" />
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ENUni\DevOps\Group1DevopsCoursework\use-cases" />
+      <recent name="E:\ENUni\DevOps\Group1DevopsCoursework" />
+      <recent name="E:\ENUni\DevOps\Group1DevopsCoursework\src\main\java\com\Group1DevopsCoursework" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.MainApp" />
       <module name="Group1DevopsCoursework" />
       <extension name="coverage">
         <pattern>
@@ -103,8 +152,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.MainApp" />
+    <configuration name="Reports" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.Reports" />
       <module name="Group1DevopsCoursework" />
       <extension name="coverage">
         <pattern>
@@ -154,18 +203,19 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainApp" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MainApp" />
         <item itemvalue="Docker.world-db/Dockerfile" />
+        <item itemvalue="Application.Reports" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
       </set>
     </attachedChunks>
   </component>
@@ -182,14 +232,26 @@
       <workItem from="1758684203508" duration="1247000" />
       <workItem from="1758700074528" duration="1432000" />
       <workItem from="1758857557603" duration="384000" />
-      <workItem from="1759243548813" duration="325000" />
-      <workItem from="1759244003123" duration="26013000" />
-      <workItem from="1759291149245" duration="5101000" />
-      <workItem from="1759378714892" duration="2211000" />
-      <workItem from="1759462537233" duration="4451000" />
-      <workItem from="1759469238277" duration="12929000" />
-      <workItem from="1759987593245" duration="26000" />
-      <workItem from="1759987636767" duration="9000" />
+      <workItem from="1758871354313" duration="1191000" />
+      <workItem from="1758895537096" duration="12257000" />
+      <workItem from="1758950016324" duration="8897000" />
+      <workItem from="1758972419267" duration="6714000" />
+      <workItem from="1758981810666" duration="2601000" />
+      <workItem from="1759052273971" duration="8650000" />
+      <workItem from="1759061368868" duration="289000" />
+      <workItem from="1759116893910" duration="16146000" />
+      <workItem from="1759220201612" duration="4597000" />
+      <workItem from="1759242967911" duration="3821000" />
+      <workItem from="1759291138740" duration="11250000" />
+      <workItem from="1759327244052" duration="476000" />
+      <workItem from="1759327756338" duration="7845000" />
+      <workItem from="1759376917737" duration="4329000" />
+      <workItem from="1759415758609" duration="2922000" />
+      <workItem from="1759479216682" duration="1579000" />
+      <workItem from="1759724682177" duration="11808000" />
+      <workItem from="1759915884535" duration="2645000" />
+      <workItem from="1759981768123" duration="13491000" />
+      <workItem from="1760004549082" duration="10371000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - ThinzarPhyoWai">
       <option name="closed" value="true" />
@@ -231,143 +293,71 @@
       <option name="project" value="LOCAL" />
       <updated>1758639195987</updated>
     </task>
-    <task id="LOCAL-00006" summary="Creating a Self-contained JAR - EPSK">
+    <task id="LOCAL-00006" summary="Reports and other files - Thinzar Phyo Wai">
       <option name="closed" value="true" />
-      <created>1759246336367</created>
+      <created>1759052733910</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1759246336367</updated>
+      <updated>1759052733910</updated>
     </task>
-    <task id="LOCAL-00007" summary="Dockerfile for Database Part">
+    <task id="LOCAL-00007" summary="Update Dockerfiles">
       <option name="closed" value="true" />
-      <created>1759251789148</created>
+      <created>1759061440192</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1759251789150</updated>
+      <updated>1759061440192</updated>
     </task>
-    <task id="LOCAL-00008" summary="Dockerfile for Database Part">
+    <task id="LOCAL-00008" summary="Update main.yml and reports">
       <option name="closed" value="true" />
-      <created>1759252829524</created>
+      <created>1759332112371</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1759252829524</updated>
+      <updated>1759332112371</updated>
     </task>
-    <task id="LOCAL-00009" summary="Update the connection process">
+    <task id="LOCAL-00009" summary="Update main.yml and reports">
       <option name="closed" value="true" />
-      <created>1759258627430</created>
+      <created>1759380007494</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1759258627430</updated>
+      <updated>1759380007494</updated>
     </task>
-    <task id="LOCAL-00010" summary="Update the connection process">
+    <task id="LOCAL-00010" summary="Update reports">
       <option name="closed" value="true" />
-      <created>1759258998125</created>
+      <created>1759993420515</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1759258998125</updated>
+      <updated>1759993420515</updated>
     </task>
-    <task id="LOCAL-00011" summary="Commit Reports">
+    <task id="LOCAL-00011" summary="Update usecase">
       <option name="closed" value="true" />
-      <created>1759295411181</created>
+      <created>1760000046500</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1759295411181</updated>
+      <updated>1760000046500</updated>
     </task>
-    <task id="LOCAL-00012" summary="Commit Reports and MainApp">
+    <task id="LOCAL-00012" summary="Update main class">
       <option name="closed" value="true" />
-      <created>1759296314258</created>
+      <created>1760006353764</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1759296314258</updated>
+      <updated>1760006353764</updated>
     </task>
-    <task id="LOCAL-00013" summary="Add GitHub Actions workflow">
+    <task id="LOCAL-00013" summary="Update main class">
       <option name="closed" value="true" />
-      <created>1759985082941</created>
+      <created>1760007324349</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1759985082942</updated>
+      <updated>1760007324349</updated>
     </task>
-    <task id="LOCAL-00014" summary="Add Code of Conduct">
-      <option name="closed" value="true" />
-      <created>1759987777622</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1759987777622</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Update README file">
-      <option name="closed" value="true" />
-      <created>1760164196438</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1760164196438</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Update README files">
-      <option name="closed" value="true" />
-      <created>1760165161238</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1760165161238</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Update files">
-      <option name="closed" value="true" />
-      <created>1760165760105</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1760165760105</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Adding the imgs">
-      <option name="closed" value="true" />
-      <created>1760169868417</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1760169868417</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Adding use-cases">
-      <option name="closed" value="true" />
-      <created>1760170244853</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1760170244853</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Adding use-case-descriptions">
-      <option name="closed" value="true" />
-      <created>1760293511763</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1760293511764</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Update main files">
-      <option name="closed" value="true" />
-      <created>1760332003002</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1760332003002</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Update main File">
-      <option name="closed" value="true" />
-      <created>1760332179514</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1760332179514</updated>
-    </task>
-    <option name="localTasksCounter" value="23" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,19 +368,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="feature/eiphyusinnkyaing" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -402,21 +380,12 @@
     <MESSAGE value="Third Commit - ThinzarPhyoWai" />
     <MESSAGE value="Fourth Commit - ThinzarPhyoWai" />
     <MESSAGE value="Commiting Develop Build - ThinzarPhyoWai" />
-    <MESSAGE value="Creating a Self-contained JAR - EPSK" />
-    <MESSAGE value="Dockerfile for Database Part" />
-    <MESSAGE value="Update the connection process" />
-    <MESSAGE value="Commit Reports" />
-    <MESSAGE value="Commit Reports and MainApp" />
-    <MESSAGE value="Add GitHub Actions workflow" />
-    <MESSAGE value="Add Code of Conduct" />
-    <MESSAGE value="Update README file" />
-    <MESSAGE value="Update README files" />
-    <MESSAGE value="Update files" />
-    <MESSAGE value="Adding the imgs" />
-    <MESSAGE value="Adding use-cases" />
-    <MESSAGE value="Adding use-case-descriptions" />
-    <MESSAGE value="Update main files" />
-    <MESSAGE value="Update main File" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update main File" />
+    <MESSAGE value="Reports and other files - Thinzar Phyo Wai" />
+    <MESSAGE value="Update Dockerfiles" />
+    <MESSAGE value="Update main.yml and reports" />
+    <MESSAGE value="Update reports" />
+    <MESSAGE value="Update usecase" />
+    <MESSAGE value="Update main class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update main class" />
   </component>
 </project>
