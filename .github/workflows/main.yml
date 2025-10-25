@@ -1,9 +1,6 @@
 name: A workflow for my Group1CourseWork App
 on: push
 
-permissions:
-  contents: write
-
 jobs:
   UnitTests:
     name: Unit Tests
