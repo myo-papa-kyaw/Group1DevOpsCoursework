@@ -48,7 +48,7 @@ jobs:
 
       - name: Integration Tests
         run: |
-          docker compose up -d db
+          docker compose up -d world-db
           mvn -Dtest=com.Group1DevopsCoursework.ReportsIntegrationTest test
 
       - name: Shutdown
