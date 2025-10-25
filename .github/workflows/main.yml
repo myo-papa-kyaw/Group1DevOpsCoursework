@@ -20,17 +20,16 @@ jobs:
           java-version: '23'
           distribution: 'adopt'
 
-      - name: Run Unit Tests with Coverage
-        run: |
-          mvn clean test -Dtest=com.Group1DevopsCoursework.ReportsUnitTest jacoco:report
+      - name: Unit Tests
+        run: mvn -Dtest=com.Group1DevopsCoursework.ReportsUnitTest test
 
-      - name: Upload Coverage to Codecov
+      - name: CodeCov
         uses: codecov/codecov-action@v5
         with:
-          files: target/site/jacoco/jacoco.xml
-          flags: unittests
+          # token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          directory: ./target/site/jacoco
+          flags: Unit Tests
           verbose: true
-          fail_ci_if_error: true
 
   IntegrationTests:
     name: Integration Tests
@@ -47,19 +46,21 @@ jobs:
           java-version: '23'
           distribution: 'adopt'
 
-      - name: Run Integration Tests with Coverage
+      - name: Integration Tests
         run: |
           docker compose up -d world-db
-          mvn test -Dtest=com.Group1DevopsCoursework.ReportsIntegrationTest jacoco:report
-          docker compose down
+          mvn -Dtest=com.Group1DevopsCoursework.ReportsIntegrationTest test
 
-      - name: Upload Coverage to Codecov
+      - name: Shutdown
+        run: docker compose down
+
+      - name: CodeCov
         uses: codecov/codecov-action@v5
         with:
-          files: target/site/jacoco/jacoco.xml
-          flags: integrationtests
+          # token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          directory: ./target/site/jacoco
+          flags: Integration Tests
           verbose: true
-          fail_ci_if_error: true
 
   build:
     name: Build Run in Docker and Deploy Release
