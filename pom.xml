@@ -53,7 +53,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.Group1DevopsCoursework.MainApp</mainClass>
+                            <mainClass>com.Group1DevopsCoursework.Reports</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
