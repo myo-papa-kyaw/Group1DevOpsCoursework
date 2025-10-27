@@ -2069,7 +2069,7 @@ public class Reports {
         if(args.length < 1){
             r.connect("localhost:33060", 0);
         }else{
-            r.connect("db:3306", 10000);
+            r.connect("world-db:3306", 1000);
         }
 
 
