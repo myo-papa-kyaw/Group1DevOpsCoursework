@@ -2,7 +2,7 @@
 
 ## Git Workflow
 
-A Git workflow is a defined process that guides how developers collaborate, manage code changes, and release stable versions of software.
+A Git workflow is a defined process that guides how developers collaborate, manage code changes, and release stable versions of software..
 
 ## License
 
