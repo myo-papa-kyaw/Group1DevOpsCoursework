@@ -5,17 +5,9 @@ import java.util.ArrayList;
 
 /**
  * Reports.java
- * Single-file implementation:
  *  - contains DB connect/disconnect
  *  - implements 32 report queries
  *  - contains print methods for results
- *  - contains simple model classes as static inner classes
- *
- * Usage:
- *  - compile: javac com/Group1DevopsCoursework/Reports.java
- *  - run:     java com.Group1DevopsCoursework.Reports
- *
- * NOTE: update DB credentials (user/password) and location if needed.
  */
 public class Reports {
 
@@ -61,7 +53,7 @@ public class Reports {
         if (con != null) {
             try {
                 con.close();
-//                System.out.println("🔌 Disconnected from database.");
+                System.out.println(" Disconnected from database.");
             } catch (Exception e) {
                 System.out.println("Error closing connection: " + e.getMessage());
             }
@@ -375,69 +367,101 @@ public class Reports {
         return 0L;
     }
 
-    public long getPopulationOfContinent(String continent) {
+    public Population getPopulationOfContinentWithName(String continent) {
+        Population p = new Population();
+        p.name = continent; // Set the name column
         String sql = "SELECT SUM(Population) AS pop FROM country WHERE Continent = ?;";
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setString(1, continent);
             try (ResultSet rs = pstmt.executeQuery()) {
-                if (rs.next()) return rs.getLong("pop");
+                if (rs.next()) {
+                    p.totalPopulation = rs.getLong("pop"); // Set the population
+                } else {
+                    p.totalPopulation = 0L;
+                }
             }
         } catch (SQLException e) {
             System.out.println("Error getting population of continent: " + e.getMessage());
+            p.totalPopulation = 0L;
         }
-        return 0L;
+        return p;
     }
 
-    public long getPopulationOfRegion(String region) {
+    public Population getPopulationOfRegionWithName(String region) {
+        Population p = new Population();
+        p.name = region;
         String sql = "SELECT SUM(Population) AS pop FROM country WHERE Region = ?;";
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setString(1, region);
             try (ResultSet rs = pstmt.executeQuery()) {
-                if (rs.next()) return rs.getLong("pop");
+                if (rs.next()) {
+                    p.totalPopulation = rs.getLong("pop");
+                } else {
+                    p.totalPopulation = 0L;
+                }
             }
         } catch (SQLException e) {
             System.out.println("Error getting population of region: " + e.getMessage());
+            p.totalPopulation = 0L;
         }
-        return 0L;
+        return p;
     }
-
-    public long getPopulationOfCountry(String countryName) {
+    public Population getPopulationOfCountryWithName(String country) {
+        Population p = new Population();
+        p.name = country;
         String sql = "SELECT Population AS pop FROM country WHERE Name = ? LIMIT 1;";
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
-            pstmt.setString(1, countryName);
+            pstmt.setString(1, country);
             try (ResultSet rs = pstmt.executeQuery()) {
-                if (rs.next()) return rs.getLong("pop");
+                if (rs.next()) {
+                    p.totalPopulation = rs.getLong("pop");
+                } else {
+                    p.totalPopulation = 0L;
+                }
             }
         } catch (SQLException e) {
             System.out.println("Error getting population of country: " + e.getMessage());
+            p.totalPopulation = 0L;
         }
-        return 0L;
+        return p;
     }
-
-    public long getPopulationOfDistrict(String district) {
+    public Population getPopulationOfDistrictWithName(String district) {
+        Population p = new Population();
+        p.name = district;
         String sql = "SELECT SUM(Population) AS pop FROM city WHERE District = ?;";
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setString(1, district);
             try (ResultSet rs = pstmt.executeQuery()) {
-                if (rs.next()) return rs.getLong("pop");
+                if (rs.next()) {
+                    p.totalPopulation = rs.getLong("pop");
+                } else {
+                    p.totalPopulation = 0L;
+                }
             }
         } catch (SQLException e) {
             System.out.println("Error getting population of district: " + e.getMessage());
+            p.totalPopulation = 0L;
         }
-        return 0L;
+        return p;
     }
-
-    public long getPopulationOfCity(String cityName) {
+    public Population getPopulationOfCityWithName(String city) {
+        Population p = new Population();
+        p.name = city;
         String sql = "SELECT Population AS pop FROM city WHERE Name = ? LIMIT 1;";
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
-            pstmt.setString(1, cityName);
+            pstmt.setString(1, city);
             try (ResultSet rs = pstmt.executeQuery()) {
-                if (rs.next()) return rs.getLong("pop");
+                if (rs.next()) {
+                    p.totalPopulation = rs.getLong("pop");
+                } else {
+                    p.totalPopulation = 0L;
+                }
             }
         } catch (SQLException e) {
             System.out.println("Error getting population of city: " + e.getMessage());
+            p.totalPopulation = 0L;
         }
-        return 0L;
+        return p;
     }
 
     // ----------------- LANGUAGE REPORT ---------------------
@@ -752,6 +776,7 @@ public class Reports {
         return list;
     }
 
+
     // ======================================================
     // ================ PRINT METHODS (already provided) ====
     // ======================================================
@@ -775,6 +800,8 @@ public class Reports {
             System.out.println(output);
         }
     }
+
+
 
     /**
      * Prints a list of City reports.
@@ -835,6 +862,11 @@ public class Reports {
             System.out.println(output);
         }
     }
+//    public void printSinglePopulation(Population p) {
+//        System.out.println(String.format("%-20s %-15s", "Name", "Population"));
+//        System.out.println(String.format("%-20s %-15d", p.name, p.totalPopulation));
+//    }
+
 
     /**
      * Prints a list of Language reports.
@@ -850,11 +882,54 @@ public class Reports {
         for (Language l : languages) {
             if (l == null)
                 continue;
-            String output = String.format("%-20s %-20d %-20.2f",
-                    l.language, l.speakers, l.percentage);
+
+            String output = String.format("%-20s %-20d %-20.2f%%", l.language, l.speakers, l.percentage);
             System.out.println(output);
+
+        }
+
+
+    }
+    public void addCountry(Country country) {
+        String sql = """
+        INSERT INTO country (Code, Name, Continent, Region, Population)
+        VALUES (?, ?, ?, ?, ?);
+        """;
+        try (PreparedStatement pstmt = con.prepareStatement(sql)) {
+            pstmt.setString(1, country.code);
+            pstmt.setString(2, country.name);
+            pstmt.setString(3, country.continent);
+            pstmt.setString(4, country.region);
+            pstmt.setInt(5, country.population);
+
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println("Error adding country: " + e.getMessage());
         }
     }
+
+    public Country getCountryByCode(String code) {
+        String sql = "SELECT Code, Name, Continent, Region, Population FROM country WHERE Code = ? LIMIT 1;";
+        Country country = null;
+        try (PreparedStatement pstmt = con.prepareStatement(sql)) {
+            pstmt.setString(1, code);
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next()) {
+                    country = new Country();
+                    country.code = rs.getString("Code");
+                    country.name = rs.getString("Name");
+                    country.continent = rs.getString("Continent");
+                    country.region = rs.getString("Region");
+                    country.population = rs.getInt("Population");
+
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println("Error getting country: " + e.getMessage());
+        }
+        return country;
+    }
+
     public static void main(String[] args) {
         Reports r = new Reports();
 
@@ -862,108 +937,132 @@ public class Reports {
         if(args.length < 1){
             r.connect("localhost:33060", 0);
         }else{
-            r.connect("world-db:3306", 1000);
+            r.connect("world-db:3306", 10000);
         }
 
 
         // ---------------- Countries ----------------
-        System.out.println("\n=== All countries in world (top by population) ===");
+        System.out.println("1. === All countries in world (top by population) ===");
         r.printCountries(r.getAllCountriesInWorld());
 
-        System.out.println("\n=== Countries in continent 'Asia' ===");
+        System.out.println("2. === Countries in continent 'Asia' ===");
         r.printCountries(r.getCountriesByContinent("Asia"));
 
-        System.out.println("\n=== Countries in region 'Eastern Europe' ===");
+        System.out.println("3. === Countries in region 'Eastern Europe' ===");
         r.printCountries(r.getCountriesByRegion("Eastern Europe"));
 
-        System.out.println("\n=== Top 5 countries in world ===");
+        System.out.println("4. === Top 5 countries in world ===");
         r.printCountries(r.getTopNCountriesInWorld(5));
 
-        System.out.println("\n=== Top 5 countries in continent 'Asia' ===");
+        System.out.println("5. === Top 5 countries in continent 'Asia' ===");
         r.printCountries(r.getTopNCountriesInContinent("Asia", 5));
 
-        System.out.println("\n=== Top 5 countries in region 'Southern Asia' ===");
+        System.out.println("6. === Top 5 countries in region 'Southern Asia' ===");
         r.printCountries(r.getTopNCountriesInRegion("Southern Asia", 5));
 
-        // ---------------- Cities ----------------
-        System.out.println("\n=== All cities in world (top by population) ===");
+// ---------------- Cities ----------------
+        System.out.println("7. === All cities in world (top by population) ===");
         r.printCities(r.getAllCitiesInWorld());
 
-        System.out.println("\n=== Cities in continent 'Asia' ===");
+        System.out.println("8. === Cities in continent 'Asia' ===");
         r.printCities(r.getCitiesByContinent("Asia"));
 
-        System.out.println("\n=== Cities in region 'Western Europe' ===");
+        System.out.println("9. === Cities in region 'Western Europe' ===");
         r.printCities(r.getCitiesByRegion("Western Europe"));
 
-        System.out.println("\n=== Cities in country 'China' ===");
+        System.out.println("10. === Cities in country 'China' ===");
         r.printCities(r.getCitiesByCountry("China"));
 
-        System.out.println("\n=== Cities in district 'California' ===");
+        System.out.println("11. === Cities in district 'California' ===");
         r.printCities(r.getCitiesByDistrict("California"));
 
-        System.out.println("\n=== Top 5 cities in world ===");
+        System.out.println("12. === Top 5 cities in world ===");
         r.printCities(r.getTopNCitiesInWorld(5));
 
-        System.out.println("\n=== Top 5 cities in continent 'Asia' ===");
+        System.out.println("13. === Top 5 cities in continent 'Asia' ===");
         r.printCities(r.getTopNCitiesInContinent("Asia", 5));
 
-        System.out.println("\n=== Top 5 cities in region 'Southern Asia' ===");
+        System.out.println("14. === Top 5 cities in region 'Southern Asia' ===");
         r.printCities(r.getTopNCitiesInRegion("Southern Asia", 5));
 
-        System.out.println("\n=== Top 5 cities in country 'India' ===");
+        System.out.println("15. === Top 5 cities in country 'India' ===");
         r.printCities(r.getTopNCitiesInCountry("India", 5));
 
-        System.out.println("\n=== Top 5 cities in district 'Maharashtra' ===");
+        System.out.println("16. === Top 5 cities in district 'Maharashtra' ===");
         r.printCities(r.getTopNCitiesInDistrict("Maharashtra", 5));
 
-        // ---------------- Capitals ----------------
-        System.out.println("\n=== All capital cities in world (top by population) ===");
+// ---------------- Capitals ----------------
+        System.out.println("17. === All capital cities in world (top by population) ===");
         r.printCapitals(r.getAllCapitalCitiesInWorld());
 
-        System.out.println("\n=== Capitals in continent 'Asia' ===");
+        System.out.println("18. === Capitals in continent 'Asia' ===");
         r.printCapitals(r.getCapitalCitiesByContinent("Asia"));
 
-        System.out.println("\n=== Capitals in region 'Northern Europe' ===");
+        System.out.println("19. === Capitals in region 'Northern Europe' ===");
         r.printCapitals(r.getCapitalCitiesByRegion("Northern Europe"));
 
-        System.out.println("\n=== Top 5 capital cities in world ===");
+        System.out.println("20. === Top 5 capital cities in world ===");
         r.printCapitals(r.getTopNCapitalCitiesInWorld(5));
 
-        System.out.println("\n=== Top 5 capital cities in continent 'Asia' ===");
+        System.out.println("21. === Top 5 capital cities in continent 'Asia' ===");
         r.printCapitals(r.getTopNCapitalCitiesInContinent("Asia", 5));
 
-        System.out.println("\n=== Top 5 capital cities in region 'Southern Europe' ===");
+        System.out.println("22. === Top 5 capital cities in region 'Southern Europe' ===");
         r.printCapitals(r.getTopNCapitalCitiesInRegion("Southern Europe", 5));
 
-        // ---------------- Populations ----------------
-        System.out.println("\n=== Population by Continent ===");
+// ---------------- Populations ----------------
+        System.out.println("23. === Population by Continent ===");
         r.printPopulations(r.getPopulationByContinent());
 
-        System.out.println("\n=== Population by Region ===");
+        System.out.println("24. === Population by Region ===");
         r.printPopulations(r.getPopulationByRegion());
 
-        System.out.println("\n=== Population by Country ===");
-        // printing top 20 countries by population (full list is large)
-        ArrayList<Population> popCountries = r.getPopulationByCountry();
-        if (popCountries.size() > 20) {
-            ArrayList<Population> top20 = new ArrayList<>(popCountries.subList(0, 20));
-            r.printPopulations(top20);
-        } else r.printPopulations(popCountries);
+        System.out.println("25. === Population by Country ===");
+//        ArrayList<Population> popCountries = r.getPopulationByCountry();
+//        if (popCountries.size() > 20) {
+//            ArrayList<Population> top20 = new ArrayList<>(popCountries.subList(0, 20));
+//            r.printPopulations(top20);
+//        } else r.printPopulations(popCountries);
+        r.printPopulations(r.getPopulationByCountry());
 
-        // single population access examples
-        System.out.println("\nWorld population: " + r.getWorldPopulation());
-        System.out.println("Population of continent Asia: " + r.getPopulationOfContinent("Asia"));
-        System.out.println("Population of region 'Eastern Asia': " + r.getPopulationOfRegion("Eastern Asia"));
-        System.out.println("Population of country 'China': " + r.getPopulationOfCountry("China"));
-        System.out.println("Population of district 'California': " + r.getPopulationOfDistrict("California"));
-        System.out.println("Population of city 'Shanghai': " + r.getPopulationOfCity("Shanghai"));
+// single population access examples
+        System.out.println("26. World population: " + r.getWorldPopulation());
+//
+        System.out.println("27. === Population of continent Asia ===");
+        Population asiaPop = r.getPopulationOfContinentWithName("Asia");
+        System.out.println(String.format("%-20s %-15s", "Continent", "Population"));
+        System.out.println(String.format("%-20s %-15d", asiaPop.name, asiaPop.totalPopulation));
 
-        // ---------------- Languages ----------------
-        System.out.println("\n=== Language report (speakers and % of world) ===");
+// 28. Region population
+        System.out.println("28. === Population of region Eastern Asia ===");
+        Population regionPop = r.getPopulationOfRegionWithName("Eastern Asia");
+        System.out.println(String.format("%-20s %-15s", "Region", "Population"));
+        System.out.println(String.format("%-20s %-15d", regionPop.name, regionPop.totalPopulation));
+
+// 29. Country population
+        System.out.println("29. === Population of country Brazil ===");
+        Population countryPop = r.getPopulationOfCountryWithName("Brazil");
+        System.out.println(String.format("%-20s %-15s", "Country", "Population"));
+        System.out.println(String.format("%-20s %-15d", countryPop.name, countryPop.totalPopulation));
+
+// 30. District population
+        System.out.println("30. === Population of district São Paulo ===");
+        Population districtPop = r.getPopulationOfDistrictWithName("São Paulo");
+        System.out.println(String.format("%-20s %-15s", "District", "Population"));
+        System.out.println(String.format("%-20s %-15d", districtPop.name, districtPop.totalPopulation));
+
+// 31. City population
+        System.out.println("31. === Population of city Shanghai ===");
+        Population cityPop = r.getPopulationOfCityWithName("Shanghai");
+        System.out.println(String.format("%-20s %-15s", "City", "Population"));
+        System.out.println(String.format("%-20s %-15d", cityPop.name, cityPop.totalPopulation));
+
+
+// ---------------- Languages ----------------
+        System.out.println("32. === Language report (speakers and % of world) ===");
         r.printLanguages(r.getLanguageReport());
 
         // disconnect
         r.disconnect();
     }
 }
-
