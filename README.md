@@ -19,7 +19,9 @@ versions of software.
 
 [![Releases](https://img.shields.io/github/release/myo-papa-kyaw/Group1DevopsCoursework/all.svg?style=flat-square)](https://github.com/myo-papa-kyaw/sem/releases)
 
-[![codecov](https://codecov.io/github/myo-papa-kyaw/Group1DevOpsCoursework/branch/master/graph/badge.svg?token=YLZQV1RFST)](https://codecov.io/gh/myo-papa-kyaw/Group1DevOpsCoursework)
+[//]: # ([![codecov]&#40;https://codecov.io/gh/myo-papa-kyaw/Group1DevOpsCoursework/branch/master/graph/badge.svg?token=YLZQV1RFST&#41;]&#40;https://codecov.io/gh/myo-papa-kyaw/Group1DevOpsCoursework&#41;)
+
+[![codecov](https://codecov.io/gh/myo-papa-kyaw/Group1DevOpsCoursework/graph/badge.svg?token=YLZQV1RFST)](https://codecov.io/gh/myo-papa-kyaw/Group1DevOpsCoursework)
 
 # Requirements Checklist
 
