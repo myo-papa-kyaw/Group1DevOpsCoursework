@@ -1,12 +1,5 @@
 name: A workflow for my Group1CourseWork App
-on:
-  push:
-    branches:
-      - master
-
-permissions:
-  contents: write
-
+on: push
 
 jobs:
   UnitTests:
