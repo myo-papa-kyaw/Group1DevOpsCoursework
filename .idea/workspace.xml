@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Adding Original Files">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Database_Connection.java" afterDir="false" />
+    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Changing test codes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/CountryLanguage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/CountryLanguage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/DatabaseConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsIntegrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +16,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -38,7 +33,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/myopapakyaw" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,7 +47,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/myo-papa-kyaw/Group1DevOpsCoursework&quot;,
-    &quot;accountId&quot;: &quot;cef891b1-fd8b-4801-b4bb-739004f09db5&quot;
+    &quot;accountId&quot;: &quot;38e609c2-f6c6-4699-9db0-b790af31433a&quot;
   }
 }</component>
   <component name="KubernetesApiProvider">{
@@ -62,43 +57,69 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="335kScl4OsS4CQf9gjqVI9JUXTR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Database_Connection.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.MainApp.executor": "Run",
-    "Docker.Dockerfile.executor": "Run",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "Docker.world-db/Dockerfile.executor": "Run",
-    "Maven.Group1DevopsCoursework [clean].executor": "Run",
-    "Maven.Group1DevopsCoursework [package].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/swezinei",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "E:/ENUni/DevOps/Group1DevopsCoursework/src/main/java/com/Group1DevopsCoursework/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Database_Connection.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Reports.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.world-db/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DatabaseConnectionDebugTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Group1DevopsCoursework in Group1DevopsCoursework.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsIntegrationTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsUnitTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsUnitTest.reportsNullConnectionTest.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.WorkingDatabaseReportsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.com.Group1DevopsCoursework in Group1DevopsCoursework.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.java in Group1DevopsCoursework.executor&quot;: &quot;Coverage&quot;,
+    &quot;Maven.Group1DevopsCoursework [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Group1DevopsCoursework [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Group1DevopsCoursework [test].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/swezinei&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;E:/ENUni/DevOps/Group1DevopsCoursework/src/main/java/com/Group1DevopsCoursework/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.MainApp">
-    <configuration name="Database_Connection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.Database_Connection" />
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.Group1DevopsCoursework" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.Group1DevopsCoursework" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ReportsIntegrationTest">
+    <configuration name="Reports" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.Reports" />
       <module name="Group1DevopsCoursework" />
       <extension name="coverage">
         <pattern>
@@ -110,8 +131,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.Main" />
+    <configuration name="Group1DevopsCoursework in Group1DevopsCoursework" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Group1DevopsCoursework" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReportsIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Group1DevopsCoursework" />
       <extension name="coverage">
         <pattern>
@@ -119,12 +147,15 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
+      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <dir value="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.MainApp" />
+    <configuration name="ReportsUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Group1DevopsCoursework" />
       <extension name="coverage">
         <pattern>
@@ -132,17 +163,20 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
+      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsUnitTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="sourceFilePath" value="Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
+    <configuration name="java in Group1DevopsCoursework" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Group1DevopsCoursework" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
@@ -156,22 +190,13 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="world-db/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="contextFolderPath" value="$PROJECT_DIR$" />
-          <option name="sourceFilePath" value="world-db/Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainApp" />
-        <item itemvalue="Docker.world-db/Dockerfile" />
-        <item itemvalue="Docker.Dockerfile" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Database_Connection" />
+        <item itemvalue="JUnit.ReportsIntegrationTest" />
+        <item itemvalue="JUnit.Group1DevopsCoursework in Group1DevopsCoursework" />
+        <item itemvalue="JUnit.java in Group1DevopsCoursework" />
+        <item itemvalue="JUnit.ReportsUnitTest" />
+        <item itemvalue="Application.Reports" />
       </list>
     </recent_temporary>
   </component>
@@ -198,6 +223,22 @@
       <workItem from="1758857557603" duration="384000" />
       <workItem from="1758860789792" duration="2832000" />
       <workItem from="1758864114959" duration="8095000" />
+      <workItem from="1760414966247" duration="5951000" />
+      <workItem from="1760448882638" duration="2769000" />
+      <workItem from="1760520458383" duration="1639000" />
+      <workItem from="1760587325718" duration="398000" />
+      <workItem from="1761020998026" duration="4045000" />
+      <workItem from="1761029602090" duration="2296000" />
+      <workItem from="1761031933999" duration="40000" />
+      <workItem from="1761104307923" duration="11507000" />
+      <workItem from="1761191913035" duration="4172000" />
+      <workItem from="1761291503892" duration="796000" />
+      <workItem from="1761318492826" duration="15728000" />
+      <workItem from="1761558171564" duration="785000" />
+      <workItem from="1761634848413" duration="7094000" />
+      <workItem from="1761704443265" duration="3096000" />
+      <workItem from="1761707895112" duration="9953000" />
+      <workItem from="1761749391708" duration="3265000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - ThinzarPhyoWai">
       <option name="closed" value="true" />
@@ -247,7 +288,159 @@
       <option name="project" value="LOCAL" />
       <updated>1759047346917</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Deleting useless java files">
+      <option name="closed" value="true" />
+      <created>1760340234516</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1760340234516</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Adding command lines">
+      <option name="closed" value="true" />
+      <created>1760421859457</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1760421859457</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Code Changes and adding new classes">
+      <option name="closed" value="true" />
+      <created>1761456049606</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1761456049606</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Changing docker-compose and pom">
+      <option name="closed" value="true" />
+      <created>1761456288760</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1761456288760</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Adding additional classes">
+      <option name="closed" value="true" />
+      <created>1761460617420</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1761460617420</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Changing pom file">
+      <option name="closed" value="true" />
+      <created>1761461623858</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1761461623858</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Changes in Docker and pom file">
+      <option name="closed" value="true" />
+      <created>1761537035639</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1761537035639</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Changes in Reports class">
+      <option name="closed" value="true" />
+      <created>1761537774046</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1761537774046</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Changes in Reports class">
+      <option name="closed" value="true" />
+      <created>1761538095194</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1761538095194</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Changes in Reports class">
+      <option name="closed" value="true" />
+      <created>1761540619680</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1761540619680</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Changes in Docker file">
+      <option name="closed" value="true" />
+      <created>1761540711324</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1761540711324</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Deleting unused files">
+      <option name="closed" value="true" />
+      <created>1761546038125</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1761546038125</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Adding testing files">
+      <option name="closed" value="true" />
+      <created>1761558410170</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1761558410170</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Adding docker file">
+      <option name="closed" value="true" />
+      <created>1761558693538</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1761558693538</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Testing test files">
+      <option name="closed" value="true" />
+      <created>1761634352653</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1761634352653</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Testing test files">
+      <option name="closed" value="true" />
+      <created>1761634512689</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1761634512689</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Setting false in surefire">
+      <option name="closed" value="true" />
+      <created>1761635976875</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1761635976875</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Setting true in surefire">
+      <option name="closed" value="true" />
+      <created>1761706288131</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1761706288131</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Changing test codes">
+      <option name="closed" value="true" />
+      <created>1761725067163</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1761725067163</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,6 +453,43 @@
     <MESSAGE value="Fourth Commit - ThinzarPhyoWai" />
     <MESSAGE value="Commiting Develop Build - ThinzarPhyoWai" />
     <MESSAGE value="Adding Original Files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Original Files" />
+    <MESSAGE value="Deleting useless java files" />
+    <MESSAGE value="Adding command lines" />
+    <MESSAGE value="Code Changes and adding new classes" />
+    <MESSAGE value="Changing docker-compose and pom" />
+    <MESSAGE value="Adding additional classes" />
+    <MESSAGE value="Changing pom file" />
+    <MESSAGE value="Changes in Docker and pom file" />
+    <MESSAGE value="Changes in Reports class" />
+    <MESSAGE value="Changes in Docker file" />
+    <MESSAGE value="Deleting unused files" />
+    <MESSAGE value="Adding testing files" />
+    <MESSAGE value="Adding docker file" />
+    <MESSAGE value="Testing test files" />
+    <MESSAGE value="Setting false in surefire" />
+    <MESSAGE value="Setting true in surefire" />
+    <MESSAGE value="Changing test codes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changing test codes" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="reportsNull" />
+        <watch expression="reportsNull" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest.ic" NAME="ReportsUnitTest Coverage Results" MODIFIED="1761721716573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$Group1DevopsCoursework_in_Group1DevopsCoursework.ic" NAME="Group1DevopsCoursework in Group1DevopsCoursework Coverage Results" MODIFIED="1761750443249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$com_Group1DevopsCoursework_in_Group1DevopsCoursework.ic" NAME="com.Group1DevopsCoursework in Group1DevopsCoursework Coverage Results" MODIFIED="1761193426319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$java_in_Group1DevopsCoursework.ic" NAME="java in Group1DevopsCoursework Coverage Results" MODIFIED="1761726029489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest.ic" NAME="ReportsIntegrationTest Coverage Results" MODIFIED="1761752398124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
   </component>
 </project>
