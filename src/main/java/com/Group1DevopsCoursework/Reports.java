@@ -34,7 +34,10 @@ public class Reports {
                 Thread.sleep(10000);
                 // Connect to database
                 //con = DriverManager.getConnection("jdbc:mysql://db:3306/employees?useSSL=false&allowPublicKeyRetrieval=true", "root", "example");
-                con = DriverManager.getConnection("jdbc:mysql://" + location + "/world?useSSL=false&allowPublicKeyRetrieval=true", "root", "example");
+                con = DriverManager.getConnection(
+                        "jdbc:mysql://" + location + "/world?useSSL=false&allowPublicKeyRetrieval=true",
+                        "root", "example"
+                );
                 System.out.println("Successfully connected");
                 break;
             } catch (SQLException sqle) {
@@ -1066,3 +1069,4 @@ public class Reports {
         r.disconnect();
     }
 }
+

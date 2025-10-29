@@ -4,6 +4,8 @@ import com.Group1DevopsCoursework.Reports;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ReportsIntegrationTest {
@@ -49,4 +51,51 @@ class ReportsIntegrationTest {
         assertNull(result.capital, "null");
         System.out.println("Added and retrieved country  " + result.name);
     }
+
+
+    @Test
+    void testDisconnect() {
+        reports.disconnect();
+        System.out.println("Disconnected from server testing complete.");
+    }
+    // -------------------- getCountriesByContinent() --------------------
+    @Test
+    void testGetCountriesByContinent_Null() {
+        System.out.println("\n--- TestNull: getCountriesByContinent ---");
+        String continent = null;
+
+        ArrayList<Country> result = reports.getCountriesByContinent(continent);
+
+        assertNotNull(result, "List should not be null even when continent is null");
+        System.out.println("Handled null continent safely");
+    }
+
+    @Test
+    void testGetCountriesByContinent_Empty() {
+        System.out.println("\n--- TestEmpty: getCountriesByContinent ---");
+        // Use a continent that does not exist in database
+        String continent = "ContinentXYZ";
+
+        ArrayList<Country> result = reports.getCountriesByContinent(continent);
+
+        assertTrue(result.isEmpty(), "List should be empty for unknown continent");
+        System.out.println("Handled empty result safely");
+    }
+
+    @Test
+    void testGetCountriesByContinent_WithValidContinent() {
+        System.out.println("\n--- TestValid: getCountriesByContinent ---");
+        String continent = "Asia";
+
+        ArrayList<Country> result = reports.getCountriesByContinent(continent);
+
+        assertNotNull(result, "Result list should not be null");
+        assertFalse(result.isEmpty(), "Asia should return country data");
+
+        for (Country c : result) {
+            assertEquals("Asia", c.continent, "Each returned country should belong to Asia");
+        }
+        reports.printCountries(result);
+    }
+
 }
