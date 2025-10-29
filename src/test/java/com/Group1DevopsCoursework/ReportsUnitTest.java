@@ -173,7 +173,6 @@ class ReportsUnitTest {
         reports.printLanguages(langs);
     }
 
-    // -------------------- 1. getAllCountriesInWorld() --------------------
     @Test
     void testGetAllCountriesInWorld_Null() {
         System.out.println("\n--- TestNull: getAllCountriesInWorld ---");
@@ -199,3 +198,4 @@ class ReportsUnitTest {
         System.out.println(" Handled list containing null safely");
     }
 }
+

@@ -7,6 +7,8 @@
     <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="update files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsUnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,13 +83,18 @@
     "Docker.world-db/Dockerfile.executor": "Run",
     "JUnit.ExecuteAndDisplay_IntegrationTest.executor": "Run",
     "JUnit.Group1DevopsCoursework in Group1DevopsCoursework.executor": "Coverage",
-    "JUnit.ReportsIntegrationTest.executor": "Run",
+    "JUnit.ReportsIntegrationTest.executor": "Coverage",
     "JUnit.ReportsIntegrationTest.testAddCountry.executor": "Coverage",
     "JUnit.ReportsIntegrationTest.testAddCountryWithoutCapital.executor": "Run",
     "JUnit.ReportsIntegrationTest.testDatabaseConnection.executor": "Run",
+    "JUnit.ReportsIntegrationTest.testDisconnect.executor": "Run",
+    "JUnit.ReportsIntegrationTest.testGetCountriesByContinent_Empty.executor": "Run",
+    "JUnit.ReportsIntegrationTest.testGetCountriesByContinent_Null.executor": "Run",
+    "JUnit.ReportsIntegrationTest.testGetCountriesByContinent_WithValidContinent.executor": "Run",
+    "JUnit.ReportsIntegrationTest.testMultipleConnectDisconnect.executor": "Run",
     "JUnit.ReportsTest.executor": "Run",
     "JUnit.ReportsUnitTest.executeAndDisplayCountry.executor": "Run",
-    "JUnit.ReportsUnitTest.executor": "Run",
+    "JUnit.ReportsUnitTest.executor": "Coverage",
     "JUnit.ReportsUnitTest.getCountriesByContinentTest.executor": "Run",
     "JUnit.ReportsUnitTest.printCapitalsEmpty.executor": "Run",
     "JUnit.ReportsUnitTest.printCities.executor": "Run",
@@ -135,6 +142,10 @@
     "JUnit.ReportsUnitTest.testPopulationOfCountry.executor": "Run",
     "JUnit.ReportsUnitTest.testPopulationOfDistrict.executor": "Run",
     "JUnit.ReportsUnitTest.testPopulationOfRegion.executor": "Run",
+    "JUnit.ReportsUnitTest.testRunPopulationAggregationQuery_Calculation.executor": "Run",
+    "JUnit.ReportsUnitTest.testRunPopulationAggregationQuery_ContainsNull.executor": "Run",
+    "JUnit.ReportsUnitTest.testRunPopulationAggregationQuery_Empty.executor": "Run",
+    "JUnit.ReportsUnitTest.testRunPopulationAggregationQuery_Null.executor": "Run",
     "JUnit.ReportsUnitTest.testWorldPopulation.executor": "Run",
     "JUnit.ReportsUnit_Test.executor": "Run",
     "JUnit.ReportsUnit_Test.testGetAllCountriesInWorld.executor": "Run",
@@ -181,8 +192,16 @@
       <recent name="com.Group1DevopsCoursework" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
-    <configuration name="ReportsUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ReportsIntegrationTest">
+    <configuration name="Group1DevopsCoursework in Group1DevopsCoursework" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Group1DevopsCoursework" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReportsIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Group1DevopsCoursework" />
       <extension name="coverage">
         <pattern>
@@ -191,13 +210,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsUnitTest" />
+      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsIntegrationTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReportsUnitTest.testGetTopNCountriesInContinent_Null" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReportsIntegrationTest.testGetCountriesByContinent_Empty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Group1DevopsCoursework" />
       <extension name="coverage">
         <pattern>
@@ -206,14 +225,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsUnitTest" />
-      <option name="METHOD_NAME" value="testGetTopNCountriesInContinent_Null" />
+      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsIntegrationTest" />
+      <option name="METHOD_NAME" value="testGetCountriesByContinent_Empty" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReportsUnitTest.testGetTopNCountriesInContinent_Print" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReportsIntegrationTest.testGetCountriesByContinent_Null" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Group1DevopsCoursework" />
       <extension name="coverage">
         <pattern>
@@ -222,14 +241,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsUnitTest" />
-      <option name="METHOD_NAME" value="testGetTopNCountriesInContinent_Print" />
+      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsIntegrationTest" />
+      <option name="METHOD_NAME" value="testGetCountriesByContinent_Null" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReportsUnitTest.testGetTopNCountriesInWorld_Print" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReportsIntegrationTest.testGetCountriesByContinent_WithValidContinent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Group1DevopsCoursework" />
       <extension name="coverage">
         <pattern>
@@ -238,8 +257,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsUnitTest" />
-      <option name="METHOD_NAME" value="testGetTopNCountriesInWorld_Print" />
+      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsIntegrationTest" />
+      <option name="METHOD_NAME" value="testGetCountriesByContinent_WithValidContinent" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -257,21 +276,13 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="JUnit.ReportsUnitTest" />
-        <item itemvalue="JUnit.ReportsUnitTest.testGetTopNCountriesInContinent_Print" />
-        <item itemvalue="JUnit.ReportsUnitTest.testGetTopNCountriesInContinent_Null" />
-        <item itemvalue="JUnit.ReportsUnitTest.testGetTopNCountriesInWorld_Print" />
+        <item itemvalue="JUnit.ReportsIntegrationTest" />
+        <item itemvalue="JUnit.ReportsIntegrationTest.testGetCountriesByContinent_WithValidContinent" />
+        <item itemvalue="JUnit.ReportsIntegrationTest.testGetCountriesByContinent_Empty" />
+        <item itemvalue="JUnit.ReportsIntegrationTest.testGetCountriesByContinent_Null" />
+        <item itemvalue="JUnit.Group1DevopsCoursework in Group1DevopsCoursework" />
       </list>
     </recent_temporary>
   </component>
@@ -344,7 +355,8 @@
       <workItem from="1761656311628" duration="2635000" />
       <workItem from="1761659001813" duration="9913000" />
       <workItem from="1761669228614" duration="980000" />
-      <workItem from="1761709025574" duration="2138000" />
+      <workItem from="1761709025574" duration="4514000" />
+      <workItem from="1761713583428" duration="4056000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - ThinzarPhyoWai">
       <option name="closed" value="true" />
@@ -650,7 +662,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761710441123</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="update files">
+      <option name="closed" value="true" />
+      <created>1761711236255</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1761711236255</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -695,7 +715,7 @@
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetLanguageReport_NotNull.ic" NAME="ReportsUnitTest.testGetLanguageReport_NotNull Coverage Results" MODIFIED="1761377338652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest.ic" NAME="ReportsUnitTest Coverage Results" MODIFIED="1761376063057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest.ic" NAME="ReportsUnitTest Coverage Results" MODIFIED="1761713445656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetLanguageReport_Print.ic" NAME="ReportsUnitTest.testGetLanguageReport_Print Coverage Results" MODIFIED="1761377260523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
@@ -713,11 +733,11 @@
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetLanguageReport_ContainsTargetLanguages.ic" NAME="ReportsUnitTest.testGetLanguageReport_ContainsTargetLanguages Coverage Results" MODIFIED="1761377428897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$Group1DevopsCoursework_in_Group1DevopsCoursework.ic" NAME="Group1DevopsCoursework in Group1DevopsCoursework Coverage Results" MODIFIED="1761537533123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$Group1DevopsCoursework_in_Group1DevopsCoursework.ic" NAME="Group1DevopsCoursework in Group1DevopsCoursework Coverage Results" MODIFIED="1761718693749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetCitiesByContinent_Empty.ic" NAME="ReportsUnitTest.testGetCitiesByContinent_Empty Coverage Results" MODIFIED="1761372298318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest.ic" NAME="ReportsIntegrationTest Coverage Results" MODIFIED="1761378608856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest.ic" NAME="ReportsIntegrationTest Coverage Results" MODIFIED="1761729227740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
   </component>
