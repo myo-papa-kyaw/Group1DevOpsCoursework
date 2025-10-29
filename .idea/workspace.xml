@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Update main File">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/CapitalCity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/City.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Country.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Language.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Population.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Database_Connection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/MainApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,10 +24,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="UML Use Case" />
         <option value="editable-svg" />
         <option value="xml" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -48,6 +56,9 @@
     &quot;accountId&quot;: &quot;20a9230c-13ea-4857-a2bc-c041d46035b4&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
@@ -94,7 +105,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "vcs.Git",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -105,7 +116,7 @@
       <recent name="E:\ENUni\DevOps\Group1DevopsCoursework\src\main\java\com\Group1DevopsCoursework" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainApp">
+  <component name="RunManager" selected="Application.Reports">
     <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.MainApp" />
       <module name="Group1DevopsCoursework" />
@@ -170,19 +181,18 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Reports" />
+        <item itemvalue="Application.MainApp" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Application.MainApp" />
         <item itemvalue="Docker.world-db/Dockerfile" />
-        <item itemvalue="Application.Reports" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
-        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
       </set>
     </attachedChunks>
   </component>
