@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Commit changes">
-      <changelist_data name="4" email="" automatic="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/CapitalCity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/City.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Country.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Language.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Population.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsIntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/MainApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" afterDir="false" />
-    </list>
+    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Testing and workflows commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,8 +20,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="4" />
         <option value="aye-chan-maw04 &lt;40804623@live.napier.ac.uk&gt;" />
+        <option value="4" />
         <option value="Thinzar-Phyo-Wai &lt;40804632@live.napier.ac.uk&gt;" />
       </list>
     </option>
@@ -228,7 +213,7 @@
       <workItem from="1760339517746" duration="3016000" />
       <workItem from="1760677882474" duration="11000" />
       <workItem from="1761712174836" duration="723000" />
-      <workItem from="1761768363291" duration="12306000" />
+      <workItem from="1761768363291" duration="12645000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - ThinzarPhyoWai">
       <option name="closed" value="true" />
@@ -486,7 +471,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760342712538</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Report updated">
+      <option name="closed" value="true" />
+      <created>1761800615387</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1761800615387</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Testing and workflows commit">
+      <option name="closed" value="true" />
+      <created>1761800761993</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1761800761993</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,7 +501,9 @@
     <MESSAGE value="Commiting Develop Build - ThinzarPhyoWai" />
     <MESSAGE value="Updating in develop - Aye Chan Maw" />
     <MESSAGE value="Reports by Aye Chan Maw" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reports by Aye Chan Maw" />
+    <MESSAGE value="Report updated" />
+    <MESSAGE value="Testing and workflows commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing and workflows commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
