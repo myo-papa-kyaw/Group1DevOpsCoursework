@@ -368,7 +368,7 @@ public class Reports {
             System.out.println("Error getting world population: " + e.getMessage());
         }
         return 0L;
-    }
+    } 
 
     public Population getPopulationOfContinentWithName(String continent) {
         Population p = new Population();
