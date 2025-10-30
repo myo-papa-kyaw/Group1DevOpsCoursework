@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Changing test codes">
+    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Adding integration test codes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsIntegrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +237,7 @@
       <workItem from="1761634848413" duration="7094000" />
       <workItem from="1761704443265" duration="3096000" />
       <workItem from="1761707895112" duration="9953000" />
-      <workItem from="1761749391708" duration="3265000" />
+      <workItem from="1761749391708" duration="3694000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - ThinzarPhyoWai">
       <option name="closed" value="true" />
@@ -440,7 +439,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761725067163</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Adding integration test codes">
+      <option name="closed" value="true" />
+      <created>1761752922039</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1761752922039</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,7 +476,8 @@
     <MESSAGE value="Setting false in surefire" />
     <MESSAGE value="Setting true in surefire" />
     <MESSAGE value="Changing test codes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changing test codes" />
+    <MESSAGE value="Adding integration test codes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding integration test codes" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
