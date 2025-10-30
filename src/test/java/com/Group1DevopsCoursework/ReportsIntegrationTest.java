@@ -313,7 +313,22 @@ class ReportsIntegrationTest {
         assertTrue(result.isEmpty(), "List should be empty for unknown district");
         System.out.println("Handled empty district safely");
     }
+    @Test
+    void testGetTopNCitiesInDistrict_Valid() {
+        System.out.println("\n--- TestValid: getTopNCitiesInDistrict ---");
+        String district = "Mendoza";
+        int n = 5;
 
+        ArrayList<City> result = reports.getTopNCitiesInDistrict(district, n);
+
+        assertNotNull(result, "Result list should not be null");
+        assertEquals(n, result.size(), "Should return top " + n + " cities in district");
+
+        for (City c : result) {
+            assertEquals(district, c.district, "Each city should belong to " + district);
+        }
+        reports.printCities(result);
+    }
 
 
     // ----------------- CAPITAL CITY REPORTS ----------------
@@ -503,7 +518,7 @@ class ReportsIntegrationTest {
 
         for (Population p : result) {
             assertNotNull(p.name, "Continent name should not be null");
-            System.out.println(p.name + " - Total: " + p.totalPopulation + ", CityPop: " + p.cityPopulation);
+            reports.printPopulations(result);
         }
     }
 
@@ -517,7 +532,7 @@ class ReportsIntegrationTest {
 
         for (Population p : result) {
             assertNotNull(p.name, "Region name should not be null");
-            System.out.println(p.name + " - Total: " + p.totalPopulation + ", CityPop: " + p.cityPopulation);
+            reports.printPopulations(result);
         }
     }
 
@@ -531,7 +546,7 @@ class ReportsIntegrationTest {
 
         for (Population p : result) {
             assertNotNull(p.name, "Country name should not be null");
-            System.out.println(p.name + " - Total: " + p.totalPopulation + ", CityPop: " + p.cityPopulation);
+            reports.printPopulations(result);
         }
     }
 

@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="update files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsIntegrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,6 +89,9 @@
     "JUnit.ReportsIntegrationTest.testGetCountriesByContinent_Empty.executor": "Run",
     "JUnit.ReportsIntegrationTest.testGetCountriesByContinent_Null.executor": "Run",
     "JUnit.ReportsIntegrationTest.testGetCountriesByContinent_WithValidContinent.executor": "Run",
+    "JUnit.ReportsIntegrationTest.testGetPopulationByContinent.executor": "Coverage",
+    "JUnit.ReportsIntegrationTest.testGetPopulationByRegion.executor": "Coverage",
+    "JUnit.ReportsIntegrationTest.testGetPopulationOfContinentWithName.executor": "Coverage",
     "JUnit.ReportsIntegrationTest.testGetTopNCitiesInDistrict_Valid.executor": "Coverage",
     "JUnit.ReportsIntegrationTest.testMultipleConnectDisconnect.executor": "Run",
     "JUnit.ReportsTest.executor": "Run",
@@ -192,7 +194,7 @@
       <recent name="com.Group1DevopsCoursework" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ReportsIntegrationTest.testGetTopNCitiesInDistrict_Valid">
+  <component name="RunManager" selected="JUnit.ReportsIntegrationTest.testGetPopulationOfContinentWithName">
     <configuration name="Group1DevopsCoursework in Group1DevopsCoursework" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Group1DevopsCoursework" />
       <option name="TEST_OBJECT" value="directory" />
@@ -201,7 +203,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReportsIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReportsIntegrationTest.testGetPopulationByContinent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Group1DevopsCoursework" />
       <extension name="coverage">
         <pattern>
@@ -211,28 +213,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
       <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsIntegrationTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReportsIntegrationTest.testGetCountriesByContinent_Empty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Group1DevopsCoursework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.Group1DevopsCoursework.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsIntegrationTest" />
-      <option name="METHOD_NAME" value="testGetCountriesByContinent_Empty" />
+      <option name="METHOD_NAME" value="testGetPopulationByContinent" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReportsIntegrationTest.testGetCountriesByContinent_WithValidContinent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReportsIntegrationTest.testGetPopulationByRegion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Group1DevopsCoursework" />
       <extension name="coverage">
         <pattern>
@@ -242,7 +229,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
       <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsIntegrationTest" />
-      <option name="METHOD_NAME" value="testGetCountriesByContinent_WithValidContinent" />
+      <option name="METHOD_NAME" value="testGetPopulationByRegion" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReportsIntegrationTest.testGetPopulationOfContinentWithName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Group1DevopsCoursework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Group1DevopsCoursework.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
+      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsIntegrationTest" />
+      <option name="METHOD_NAME" value="testGetPopulationOfContinentWithName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -278,11 +281,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ReportsIntegrationTest.testGetPopulationOfContinentWithName" />
+        <item itemvalue="JUnit.ReportsIntegrationTest.testGetPopulationByRegion" />
+        <item itemvalue="JUnit.ReportsIntegrationTest.testGetPopulationByContinent" />
         <item itemvalue="JUnit.ReportsIntegrationTest.testGetTopNCitiesInDistrict_Valid" />
         <item itemvalue="JUnit.Group1DevopsCoursework in Group1DevopsCoursework" />
-        <item itemvalue="JUnit.ReportsIntegrationTest" />
-        <item itemvalue="JUnit.ReportsIntegrationTest.testGetCountriesByContinent_WithValidContinent" />
-        <item itemvalue="JUnit.ReportsIntegrationTest.testGetCountriesByContinent_Empty" />
       </list>
     </recent_temporary>
   </component>
@@ -357,7 +360,7 @@
       <workItem from="1761669228614" duration="980000" />
       <workItem from="1761709025574" duration="4514000" />
       <workItem from="1761713583428" duration="6349000" />
-      <workItem from="1761795929816" duration="1836000" />
+      <workItem from="1761795929816" duration="4905000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - ThinzarPhyoWai">
       <option name="closed" value="true" />
@@ -687,7 +690,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761730737600</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="update files">
+      <option name="closed" value="true" />
+      <created>1761798036167</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1761798036168</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -723,7 +734,10 @@
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetAllCitiesInWorld_Print.ic" NAME="ReportsUnitTest.testGetAllCitiesInWorld_Print Coverage Results" MODIFIED="1761372184632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetTopNCitiesInDistrict_Valid.ic" NAME="ReportsIntegrationTest.testGetTopNCitiesInDistrict_Valid Coverage Results" MODIFIED="1761796696368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetPopulationByRegion.ic" NAME="ReportsIntegrationTest.testGetPopulationByRegion Coverage Results" MODIFIED="1761800892889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetTopNCitiesInDistrict_Valid.ic" NAME="ReportsIntegrationTest.testGetTopNCitiesInDistrict_Valid Coverage Results" MODIFIED="1761800283015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testAddCountry.ic" NAME="ReportsIntegrationTest.testAddCountry Coverage Results" MODIFIED="1761379828116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
@@ -735,7 +749,13 @@
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetLanguageReport_NotNull.ic" NAME="ReportsUnitTest.testGetLanguageReport_NotNull Coverage Results" MODIFIED="1761377338652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetPopulationOfContinentWithName.ic" NAME="ReportsIntegrationTest.testGetPopulationOfContinentWithName Coverage Results" MODIFIED="1761800944441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest.ic" NAME="ReportsUnitTest Coverage Results" MODIFIED="1761713445656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetPopulationByContinent.ic" NAME="ReportsIntegrationTest.testGetPopulationByContinent Coverage Results" MODIFIED="1761800747279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetLanguageReport_Print.ic" NAME="ReportsUnitTest.testGetLanguageReport_Print Coverage Results" MODIFIED="1761377260523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
