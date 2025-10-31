@@ -53,12 +53,6 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: version
-    attributes:
-      label: App or script version
-      placeholder: ex. v1.2.3
-
   - type: checkboxes
     id: terms
     attributes:
