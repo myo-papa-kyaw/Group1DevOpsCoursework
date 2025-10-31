@@ -24,7 +24,6 @@ If applicable, add screenshots or log output to help explain your problem.
 
 ### 🧠 System Information
 - OS: [e.g. Windows 11, Ubuntu 22.04]
-- App Version: [e.g. 1.2.3]
 - Python Version (if relevant): [e.g. 3.10]
 
 ### 📜 Additional Context
