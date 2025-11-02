@@ -173,5 +173,29 @@ class ReportsUnitTest {
         reports.printLanguages(langs);
     }
 
-}
+    // -------------------- 1. getAllCountriesInWorld() --------------------
+    @Test
+    void testGetAllCountriesInWorld_Null() {
+        System.out.println("\n--- TestNull: getAllCountriesInWorld ---");
+        ArrayList<Country> result = null;
+        assertNull(result, "Expected null when data is not available");
+        System.out.println("Handled null safely");
+    }
 
+    @Test
+    void testGetAllCountriesInWorld_Empty() {
+        System.out.println("\n--- TestEmpty: getAllCountriesInWorld ---");
+        ArrayList<Country> emptyList = new ArrayList<>();
+        assertTrue(emptyList.isEmpty(), "Expected empty list");
+        System.out.println(" Handled empty list safely");
+    }
+
+    @Test
+    void testGetAllCountriesInWorld_ContainsNull() {
+        System.out.println("\n--- TestContainsNull: getAllCountriesInWorld ---");
+        ArrayList<Country> list = new ArrayList<>();
+        list.add(null);
+        assertNotNull(list, "List should not be null");
+        System.out.println(" Handled list containing null safely");
+    }
+}

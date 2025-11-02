@@ -1,6 +1,6 @@
 # Code of Conduct & Team Ethics
 
-**Team:** `Group 1`  
+**Team:** `Group 1`
 
 ---
 
@@ -59,8 +59,7 @@ As a team member, I will:
 
 The following behaviors are considered unacceptable and will not be tolerated:
 
-*   Harassment, bullying, or intimidation of any kind.
-*   Discrimination based on race, gender, sexual orientation, religion, age, or any other personal characteristic.
+*   Bullying, or intimidation of any kind.
 *   Public or private humiliation of a team member.
 *   Malicious, disruptive, or obstructive behavior.
 *   Gossiping or spreading rumors about other team members.

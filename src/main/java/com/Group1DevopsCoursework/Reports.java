@@ -11,6 +11,7 @@ import java.util.ArrayList;
  */
 public class Reports {
 
+
     // Database connection
     private Connection con = null;
 
@@ -34,10 +35,7 @@ public class Reports {
                 Thread.sleep(10000);
                 // Connect to database
                 //con = DriverManager.getConnection("jdbc:mysql://db:3306/employees?useSSL=false&allowPublicKeyRetrieval=true", "root", "example");
-                con = DriverManager.getConnection(
-                        "jdbc:mysql://" + location + "/world?useSSL=false&allowPublicKeyRetrieval=true",
-                        "root", "example"
-                );
+                con = DriverManager.getConnection("jdbc:mysql://" + location + "/world?useSSL=false&allowPublicKeyRetrieval=true", "root", "example");
                 System.out.println("Successfully connected");
                 break;
             } catch (SQLException sqle) {
@@ -368,7 +366,7 @@ public class Reports {
             System.out.println("Error getting world population: " + e.getMessage());
         }
         return 0L;
-    } 
+    }
 
     public Population getPopulationOfContinentWithName(String continent) {
         Population p = new Population();
@@ -1069,4 +1067,3 @@ public class Reports {
         r.disconnect();
     }
 }
-
