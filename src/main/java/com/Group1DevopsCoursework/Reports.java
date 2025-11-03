@@ -15,6 +15,28 @@ public class Reports {
     private Connection con = null;
 
     /**
+     * Check if database connection is available and valid
+     */
+    private boolean isConnected() {
+        try {
+            return con != null && !con.isClosed();
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
+    /**
+     * Safe method to check connection before executing queries
+     */
+    private boolean checkConnection() {
+        if (!isConnected()) {
+            System.out.println("Database not connected - cannot execute query");
+            return false;
+        }
+        return true;
+    }
+
+    /**
      * Connect to the MySQL database.
      * @param location host:port (e.g. "localhost:3306")
      * @param delay milliseconds to wait before first attempt (can be 0)
