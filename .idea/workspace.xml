@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Changing pom.xml file">
+    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Update reports">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsIntegrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,8 +72,11 @@
     &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
     &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
     &quot;Docker.world-db/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CapitalCityTest.executor&quot;: &quot;Coverage&quot;,
     &quot;JUnit.DatabaseConnectionDebugTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Group1DevopsCoursework in Group1DevopsCoursework.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.Group1DevopsCoursework in Group1DevopsCoursework.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.ReportsConnectionTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsConnectionTest.testConnectWithInvalidLocation.executor&quot;: &quot;Coverage&quot;,
     &quot;JUnit.ReportsIntegrationTest.executor&quot;: &quot;Coverage&quot;,
     &quot;JUnit.ReportsIntegrationTest.testDriverLoadFails.executor&quot;: &quot;Coverage&quot;,
     &quot;JUnit.ReportsIntegrationTest.testDriverLoadsSuccessfully.executor&quot;: &quot;Coverage&quot;,
@@ -119,9 +121,8 @@
       <recent name="com.Group1DevopsCoursework" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Group1DevopsCoursework in Group1DevopsCoursework">
-    <configuration name="Reports" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.Reports" />
+  <component name="RunManager" selected="Docker.Dockerfile">
+    <configuration name="CapitalCityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Group1DevopsCoursework" />
       <extension name="coverage">
         <pattern>
@@ -129,6 +130,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
+      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.CapitalCityTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -141,7 +145,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReportsIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReportsConnectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Group1DevopsCoursework" />
       <extension name="coverage">
         <pattern>
@@ -150,14 +154,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsIntegrationTest" />
+      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsConnectionTest" />
       <option name="TEST_OBJECT" value="class" />
-      <dir value="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReportsIntegrationTest.testDriverLoadFails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReportsConnectionTest.testConnectWithInvalidLocation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Group1DevopsCoursework" />
       <extension name="coverage">
         <pattern>
@@ -166,28 +169,20 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsIntegrationTest" />
-      <option name="METHOD_NAME" value="testDriverLoadFails" />
+      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsConnectionTest" />
+      <option name="METHOD_NAME" value="testConnectWithInvalidLocation" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReportsIntegrationTest.testDriverLoadsSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Group1DevopsCoursework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.Group1DevopsCoursework.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsIntegrationTest" />
-      <option name="METHOD_NAME" value="testDriverLoadsSuccessfully" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
@@ -203,11 +198,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="JUnit.CapitalCityTest" />
+        <item itemvalue="JUnit.ReportsConnectionTest.testConnectWithInvalidLocation" />
+        <item itemvalue="JUnit.ReportsConnectionTest" />
         <item itemvalue="JUnit.Group1DevopsCoursework in Group1DevopsCoursework" />
-        <item itemvalue="JUnit.ReportsIntegrationTest.testDriverLoadFails" />
-        <item itemvalue="JUnit.ReportsIntegrationTest.testDriverLoadsSuccessfully" />
-        <item itemvalue="JUnit.ReportsIntegrationTest" />
-        <item itemvalue="Application.Reports" />
       </list>
     </recent_temporary>
   </component>
@@ -251,6 +246,10 @@
       <workItem from="1761707895112" duration="9953000" />
       <workItem from="1761749391708" duration="7418000" />
       <workItem from="1761875103277" duration="5217000" />
+      <workItem from="1761880429074" duration="7334000" />
+      <workItem from="1761897835441" duration="41000" />
+      <workItem from="1762174826031" duration="991000" />
+      <workItem from="1762308599748" duration="1309000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - ThinzarPhyoWai">
       <option name="closed" value="true" />
@@ -476,7 +475,47 @@
       <option name="project" value="LOCAL" />
       <updated>1761795831371</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Adding tests">
+      <option name="closed" value="true" />
+      <created>1761880663939</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1761880663939</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Adding tests">
+      <option name="closed" value="true" />
+      <created>1761880902537</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1761880902537</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Update pom">
+      <option name="closed" value="true" />
+      <created>1761882618954</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1761882618954</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Update Readme file">
+      <option name="closed" value="true" />
+      <created>1762174937908</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1762174937908</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Update reports">
+      <option name="closed" value="true" />
+      <created>1762175630089</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1762175630089</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,10 +533,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial Commit - ThinzarPhyoWai" />
-    <MESSAGE value="Second Commit - ThinzarPhyoWai" />
-    <MESSAGE value="Third Commit - ThinzarPhyoWai" />
-    <MESSAGE value="Fourth Commit - ThinzarPhyoWai" />
     <MESSAGE value="Commiting Develop Build - ThinzarPhyoWai" />
     <MESSAGE value="Adding Original Files" />
     <MESSAGE value="Deleting useless java files" />
@@ -519,9 +554,22 @@
     <MESSAGE value="Adding integration test codes" />
     <MESSAGE value="Changing false" />
     <MESSAGE value="Changing pom.xml file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changing pom.xml file" />
+    <MESSAGE value="Adding tests" />
+    <MESSAGE value="Update pom" />
+    <MESSAGE value="Update Readme file" />
+    <MESSAGE value="Update reports" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update reports" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java</url>
+          <line>535</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="reportsNull" />
@@ -533,8 +581,17 @@
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest.ic" NAME="ReportsUnitTest Coverage Results" MODIFIED="1761721716573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$Group1DevopsCoursework_in_Group1DevopsCoursework.ic" NAME="Group1DevopsCoursework in Group1DevopsCoursework Coverage Results" MODIFIED="1761879483347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$Group1DevopsCoursework_in_Group1DevopsCoursework.ic" NAME="Group1DevopsCoursework in Group1DevopsCoursework Coverage Results" MODIFIED="1761880531618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsConnectionTest.ic" NAME="ReportsConnectionTest Coverage Results" MODIFIED="1761882505321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testDriverLoadFails.ic" NAME="ReportsIntegrationTest.testDriverLoadFails Coverage Results" MODIFIED="1761879451599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$CapitalCityTest.ic" NAME="CapitalCityTest Coverage Results" MODIFIED="1761886300489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsConnectionTest_testConnectWithInvalidLocation.ic" NAME="ReportsConnectionTest.testConnectWithInvalidLocation Coverage Results" MODIFIED="1761885129108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testDriverLoadsSuccessfully.ic" NAME="ReportsIntegrationTest.testDriverLoadsSuccessfully Coverage Results" MODIFIED="1761879416503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">

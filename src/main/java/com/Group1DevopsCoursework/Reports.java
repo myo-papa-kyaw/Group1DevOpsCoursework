@@ -15,60 +15,57 @@ public class Reports {
     private Connection con = null;
 
     /**
-     * Check if database connection is available and valid
-     */
-    private boolean isConnected() {
-        try {
-            return con != null && !con.isClosed();
-        } catch (SQLException e) {
-            return false;
-        }
-    }
-
-    /**
-     * Safe method to check connection before executing queries
-     */
-    private boolean checkConnection() {
-        if (!isConnected()) {
-            System.out.println("Database not connected - cannot execute query");
-            return false;
-        }
-        return true;
-    }
-
-    /**
      * Connect to the MySQL database.
      * @param location host:port (e.g. "localhost:3306")
      * @param delay milliseconds to wait before first attempt (can be 0)
+     * @return true if connection successful, false otherwise
      */
-    public void connect(String location, int delay) {
+    public boolean connect(String location, int delay) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             System.out.println("Could not load SQL driver");
-            System.exit(-1);
+            return false; // Don't exit in tests!
         }
 
-        int retries = 15;
+        int retries = 5; // Reduced for tests
         for (int i = 0; i < retries; ++i) {
             System.out.println("Connecting to database...");
             try {
-                Thread.sleep(10000);
-                // Connect to database
-                //con = DriverManager.getConnection("jdbc:mysql://db:3306/employees?useSSL=false&allowPublicKeyRetrieval=true", "root", "example");
+                if (delay > 0 && i == 0) {
+                    Thread.sleep(delay); // Only sleep on first attempt if delay specified
+                }
+
                 con = DriverManager.getConnection(
                         "jdbc:mysql://" + location + "/world?useSSL=false&allowPublicKeyRetrieval=true",
                         "root", "example"
                 );
-                System.out.println("Successfully connected");
-                break;
+
+                // Test the connection
+                if (con != null && !con.isClosed()) {
+                    System.out.println("Successfully connected");
+                    return true;
+                }
             } catch (SQLException sqle) {
-                System.out.println("Failed to connect attempt " + Integer.toString(i));
-                System.out.println(sqle.getMessage());
+                System.out.println("Failed to connect attempt " + (i + 1) + ": " + sqle.getMessage());
             } catch (InterruptedException ie) {
-                System.out.println("Thread interrupted? Should not happen.");
+                System.out.println("Thread interrupted");
+                Thread.currentThread().interrupt();
+                return false;
+            }
+
+            // Wait before retry (shorter wait for tests)
+            if (i < retries - 1) {
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException ie) {
+                    Thread.currentThread().interrupt();
+                    return false;
+                }
             }
         }
+        System.out.println("Failed to connect after " + retries + " attempts");
+        return false;
     }
 
     /**
@@ -82,6 +79,22 @@ public class Reports {
             } catch (Exception e) {
                 System.out.println("Error closing connection: " + e.getMessage());
             }
+        }
+    }
+
+    /**
+     * Check if connection is valid and reconnect if necessary
+     */
+    private boolean ensureConnection() {
+        try {
+            if (con == null || con.isClosed()) {
+                System.out.println("Connection lost, attempting to reconnect...");
+                return connect("localhost:33060", 1000);
+            }
+            return true;
+        } catch (SQLException e) {
+            System.out.println("Error checking connection: " + e.getMessage());
+            return connect("localhost:33060", 1000);
         }
     }
 
@@ -382,6 +395,8 @@ public class Reports {
     // Single-population getters
 
     public long getWorldPopulation() {
+        if (!ensureConnection()) return 0L;
+
         String sql = "SELECT SUM(Population) AS worldPop FROM country;";
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
@@ -393,6 +408,13 @@ public class Reports {
     }
 
     public Population getPopulationOfContinentWithName(String continent) {
+        if (!ensureConnection()) {
+            Population p = new Population();
+            p.name = continent;
+            p.totalPopulation = 0L;
+            return p;
+        }
+
         Population p = new Population();
         p.name = continent; // Set the name column
         String sql = "SELECT SUM(Population) AS pop FROM country WHERE Continent = ?;";
@@ -413,6 +435,13 @@ public class Reports {
     }
 
     public Population getPopulationOfRegionWithName(String region) {
+        if (!ensureConnection()) {
+            Population p = new Population();
+            p.name = region;
+            p.totalPopulation = 0L;
+            return p;
+        }
+
         Population p = new Population();
         p.name = region;
         String sql = "SELECT SUM(Population) AS pop FROM country WHERE Region = ?;";
@@ -432,6 +461,13 @@ public class Reports {
         return p;
     }
     public Population getPopulationOfCountryWithName(String country) {
+        if (!ensureConnection()) {
+            Population p = new Population();
+            p.name = country;
+            p.totalPopulation = 0L;
+            return p;
+        }
+
         Population p = new Population();
         p.name = country;
         String sql = "SELECT Population AS pop FROM country WHERE Name = ? LIMIT 1;";
@@ -451,6 +487,13 @@ public class Reports {
         return p;
     }
     public Population getPopulationOfDistrictWithName(String district) {
+        if (!ensureConnection()) {
+            Population p = new Population();
+            p.name = district;
+            p.totalPopulation = 0L;
+            return p;
+        }
+
         Population p = new Population();
         p.name = district;
         String sql = "SELECT SUM(Population) AS pop FROM city WHERE District = ?;";
@@ -470,6 +513,13 @@ public class Reports {
         return p;
     }
     public Population getPopulationOfCityWithName(String city) {
+        if (!ensureConnection()) {
+            Population p = new Population();
+            p.name = city;
+            p.totalPopulation = 0L;
+            return p;
+        }
+
         Population p = new Population();
         p.name = city;
         String sql = "SELECT Population AS pop FROM city WHERE Name = ? LIMIT 1;";
@@ -496,6 +546,8 @@ public class Reports {
      * number of speakers and percentage of world.
      */
     public ArrayList<Language> getLanguageReport() {
+        if (!ensureConnection()) return new ArrayList<>();
+
         String sql = """
                 SELECT cl.Language AS language,
                        SUM( (c.Population * cl.Percentage) / 100.0 ) AS speakers
@@ -532,6 +584,8 @@ public class Reports {
 
     // country helpers
     private ArrayList<Country> runCountryQuery(String sql) {
+        if (!ensureConnection()) return new ArrayList<>();
+
         ArrayList<Country> list = new ArrayList<>();
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
@@ -553,6 +607,8 @@ public class Reports {
     }
 
     private ArrayList<Country> runCountryQueryWithString(String sql, String param) {
+        if (!ensureConnection()) return new ArrayList<>();
+
         ArrayList<Country> list = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setString(1, param);
@@ -575,6 +631,8 @@ public class Reports {
     }
 
     private ArrayList<Country> runCountryQueryWithInt(String sql, int n) {
+        if (!ensureConnection()) return new ArrayList<>();
+
         ArrayList<Country> list = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setInt(1, n);
@@ -597,6 +655,8 @@ public class Reports {
     }
 
     private ArrayList<Country> runCountryQueryWithStringAndInt(String sql, String s, int n) {
+        if (!ensureConnection()) return new ArrayList<>();
+
         ArrayList<Country> list = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setString(1, s);
@@ -621,6 +681,8 @@ public class Reports {
 
     // city helpers
     private ArrayList<City> runCityQuery(String sql) {
+        if (!ensureConnection()) return new ArrayList<>();
+
         ArrayList<City> list = new ArrayList<>();
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
@@ -639,6 +701,8 @@ public class Reports {
     }
 
     private ArrayList<City> runCityQueryWithString(String sql, String param) {
+        if (!ensureConnection()) return new ArrayList<>();
+
         ArrayList<City> list = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setString(1, param);
@@ -659,6 +723,8 @@ public class Reports {
     }
 
     private ArrayList<City> runCityQueryWithInt(String sql, int n) {
+        if (!ensureConnection()) return new ArrayList<>();
+
         ArrayList<City> list = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setInt(1, n);
@@ -679,6 +745,8 @@ public class Reports {
     }
 
     private ArrayList<City> runCityQueryWithStringAndInt(String sql, String s, int n) {
+        if (!ensureConnection()) return new ArrayList<>();
+
         ArrayList<City> list = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setString(1, s);
@@ -701,6 +769,8 @@ public class Reports {
 
     // capital helpers
     private ArrayList<CapitalCity> runCapitalQuery(String sql) {
+        if (!ensureConnection()) return new ArrayList<>();
+
         ArrayList<CapitalCity> list = new ArrayList<>();
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
@@ -718,6 +788,8 @@ public class Reports {
     }
 
     private ArrayList<CapitalCity> runCapitalQueryWithString(String sql, String param) {
+        if (!ensureConnection()) return new ArrayList<>();
+
         ArrayList<CapitalCity> list = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setString(1, param);
@@ -737,6 +809,8 @@ public class Reports {
     }
 
     private ArrayList<CapitalCity> runCapitalQueryWithInt(String sql, int n) {
+        if (!ensureConnection()) return new ArrayList<>();
+
         ArrayList<CapitalCity> list = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setInt(1, n);
@@ -756,6 +830,8 @@ public class Reports {
     }
 
     private ArrayList<CapitalCity> runCapitalQueryWithStringAndInt(String sql, String s, int n) {
+        if (!ensureConnection()) return new ArrayList<>();
+
         ArrayList<CapitalCity> list = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setString(1, s);
@@ -777,6 +853,8 @@ public class Reports {
 
     // population aggregation helper (handles continent/region/country query shapes)
     private ArrayList<Population> runPopulationAggregationQuery(String sql, String level) {
+        if (!ensureConnection()) return new ArrayList<>();
+
         ArrayList<Population> list = new ArrayList<>();
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
@@ -916,6 +994,8 @@ public class Reports {
 
     }
     public void addCountry(Country country) {
+        if (!ensureConnection()) return;
+
         String sql = """
         INSERT INTO country (Code, Name, Continent, Region, Population)
         VALUES (?, ?, ?, ?, ?);
@@ -934,6 +1014,8 @@ public class Reports {
     }
 
     public Country getCountryByCode(String code) {
+        if (!ensureConnection()) return null;
+
         String sql = "SELECT Code, Name, Continent, Region, Population FROM country WHERE Code = ? LIMIT 1;";
         Country country = null;
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
@@ -1091,4 +1173,3 @@ public class Reports {
         r.disconnect();
     }
 }
-
