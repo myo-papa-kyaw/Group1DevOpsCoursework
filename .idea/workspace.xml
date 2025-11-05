@@ -7,7 +7,6 @@
     <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Updated reports file">
       <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -366,30 +365,6 @@
       <workItem from="1762269315969" duration="6301000" />
       <workItem from="1762314183095" duration="3448000" />
       <workItem from="1762317890584" duration="1462000" />
-    </task>
-    <task id="LOCAL-00003" summary="Third Commit - ThinzarPhyoWai">
-      <option name="closed" value="true" />
-      <created>1758617345729</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1758617345729</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Fourth Commit - ThinzarPhyoWai">
-      <option name="closed" value="true" />
-      <created>1758638487372</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1758638487372</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Commiting Develop Build - ThinzarPhyoWai">
-      <option name="closed" value="true" />
-      <created>1758639195987</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1758639195987</updated>
     </task>
     <task id="LOCAL-00006" summary="Reports and other files - Thinzar Phyo Wai">
       <option name="closed" value="true" />
@@ -759,7 +734,31 @@
       <option name="project" value="LOCAL" />
       <updated>1762324053323</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Updated reports file">
+      <option name="closed" value="true" />
+      <created>1762334821578</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1762334821578</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Updated reports file">
+      <option name="closed" value="true" />
+      <created>1762335004757</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1762335004757</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Updated reports file">
+      <option name="closed" value="true" />
+      <created>1762335025122</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1762335025122</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
