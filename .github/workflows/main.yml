@@ -1,5 +1,8 @@
 name: A workflow for my Group1CourseWork App
-on: push
+on:
+  push:
+     branches:
+       - master
 
 permissions:
   contents: write
@@ -89,7 +92,6 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
-          branch: reports # The branch the action should deploy to.
           folder: reports # The folder we are copying
 
       - name: Create Release
