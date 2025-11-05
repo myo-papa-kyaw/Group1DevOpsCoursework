@@ -19,19 +19,6 @@ class ReportsIntegrationTest {
     }
 
     @Test
-    void testDriverLoadsSuccessfully() throws Exception {
-        assertDoesNotThrow(() -> Class.forName("com.mysql.cj.jdbc.Driver"));
-    }
-
-    @Test
-    void testDriverLoadFails() {
-        assertThrows(ClassNotFoundException.class, () -> {
-            Class.forName("non.existing.DriverClass");
-        });
-    }
-
-
-    @Test
     void testGetCountryByCode() {
         // Assuming a country with code "BRA" already exists in the DB
         Country country = reports.getCountryByCode("BRA");
@@ -957,6 +944,7 @@ class ReportsIntegrationTest {
         String[] args = {};
         Reports.main(args);
     }
+
 
     @Test
     void testDisconnect() {

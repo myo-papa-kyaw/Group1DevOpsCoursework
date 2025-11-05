@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Rechanges">
+    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Change pom">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsUnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,53 +66,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Database_Connection.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainApp.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Reports.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.world-db/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CapitalCityTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.DatabaseConnectionDebugTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Group1DevopsCoursework in Group1DevopsCoursework.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.ReportsConnectionTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.ReportsConnectionTest.testConnectWithInvalidLocation.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.ReportsIntegrationTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.ReportsIntegrationTest.testDriverLoadFails.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.ReportsIntegrationTest.testDriverLoadsSuccessfully.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.ReportsUnitTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.ReportsUnitTest.reportsNullConnectionTest.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.WorkingDatabaseReportsTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.com.Group1DevopsCoursework in Group1DevopsCoursework.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.java in Group1DevopsCoursework.executor&quot;: &quot;Coverage&quot;,
-    &quot;Maven.Group1DevopsCoursework [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Group1DevopsCoursework [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Group1DevopsCoursework [test].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/swezinei&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;E:/ENUni/DevOps/Group1DevopsCoursework/src/main/java/com/Group1DevopsCoursework/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Database_Connection.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MainApp.executor": "Run",
+    "Application.Reports.executor": "Coverage",
+    "Docker.Dockerfile.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "Docker.world-db/Dockerfile.executor": "Run",
+    "JUnit.CapitalCityTest.executor": "Coverage",
+    "JUnit.DatabaseConnectionDebugTest.executor": "Run",
+    "JUnit.Group1DevopsCoursework in Group1DevopsCoursework.executor": "Coverage",
+    "JUnit.ReportsConnectionTest.executor": "Coverage",
+    "JUnit.ReportsConnectionTest.testConnectWithInvalidLocation.executor": "Coverage",
+    "JUnit.ReportsIntegrationTest.executor": "Coverage",
+    "JUnit.ReportsIntegrationTest.testDriverLoadFails.executor": "Coverage",
+    "JUnit.ReportsIntegrationTest.testDriverLoadsSuccessfully.executor": "Coverage",
+    "JUnit.ReportsUnitTest.executor": "Coverage",
+    "JUnit.ReportsUnitTest.reportsNullConnectionTest.executor": "Debug",
+    "JUnit.WorkingDatabaseReportsTest.executor": "Run",
+    "JUnit.com.Group1DevopsCoursework in Group1DevopsCoursework.executor": "Coverage",
+    "JUnit.java in Group1DevopsCoursework.executor": "Coverage",
+    "Maven.Group1DevopsCoursework [clean].executor": "Run",
+    "Maven.Group1DevopsCoursework [package].executor": "Run",
+    "Maven.Group1DevopsCoursework [test].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "feature/swezinei",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "E:/ENUni/DevOps/Group1DevopsCoursework/src/main/java/com/Group1DevopsCoursework/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -123,7 +125,8 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.Group1DevopsCoursework in Group1DevopsCoursework">
-    <configuration name="CapitalCityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Reports" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.Reports" />
       <module name="Group1DevopsCoursework" />
       <extension name="coverage">
         <pattern>
@@ -131,9 +134,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.CapitalCityTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -185,10 +185,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.Group1DevopsCoursework in Group1DevopsCoursework" />
+        <item itemvalue="Application.Reports" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Docker.world-db/Dockerfile" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="JUnit.CapitalCityTest" />
       </list>
     </recent_temporary>
   </component>
@@ -236,7 +236,7 @@
       <workItem from="1761897835441" duration="41000" />
       <workItem from="1762174826031" duration="991000" />
       <workItem from="1762308599748" duration="1613000" />
-      <workItem from="1762321383145" duration="2183000" />
+      <workItem from="1762321383145" duration="8228000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - ThinzarPhyoWai">
       <option name="closed" value="true" />
@@ -518,7 +518,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762310945107</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Change Docker">
+      <option name="closed" value="true" />
+      <created>1762324422716</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1762324422716</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Change pom">
+      <option name="closed" value="true" />
+      <created>1762326658563</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1762326658563</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -536,8 +552,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Deleting useless java files" />
-    <MESSAGE value="Adding command lines" />
     <MESSAGE value="Code Changes and adding new classes" />
     <MESSAGE value="Changing docker-compose and pom" />
     <MESSAGE value="Adding additional classes" />
@@ -561,14 +575,16 @@
     <MESSAGE value="Update reports" />
     <MESSAGE value="Code Changes" />
     <MESSAGE value="Rechanges" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rechanges" />
+    <MESSAGE value="Change Docker" />
+    <MESSAGE value="Change pom" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change pom" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java</url>
-          <line>535</line>
+          <line>513</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -584,7 +600,7 @@
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest.ic" NAME="ReportsUnitTest Coverage Results" MODIFIED="1761721716573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$Group1DevopsCoursework_in_Group1DevopsCoursework.ic" NAME="Group1DevopsCoursework in Group1DevopsCoursework Coverage Results" MODIFIED="1762322817860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$Group1DevopsCoursework_in_Group1DevopsCoursework.ic" NAME="Group1DevopsCoursework in Group1DevopsCoursework Coverage Results" MODIFIED="1762330170499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsConnectionTest.ic" NAME="ReportsConnectionTest Coverage Results" MODIFIED="1761882505321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
@@ -605,6 +621,9 @@
     </SUITE>
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$java_in_Group1DevopsCoursework.ic" NAME="java in Group1DevopsCoursework Coverage Results" MODIFIED="1761726029489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest.ic" NAME="ReportsIntegrationTest Coverage Results" MODIFIED="1761878882097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$Reports.ic" NAME="Reports Coverage Results" MODIFIED="1762328231182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
   </component>
