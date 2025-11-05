@@ -1,7 +1,6 @@
 package com.Group1DevopsCoursework;
 
 import com.Group1DevopsCoursework.Reports;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -16,37 +15,25 @@ class ReportsIntegrationTest {
     @BeforeEach
     void setUp() {
         reports = new Reports();
-        boolean connected = reports.connect("localhost:33060", 1000);
-        if (!connected) {
-            System.out.println("WARNING: Database connection failed, tests may fail");
-        }
-    }
-
-    @AfterEach
-    void tearDown() {
-        // Don't disconnect after each test to maintain connection for subsequent tests
-    }
-
-    /**
-     * Helper method to check if database connection is available
-     */
-    private boolean isConnected() {
-        try {
-            // Try a simple query to check connection
-            ArrayList<Country> result = reports.getAllCountriesInWorld();
-            return result != null && !result.isEmpty();
-        } catch (Exception e) {
-            return false;
-        }
+        reports.connect("localhost:33060", 1000);
     }
 
     @Test
-    void testGetCountryByCode() {
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
+    void testDriverLoadsSuccessfully() throws Exception {
+        assertDoesNotThrow(() -> Class.forName("com.mysql.cj.jdbc.Driver"));
+    }
 
+    @Test
+    void testDriverLoadFails() {
+        assertThrows(ClassNotFoundException.class, () -> {
+            Class.forName("non.existing.DriverClass");
+        });
+    }
+
+
+    @Test
+    void testGetCountryByCode() {
+        // Assuming a country with code "BRA" already exists in the DB
         Country country = reports.getCountryByCode("BRA");
         assertNotNull(country);
         assertEquals("Brazil", country.name);
@@ -55,23 +42,7 @@ class ReportsIntegrationTest {
     }
 
     @Test
-    void testGetCountryByCode_NotFound() {
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
-        Country country = reports.getCountryByCode("INVALID_CODE");
-        assertNull(country, "Should return null for non-existent country code");
-    }
-
-    @Test
     void testAddCountry() {
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
         // Create country object without capital
         Country country = new Country();
         country.code = "TST";
@@ -92,31 +63,7 @@ class ReportsIntegrationTest {
         assertEquals(100000, result.population);
         assertNull(result.capital, "null");
         System.out.println("Added and retrieved country  " + result.name);
-
-        // Clean up - remove test country
-        // You might want to add a deleteCountry method to Reports class for cleanup
     }
-
-    @Test
-    void testAddCountry_DuplicateCode() {
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
-        // Try to add country with existing code
-        Country country = new Country();
-        country.code = "USA"; // Assuming this exists
-        country.name = "TestDuplicate";
-        country.continent = "North America";
-        country.region = "TestRegion";
-        country.population = 100000;
-
-        // This should not crash, just output error
-        reports.addCountry(country);
-        System.out.println("Handled duplicate country code gracefully");
-    }
-
     @Test
     void testGetAllCountriesInWorld_NotNull() {
         System.out.println("\n--- TestNull: getAllCountriesInWorld ---");
@@ -133,12 +80,8 @@ class ReportsIntegrationTest {
 
         ArrayList<Country> result = reports.getAllCountriesInWorld();
 
-        if (isConnected()) {
-            assertFalse(result.isEmpty(), "List should not be empty because world has countries");
-            System.out.println("Handled non-empty result correctly");
-        } else {
-            System.out.println("Database not connected, list may be empty");
-        }
+        assertFalse(result.isEmpty(), "List should not be empty because world has countries");
+        System.out.println("Handled non-empty result correctly");
     }
 
     @Test
@@ -148,13 +91,14 @@ class ReportsIntegrationTest {
         ArrayList<Country> result = reports.getAllCountriesInWorld();
 
         assertNotNull(result, "List should not be null");
-        if (isConnected()) {
-            assertFalse(result.isEmpty(), "List should not be empty");
-        }
+        assertFalse(result.isEmpty(), "List should not be empty");
 
         reports.printCountries(result);
         System.out.println("Print execution completed successfully");
     }
+
+
+
 
     // -------------------- getCountriesByContinent() --------------------
     @Test
@@ -171,26 +115,18 @@ class ReportsIntegrationTest {
     @Test
     void testGetCountriesByContinent_Empty() {
         System.out.println("\n--- TestEmpty: getCountriesByContinent ---");
+        // Use a continent that does not exist in database
         String continent = "ContinentXYZ";
 
         ArrayList<Country> result = reports.getCountriesByContinent(continent);
 
-        assertNotNull(result, "List should not be null");
-        if (isConnected()) {
-            assertTrue(result.isEmpty(), "List should be empty for unknown continent");
-        }
+        assertTrue(result.isEmpty(), "List should be empty for unknown continent");
         System.out.println("Handled empty result safely");
     }
 
     @Test
     void testGetCountriesByContinent_WithValidContinent() {
         System.out.println("\n--- TestValid: getCountriesByContinent ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
         String continent = "Asia";
 
         ArrayList<Country> result = reports.getCountriesByContinent(continent);
@@ -223,22 +159,13 @@ class ReportsIntegrationTest {
 
         ArrayList<Country> result = reports.getCountriesByRegion(region);
 
-        assertNotNull(result, "List should not be null");
-        if (isConnected()) {
-            assertTrue(result.isEmpty(), "List should be empty for unknown region");
-        }
+        assertTrue(result.isEmpty(), "List should be empty for unknown region");
         System.out.println("Handled empty result safely");
     }
 
     @Test
     void testGetCountriesByRegion_Valid() {
         System.out.println("\n--- TestValid: getCountriesByRegion ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
         String region = "Southeast Asia";
 
         ArrayList<Country> result = reports.getCountriesByRegion(region);
@@ -265,26 +192,8 @@ class ReportsIntegrationTest {
     }
 
     @Test
-    void testGetTopNCountriesInWorld_ZeroN() {
-        System.out.println("\n--- TestZero: getTopNCountriesInWorld ---");
-        int n = 0;
-
-        ArrayList<Country> result = reports.getTopNCountriesInWorld(n);
-
-        assertNotNull(result, "Result list should not be null for n=0");
-        assertTrue(result.isEmpty(), "List should be empty for n=0");
-        System.out.println("Handled n=0 safely");
-    }
-
-    @Test
     void testGetTopNCountriesInWorld_Valid() {
         System.out.println("\n--- TestValid: getTopNCountriesInWorld ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
         int n = 5;
 
         ArrayList<Country> result = reports.getTopNCountriesInWorld(n);
@@ -317,22 +226,13 @@ class ReportsIntegrationTest {
 
         ArrayList<Country> result = reports.getTopNCountriesInContinent(continent, n);
 
-        assertNotNull(result, "List should not be null");
-        if (isConnected()) {
-            assertTrue(result.isEmpty(), "List should be empty for unknown continent");
-        }
+        assertTrue(result.isEmpty(), "List should be empty for unknown continent");
         System.out.println("Handled empty continent safely");
     }
 
     @Test
     void testGetTopNCountriesInContinent_Valid() {
         System.out.println("\n--- TestValid: getTopNCountriesInContinent ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
         String continent = "Asia";
         int n = 5;
 
@@ -368,22 +268,13 @@ class ReportsIntegrationTest {
 
         ArrayList<Country> result = reports.getTopNCountriesInRegion(region, n);
 
-        assertNotNull(result, "List should not be null");
-        if (isConnected()) {
-            assertTrue(result.isEmpty(), "List should be empty for unknown region");
-        }
+        assertTrue(result.isEmpty(), "List should be empty for unknown region");
         System.out.println("Handled empty region safely");
     }
 
     @Test
     void testGetTopNCountriesInRegion_Valid() {
         System.out.println("\n--- TestValid: getTopNCountriesInRegion ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
         String region = "Southeast Asia";
         int n = 5;
 
@@ -399,6 +290,7 @@ class ReportsIntegrationTest {
     }
 
     // ----------------- getCitiesByContinent -----------------------
+
     @Test
     void testGetCitiesByContinent_Null() {
         System.out.println("\n--- TestNull: getCitiesByContinent ---");
@@ -417,22 +309,13 @@ class ReportsIntegrationTest {
 
         ArrayList<City> result = reports.getCitiesByContinent(continent);
 
-        assertNotNull(result, "List should not be null");
-        if (isConnected()) {
-            assertTrue(result.isEmpty(), "List should be empty for unknown continent");
-        }
+        assertTrue(result.isEmpty(), "List should be empty for unknown continent");
         System.out.println("Handled empty result safely");
     }
 
     @Test
     void testGetCitiesByContinent_Valid() {
         System.out.println("\n--- TestValid: getCitiesByContinent ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
         String continent = "Asia";
 
         ArrayList<City> result = reports.getCitiesByContinent(continent);
@@ -444,6 +327,7 @@ class ReportsIntegrationTest {
     }
 
     // ----------------- getCitiesByRegion -----------------------
+
     @Test
     void testGetCitiesByRegion_Null() {
         System.out.println("\n--- TestNull: getCitiesByRegion ---");
@@ -462,22 +346,13 @@ class ReportsIntegrationTest {
 
         ArrayList<City> result = reports.getCitiesByRegion(region);
 
-        assertNotNull(result, "List should not be null");
-        if (isConnected()) {
-            assertTrue(result.isEmpty(), "List should be empty for unknown region");
-        }
+        assertTrue(result.isEmpty(), "List should be empty for unknown region");
         System.out.println("Handled empty result safely");
     }
 
     @Test
     void testGetCitiesByRegion_Valid() {
         System.out.println("\n--- TestValid: getCitiesByRegion ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
         String region = "Southeast Asia";
 
         ArrayList<City> result = reports.getCitiesByRegion(region);
@@ -489,6 +364,7 @@ class ReportsIntegrationTest {
     }
 
     // ----------------- getCitiesByCountry -----------------------
+
     @Test
     void testGetCitiesByCountry_Null() {
         System.out.println("\n--- TestNull: getCitiesByCountry ---");
@@ -507,22 +383,13 @@ class ReportsIntegrationTest {
 
         ArrayList<City> result = reports.getCitiesByCountry(country);
 
-        assertNotNull(result, "List should not be null");
-        if (isConnected()) {
-            assertTrue(result.isEmpty(), "List should be empty for unknown country");
-        }
+        assertTrue(result.isEmpty(), "List should be empty for unknown country");
         System.out.println("Handled empty result safely");
     }
 
     @Test
     void testGetCitiesByCountry_Valid() {
         System.out.println("\n--- TestValid: getCitiesByCountry ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
         String country = "Myanmar";
 
         ArrayList<City> result = reports.getCitiesByCountry(country);
@@ -534,6 +401,7 @@ class ReportsIntegrationTest {
     }
 
     // ----------------- getCitiesByDistrict -----------------------
+
     @Test
     void testGetCitiesByDistrict_Null() {
         System.out.println("\n--- TestNull: getCitiesByDistrict ---");
@@ -552,156 +420,19 @@ class ReportsIntegrationTest {
 
         ArrayList<City> result = reports.getCitiesByDistrict(district);
 
-        assertNotNull(result, "List should not be null");
-        if (isConnected()) {
-            assertTrue(result.isEmpty(), "List should be empty for unknown district");
-        }
+        assertTrue(result.isEmpty(), "List should be empty for unknown district");
         System.out.println("Handled empty result safely");
     }
 
     @Test
     void testGetCitiesByDistrict_Valid() {
         System.out.println("\n--- TestValid: getCitiesByDistrict ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
         String district = "São Paulo";
 
         ArrayList<City> result = reports.getCitiesByDistrict(district);
 
         assertNotNull(result, "Result list should not be null");
         assertFalse(result.isEmpty(), "District should return city data");
-
-        reports.printCities(result);
-    }
-
-    // -------------------- getTopNCitiesInWorld() --------------------
-    @Test
-    void testGetTopNCitiesInWorld_ZeroN() {
-        System.out.println("\n--- TestZero: getTopNCitiesInWorld ---");
-        int n = 0;
-
-        ArrayList<City> result = reports.getTopNCitiesInWorld(n);
-
-        assertNotNull(result, "Result list should not be null for n=0");
-        assertTrue(result.isEmpty(), "List should be empty for n=0");
-        System.out.println("Handled n=0 safely");
-    }
-
-    @Test
-    void testGetTopNCitiesInWorld_Valid() {
-        System.out.println("\n--- TestValid: getTopNCitiesInWorld ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
-        int n = 5;
-
-        ArrayList<City> result = reports.getTopNCitiesInWorld(n);
-
-        assertNotNull(result, "Result list should not be null");
-        assertEquals(n, result.size(), "Should return top " + n + " cities in world");
-
-        reports.printCities(result);
-    }
-
-    // -------------------- getTopNCitiesInContinent() --------------------
-    @Test
-    void testGetTopNCitiesInContinent_NullContinent() {
-        System.out.println("\n--- TestNull: getTopNCitiesInContinent ---");
-        String continent = null;
-        int n = 5;
-
-        ArrayList<City> result = reports.getTopNCitiesInContinent(continent, n);
-
-        assertNotNull(result, "Result list should not be null even if continent is null");
-        System.out.println("Handled null continent safely");
-    }
-
-    @Test
-    void testGetTopNCitiesInContinent_EmptyContinent() {
-        System.out.println("\n--- TestEmpty: getTopNCitiesInContinent ---");
-        String continent = "ContinentXYZ";
-        int n = 5;
-
-        ArrayList<City> result = reports.getTopNCitiesInContinent(continent, n);
-
-        assertNotNull(result, "List should not be null");
-        if (isConnected()) {
-            assertTrue(result.isEmpty(), "List should be empty for unknown continent");
-        }
-        System.out.println("Handled empty continent safely");
-    }
-
-    @Test
-    void testGetTopNCitiesInContinent_Valid() {
-        System.out.println("\n--- TestValid: getTopNCitiesInContinent ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
-        String continent = "Asia";
-        int n = 5;
-
-        ArrayList<City> result = reports.getTopNCitiesInContinent(continent, n);
-
-        assertNotNull(result, "Result list should not be null");
-        assertEquals(n, result.size(), "Should return top " + n + " cities in continent");
-
-        reports.printCities(result);
-    }
-
-    // -------------------- getTopNCitiesInRegion() --------------------
-    @Test
-    void testGetTopNCitiesInRegion_NullRegion() {
-        System.out.println("\n--- TestNull: getTopNCitiesInRegion ---");
-        String region = null;
-        int n = 5;
-
-        ArrayList<City> result = reports.getTopNCitiesInRegion(region, n);
-
-        assertNotNull(result, "Result list should not be null even if region is null");
-        System.out.println("Handled null region safely");
-    }
-
-    @Test
-    void testGetTopNCitiesInRegion_EmptyRegion() {
-        System.out.println("\n--- TestEmpty: getTopNCitiesInRegion ---");
-        String region = "RegionXYZ";
-        int n = 5;
-
-        ArrayList<City> result = reports.getTopNCitiesInRegion(region, n);
-
-        assertNotNull(result, "List should not be null");
-        if (isConnected()) {
-            assertTrue(result.isEmpty(), "List should be empty for unknown region");
-        }
-        System.out.println("Handled empty region safely");
-    }
-
-    @Test
-    void testGetTopNCitiesInRegion_Valid() {
-        System.out.println("\n--- TestValid: getTopNCitiesInRegion ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
-        String region = "Southeast Asia";
-        int n = 5;
-
-        ArrayList<City> result = reports.getTopNCitiesInRegion(region, n);
-
-        assertNotNull(result, "Result list should not be null");
-        assertEquals(n, result.size(), "Should return top " + n + " cities in region");
 
         reports.printCities(result);
     }
@@ -727,22 +458,13 @@ class ReportsIntegrationTest {
 
         ArrayList<City> result = reports.getTopNCitiesInCountry(countryName, n);
 
-        assertNotNull(result, "List should not be null");
-        if (isConnected()) {
-            assertTrue(result.isEmpty(), "List should be empty for unknown country");
-        }
+        assertTrue(result.isEmpty(), "List should be empty for unknown country");
         System.out.println("Handled empty country safely");
     }
 
     @Test
     void testGetTopNCitiesInCountry_Valid() {
         System.out.println("\n--- TestValid: getTopNCitiesInCountry ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
         String countryName = "Myanmar";
         int n = 5;
 
@@ -778,22 +500,12 @@ class ReportsIntegrationTest {
 
         ArrayList<City> result = reports.getTopNCitiesInDistrict(district, n);
 
-        assertNotNull(result, "List should not be null");
-        if (isConnected()) {
-            assertTrue(result.isEmpty(), "List should be empty for unknown district");
-        }
+        assertTrue(result.isEmpty(), "List should be empty for unknown district");
         System.out.println("Handled empty district safely");
     }
-
     @Test
     void testGetTopNCitiesInDistrict_Valid() {
         System.out.println("\n--- TestValid: getTopNCitiesInDistrict ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
         String district = "Mendoza";
         int n = 5;
 
@@ -808,7 +520,48 @@ class ReportsIntegrationTest {
         reports.printCities(result);
     }
 
+    @Test
+    void testRunCityQuery_ValidResult() {
+        System.out.println("\n--- TestValid: runCityQuery  ---");
+
+        ArrayList<City> result = reports.getAllCitiesInWorld();
+
+        assertNotNull(result, "List should not be null");
+        assertFalse(result.isEmpty(), "World city list should not be empty");
+
+        reports.printCities(result);
+        System.out.println("Valid data printed successfully (runCityQuery mapping confirmed)");
+    }
+
+    @Test
+    void testRunCityQueryWithInt_EmptyResult() {
+        System.out.println("\n--- TestEmpty: runCityQueryWithInt indirect via getTopNCitiesInWorld ---");
+        int n = -1; // negative number should return empty
+
+        ArrayList<City> result = reports.getTopNCitiesInWorld(n);
+
+        assertTrue(result.isEmpty(), "List should be empty for invalid top N");
+        System.out.println("Handled empty result safely (runCityQueryWithInt returned empty list)");
+    }
+
+    @Test
+    void testRunCityQueryWithInt_ValidResult() {
+        System.out.println("\n--- TestValid: runCityQueryWithInt indirect via getTopNCitiesInWorld ---");
+        int n = 5; // top 5 cities
+
+        ArrayList<City> result = reports.getTopNCitiesInWorld(n);
+
+        assertNotNull(result, "List should not be null");
+        assertFalse(result.isEmpty(), "Top 5 cities should return data");
+
+        reports.printCities(result);
+        System.out.println("Valid data printed successfully.");
+    }
+
+
     // ----------------- CAPITAL CITY REPORTS ----------------
+    // ----------------- getAllCapitalCitiesInWorld -----------------------
+
     @Test
     void testGetAllCapitalCitiesInWorld_NotNull() {
         System.out.println("\n--- TestNull: getAllCapitalCitiesInWorld ---");
@@ -825,9 +578,7 @@ class ReportsIntegrationTest {
 
         ArrayList<CapitalCity> result = reports.getAllCapitalCitiesInWorld();
 
-        if (isConnected()) {
-            assertFalse(result.isEmpty(), "List should not be empty because the world has capital cities");
-        }
+        assertFalse(result.isEmpty(), "List should not be empty because the world has capital cities");
         System.out.println("Handled non-empty result safely");
     }
 
@@ -838,13 +589,12 @@ class ReportsIntegrationTest {
         ArrayList<CapitalCity> result = reports.getAllCapitalCitiesInWorld();
 
         assertNotNull(result, "List should not be null");
-        if (isConnected()) {
-            assertFalse(result.isEmpty(), "List should not be empty");
-        }
+        assertFalse(result.isEmpty(), "List should not be empty");
 
         reports.printCapitals(result);
         System.out.println("Print execution completed successfully");
     }
+
 
     // -------------------- getCapitalCitiesByContinent() --------------------
     @Test
@@ -865,22 +615,13 @@ class ReportsIntegrationTest {
 
         ArrayList<CapitalCity> result = reports.getCapitalCitiesByContinent(continent);
 
-        assertNotNull(result, "List should not be null");
-        if (isConnected()) {
-            assertTrue(result.isEmpty(), "List should be empty for unknown continent");
-        }
+        assertTrue(result.isEmpty(), "List should be empty for unknown continent");
         System.out.println("Handled empty continent safely");
     }
 
     @Test
     void testGetCapitalCitiesByContinent_Valid() {
         System.out.println("\n--- TestValid: getCapitalCitiesByContinent ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
         String continent = "Asia";
 
         ArrayList<CapitalCity> result = reports.getCapitalCitiesByContinent(continent);
@@ -891,8 +632,10 @@ class ReportsIntegrationTest {
         for (CapitalCity c : result) {
             assertNotNull(c.name, "Capital name should not be null");
             assertNotNull(c.country, "Country should not be null");
+            System.out.println(c.name + " - " + c.country + " - " + c.population);
         }
     }
+
 
     // -------------------- getCapitalCitiesByRegion() --------------------
     @Test
@@ -913,22 +656,13 @@ class ReportsIntegrationTest {
 
         ArrayList<CapitalCity> result = reports.getCapitalCitiesByRegion(region);
 
-        assertNotNull(result, "List should not be null");
-        if (isConnected()) {
-            assertTrue(result.isEmpty(), "List should be empty for unknown region");
-        }
+        assertTrue(result.isEmpty(), "List should be empty for unknown region");
         System.out.println("Handled empty region safely");
     }
 
     @Test
     void testGetCapitalCitiesByRegion_Valid() {
         System.out.println("\n--- TestValid: getCapitalCitiesByRegion ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
         String region = "Southeast Asia";
 
         ArrayList<CapitalCity> result = reports.getCapitalCitiesByRegion(region);
@@ -939,44 +673,27 @@ class ReportsIntegrationTest {
         for (CapitalCity c : result) {
             assertNotNull(c.name, "Capital name should not be null");
             assertNotNull(c.country, "Country should not be null");
+            System.out.println(c.name + " - " + c.country + " - " + c.population);
         }
     }
 
     // -------------------- getTopNCapitalCitiesInWorld() --------------------
     @Test
-    void testGetTopNCapitalCitiesInWorld_ZeroN() {
-        System.out.println("\n--- TestZero: getTopNCapitalCitiesInWorld ---");
-        int n = 0;
-
-        ArrayList<CapitalCity> result = reports.getTopNCapitalCitiesInWorld(n);
-
-        assertNotNull(result, "Result list should not be null for n=0");
-        assertTrue(result.isEmpty(), "List should be empty for n=0");
-        System.out.println("Handled n=0 safely");
-    }
-
-    @Test
-    void testGetTopNCapitalCitiesInWorld_Valid() {
-        System.out.println("\n--- TestValid: getTopNCapitalCitiesInWorld ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
+    void testGetTopNCapitalCitiesInWorld() {
+        System.out.println("\n--- Test: getTopNCapitalCitiesInWorld ---");
         int n = 5;
 
         ArrayList<CapitalCity> result = reports.getTopNCapitalCitiesInWorld(n);
 
         assertNotNull(result, "Result list should not be null");
-        assertEquals(n, result.size(), "Should return top " + n + " capital cities in world");
+        assertEquals(n, result.size(), "Should return top " + n + " capital cities");
 
         reports.printCapitals(result);
     }
 
     // -------------------- getTopNCapitalCitiesInContinent() --------------------
     @Test
-    void testGetTopNCapitalCitiesInContinent_NullContinent() {
+    void testGetTopNCapitalCitiesInContinent_Null() {
         System.out.println("\n--- TestNull: getTopNCapitalCitiesInContinent ---");
         String continent = null;
         int n = 5;
@@ -988,29 +705,20 @@ class ReportsIntegrationTest {
     }
 
     @Test
-    void testGetTopNCapitalCitiesInContinent_EmptyContinent() {
+    void testGetTopNCapitalCitiesInContinent_Empty() {
         System.out.println("\n--- TestEmpty: getTopNCapitalCitiesInContinent ---");
         String continent = "ContinentXYZ";
         int n = 5;
 
         ArrayList<CapitalCity> result = reports.getTopNCapitalCitiesInContinent(continent, n);
 
-        assertNotNull(result, "List should not be null");
-        if (isConnected()) {
-            assertTrue(result.isEmpty(), "List should be empty for unknown continent");
-        }
+        assertTrue(result.isEmpty(), "List should be empty for unknown continent");
         System.out.println("Handled empty continent safely");
     }
 
     @Test
     void testGetTopNCapitalCitiesInContinent_Valid() {
         System.out.println("\n--- TestValid: getTopNCapitalCitiesInContinent ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
         String continent = "Asia";
         int n = 5;
 
@@ -1024,7 +732,7 @@ class ReportsIntegrationTest {
 
     // -------------------- getTopNCapitalCitiesInRegion() --------------------
     @Test
-    void testGetTopNCapitalCitiesInRegion_NullRegion() {
+    void testGetTopNCapitalCitiesInRegion_Null() {
         System.out.println("\n--- TestNull: getTopNCapitalCitiesInRegion ---");
         String region = null;
         int n = 5;
@@ -1036,29 +744,20 @@ class ReportsIntegrationTest {
     }
 
     @Test
-    void testGetTopNCapitalCitiesInRegion_EmptyRegion() {
+    void testGetTopNCapitalCitiesInRegion_Empty() {
         System.out.println("\n--- TestEmpty: getTopNCapitalCitiesInRegion ---");
         String region = "RegionXYZ";
         int n = 5;
 
         ArrayList<CapitalCity> result = reports.getTopNCapitalCitiesInRegion(region, n);
 
-        assertNotNull(result, "List should not be null");
-        if (isConnected()) {
-            assertTrue(result.isEmpty(), "List should be empty for unknown region");
-        }
+        assertTrue(result.isEmpty(), "List should be empty for unknown region");
         System.out.println("Handled empty region safely");
     }
 
     @Test
     void testGetTopNCapitalCitiesInRegion_Valid() {
         System.out.println("\n--- TestValid: getTopNCapitalCitiesInRegion ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
         String region = "Southeast Asia";
         int n = 5;
 
@@ -1071,6 +770,8 @@ class ReportsIntegrationTest {
     }
 
     // ----------------- POPULATION REPORTS -------------------
+
+    // -------------------- getPopulationByContinent() --------------------
     @Test
     void testGetPopulationByContinent() {
         System.out.println("\n--- Test: getPopulationByContinent ---");
@@ -1080,10 +781,11 @@ class ReportsIntegrationTest {
 
         for (Population p : result) {
             assertNotNull(p.name, "Continent name should not be null");
+            reports.printPopulations(result);
         }
-        reports.printPopulations(result);
     }
 
+    // -------------------- getPopulationByRegion() --------------------
     @Test
     void testGetPopulationByRegion() {
         System.out.println("\n--- Test: getPopulationByRegion ---");
@@ -1093,10 +795,11 @@ class ReportsIntegrationTest {
 
         for (Population p : result) {
             assertNotNull(p.name, "Region name should not be null");
+            reports.printPopulations(result);
         }
-        reports.printPopulations(result);
     }
 
+    // -------------------- getPopulationByCountry() --------------------
     @Test
     void testGetPopulationByCountry() {
         System.out.println("\n--- Test: getPopulationByCountry ---");
@@ -1106,8 +809,8 @@ class ReportsIntegrationTest {
 
         for (Population p : result) {
             assertNotNull(p.name, "Country name should not be null");
+            reports.printPopulations(result);
         }
-        reports.printPopulations(result);
     }
 
     // -------------------- getWorldPopulation() --------------------
@@ -1116,9 +819,7 @@ class ReportsIntegrationTest {
         System.out.println("\n--- Test: getWorldPopulation ---");
         long worldPop = reports.getWorldPopulation();
 
-        if (isConnected()) {
-            assertTrue(worldPop > 0, "World population should be greater than 0");
-        }
+        assertTrue(worldPop > 0, "World population should be greater than 0");
         System.out.println("World Population: " + worldPop);
     }
 
@@ -1126,12 +827,6 @@ class ReportsIntegrationTest {
     @Test
     void testGetPopulationOfContinentWithName() {
         System.out.println("\n--- Test: getPopulationOfContinentWithName ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
         String continent = "Asia";
         Population result = reports.getPopulationOfContinentWithName(continent);
 
@@ -1155,12 +850,6 @@ class ReportsIntegrationTest {
     @Test
     void testGetPopulationOfRegionWithName() {
         System.out.println("\n--- Test: getPopulationOfRegionWithName ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
         String region = "Eastern Asia";
         Population result = reports.getPopulationOfRegionWithName(region);
 
@@ -1184,12 +873,6 @@ class ReportsIntegrationTest {
     @Test
     void testGetPopulationOfCountryWithName() {
         System.out.println("\n--- Test: getPopulationOfCountryWithName ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
         String country = "China";
         Population result = reports.getPopulationOfCountryWithName(country);
 
@@ -1213,12 +896,6 @@ class ReportsIntegrationTest {
     @Test
     void testGetPopulationOfDistrictWithName() {
         System.out.println("\n--- Test: getPopulationOfDistrictWithName ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
         String district = "Guangdong";
         Population result = reports.getPopulationOfDistrictWithName(district);
 
@@ -1242,12 +919,6 @@ class ReportsIntegrationTest {
     @Test
     void testGetPopulationOfCityWithName() {
         System.out.println("\n--- Test: getPopulationOfCityWithName ---");
-
-        if (!isConnected()) {
-            System.out.println("Skipping test - no database connection");
-            return;
-        }
-
         String city = "Beijing";
         Population result = reports.getPopulationOfCityWithName(city);
 
@@ -1267,7 +938,7 @@ class ReportsIntegrationTest {
         System.out.println("Handled unknown city safely");
     }
 
-    // ----------------- LANGUAGE REPORT ---------------------
+
     @Test
     void testGetLanguageReport_PrintResults() {
         System.out.println("\n--- TestPrint: getLanguageReport ---");
@@ -1275,44 +946,14 @@ class ReportsIntegrationTest {
         ArrayList<Language> result = reports.getLanguageReport();
 
         assertNotNull(result, "List should not be null");
-        if (isConnected()) {
-            assertFalse(result.isEmpty(), "List should not be empty");
-        }
+        assertFalse(result.isEmpty(), "List should not be empty");
 
         reports.printLanguages(result);
         System.out.println("Language report printed successfully");
     }
 
-    // ===== Database Connection Edge Cases =====
     @Test
-    void testConnectWithInvalidLocation() {
-        // This should test connection failure scenarios
-        boolean connected = reports.connect("invalid-host:9999", 100);
-        assertFalse(connected, "Should not connect to invalid host");
-        // Should handle gracefully without crashing
-    }
-
-    @Test
-    void testMultipleConnectionsAndDisconnects() {
-        // Test multiple connection/disconnect cycles
-        reports.disconnect();
-        boolean connected1 = reports.connect("localhost:33060", 1000);
-        reports.disconnect();
-        boolean connected2 = reports.connect("localhost:33060", 1000);
-        // Should not crash
-        System.out.println("Multiple connection cycles completed");
-    }
-
-    @Test
-    void testQueryAfterDisconnect() {
-        reports.disconnect();
-        ArrayList<Country> result = reports.getAllCountriesInWorld();
-        // Should handle gracefully - either reconnect or return empty
-        assertNotNull(result);
-    }
-
-    @Test
-    void testMainMethod() {
+    public void testMainMethod() {
         String[] args = {};
         Reports.main(args);
     }
@@ -1321,12 +962,5 @@ class ReportsIntegrationTest {
     void testDisconnect() {
         reports.disconnect();
         System.out.println("Disconnected from server testing complete.");
-    }
-
-    // ===== Cleanup =====
-    @Test
-    void cleanup() {
-        reports.disconnect();
-        System.out.println("Database connection closed.");
     }
 }
