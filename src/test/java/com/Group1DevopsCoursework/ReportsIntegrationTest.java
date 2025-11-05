@@ -51,13 +51,42 @@ class ReportsIntegrationTest {
         assertNull(result.capital, "null");
         System.out.println("Added and retrieved country  " + result.name);
     }
+    @Test
+    void testGetAllCountriesInWorld_NotNull() {
+        System.out.println("\n--- TestNull: getAllCountriesInWorld ---");
 
+        ArrayList<Country> result = reports.getAllCountriesInWorld();
+
+        assertNotNull(result, "List should not be null");
+        System.out.println("Handled non-null return correctly");
+    }
 
     @Test
-    void testDisconnect() {
-        reports.disconnect();
-        System.out.println("Disconnected from server testing complete.");
+    void testGetAllCountriesInWorld_NotEmpty() {
+        System.out.println("\n--- TestEmpty: getAllCountriesInWorld ---");
+
+        ArrayList<Country> result = reports.getAllCountriesInWorld();
+
+        assertFalse(result.isEmpty(), "List should not be empty because world has countries");
+        System.out.println("Handled non-empty result correctly");
     }
+
+    @Test
+    void testGetAllCountriesInWorld_PrintResults() {
+        System.out.println("\n--- TestPrint: getAllCountriesInWorld ---");
+
+        ArrayList<Country> result = reports.getAllCountriesInWorld();
+
+        assertNotNull(result, "List should not be null");
+        assertFalse(result.isEmpty(), "List should not be empty");
+
+        reports.printCountries(result);
+        System.out.println("Print execution completed successfully");
+    }
+
+
+
+
     // -------------------- getCountriesByContinent() --------------------
     @Test
     void testGetCountriesByContinent_Null() {
@@ -247,6 +276,154 @@ class ReportsIntegrationTest {
         reports.printCountries(result);
     }
 
+    // ----------------- getCitiesByContinent -----------------------
+
+    @Test
+    void testGetCitiesByContinent_Null() {
+        System.out.println("\n--- TestNull: getCitiesByContinent ---");
+        String continent = null;
+
+        ArrayList<City> result = reports.getCitiesByContinent(continent);
+
+        assertNotNull(result, "List should not be null even when continent is null");
+        System.out.println("Handled null continent safely");
+    }
+
+    @Test
+    void testGetCitiesByContinent_Empty() {
+        System.out.println("\n--- TestEmpty: getCitiesByContinent ---");
+        String continent = "ContinentXYZ";
+
+        ArrayList<City> result = reports.getCitiesByContinent(continent);
+
+        assertTrue(result.isEmpty(), "List should be empty for unknown continent");
+        System.out.println("Handled empty result safely");
+    }
+
+    @Test
+    void testGetCitiesByContinent_Valid() {
+        System.out.println("\n--- TestValid: getCitiesByContinent ---");
+        String continent = "Asia";
+
+        ArrayList<City> result = reports.getCitiesByContinent(continent);
+
+        assertNotNull(result, "Result list should not be null");
+        assertFalse(result.isEmpty(), "Asia should return city data");
+
+        reports.printCities(result);
+    }
+
+    // ----------------- getCitiesByRegion -----------------------
+
+    @Test
+    void testGetCitiesByRegion_Null() {
+        System.out.println("\n--- TestNull: getCitiesByRegion ---");
+        String region = null;
+
+        ArrayList<City> result = reports.getCitiesByRegion(region);
+
+        assertNotNull(result, "List should not be null even when region is null");
+        System.out.println("Handled null region safely");
+    }
+
+    @Test
+    void testGetCitiesByRegion_Empty() {
+        System.out.println("\n--- TestEmpty: getCitiesByRegion ---");
+        String region = "RegionXYZ";
+
+        ArrayList<City> result = reports.getCitiesByRegion(region);
+
+        assertTrue(result.isEmpty(), "List should be empty for unknown region");
+        System.out.println("Handled empty result safely");
+    }
+
+    @Test
+    void testGetCitiesByRegion_Valid() {
+        System.out.println("\n--- TestValid: getCitiesByRegion ---");
+        String region = "Southeast Asia";
+
+        ArrayList<City> result = reports.getCitiesByRegion(region);
+
+        assertNotNull(result, "Result list should not be null");
+        assertFalse(result.isEmpty(), "Region should return city data");
+
+        reports.printCities(result);
+    }
+
+    // ----------------- getCitiesByCountry -----------------------
+
+    @Test
+    void testGetCitiesByCountry_Null() {
+        System.out.println("\n--- TestNull: getCitiesByCountry ---");
+        String country = null;
+
+        ArrayList<City> result = reports.getCitiesByCountry(country);
+
+        assertNotNull(result, "List should not be null even when country is null");
+        System.out.println("Handled null country safely");
+    }
+
+    @Test
+    void testGetCitiesByCountry_Empty() {
+        System.out.println("\n--- TestEmpty: getCitiesByCountry ---");
+        String country = "CountryXYZ";
+
+        ArrayList<City> result = reports.getCitiesByCountry(country);
+
+        assertTrue(result.isEmpty(), "List should be empty for unknown country");
+        System.out.println("Handled empty result safely");
+    }
+
+    @Test
+    void testGetCitiesByCountry_Valid() {
+        System.out.println("\n--- TestValid: getCitiesByCountry ---");
+        String country = "Myanmar";
+
+        ArrayList<City> result = reports.getCitiesByCountry(country);
+
+        assertNotNull(result, "Result list should not be null");
+        assertFalse(result.isEmpty(), "Country should return city data");
+
+        reports.printCities(result);
+    }
+
+    // ----------------- getCitiesByDistrict -----------------------
+
+    @Test
+    void testGetCitiesByDistrict_Null() {
+        System.out.println("\n--- TestNull: getCitiesByDistrict ---");
+        String district = null;
+
+        ArrayList<City> result = reports.getCitiesByDistrict(district);
+
+        assertNotNull(result, "List should not be null even when district is null");
+        System.out.println("Handled null district safely");
+    }
+
+    @Test
+    void testGetCitiesByDistrict_Empty() {
+        System.out.println("\n--- TestEmpty: getCitiesByDistrict ---");
+        String district = "DistrictXYZ";
+
+        ArrayList<City> result = reports.getCitiesByDistrict(district);
+
+        assertTrue(result.isEmpty(), "List should be empty for unknown district");
+        System.out.println("Handled empty result safely");
+    }
+
+    @Test
+    void testGetCitiesByDistrict_Valid() {
+        System.out.println("\n--- TestValid: getCitiesByDistrict ---");
+        String district = "São Paulo";
+
+        ArrayList<City> result = reports.getCitiesByDistrict(district);
+
+        assertNotNull(result, "Result list should not be null");
+        assertFalse(result.isEmpty(), "District should return city data");
+
+        reports.printCities(result);
+    }
+
     // -------------------- getTopNCitiesInCountry() --------------------
     @Test
     void testGetTopNCitiesInCountry_NullCountry() {
@@ -313,7 +490,6 @@ class ReportsIntegrationTest {
         assertTrue(result.isEmpty(), "List should be empty for unknown district");
         System.out.println("Handled empty district safely");
     }
-
     @Test
     void testGetTopNCitiesInDistrict_Valid() {
         System.out.println("\n--- TestValid: getTopNCitiesInDistrict ---");
@@ -331,7 +507,81 @@ class ReportsIntegrationTest {
         reports.printCities(result);
     }
 
+    @Test
+    void testRunCityQuery_ValidResult() {
+        System.out.println("\n--- TestValid: runCityQuery  ---");
+
+        ArrayList<City> result = reports.getAllCitiesInWorld();
+
+        assertNotNull(result, "List should not be null");
+        assertFalse(result.isEmpty(), "World city list should not be empty");
+
+        reports.printCities(result);
+        System.out.println("Valid data printed successfully (runCityQuery mapping confirmed)");
+    }
+
+    @Test
+    void testRunCityQueryWithInt_EmptyResult() {
+        System.out.println("\n--- TestEmpty: runCityQueryWithInt indirect via getTopNCitiesInWorld ---");
+        int n = -1; // negative number should return empty
+
+        ArrayList<City> result = reports.getTopNCitiesInWorld(n);
+
+        assertTrue(result.isEmpty(), "List should be empty for invalid top N");
+        System.out.println("Handled empty result safely (runCityQueryWithInt returned empty list)");
+    }
+
+    @Test
+    void testRunCityQueryWithInt_ValidResult() {
+        System.out.println("\n--- TestValid: runCityQueryWithInt indirect via getTopNCitiesInWorld ---");
+        int n = 5; // top 5 cities
+
+        ArrayList<City> result = reports.getTopNCitiesInWorld(n);
+
+        assertNotNull(result, "List should not be null");
+        assertFalse(result.isEmpty(), "Top 5 cities should return data");
+
+        reports.printCities(result);
+        System.out.println("Valid data printed successfully.");
+    }
+
+
     // ----------------- CAPITAL CITY REPORTS ----------------
+    // ----------------- getAllCapitalCitiesInWorld -----------------------
+
+    @Test
+    void testGetAllCapitalCitiesInWorld_NotNull() {
+        System.out.println("\n--- TestNull: getAllCapitalCitiesInWorld ---");
+
+        ArrayList<CapitalCity> result = reports.getAllCapitalCitiesInWorld();
+
+        assertNotNull(result, "List should not be null");
+        System.out.println("Handled non-null return safely");
+    }
+
+    @Test
+    void testGetAllCapitalCitiesInWorld_NotEmpty() {
+        System.out.println("\n--- TestEmpty: getAllCapitalCitiesInWorld ---");
+
+        ArrayList<CapitalCity> result = reports.getAllCapitalCitiesInWorld();
+
+        assertFalse(result.isEmpty(), "List should not be empty because the world has capital cities");
+        System.out.println("Handled non-empty result safely");
+    }
+
+    @Test
+    void testGetAllCapitalCitiesInWorld_PrintResults() {
+        System.out.println("\n--- TestPrint: getAllCapitalCitiesInWorld ---");
+
+        ArrayList<CapitalCity> result = reports.getAllCapitalCitiesInWorld();
+
+        assertNotNull(result, "List should not be null");
+        assertFalse(result.isEmpty(), "List should not be empty");
+
+        reports.printCapitals(result);
+        System.out.println("Print execution completed successfully");
+    }
+
 
     // -------------------- getCapitalCitiesByContinent() --------------------
     @Test
@@ -518,7 +768,7 @@ class ReportsIntegrationTest {
 
         for (Population p : result) {
             assertNotNull(p.name, "Continent name should not be null");
-            System.out.println(p.name + " - Total: " + p.totalPopulation + ", CityPop: " + p.cityPopulation);
+            reports.printPopulations(result);
         }
     }
 
@@ -532,7 +782,7 @@ class ReportsIntegrationTest {
 
         for (Population p : result) {
             assertNotNull(p.name, "Region name should not be null");
-            System.out.println(p.name + " - Total: " + p.totalPopulation + ", CityPop: " + p.cityPopulation);
+            reports.printPopulations(result);
         }
     }
 
@@ -546,7 +796,7 @@ class ReportsIntegrationTest {
 
         for (Population p : result) {
             assertNotNull(p.name, "Country name should not be null");
-            System.out.println(p.name + " - Total: " + p.totalPopulation + ", CityPop: " + p.cityPopulation);
+            reports.printPopulations(result);
         }
     }
 
@@ -675,8 +925,30 @@ class ReportsIntegrationTest {
         System.out.println("Handled unknown city safely");
     }
 
-   
+
+    @Test
+    void testGetLanguageReport_PrintResults() {
+        System.out.println("\n--- TestPrint: getLanguageReport ---");
+
+        ArrayList<Language> result = reports.getLanguageReport();
+
+        assertNotNull(result, "List should not be null");
+        assertFalse(result.isEmpty(), "List should not be empty");
+
+        reports.printLanguages(result);
+        System.out.println("Language report printed successfully");
+    }
+
+    @Test
+    public void testMainMethod() {
+        String[] args = {};
+        Reports.main(args);
+    }
 
 
-
+    @Test
+    void testDisconnect() {
+        reports.disconnect();
+        System.out.println("Disconnected from server testing complete.");
+    }
 }
