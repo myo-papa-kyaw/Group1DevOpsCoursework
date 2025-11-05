@@ -11,4 +11,4 @@ services:
       MYSQL_DATABASE: world
       MYSQL_ROOT_HOST: '%'
     ports:
-      - "33061:3306"
+      - "33060:3306"
