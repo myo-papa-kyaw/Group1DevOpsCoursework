@@ -93,6 +93,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
           folder: reports # The folder we are copying
+          branch: ''
 
       - name: Create Release
         uses: marvinpinto/action-automatic-releases@latest
