@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="update files">
+    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Updated Codecov Percentage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +30,13 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="myo-papa-kyaw &lt;40804635@live.napier.ac.uk&gt;" />
         <option value="Thinzar-Phyo-Wai &lt;40804632@live.napier.ac.uk&gt;" />
       </list>
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,7 +50,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/myo-papa-kyaw/Group1DevOpsCoursework&quot;,
-    &quot;accountId&quot;: &quot;20a9230c-13ea-4857-a2bc-c041d46035b4&quot;
+    &quot;accountId&quot;: &quot;cef891b1-fd8b-4801-b4bb-739004f09db5&quot;
   }
 }</component>
   <component name="KubernetesApiProvider">{
@@ -69,130 +70,132 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Database_Connection.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.MainApp.executor": "Run",
-    "Application.Reports.executor": "Run",
-    "DefaultPlantUmlFileTemplate": "UML Use Case",
-    "Docker.Dockerfile.executor": "Run",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "Docker.world-db/Dockerfile.executor": "Run",
-    "JUnit.ExecuteAndDisplay_IntegrationTest.executor": "Run",
-    "JUnit.Group1DevopsCoursework in Group1DevopsCoursework.executor": "Coverage",
-    "JUnit.ReportsIntegrationTest.executor": "Coverage",
-    "JUnit.ReportsIntegrationTest.testAddCountry.executor": "Coverage",
-    "JUnit.ReportsIntegrationTest.testAddCountryWithoutCapital.executor": "Run",
-    "JUnit.ReportsIntegrationTest.testDatabaseConnection.executor": "Run",
-    "JUnit.ReportsIntegrationTest.testDisconnect.executor": "Run",
-    "JUnit.ReportsIntegrationTest.testFullReportsWorkflow.executor": "Coverage",
-    "JUnit.ReportsIntegrationTest.testGetAllCapitalCitiesInWorld_PrintResults.executor": "Coverage",
-    "JUnit.ReportsIntegrationTest.testGetAllCountriesInWorld_NotEmpty.executor": "Coverage",
-    "JUnit.ReportsIntegrationTest.testGetAllCountriesInWorld_NotNull.executor": "Run",
-    "JUnit.ReportsIntegrationTest.testGetAllCountriesInWorld_PrintResults.executor": "Coverage",
-    "JUnit.ReportsIntegrationTest.testGetCountriesByContinent_Empty.executor": "Run",
-    "JUnit.ReportsIntegrationTest.testGetCountriesByContinent_Null.executor": "Run",
-    "JUnit.ReportsIntegrationTest.testGetCountriesByContinent_WithValidContinent.executor": "Run",
-    "JUnit.ReportsIntegrationTest.testGetLanguageReport_NotEmpty.executor": "Coverage",
-    "JUnit.ReportsIntegrationTest.testGetLanguageReport_PrintResults.executor": "Coverage",
-    "JUnit.ReportsIntegrationTest.testGetPopulationByContinent.executor": "Coverage",
-    "JUnit.ReportsIntegrationTest.testGetPopulationByRegion.executor": "Coverage",
-    "JUnit.ReportsIntegrationTest.testGetPopulationOfContinentWithName.executor": "Coverage",
-    "JUnit.ReportsIntegrationTest.testGetTopNCitiesInDistrict_Valid.executor": "Coverage",
-    "JUnit.ReportsIntegrationTest.testMainMethod.executor": "Coverage",
-    "JUnit.ReportsIntegrationTest.testMultipleConnectDisconnect.executor": "Run",
-    "JUnit.ReportsIntegrationTest.testRunCityQueryWithInt_EmptyResult.executor": "Coverage",
-    "JUnit.ReportsIntegrationTest.testRunCityQueryWithInt_ValidResult.executor": "Coverage",
-    "JUnit.ReportsIntegrationTest.testRunCityQuery_EmptyResult.executor": "Coverage",
-    "JUnit.ReportsIntegrationTest.testRunCityQuery_ValidResult.executor": "Coverage",
-    "JUnit.ReportsTest.executor": "Run",
-    "JUnit.ReportsUnitTest.executeAndDisplayCountry.executor": "Run",
-    "JUnit.ReportsUnitTest.executor": "Coverage",
-    "JUnit.ReportsUnitTest.getCountriesByContinentTest.executor": "Run",
-    "JUnit.ReportsUnitTest.printCapitalsEmpty.executor": "Run",
-    "JUnit.ReportsUnitTest.printCities.executor": "Run",
-    "JUnit.ReportsUnitTest.printCountriesNull.executor": "Run",
-    "JUnit.ReportsUnitTest.printLanguages.executor": "Run",
-    "JUnit.ReportsUnitTest.printLanguagesContainsNull.executor": "Run",
-    "JUnit.ReportsUnitTest.testAllCountriesInWorld.executor": "Run",
-    "JUnit.ReportsUnitTest.testCountriesByRegion.executor": "Run",
-    "JUnit.ReportsUnitTest.testCountriesContainNull.executor": "Run",
-    "JUnit.ReportsUnitTest.testEmptyCountries.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetAllCapitalCitiesInWorld_Print.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetAllCitiesInWorld_Print.executor": "Coverage",
-    "JUnit.ReportsUnitTest.testGetAllCountriesInWorld.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetAllCountriesInWorld_ContainsNull.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetAllCountriesInWorld_Empty.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetAllCountriesInWorld_Null.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetAllCountriesInWorld_Print.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetCapitalCitiesByContinent_Null.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetCitiesByContinent_Empty.executor": "Coverage",
-    "JUnit.ReportsUnitTest.testGetCitiesByContinent_Null.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetCitiesByContinent_Print.executor": "Coverage",
-    "JUnit.ReportsUnitTest.testGetCitiesByCountry.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetCitiesByDistrict_Empty.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetCountriesByContinent_Null.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetCountriesByContinent_Print.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetCountriesByRegion_Empty.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetCountriesByRegion_Null.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetCountriesByRegion_Print.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetLanguageReport_ContainsTargetLanguages.executor": "Coverage",
-    "JUnit.ReportsUnitTest.testGetLanguageReport_NotEmpty.executor": "Coverage",
-    "JUnit.ReportsUnitTest.testGetLanguageReport_NotNull.executor": "Coverage",
-    "JUnit.ReportsUnitTest.testGetLanguageReport_PercentageCalculation.executor": "Coverage",
-    "JUnit.ReportsUnitTest.testGetLanguageReport_Print.executor": "Coverage",
-    "JUnit.ReportsUnitTest.testGetTopNCitiesInDistrict_Print.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetTopNCountriesInContinent_Null.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetTopNCountriesInContinent_Print.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetTopNCountriesInRegion_Null.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetTopNCountriesInRegion_Print.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetTopNCountriesInWorld_Negative.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetTopNCountriesInWorld_Print.executor": "Run",
-    "JUnit.ReportsUnitTest.testNullCountries.executor": "Run",
-    "JUnit.ReportsUnitTest.testPopulationByRegion.executor": "Run",
-    "JUnit.ReportsUnitTest.testPopulationOfCity.executor": "Run",
-    "JUnit.ReportsUnitTest.testPopulationOfContinent.executor": "Run",
-    "JUnit.ReportsUnitTest.testPopulationOfCountry.executor": "Run",
-    "JUnit.ReportsUnitTest.testPopulationOfDistrict.executor": "Run",
-    "JUnit.ReportsUnitTest.testPopulationOfRegion.executor": "Run",
-    "JUnit.ReportsUnitTest.testRunPopulationAggregationQuery_Calculation.executor": "Run",
-    "JUnit.ReportsUnitTest.testRunPopulationAggregationQuery_ContainsNull.executor": "Run",
-    "JUnit.ReportsUnitTest.testRunPopulationAggregationQuery_Empty.executor": "Run",
-    "JUnit.ReportsUnitTest.testRunPopulationAggregationQuery_Null.executor": "Run",
-    "JUnit.ReportsUnitTest.testWorldPopulation.executor": "Run",
-    "JUnit.ReportsUnit_Test.executor": "Run",
-    "JUnit.ReportsUnit_Test.testGetAllCountriesInWorld.executor": "Run",
-    "Maven.Group1DevopsCoursework [clean].executor": "Run",
-    "Maven.Group1DevopsCoursework [compile].executor": "Run",
-    "Maven.Group1DevopsCoursework [deploy].executor": "Run",
-    "Maven.Group1DevopsCoursework [org.apache.maven.plugins:maven-surefire-plugin:3.2.5:test].executor": "Run",
-    "Maven.Group1DevopsCoursework [package].executor": "Run",
-    "Maven.Group1DevopsCoursework [test].executor": "Run",
-    "Maven.Group1DevopsCoursework [validate].executor": "Run",
-    "Maven.Group1DevopsCoursework [verify].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/ENUni/DevOps/Group1DevopsCoursework/use-cases",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "E:/ENUni/DevOps/Group1DevopsCoursework/src/main/java/com/Group1DevopsCoursework/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "advanced.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Database_Connection.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Reports.executor&quot;: &quot;Coverage&quot;,
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Use Case&quot;,
+    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.world-db/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ExecuteAndDisplay_IntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Group1DevopsCoursework in Group1DevopsCoursework.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsIntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testAddCountry.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testAddCountryWithoutCapital.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testDatabaseConnection.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testDisconnect.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testFullReportsWorkflow.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testGetAllCapitalCitiesInWorld_PrintResults.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testGetAllCountriesInWorld_NotEmpty.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testGetAllCountriesInWorld_NotNull.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testGetAllCountriesInWorld_PrintResults.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testGetCountriesByContinent_Empty.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testGetCountriesByContinent_Null.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testGetCountriesByContinent_WithValidContinent.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testGetLanguageReport_NotEmpty.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testGetLanguageReport_PrintResults.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testGetPopulationByContinent.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testGetPopulationByRegion.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testGetPopulationOfContinentWithName.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testGetTopNCitiesInDistrict_Valid.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testMainMethod.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testMultipleConnectDisconnect.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testRunCityQueryWithInt_EmptyResult.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testRunCityQueryWithInt_ValidResult.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testRunCityQuery_EmptyResult.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testRunCityQuery_ValidResult.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.executeAndDisplayCountry.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.getCountriesByContinentTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.printCapitalsEmpty.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.printCities.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.printCountriesNull.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.printLanguages.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.printLanguagesContainsNull.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testAllCountriesInWorld.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testCountriesByRegion.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testCountriesContainNull.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testEmptyCountries.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetAllCapitalCitiesInWorld_Print.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetAllCitiesInWorld_Print.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetAllCountriesInWorld.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetAllCountriesInWorld_ContainsNull.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetAllCountriesInWorld_Empty.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetAllCountriesInWorld_Null.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetAllCountriesInWorld_Print.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetCapitalCitiesByContinent_Null.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetCitiesByContinent_Empty.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetCitiesByContinent_Null.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetCitiesByContinent_Print.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetCitiesByCountry.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetCitiesByDistrict_Empty.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetCountriesByContinent_Null.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetCountriesByContinent_Print.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetCountriesByRegion_Empty.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetCountriesByRegion_Null.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetCountriesByRegion_Print.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetLanguageReport_ContainsTargetLanguages.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetLanguageReport_NotEmpty.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetLanguageReport_NotNull.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetLanguageReport_PercentageCalculation.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetLanguageReport_Print.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetTopNCitiesInDistrict_Print.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetTopNCountriesInContinent_Null.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetTopNCountriesInContinent_Print.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetTopNCountriesInRegion_Null.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetTopNCountriesInRegion_Print.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetTopNCountriesInWorld_Negative.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetTopNCountriesInWorld_Print.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testNullCountries.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testPopulationByRegion.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testPopulationOfCity.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testPopulationOfContinent.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testPopulationOfCountry.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testPopulationOfDistrict.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testPopulationOfRegion.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testRunPopulationAggregationQuery_Calculation.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testRunPopulationAggregationQuery_ContainsNull.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testRunPopulationAggregationQuery_Empty.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testRunPopulationAggregationQuery_Null.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testWorldPopulation.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnit_Test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnit_Test.testGetAllCountriesInWorld.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Group1DevopsCoursework [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Group1DevopsCoursework [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Group1DevopsCoursework [deploy].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Group1DevopsCoursework [org.apache.maven.plugins:maven-surefire-plugin:3.2.5:test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Group1DevopsCoursework [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Group1DevopsCoursework [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Group1DevopsCoursework [validate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Group1DevopsCoursework [verify].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/myopapakyaw&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/ENUni/DevOps/Group1DevopsCoursework/use-cases&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;E:/ENUni/DevOps/Group1DevopsCoursework/src/main/java/com/Group1DevopsCoursework/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\ENUni\DevOps\Group1DevopsCoursework\use-cases" />
@@ -206,35 +209,11 @@
       <recent name="com.Group1DevopsCoursework" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ReportsUnitTest">
-    <configuration name="ReportsIntegrationTest.testFullReportsWorkflow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.Group1DevopsCoursework in Group1DevopsCoursework">
+    <configuration name="Group1DevopsCoursework in Group1DevopsCoursework" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Group1DevopsCoursework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.Group1DevopsCoursework.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsIntegrationTest" />
-      <option name="METHOD_NAME" value="testFullReportsWorkflow" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReportsIntegrationTest.testGetLanguageReport_NotEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Group1DevopsCoursework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.Group1DevopsCoursework.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsIntegrationTest" />
-      <option name="METHOD_NAME" value="testGetLanguageReport_NotEmpty" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -286,9 +265,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Group1DevopsCoursework" />
-      <option name="filePath" />
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="buildOnly" value="true" />
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
@@ -305,11 +288,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Group1DevopsCoursework in Group1DevopsCoursework" />
+        <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="JUnit.ReportsUnitTest.testGetAllCountriesInWorld" />
         <item itemvalue="JUnit.ReportsUnitTest" />
         <item itemvalue="JUnit.ReportsIntegrationTest.testMainMethod" />
-        <item itemvalue="JUnit.ReportsIntegrationTest.testFullReportsWorkflow" />
-        <item itemvalue="JUnit.ReportsUnitTest.testGetAllCountriesInWorld" />
-        <item itemvalue="JUnit.ReportsIntegrationTest.testGetLanguageReport_NotEmpty" />
       </list>
     </recent_temporary>
   </component>
@@ -387,6 +370,9 @@
       <workItem from="1761795929816" duration="5974000" />
       <workItem from="1761812018774" duration="330000" />
       <workItem from="1761822892841" duration="12173000" />
+      <workItem from="1762269315969" duration="6301000" />
+      <workItem from="1762314183095" duration="3448000" />
+      <workItem from="1762317890584" duration="1462000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - ThinzarPhyoWai">
       <option name="closed" value="true" />
@@ -748,7 +734,39 @@
       <option name="project" value="LOCAL" />
       <updated>1761837595142</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Updated ReadMe file">
+      <option name="closed" value="true" />
+      <created>1762099703759</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1762099703759</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Updated Codecov Percentage">
+      <option name="closed" value="true" />
+      <created>1762276662801</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1762276662801</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Updated Codecov Percentage">
+      <option name="closed" value="true" />
+      <created>1762277305650</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1762277305650</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Updated Codecov Percentage">
+      <option name="closed" value="true" />
+      <created>1762318838605</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1762318838605</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -778,77 +796,37 @@
     <MESSAGE value="Update usecase" />
     <MESSAGE value="Update main class" />
     <MESSAGE value="update files" />
-    <option name="LAST_COMMIT_MESSAGE" value="update files" />
+    <MESSAGE value="Updated ReadMe file" />
+    <MESSAGE value="Updated Codecov Percentage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Codecov Percentage" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetAllCitiesInWorld_Print.ic" NAME="ReportsUnitTest.testGetAllCitiesInWorld_Print Coverage Results" MODIFIED="1761372184632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>com.Group1DevopsCoursework.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetPopulationByRegion.ic" NAME="ReportsIntegrationTest.testGetPopulationByRegion Coverage Results" MODIFIED="1761800892889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>com.Group1DevopsCoursework.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetTopNCitiesInDistrict_Valid.ic" NAME="ReportsIntegrationTest.testGetTopNCitiesInDistrict_Valid Coverage Results" MODIFIED="1761800283015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>com.Group1DevopsCoursework.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetAllCapitalCitiesInWorld_PrintResults.ic" NAME="ReportsIntegrationTest.testGetAllCapitalCitiesInWorld_PrintResults Coverage Results" MODIFIED="1761832632197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>com.Group1DevopsCoursework.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testAddCountry.ic" NAME="ReportsIntegrationTest.testAddCountry Coverage Results" MODIFIED="1761379828116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>com.Group1DevopsCoursework.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetAllCountriesInWorld_PrintResults.ic" NAME="ReportsIntegrationTest.testGetAllCountriesInWorld_PrintResults Coverage Results" MODIFIED="1761825803625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>com.Group1DevopsCoursework.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testRunCityQuery_EmptyResult.ic" NAME="ReportsIntegrationTest.testRunCityQuery_EmptyResult Coverage Results" MODIFIED="1761834198602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>com.Group1DevopsCoursework.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetLanguageReport_NotNull.ic" NAME="ReportsUnitTest.testGetLanguageReport_NotNull Coverage Results" MODIFIED="1761377338652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>com.Group1DevopsCoursework.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetPopulationOfContinentWithName.ic" NAME="ReportsIntegrationTest.testGetPopulationOfContinentWithName Coverage Results" MODIFIED="1761800944441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>com.Group1DevopsCoursework.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetPopulationByContinent.ic" NAME="ReportsIntegrationTest.testGetPopulationByContinent Coverage Results" MODIFIED="1761800747279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>com.Group1DevopsCoursework.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest.ic" NAME="ReportsUnitTest Coverage Results" MODIFIED="1761835560988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>com.Group1DevopsCoursework.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetCitiesByContinent_Print.ic" NAME="ReportsUnitTest.testGetCitiesByContinent_Print Coverage Results" MODIFIED="1761372359808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testRunCityQuery_ValidResult.ic" NAME="ReportsIntegrationTest.testRunCityQuery_ValidResult Coverage Results" MODIFIED="1761833717921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetLanguageReport_PercentageCalculation.ic" NAME="ReportsUnitTest.testGetLanguageReport_PercentageCalculation Coverage Results" MODIFIED="1761377395368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testRunCityQuery_ValidResult.ic" NAME="ReportsIntegrationTest.testRunCityQuery_ValidResult Coverage Results" MODIFIED="1761833717921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>com.Group1DevopsCoursework.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetLanguageReport_ContainsTargetLanguages.ic" NAME="ReportsUnitTest.testGetLanguageReport_ContainsTargetLanguages Coverage Results" MODIFIED="1761377428897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>com.Group1DevopsCoursework.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetCitiesByContinent_Empty.ic" NAME="ReportsUnitTest.testGetCitiesByContinent_Empty Coverage Results" MODIFIED="1761372298318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>com.Group1DevopsCoursework.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetLanguageReport_NotEmpty.ic" NAME="ReportsIntegrationTest.testGetLanguageReport_NotEmpty Coverage Results" MODIFIED="1761834621767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetPopulationByRegion.ic" NAME="ReportsIntegrationTest.testGetPopulationByRegion Coverage Results" MODIFIED="1761800892889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testRunCityQueryWithInt_ValidResult.ic" NAME="ReportsIntegrationTest.testRunCityQueryWithInt_ValidResult Coverage Results" MODIFIED="1761834096789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest.ic" NAME="ReportsIntegrationTest Coverage Results" MODIFIED="1761826781093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testAddCountry.ic" NAME="ReportsIntegrationTest.testAddCountry Coverage Results" MODIFIED="1761379828116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testRunCityQueryWithInt_EmptyResult.ic" NAME="ReportsIntegrationTest.testRunCityQueryWithInt_EmptyResult Coverage Results" MODIFIED="1761834039711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetLanguageReport_NotEmpty.ic" NAME="ReportsUnitTest.testGetLanguageReport_NotEmpty Coverage Results" MODIFIED="1761377363957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetLanguageReport_NotEmpty.ic" NAME="ReportsIntegrationTest.testGetLanguageReport_NotEmpty Coverage Results" MODIFIED="1761834621767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetLanguageReport_PrintResults.ic" NAME="ReportsIntegrationTest.testGetLanguageReport_PrintResults Coverage Results" MODIFIED="1761834319880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
@@ -857,20 +835,56 @@
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetAllCountriesInWorld_NotEmpty.ic" NAME="ReportsIntegrationTest.testGetAllCountriesInWorld_NotEmpty Coverage Results" MODIFIED="1761825782420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testFullReportsWorkflow.ic" NAME="ReportsIntegrationTest.testFullReportsWorkflow Coverage Results" MODIFIED="1761834890756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testMainMethod.ic" NAME="ReportsIntegrationTest.testMainMethod Coverage Results" MODIFIED="1761835255882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetAllCitiesInWorld_Print.ic" NAME="ReportsUnitTest.testGetAllCitiesInWorld_Print Coverage Results" MODIFIED="1761372184632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetLanguageReport_ContainsTargetLanguages.ic" NAME="ReportsUnitTest.testGetLanguageReport_ContainsTargetLanguages Coverage Results" MODIFIED="1761377428897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetLanguageReport_Print.ic" NAME="ReportsUnitTest.testGetLanguageReport_Print Coverage Results" MODIFIED="1761377260523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$Reports.ic" NAME="Reports Coverage Results" MODIFIED="1761369594197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$Group1DevopsCoursework_in_Group1DevopsCoursework.ic" NAME="Group1DevopsCoursework in Group1DevopsCoursework Coverage Results" MODIFIED="1762318636533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetPopulationOfContinentWithName.ic" NAME="ReportsIntegrationTest.testGetPopulationOfContinentWithName Coverage Results" MODIFIED="1761800944441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testMainMethod.ic" NAME="ReportsIntegrationTest.testMainMethod Coverage Results" MODIFIED="1761835255882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$Reports.ic" NAME="Reports Coverage Results" MODIFIED="1762273841169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$Group1DevopsCoursework_in_Group1DevopsCoursework.ic" NAME="Group1DevopsCoursework in Group1DevopsCoursework Coverage Results" MODIFIED="1761823006260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest.ic" NAME="ReportsIntegrationTest Coverage Results" MODIFIED="1761826781093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetTopNCitiesInDistrict_Valid.ic" NAME="ReportsIntegrationTest.testGetTopNCitiesInDistrict_Valid Coverage Results" MODIFIED="1761800283015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetLanguageReport_NotNull.ic" NAME="ReportsUnitTest.testGetLanguageReport_NotNull Coverage Results" MODIFIED="1761377338652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest.ic" NAME="ReportsUnitTest Coverage Results" MODIFIED="1761835560988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetLanguageReport_NotEmpty.ic" NAME="ReportsUnitTest.testGetLanguageReport_NotEmpty Coverage Results" MODIFIED="1761377363957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetPopulationByContinent.ic" NAME="ReportsIntegrationTest.testGetPopulationByContinent Coverage Results" MODIFIED="1761800747279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetAllCapitalCitiesInWorld_PrintResults.ic" NAME="ReportsIntegrationTest.testGetAllCapitalCitiesInWorld_PrintResults Coverage Results" MODIFIED="1761832632197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testFullReportsWorkflow.ic" NAME="ReportsIntegrationTest.testFullReportsWorkflow Coverage Results" MODIFIED="1761834890756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetCitiesByContinent_Print.ic" NAME="ReportsUnitTest.testGetCitiesByContinent_Print Coverage Results" MODIFIED="1761372359808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetCitiesByContinent_Empty.ic" NAME="ReportsUnitTest.testGetCitiesByContinent_Empty Coverage Results" MODIFIED="1761372298318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testRunCityQuery_EmptyResult.ic" NAME="ReportsIntegrationTest.testRunCityQuery_EmptyResult Coverage Results" MODIFIED="1761834198602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetAllCountriesInWorld_PrintResults.ic" NAME="ReportsIntegrationTest.testGetAllCountriesInWorld_PrintResults Coverage Results" MODIFIED="1761825803625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
   </component>
