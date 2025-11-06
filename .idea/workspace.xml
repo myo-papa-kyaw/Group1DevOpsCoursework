@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Changes in code files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsIntegrationTest.java" afterDir="false" />
+    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Adding integration tests">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,7 +243,7 @@
       <workItem from="1762174826031" duration="991000" />
       <workItem from="1762308599748" duration="1613000" />
       <workItem from="1762321383145" duration="8329000" />
-      <workItem from="1762395482873" duration="10747000" />
+      <workItem from="1762395482873" duration="11202000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - ThinzarPhyoWai">
       <option name="closed" value="true" />
@@ -552,7 +549,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762331015586</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Adding integration tests">
+      <option name="closed" value="true" />
+      <created>1762408027490</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1762408027490</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,7 +575,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changing docker-compose and pom" />
     <MESSAGE value="Adding additional classes" />
     <MESSAGE value="Changing pom file" />
     <MESSAGE value="Changes in Docker and pom file" />
@@ -595,7 +599,8 @@
     <MESSAGE value="Change Docker" />
     <MESSAGE value="Change pom" />
     <MESSAGE value="Changes in code files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes in code files" />
+    <MESSAGE value="Adding integration tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding integration tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
