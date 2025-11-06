@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Updated reports file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsUnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +179,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "feature/myopapakyaw",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "E:/ENUni/DevOps/Group1DevopsCoursework/use-cases",
@@ -208,7 +210,7 @@
       <recent name="com.Group1DevopsCoursework" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.Group1DevopsCoursework in Group1DevopsCoursework">
     <configuration name="Group1DevopsCoursework in Group1DevopsCoursework" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Group1DevopsCoursework" />
       <option name="TEST_OBJECT" value="directory" />
@@ -287,10 +289,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Group1DevopsCoursework in Group1DevopsCoursework" />
         <item itemvalue="JUnit.ReportsUnitTest.testGetAllCountriesInWorld" />
         <item itemvalue="JUnit.ReportsUnitTest" />
         <item itemvalue="JUnit.ReportsIntegrationTest.testMainMethod" />
-        <item itemvalue="JUnit.Group1DevopsCoursework in Group1DevopsCoursework" />
         <item itemvalue="Docker.Dockerfile" />
       </list>
     </recent_temporary>
@@ -373,14 +375,6 @@
       <workItem from="1762314183095" duration="3448000" />
       <workItem from="1762317890584" duration="1462000" />
       <workItem from="1762400722681" duration="5350000" />
-    </task>
-    <task id="LOCAL-00010" summary="Update reports">
-      <option name="closed" value="true" />
-      <created>1759993420515</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1759993420515</updated>
     </task>
     <task id="LOCAL-00011" summary="Update usecase">
       <option name="closed" value="true" />
@@ -766,7 +760,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762406500155</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Updated reports file">
+      <option name="closed" value="true" />
+      <created>1762406784561</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1762406784561</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -800,16 +802,6 @@
     <MESSAGE value="Updated Codecov Percentage" />
     <MESSAGE value="Updated reports file" />
     <option name="LAST_COMMIT_MESSAGE" value="Updated reports file" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
@@ -858,7 +850,7 @@
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetLanguageReport_Print.ic" NAME="ReportsUnitTest.testGetLanguageReport_Print Coverage Results" MODIFIED="1761377260523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$Group1DevopsCoursework_in_Group1DevopsCoursework.ic" NAME="Group1DevopsCoursework in Group1DevopsCoursework Coverage Results" MODIFIED="1762404821737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$Group1DevopsCoursework_in_Group1DevopsCoursework.ic" NAME="Group1DevopsCoursework in Group1DevopsCoursework Coverage Results" MODIFIED="1762406941155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetPopulationOfContinentWithName.ic" NAME="ReportsIntegrationTest.testGetPopulationOfContinentWithName Coverage Results" MODIFIED="1761800944441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
