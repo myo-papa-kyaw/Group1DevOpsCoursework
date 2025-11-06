@@ -1,5 +1,9 @@
 package com.Group1DevopsCoursework;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -18,54 +22,36 @@ public class Reports {
      * Connect to the MySQL database.
      * @param location host:port (e.g. "localhost:3306")
      * @param delay milliseconds to wait before first attempt (can be 0)
-     * @return true if connection successful, false otherwise
      */
-    public boolean connect(String location, int delay) {
+    public void connect(String location, int delay) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             System.out.println("Could not load SQL driver");
-            return false; // Don't exit in tests!
+            System.exit(-1);
         }
 
-        int retries = 5; // Reduced for tests
+        int retries = 15;
         for (int i = 0; i < retries; ++i) {
-            System.out.println("Connecting to database...");
             try {
-                if (delay > 0 && i == 0) {
-                    Thread.sleep(delay); // Only sleep on first attempt if delay specified
-                }
+                System.out.println("Waiting for database to be ready... attempt " + (i + 1));
+                Thread.sleep(10000); // Wait 10 seconds before each attempt
 
                 con = DriverManager.getConnection(
                         "jdbc:mysql://" + location + "/world?useSSL=false&allowPublicKeyRetrieval=true",
                         "root", "example"
                 );
 
-                // Test the connection
-                if (con != null && !con.isClosed()) {
-                    System.out.println("Successfully connected");
-                    return true;
-                }
+                System.out.println("✅ Successfully connected to database!");
+                break;
             } catch (SQLException sqle) {
-                System.out.println("Failed to connect attempt " + (i + 1) + ": " + sqle.getMessage());
+                System.out.println("❌ Database not ready yet (" + (i + 1) + "/" + retries + ")");
+                System.out.println(sqle.getMessage());
             } catch (InterruptedException ie) {
-                System.out.println("Thread interrupted");
-                Thread.currentThread().interrupt();
-                return false;
-            }
-
-            // Wait before retry (shorter wait for tests)
-            if (i < retries - 1) {
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException ie) {
-                    Thread.currentThread().interrupt();
-                    return false;
-                }
+                System.out.println("Thread interrupted? Should not happen.");
             }
         }
-        System.out.println("Failed to connect after " + retries + " attempts");
-        return false;
+
     }
 
     /**
@@ -82,22 +68,6 @@ public class Reports {
         }
     }
 
-    /**
-     * Check if connection is valid and reconnect if necessary
-     */
-    private boolean ensureConnection() {
-        try {
-            if (con == null || con.isClosed()) {
-                System.out.println("Connection lost, attempting to reconnect...");
-                return connect("localhost:33060", 1000);
-            }
-            return true;
-        } catch (SQLException e) {
-            System.out.println("Error checking connection: " + e.getMessage());
-            return connect("localhost:33060", 1000);
-        }
-    }
-
     // ======================================================
     // ================ QUERY / REPORT METHODS =============
     // ======================================================
@@ -106,64 +76,76 @@ public class Reports {
 
     public ArrayList<Country> getAllCountriesInWorld() {
         String sql = """
-                SELECT Code, Name, Continent, Region, Population, Capital
-                FROM country
-                ORDER BY Population DESC;
-                """;
+    SELECT c.Code, c.Name, c.Continent, c.Region, c.Population, ci.Name AS Capital
+    FROM country c
+    LEFT JOIN city ci ON c.Capital = ci.ID
+    ORDER BY c.Population DESC;
+    """;
+
         return runCountryQuery(sql);
     }
 
     public ArrayList<Country> getCountriesByContinent(String continent) {
         String sql = """
-                SELECT Code, Name, Continent, Region, Population, Capital
-                FROM country
-                WHERE Continent = ?
-                ORDER BY Population DESC;
-                """;
+        SELECT c.Code, c.Name, c.Continent, c.Region, c.Population, ci.Name AS Capital
+        FROM country c
+        LEFT JOIN city ci ON c.Capital = ci.ID
+        WHERE c.Continent = ?
+        ORDER BY c.Population DESC;
+        """;
         return runCountryQueryWithString(sql, continent);
     }
 
+
     public ArrayList<Country> getCountriesByRegion(String region) {
         String sql = """
-                SELECT Code, Name, Continent, Region, Population, Capital
-                FROM country
-                WHERE Region = ?
-                ORDER BY Population DESC;
-                """;
+        SELECT c.Code, c.Name, c.Continent, c.Region, c.Population, ci.Name AS Capital
+        FROM country c
+        LEFT JOIN city ci ON c.Capital = ci.ID
+        WHERE c.Region = ?
+        ORDER BY c.Population DESC;
+        """;
         return runCountryQueryWithString(sql, region);
     }
 
+
     public ArrayList<Country> getTopNCountriesInWorld(int n) {
         String sql = """
-                SELECT Code, Name, Continent, Region, Population, Capital
-                FROM country
-                ORDER BY Population DESC
-                LIMIT ?;
-                """;
+        SELECT c.Code, c.Name, c.Continent, c.Region, c.Population, ci.Name AS Capital
+        FROM country c
+        LEFT JOIN city ci ON c.Capital = ci.ID
+        ORDER BY c.Population DESC
+        LIMIT ?;
+        """;
         return runCountryQueryWithInt(sql, n);
     }
 
+
     public ArrayList<Country> getTopNCountriesInContinent(String continent, int n) {
         String sql = """
-                SELECT Code, Name, Continent, Region, Population, Capital
-                FROM country
-                WHERE Continent = ?
-                ORDER BY Population DESC
-                LIMIT ?;
-                """;
+        SELECT c.Code, c.Name, c.Continent, c.Region, c.Population, ci.Name AS Capital
+        FROM country c
+        LEFT JOIN city ci ON c.Capital = ci.ID
+        WHERE c.Continent = ?
+        ORDER BY c.Population DESC
+        LIMIT ?;
+        """;
         return runCountryQueryWithStringAndInt(sql, continent, n);
     }
 
+
     public ArrayList<Country> getTopNCountriesInRegion(String region, int n) {
         String sql = """
-                SELECT Code, Name, Continent, Region, Population, Capital
-                FROM country
-                WHERE Region = ?
-                ORDER BY Population DESC
-                LIMIT ?;
-                """;
+        SELECT c.Code, c.Name, c.Continent, c.Region, c.Population, ci.Name AS Capital
+        FROM country c
+        LEFT JOIN city ci ON c.Capital = ci.ID
+        WHERE c.Region = ?
+        ORDER BY c.Population DESC
+        LIMIT ?;
+        """;
         return runCountryQueryWithStringAndInt(sql, region, n);
     }
+
 
     // ----------------- CITY REPORTS -----------------------
 
@@ -395,8 +377,6 @@ public class Reports {
     // Single-population getters
 
     public long getWorldPopulation() {
-        if (!ensureConnection()) return 0L;
-
         String sql = "SELECT SUM(Population) AS worldPop FROM country;";
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
@@ -408,13 +388,6 @@ public class Reports {
     }
 
     public Population getPopulationOfContinentWithName(String continent) {
-        if (!ensureConnection()) {
-            Population p = new Population();
-            p.name = continent;
-            p.totalPopulation = 0L;
-            return p;
-        }
-
         Population p = new Population();
         p.name = continent; // Set the name column
         String sql = "SELECT SUM(Population) AS pop FROM country WHERE Continent = ?;";
@@ -435,13 +408,6 @@ public class Reports {
     }
 
     public Population getPopulationOfRegionWithName(String region) {
-        if (!ensureConnection()) {
-            Population p = new Population();
-            p.name = region;
-            p.totalPopulation = 0L;
-            return p;
-        }
-
         Population p = new Population();
         p.name = region;
         String sql = "SELECT SUM(Population) AS pop FROM country WHERE Region = ?;";
@@ -461,13 +427,6 @@ public class Reports {
         return p;
     }
     public Population getPopulationOfCountryWithName(String country) {
-        if (!ensureConnection()) {
-            Population p = new Population();
-            p.name = country;
-            p.totalPopulation = 0L;
-            return p;
-        }
-
         Population p = new Population();
         p.name = country;
         String sql = "SELECT Population AS pop FROM country WHERE Name = ? LIMIT 1;";
@@ -487,13 +446,6 @@ public class Reports {
         return p;
     }
     public Population getPopulationOfDistrictWithName(String district) {
-        if (!ensureConnection()) {
-            Population p = new Population();
-            p.name = district;
-            p.totalPopulation = 0L;
-            return p;
-        }
-
         Population p = new Population();
         p.name = district;
         String sql = "SELECT SUM(Population) AS pop FROM city WHERE District = ?;";
@@ -513,13 +465,6 @@ public class Reports {
         return p;
     }
     public Population getPopulationOfCityWithName(String city) {
-        if (!ensureConnection()) {
-            Population p = new Population();
-            p.name = city;
-            p.totalPopulation = 0L;
-            return p;
-        }
-
         Population p = new Population();
         p.name = city;
         String sql = "SELECT Population AS pop FROM city WHERE Name = ? LIMIT 1;";
@@ -546,8 +491,6 @@ public class Reports {
      * number of speakers and percentage of world.
      */
     public ArrayList<Language> getLanguageReport() {
-        if (!ensureConnection()) return new ArrayList<>();
-
         String sql = """
                 SELECT cl.Language AS language,
                        SUM( (c.Population * cl.Percentage) / 100.0 ) AS speakers
@@ -578,14 +521,178 @@ public class Reports {
         return list;
     }
 
+
+    public void outputAllReportsMarkdown(String filename) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("# World Database Reports\n\n");
+
+        try {
+            new File("./reports/").mkdirs();
+
+            // ---------------- Countries ----------------
+            sb.append("## 1. All Countries in the World\n\n");
+            appendCountriesMarkdown(sb, getAllCountriesInWorld());
+
+            sb.append("## 2. Countries by Continent: Asia\n\n");
+            appendCountriesMarkdown(sb, getCountriesByContinent("Asia"));
+
+            sb.append("## 3. Countries by Region: Eastern Europe\n\n");
+            appendCountriesMarkdown(sb, getCountriesByRegion("Eastern Europe"));
+
+            sb.append("## 4. Top 5 Countries in World\n\n");
+            appendCountriesMarkdown(sb, getTopNCountriesInWorld(5));
+
+            sb.append("## 5. Top 5 Countries in Asia\n\n");
+            appendCountriesMarkdown(sb, getTopNCountriesInContinent("Asia", 5));
+
+            sb.append("## 6. Top 5 Countries in Middle East\n\n");
+            appendCountriesMarkdown(sb, getTopNCountriesInRegion("Middle East", 5));
+
+            // ---------------- Cities ----------------
+            sb.append("## 7. All Cities in World\n\n");
+            appendCitiesMarkdown(sb, getAllCitiesInWorld());
+
+            sb.append("## 8. Cities in Continent: Asia\n\n");
+            appendCitiesMarkdown(sb, getCitiesByContinent("Asia"));
+
+            sb.append("## 9. Cities in Region: Western Europe\n\n");
+            appendCitiesMarkdown(sb, getCitiesByRegion("Western Europe"));
+
+            sb.append("## 10. Cities in Country: China\n\n");
+            appendCitiesMarkdown(sb, getCitiesByCountry("China"));
+
+            sb.append("## 11. Cities in District: California\n\n");
+            appendCitiesMarkdown(sb, getCitiesByDistrict("California"));
+
+            sb.append("## 12–16. Top Cities (World, Continent, Region, Country, District)\n\n");
+            appendCitiesMarkdown(sb, getTopNCitiesInWorld(5));
+
+            // ---------------- Capitals ----------------
+            sb.append("## 17. All Capital Cities in World\n\n");
+            appendCapitalsMarkdown(sb, getAllCapitalCitiesInWorld());
+
+            sb.append("## 18–22. Top Capital City Reports\n\n");
+            appendCapitalsMarkdown(sb, getTopNCapitalCitiesInWorld(5));
+
+            // ---------------- Population ----------------
+            sb.append("## 23. Population by Continent\n\n");
+            appendPopulationsMarkdown(sb, getPopulationByContinent());
+
+            sb.append("## 24. Population by Region\n\n");
+            appendPopulationsMarkdown(sb, getPopulationByRegion());
+
+            sb.append("## 25. Population by Country\n\n");
+            appendPopulationsMarkdown(sb, getPopulationByCountry());
+
+            sb.append("## 26–31. Specific Population Reports\n\n");
+            sb.append("| Area | Population |\r\n| --- | --- |\r\n");
+            sb.append("| World | ").append(getWorldPopulation()).append(" |\r\n");
+            sb.append("| Continent: Asia | ").append(getPopulationOfContinentWithName("Asia").totalPopulation).append(" |\r\n");
+            sb.append("| Region: Eastern Asia | ").append(getPopulationOfRegionWithName("Eastern Asia").totalPopulation).append(" |\r\n");
+            sb.append("| Country: Brazil | ").append(getPopulationOfCountryWithName("Brazil").totalPopulation).append(" |\r\n");
+            sb.append("| District: São Paulo | ").append(getPopulationOfDistrictWithName("São Paulo").totalPopulation).append(" |\r\n");
+            sb.append("| City: Shanghai | ").append(getPopulationOfCityWithName("Shanghai").totalPopulation).append(" |\r\n\n");
+
+            // ---------------- Languages ----------------
+            sb.append("## 32. Language Report\n\n");
+            appendLanguagesMarkdown(sb, getLanguageReport());
+
+            // Write to file
+            BufferedWriter writer = new BufferedWriter(new FileWriter(new File("./reports/" + filename)));
+            writer.write(sb.toString());
+            writer.close();
+            System.out.println("Markdown report written to ./reports/" + filename);
+        } catch (IOException e) {
+            System.out.println("Error writing markdown report: " + e.getMessage());
+        }
+    }
+
+// ---------- Helper methods for markdown formatting ----------
+
+    private void appendCountriesMarkdown(StringBuilder sb, ArrayList<Country> countries) {
+        if (countries == null || countries.isEmpty()) {
+            sb.append("_No countries found._\n\n");
+            return;
+        }
+        sb.append("| Code | Name | Continent | Region | Population | Capital |\r\n");
+        sb.append("| --- | --- | --- | --- | --- | --- |\r\n");
+        for (Country c : countries) {
+            if (c == null) continue;
+            sb.append("| ").append(c.code).append(" | ").append(c.name)
+                    .append(" | ").append(c.continent).append(" | ").append(c.region)
+                    .append(" | ").append(c.population).append(" | ").append(c.capital).append(" |\r\n");
+        }
+        sb.append("\n");
+    }
+
+    private void appendCitiesMarkdown(StringBuilder sb, ArrayList<City> cities) {
+        if (cities == null || cities.isEmpty()) {
+            sb.append("_No cities found._\n\n");
+            return;
+        }
+        sb.append("| Name | Country | District | Population |\r\n");
+        sb.append("| --- | --- | --- | --- |\r\n");
+        for (City ci : cities) {
+            if (ci == null) continue;
+            sb.append("| ").append(ci.name).append(" | ").append(ci.country)
+                    .append(" | ").append(ci.district).append(" | ").append(ci.population).append(" |\r\n");
+        }
+        sb.append("\n");
+    }
+
+    private void appendCapitalsMarkdown(StringBuilder sb, ArrayList<CapitalCity> capitals) {
+        if (capitals == null || capitals.isEmpty()) {
+            sb.append("_No capitals found._\n\n");
+            return;
+        }
+        sb.append("| Name | Country | Population |\r\n");
+        sb.append("| --- | --- | --- |\r\n");
+        for (CapitalCity cap : capitals) {
+            if (cap == null) continue;
+            sb.append("| ").append(cap.name).append(" | ").append(cap.country)
+                    .append(" | ").append(cap.population).append(" |\r\n");
+        }
+        sb.append("\n");
+    }
+
+    private void appendPopulationsMarkdown(StringBuilder sb, ArrayList<Population> populations) {
+        if (populations == null || populations.isEmpty()) {
+            sb.append("_No population data found._\n\n");
+            return;
+        }
+        sb.append("| Name | Total Population | City Population | % in Cities | % not in Cities |\r\n");
+        sb.append("| --- | --- | --- | --- | --- |\r\n");
+        for (Population p : populations) {
+            if (p == null) continue;
+            sb.append("| ").append(p.name).append(" | ")
+                    .append(p.totalPopulation).append(" | ").append(p.cityPopulation)
+                    .append(" | ").append(String.format("%.2f", p.cityPercentage))
+                    .append(" | ").append(String.format("%.2f", p.nonCityPercentage)).append(" |\r\n");
+        }
+        sb.append("\n");
+    }
+
+    private void appendLanguagesMarkdown(StringBuilder sb, ArrayList<Language> languages) {
+        if (languages == null || languages.isEmpty()) {
+            sb.append("_No language data found._\n\n");
+            return;
+        }
+        sb.append("| Language | Speakers | % of World Population |\r\n");
+        sb.append("| --- | --- | --- |\r\n");
+        for (Language l : languages) {
+            if (l == null) continue;
+            sb.append("| ").append(l.language).append(" | ").append(l.speakers)
+                    .append(" | ").append(String.format("%.2f%%", l.percentage)).append(" |\r\n");
+        }
+        sb.append("\n");
+    }
+
     // ======================================================
     // ================ RUNNER & PRINT HELPERS =============
     // ======================================================
 
     // country helpers
     private ArrayList<Country> runCountryQuery(String sql) {
-        if (!ensureConnection()) return new ArrayList<>();
-
         ArrayList<Country> list = new ArrayList<>();
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
@@ -607,8 +714,6 @@ public class Reports {
     }
 
     private ArrayList<Country> runCountryQueryWithString(String sql, String param) {
-        if (!ensureConnection()) return new ArrayList<>();
-
         ArrayList<Country> list = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setString(1, param);
@@ -631,8 +736,6 @@ public class Reports {
     }
 
     private ArrayList<Country> runCountryQueryWithInt(String sql, int n) {
-        if (!ensureConnection()) return new ArrayList<>();
-
         ArrayList<Country> list = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setInt(1, n);
@@ -655,8 +758,6 @@ public class Reports {
     }
 
     private ArrayList<Country> runCountryQueryWithStringAndInt(String sql, String s, int n) {
-        if (!ensureConnection()) return new ArrayList<>();
-
         ArrayList<Country> list = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setString(1, s);
@@ -681,8 +782,6 @@ public class Reports {
 
     // city helpers
     private ArrayList<City> runCityQuery(String sql) {
-        if (!ensureConnection()) return new ArrayList<>();
-
         ArrayList<City> list = new ArrayList<>();
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
@@ -701,8 +800,6 @@ public class Reports {
     }
 
     private ArrayList<City> runCityQueryWithString(String sql, String param) {
-        if (!ensureConnection()) return new ArrayList<>();
-
         ArrayList<City> list = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setString(1, param);
@@ -723,8 +820,6 @@ public class Reports {
     }
 
     private ArrayList<City> runCityQueryWithInt(String sql, int n) {
-        if (!ensureConnection()) return new ArrayList<>();
-
         ArrayList<City> list = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setInt(1, n);
@@ -745,8 +840,6 @@ public class Reports {
     }
 
     private ArrayList<City> runCityQueryWithStringAndInt(String sql, String s, int n) {
-        if (!ensureConnection()) return new ArrayList<>();
-
         ArrayList<City> list = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setString(1, s);
@@ -769,8 +862,6 @@ public class Reports {
 
     // capital helpers
     private ArrayList<CapitalCity> runCapitalQuery(String sql) {
-        if (!ensureConnection()) return new ArrayList<>();
-
         ArrayList<CapitalCity> list = new ArrayList<>();
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
@@ -788,8 +879,6 @@ public class Reports {
     }
 
     private ArrayList<CapitalCity> runCapitalQueryWithString(String sql, String param) {
-        if (!ensureConnection()) return new ArrayList<>();
-
         ArrayList<CapitalCity> list = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setString(1, param);
@@ -809,8 +898,6 @@ public class Reports {
     }
 
     private ArrayList<CapitalCity> runCapitalQueryWithInt(String sql, int n) {
-        if (!ensureConnection()) return new ArrayList<>();
-
         ArrayList<CapitalCity> list = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setInt(1, n);
@@ -830,8 +917,6 @@ public class Reports {
     }
 
     private ArrayList<CapitalCity> runCapitalQueryWithStringAndInt(String sql, String s, int n) {
-        if (!ensureConnection()) return new ArrayList<>();
-
         ArrayList<CapitalCity> list = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setString(1, s);
@@ -853,8 +938,6 @@ public class Reports {
 
     // population aggregation helper (handles continent/region/country query shapes)
     private ArrayList<Population> runPopulationAggregationQuery(String sql, String level) {
-        if (!ensureConnection()) return new ArrayList<>();
-
         ArrayList<Population> list = new ArrayList<>();
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
@@ -994,8 +1077,6 @@ public class Reports {
 
     }
     public void addCountry(Country country) {
-        if (!ensureConnection()) return;
-
         String sql = """
         INSERT INTO country (Code, Name, Continent, Region, Population)
         VALUES (?, ?, ?, ?, ?);
@@ -1014,8 +1095,6 @@ public class Reports {
     }
 
     public Country getCountryByCode(String code) {
-        if (!ensureConnection()) return null;
-
         String sql = "SELECT Code, Name, Continent, Region, Population FROM country WHERE Code = ? LIMIT 1;";
         Country country = null;
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
@@ -1064,8 +1143,8 @@ public class Reports {
         System.out.println("5. === Top 5 countries in continent 'Asia' ===");
         r.printCountries(r.getTopNCountriesInContinent("Asia", 5));
 
-        System.out.println("6. === Top 5 countries in region 'Southern Asia' ===");
-        r.printCountries(r.getTopNCountriesInRegion("Southern Asia", 5));
+        System.out.println("6. === Top 5 countries in region 'Middle East' ===");
+        r.printCountries(r.getTopNCountriesInRegion("Middle East", 5));
 
 // ---------------- Cities ----------------
         System.out.println("7. === All cities in world (top by population) ===");
@@ -1169,7 +1248,13 @@ public class Reports {
         System.out.println("32. === Language report (speakers and % of world) ===");
         r.printLanguages(r.getLanguageReport());
 
+        // ---------------- Markdown Output ----------------
+        System.out.println("Generating full Markdown report...");
+        r.outputAllReportsMarkdown("WorldReports.md");
+
+
         // disconnect
         r.disconnect();
     }
 }
+
