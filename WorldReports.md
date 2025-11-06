@@ -1,6 +1,8 @@
-# World Database Reports
+# World Popullation Reports
 
-## 1. All Countries in the World
+### Group 1 — DevOps Coursework Team Project
+
+This report was collaboratively created by **Group 1** as part of our DevOps coursework.## 1. All Countries in the World
 
 | Code | Name | Continent | Region | Population | Capital |
 | --- | --- | --- | --- | --- | --- |
@@ -196,7 +198,6 @@
 | FSM | Micronesia, Federated States of | Oceania | Micronesia | 119000 | Palikir |
 | VCT | Saint Vincent and the Grenadines | North America | Caribbean | 114000 | Kingstown |
 | ABW | Aruba | North America | Caribbean | 103000 | Oranjestad |
-| TST | TestLand | Asia | TestRegion | 100000 | null |
 | TON | Tonga | Oceania | Polynesia | 99000 | Nuku´alofa |
 | GRD | Grenada | North America | Caribbean | 94000 | Saint George´s |
 | VIR | Virgin Islands, U.S. | North America | Caribbean | 93000 | Charlotte Amalie |
@@ -300,7 +301,6 @@
 | MAC | Macao | Asia | Eastern Asia | 473000 | Macao |
 | BRN | Brunei | Asia | Southeast Asia | 328000 | Bandar Seri Begawan |
 | MDV | Maldives | Asia | Southern and Central Asia | 286000 | Male |
-| TST | TestLand | Asia | TestRegion | 100000 | null |
 
 ## 3. Countries by Region: Eastern Europe
 
@@ -6834,7 +6834,7 @@
 | Santa Monica | United States | California | 91084 |
 | Carson | United States | California | 89089 |
 
-## 12–16. Top Cities (World, Continent, Region, Country, District)
+## 12. Top 5 Cities in the World
 
 | Name | Country | District | Population |
 | --- | --- | --- | --- |
@@ -6843,6 +6843,46 @@
 | São Paulo | Brazil | São Paulo | 9968485 |
 | Shanghai | China | Shanghai | 9696300 |
 | Jakarta | Indonesia | Jakarta Raya | 9604900 |
+
+## 13. Top 5 Cities in Continent: Asia
+
+| Name | Country | District | Population |
+| --- | --- | --- | --- |
+| Mumbai (Bombay) | India | Maharashtra | 10500000 |
+| Seoul | South Korea | Seoul | 9981619 |
+| Shanghai | China | Shanghai | 9696300 |
+| Jakarta | Indonesia | Jakarta Raya | 9604900 |
+| Karachi | Pakistan | Sindh | 9269265 |
+
+## 14. Top 5 Cities in Region: Eastern Asia
+
+| Name | Country | District | Population |
+| --- | --- | --- | --- |
+| Seoul | South Korea | Seoul | 9981619 |
+| Shanghai | China | Shanghai | 9696300 |
+| Tokyo | Japan | Tokyo-to | 7980230 |
+| Peking | China | Peking | 7472000 |
+| Chongqing | China | Chongqing | 6351600 |
+
+## 15. Top 5 Cities in Country: India
+
+| Name | Country | District | Population |
+| --- | --- | --- | --- |
+| Mumbai (Bombay) | India | Maharashtra | 10500000 |
+| Delhi | India | Delhi | 7206704 |
+| Calcutta [Kolkata] | India | West Bengali | 4399819 |
+| Chennai (Madras) | India | Tamil Nadu | 3841396 |
+| Hyderabad | India | Andhra Pradesh | 2964638 |
+
+## 16. Top 5 Cities in District: Maharashtra
+
+| Name | Country | District | Population |
+| --- | --- | --- | --- |
+| Mumbai (Bombay) | India | Maharashtra | 10500000 |
+| Nagpur | India | Maharashtra | 1624752 |
+| Pune | India | Maharashtra | 1566651 |
+| Kalyan | India | Maharashtra | 1014557 |
+| Thane (Thana) | India | Maharashtra | 803389 |
 
 ## 17. All Capital Cities in World
 
@@ -7081,7 +7121,76 @@
 | West Island | Cocos (Keeling) Islands | 167 |
 | Adamstown | Pitcairn | 42 |
 
-## 18–22. Top Capital City Reports
+## 18. Capitals in Continent: Asia
+
+| Name | Country | Population |
+| --- | --- | --- |
+| Seoul | South Korea | 9981619 |
+| Jakarta | Indonesia | 9604900 |
+| Tokyo | Japan | 7980230 |
+| Peking | China | 7472000 |
+| Teheran | Iran | 6758845 |
+| Bangkok | Thailand | 6320174 |
+| Baghdad | Iraq | 4336000 |
+| Singapore | Singapore | 4017733 |
+| Dhaka | Bangladesh | 3612850 |
+| Rangoon (Yangon) | Myanmar | 3361700 |
+| Riyadh | Saudi Arabia | 3324000 |
+| Ankara | Turkey | 3038159 |
+| Taipei | Taiwan | 2641312 |
+| Pyongyang | North Korea | 2484000 |
+| Toskent | Uzbekistan | 2117500 |
+| Bakı | Azerbaijan | 1787800 |
+| Kabul | Afghanistan | 1780000 |
+| Manila | Philippines | 1581082 |
+| Hanoi | Vietnam | 1410000 |
+| Damascus | Syria | 1347000 |
+| Victoria | Hong Kong | 1312637 |
+| Kuala Lumpur | Malaysia | 1297526 |
+| Yerevan | Armenia | 1248700 |
+| Tbilisi | Georgia | 1235200 |
+| Beirut | Lebanon | 1100000 |
+| Amman | Jordan | 1000000 |
+| Ulan Bator | Mongolia | 773700 |
+| Colombo | Sri Lanka | 645000 |
+| Jerusalem | Israel | 633700 |
+| Kathmandu | Nepal | 591835 |
+| Bishkek | Kyrgyzstan | 589400 |
+| Phnom Penh | Cambodia | 570155 |
+| Ashgabat | Turkmenistan | 540600 |
+| Vientiane | Laos | 531800 |
+| Islamabad | Pakistan | 524500 |
+| Dushanbe | Tajikistan | 524000 |
+| Sanaa | Yemen | 503600 |
+| Macao | Macao | 437500 |
+| Abu Dhabi | United Arab Emirates | 398695 |
+| Doha | Qatar | 355000 |
+| Gaza | Palestine | 353632 |
+| Astana | Kazakstan | 311200 |
+| New Delhi | India | 301297 |
+| Nicosia | Cyprus | 195000 |
+| al-Manama | Bahrain | 148000 |
+| Male | Maldives | 71000 |
+| Masqat | Oman | 51969 |
+| Dili | East Timor | 47900 |
+| Kuwait | Kuwait | 28859 |
+| Thimphu | Bhutan | 22000 |
+| Bandar Seri Begawan | Brunei | 21484 |
+
+## 19. Capitals in Region: Eastern Asia
+
+| Name | Country | Population |
+| --- | --- | --- |
+| Seoul | South Korea | 9981619 |
+| Tokyo | Japan | 7980230 |
+| Peking | China | 7472000 |
+| Taipei | Taiwan | 2641312 |
+| Pyongyang | North Korea | 2484000 |
+| Victoria | Hong Kong | 1312637 |
+| Ulan Bator | Mongolia | 773700 |
+| Macao | Macao | 437500 |
+
+## 20. Top 5 Capital Cities in the World
 
 | Name | Country | Population |
 | --- | --- | --- |
@@ -7091,11 +7200,31 @@
 | Moscow | Russian Federation | 8389200 |
 | Tokyo | Japan | 7980230 |
 
+## 21. Top 5 Capital Cities in Continent: Asia
+
+| Name | Country | Population |
+| --- | --- | --- |
+| Seoul | South Korea | 9981619 |
+| Jakarta | Indonesia | 9604900 |
+| Tokyo | Japan | 7980230 |
+| Peking | China | 7472000 |
+| Teheran | Iran | 6758845 |
+
+## 22. Top 5 Capital Cities in Region: Southern Europe
+
+| Name | Country | Population |
+| --- | --- | --- |
+| Madrid | Spain | 2879052 |
+| Roma | Italy | 2643581 |
+| Beograd | Yugoslavia | 1204000 |
+| Athenai | Greece | 772072 |
+| Zagreb | Croatia | 706770 |
+
 ## 23. Population by Continent
 
 | Name | Total Population | City Population | % in Cities | % not in Cities |
 | --- | --- | --- | --- | --- |
-| Asia | 900937699400 | 697604103 | 0.08 | 99.92 |
+| Asia | 900937599400 | 697604103 | 0.08 | 99.92 |
 | North America | 95330838000 | 168250381 | 0.18 | 99.82 |
 | Europe | 55118944000 | 241942813 | 0.44 | 99.56 |
 | South America | 48533025000 | 172037859 | 0.35 | 99.65 |
@@ -7130,7 +7259,6 @@
 | Melanesia | 6472000 | 484459 | 7.49 | 92.51 |
 | Polynesia | 936050 | 135925 | 14.52 | 85.48 |
 | Micronesia | 925000 | 102329 | 11.06 | 88.94 |
-| TestRegion | 100000 | 0 | 0.00 | 100.00 |
 | Antarctica | 0 | 0 | 0.00 | 0.00 |
 | Micronesia/Caribbean | 0 | 0 | 0.00 | 0.00 |
 
@@ -7330,7 +7458,6 @@
 | Micronesia, Federated States of | 119000 | 30600 | 25.71 | 74.29 |
 | Saint Vincent and the Grenadines | 114000 | 17100 | 15.00 | 85.00 |
 | Aruba | 103000 | 29034 | 28.19 | 71.81 |
-| TestLand | 100000 | 0 | 0.00 | 100.00 |
 | Tonga | 99000 | 22400 | 22.63 | 77.37 |
 | Grenada | 94000 | 4621 | 4.92 | 95.08 |
 | Virgin Islands, U.S. | 93000 | 13000 | 13.98 | 86.02 |
@@ -7379,16 +7506,41 @@
 | South Georgia and the South Sandwich Islands | 0 | 0 | 0.00 | 0.00 |
 | United States Minor Outlying Islands | 0 | 0 | 0.00 | 0.00 |
 
-## 26–31. Specific Population Reports
+## 26. World Population
 
 | Area | Population |
 | --- | --- |
-| World | 6078849450 |
-| Continent: Asia | 3705125700 |
-| Region: Eastern Asia | 1507328000 |
-| Country: Brazil | 170115000 |
-| District: São Paulo | 26316966 |
-| City: Shanghai | 9696300 |
+| World | 6078749450 |
+
+## 27. Population of Continent: Asia
+
+| Continent | Population |
+| --- | --- |
+| Asia | 3705025700 |
+
+## 28. Population of Region: Eastern Asia
+
+| Region | Population |
+| --- | --- |
+| Eastern Asia | 1507328000 |
+
+## 29. Population of Country: Brazil
+
+| Country | Population |
+| --- | --- |
+| Brazil | 170115000 |
+
+## 30. Population of District: São Paulo
+
+| District | Population |
+| --- | --- |
+| São Paulo | 26316966 |
+
+## 31. Population of City: Shanghai
+
+| City | Population |
+| --- | --- |
+| Shanghai | 9696300 |
 
 ## 32. Language Report
 
