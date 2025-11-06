@@ -1,7 +1,7 @@
-FROM eclipse-temurin:23-jdk
+FROM amazoncorretto:23
 WORKDIR /app
 COPY ./target/devops.jar .
 # Create a folder for report output
 RUN mkdir -p /app/reports
 
-ENTRYPOINT ["java", "-jar", "devops.jar", "localhost:33060", "10000"]
+ENTRYPOINT ["java", "-jar", "devops.jar", "world-db:33060", "10000"]
