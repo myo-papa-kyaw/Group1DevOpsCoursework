@@ -35,9 +35,8 @@ public class Reports {
                 // Connect to database
                 //con = DriverManager.getConnection("jdbc:mysql://db:3306/employees?useSSL=false&allowPublicKeyRetrieval=true", "root", "example");
                 con = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:33061/world?useSSL=false&allowPublicKeyRetrieval=true",
-                        "root",
-                        "example"
+                        "jdbc:mysql://" + location + "/world?useSSL=false&allowPublicKeyRetrieval=true",
+                        "root", "example"
                 );
                 System.out.println("Successfully connected");
                 break;

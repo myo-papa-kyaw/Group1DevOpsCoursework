@@ -317,7 +317,7 @@ class ReportsIntegrationTest {
     @Test
     void testGetTopNCitiesInDistrict_Valid() {
         System.out.println("\n--- TestValid: getTopNCitiesInDistrict ---");
-        String district = "Yangon";
+        String district = "Mendoza";
         int n = 5;
 
         ArrayList<City> result = reports.getTopNCitiesInDistrict(district, n);
