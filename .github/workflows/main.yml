@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - feature/thinzarphyowai
 
 permissions:
   contents: write
@@ -85,6 +86,16 @@ jobs:
         run: |
           mvn package -DskipTests
           docker compose up --abort-on-container-exit
+
+      - name: Copy Output
+        run: docker container cp group1devopscoursework-app-1:/tmp/reports ./ || true
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: reports
+          folder: reports # The folder we are copying
+
 
       - name: Create Release
         uses: marvinpinto/action-automatic-releases@latest
