@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Adding integration tests">
+    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Update pom">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -243,7 +244,7 @@
       <workItem from="1762174826031" duration="991000" />
       <workItem from="1762308599748" duration="1613000" />
       <workItem from="1762321383145" duration="8329000" />
-      <workItem from="1762395482873" duration="11202000" />
+      <workItem from="1762395482873" duration="12495000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - ThinzarPhyoWai">
       <option name="closed" value="true" />
@@ -557,7 +558,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762408027490</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Update pom">
+      <option name="closed" value="true" />
+      <created>1762408357330</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1762408357330</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -591,7 +600,6 @@
     <MESSAGE value="Changing false" />
     <MESSAGE value="Changing pom.xml file" />
     <MESSAGE value="Adding tests" />
-    <MESSAGE value="Update pom" />
     <MESSAGE value="Update Readme file" />
     <MESSAGE value="Update reports" />
     <MESSAGE value="Code Changes" />
@@ -600,7 +608,8 @@
     <MESSAGE value="Change pom" />
     <MESSAGE value="Changes in code files" />
     <MESSAGE value="Adding integration tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding integration tests" />
+    <MESSAGE value="Update pom" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update pom" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
