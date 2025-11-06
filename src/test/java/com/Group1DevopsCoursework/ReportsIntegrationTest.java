@@ -1157,13 +1157,6 @@ class ReportsIntegrationTest {
         assertTrue(result.isEmpty(), "Should return empty list for n=0");
     }
 
-    // 7. Main Method with Arguments
-//    @Test
-//    void testMainMethod_WithArguments() {
-//        String[] args = {"test-arg"};
-//        assertDoesNotThrow(() -> Reports.main(args));
-//    }
-
     // 8. Language Report Edge Cases
     @Test
     void testGetLanguageReport_WithZeroWorldPopulationScenario() {
