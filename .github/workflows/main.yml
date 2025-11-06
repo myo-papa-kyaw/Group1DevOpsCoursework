@@ -1,9 +1,5 @@
 name: A workflow for my Group1CourseWork App
-on:
-  push:
-    branches:
-      - master
-      - feature/thinzarphyowai
+on: push
 
 permissions:
   contents: write
