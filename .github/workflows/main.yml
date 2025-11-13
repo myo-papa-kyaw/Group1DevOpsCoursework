@@ -30,6 +30,7 @@ jobs:
           # token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
           directory: ./target/site/jacoco
           flags: Unit Tests
+          fail_ci_if_error: true
           verbose: true
 
   IntegrationTests:
@@ -83,8 +84,13 @@ jobs:
           mvn package -DskipTests
           docker compose up --abort-on-container-exit
 
+      - name: view logs
+        run: docker logs group1devopscoursework-app-1
+
       - name: Copy Output
-        run: docker container cp group1devopscoursework-app-1:/tmp/reports ./ || true
+        run: |
+          mkdir -p reports
+          docker container cp group1devopscoursework-app-1:./tmp/reports/. ./reports
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.5
@@ -94,10 +100,11 @@ jobs:
 
 
       - name: Create Release
-        uses: marvinpinto/action-automatic-releases@latest
+        uses: softprops/action-gh-release@v2
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          prerelease: false
-          automatic_release_tag: "latest"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag_name: latest
           files: |
-            ./target/*.jar
+              ./target/*.jar
+          draft: false
+          prerelease: false

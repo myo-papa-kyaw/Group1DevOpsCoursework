@@ -5,42 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="update files">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report1.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report10.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report11.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report12.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report13.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report14.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report15.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report15.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report16.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report17.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report17.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report18.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report18.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report19.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report19.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report2.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report20.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report20.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report21.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report22.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report22.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report23.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report23.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report24.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report24.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report25.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report25.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report26.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report26.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report27.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report27.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report28.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report28.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report29.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report29.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report3.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report30.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report30.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report31.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report31.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report32.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report32.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report4.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report5.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report6.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report7.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report8.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/report9.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/report9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/WorldReports.md" beforeDir="false" afterPath="$PROJECT_DIR$/reports/WorldReports.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsIntegrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,100 +75,100 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Database_Connection.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.MainApp.executor": "Run",
-    "Application.Reports.executor": "Run",
-    "DefaultPlantUmlFileTemplate": "UML Use Case",
-    "Docker.Dockerfile.executor": "Run",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "Docker.world-db/Dockerfile.executor": "Run",
-    "JUnit.ExecuteAndDisplay_IntegrationTest.executor": "Run",
-    "JUnit.Group1DevopsCoursework in Group1DevopsCoursework.executor": "Coverage",
-    "JUnit.ReportsIntegrationTest.executor": "Run",
-    "JUnit.ReportsIntegrationTest.testAddCountry.executor": "Coverage",
-    "JUnit.ReportsIntegrationTest.testAddCountryWithoutCapital.executor": "Run",
-    "JUnit.ReportsIntegrationTest.testDatabaseConnection.executor": "Run",
-    "JUnit.ReportsTest.executor": "Run",
-    "JUnit.ReportsUnitTest.executeAndDisplayCountry.executor": "Run",
-    "JUnit.ReportsUnitTest.executor": "Coverage",
-    "JUnit.ReportsUnitTest.getCountriesByContinentTest.executor": "Run",
-    "JUnit.ReportsUnitTest.outputCountriesSections.executor": "Coverage",
-    "JUnit.ReportsUnitTest.printCountriesNull.executor": "Run",
-    "JUnit.ReportsUnitTest.testAllCountriesInWorld.executor": "Run",
-    "JUnit.ReportsUnitTest.testCountriesByRegion.executor": "Run",
-    "JUnit.ReportsUnitTest.testCountriesContainNull.executor": "Run",
-    "JUnit.ReportsUnitTest.testEmptyCountries.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetAllCapitalCitiesInWorld_Print.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetAllCitiesInWorld_Print.executor": "Coverage",
-    "JUnit.ReportsUnitTest.testGetAllCountriesInWorld.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetAllCountriesInWorld_ContainsNull.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetAllCountriesInWorld_Empty.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetAllCountriesInWorld_Null.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetAllCountriesInWorld_Print.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetCapitalCitiesByContinent_Null.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetCitiesByContinent_Empty.executor": "Coverage",
-    "JUnit.ReportsUnitTest.testGetCitiesByContinent_Null.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetCitiesByContinent_Print.executor": "Coverage",
-    "JUnit.ReportsUnitTest.testGetCitiesByCountry.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetCitiesByDistrict_Empty.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetCountriesByContinent_Null.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetCountriesByContinent_Print.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetCountriesByRegion_Empty.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetCountriesByRegion_Null.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetCountriesByRegion_Print.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetLanguageReport_ContainsTargetLanguages.executor": "Coverage",
-    "JUnit.ReportsUnitTest.testGetLanguageReport_NotEmpty.executor": "Coverage",
-    "JUnit.ReportsUnitTest.testGetLanguageReport_NotNull.executor": "Coverage",
-    "JUnit.ReportsUnitTest.testGetLanguageReport_PercentageCalculation.executor": "Coverage",
-    "JUnit.ReportsUnitTest.testGetLanguageReport_Print.executor": "Coverage",
-    "JUnit.ReportsUnitTest.testGetTopNCitiesInDistrict_Print.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetTopNCountriesInContinent_Null.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetTopNCountriesInContinent_Print.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetTopNCountriesInRegion_Null.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetTopNCountriesInRegion_Print.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetTopNCountriesInWorld_Negative.executor": "Run",
-    "JUnit.ReportsUnitTest.testGetTopNCountriesInWorld_Print.executor": "Run",
-    "JUnit.ReportsUnitTest.testNullCountries.executor": "Run",
-    "JUnit.ReportsUnitTest.testPopulationByRegion.executor": "Run",
-    "JUnit.ReportsUnitTest.testPopulationOfCity.executor": "Run",
-    "JUnit.ReportsUnitTest.testPopulationOfContinent.executor": "Run",
-    "JUnit.ReportsUnitTest.testPopulationOfCountry.executor": "Run",
-    "JUnit.ReportsUnitTest.testPopulationOfDistrict.executor": "Run",
-    "JUnit.ReportsUnitTest.testPopulationOfRegion.executor": "Run",
-    "JUnit.ReportsUnitTest.testWorldPopulation.executor": "Run",
-    "JUnit.ReportsUnit_Test.executor": "Run",
-    "JUnit.ReportsUnit_Test.testGetAllCountriesInWorld.executor": "Run",
-    "Maven.Group1DevopsCoursework [clean].executor": "Run",
-    "Maven.Group1DevopsCoursework [compile].executor": "Run",
-    "Maven.Group1DevopsCoursework [deploy].executor": "Run",
-    "Maven.Group1DevopsCoursework [package].executor": "Run",
-    "Maven.Group1DevopsCoursework [test].executor": "Run",
-    "Maven.Group1DevopsCoursework [verify].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/thinzarphyowai",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/ENUni/DevOps/Group1DevopsCoursework/use-cases",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "E:/ENUni/DevOps/Group1DevopsCoursework/src/main/java/com/Group1DevopsCoursework/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Database_Connection.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Reports.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Use Case&quot;,
+    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.world-db/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ExecuteAndDisplay_IntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Group1DevopsCoursework in Group1DevopsCoursework.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsIntegrationTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testAddCountry.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testAddCountryWithoutCapital.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testDatabaseConnection.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.executeAndDisplayCountry.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsUnitTest.getCountriesByContinentTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.outputCountriesSections.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsUnitTest.printCountriesNull.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testAllCountriesInWorld.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testCountriesByRegion.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testCountriesContainNull.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testEmptyCountries.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetAllCapitalCitiesInWorld_Print.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetAllCitiesInWorld_Print.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetAllCountriesInWorld.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetAllCountriesInWorld_ContainsNull.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetAllCountriesInWorld_Empty.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetAllCountriesInWorld_Null.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetAllCountriesInWorld_Print.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetCapitalCitiesByContinent_Null.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetCitiesByContinent_Empty.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetCitiesByContinent_Null.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetCitiesByContinent_Print.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetCitiesByCountry.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetCitiesByDistrict_Empty.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetCountriesByContinent_Null.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetCountriesByContinent_Print.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetCountriesByRegion_Empty.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetCountriesByRegion_Null.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetCountriesByRegion_Print.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetLanguageReport_ContainsTargetLanguages.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetLanguageReport_NotEmpty.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetLanguageReport_NotNull.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetLanguageReport_PercentageCalculation.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetLanguageReport_Print.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetTopNCitiesInDistrict_Print.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetTopNCountriesInContinent_Null.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetTopNCountriesInContinent_Print.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetTopNCountriesInRegion_Null.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetTopNCountriesInRegion_Print.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetTopNCountriesInWorld_Negative.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testGetTopNCountriesInWorld_Print.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testNullCountries.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testPopulationByRegion.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testPopulationOfCity.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testPopulationOfContinent.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testPopulationOfCountry.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testPopulationOfDistrict.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testPopulationOfRegion.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnitTest.testWorldPopulation.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnit_Test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsUnit_Test.testGetAllCountriesInWorld.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Group1DevopsCoursework [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Group1DevopsCoursework [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Group1DevopsCoursework [deploy].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Group1DevopsCoursework [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Group1DevopsCoursework [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Group1DevopsCoursework [verify].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/thinzarphyowai&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/ENUni/DevOps/Group1DevopsCoursework/use-cases&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;E:/ENUni/DevOps/Group1DevopsCoursework/src/main/java/com/Group1DevopsCoursework/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\ENUni\DevOps\Group1DevopsCoursework\use-cases" />
@@ -210,11 +182,18 @@
       <recent name="com.Group1DevopsCoursework" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Group1DevopsCoursework in Group1DevopsCoursework" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
+    <configuration name="ReportsIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Group1DevopsCoursework" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Group1DevopsCoursework.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
+      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -280,11 +259,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ReportsUnitTest" />
-        <item itemvalue="JUnit.ReportsUnitTest.outputCountriesSections" />
-        <item itemvalue="JUnit.Group1DevopsCoursework in Group1DevopsCoursework" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="JUnit.ReportsIntegrationTest" />
+        <item itemvalue="JUnit.ReportsUnitTest" />
+        <item itemvalue="JUnit.ReportsUnitTest.outputCountriesSections" />
       </list>
     </recent_temporary>
   </component>
@@ -346,7 +325,11 @@
       <workItem from="1761366425264" duration="13209000" />
       <workItem from="1761387851423" duration="7597000" />
       <workItem from="1761536573469" duration="2673000" />
-      <workItem from="1762436990430" duration="7438000" />
+      <workItem from="1762436990430" duration="9611000" />
+      <workItem from="1762767649989" duration="114000" />
+      <workItem from="1762936028467" duration="713000" />
+      <workItem from="1763005662658" duration="549000" />
+      <workItem from="1763040966025" duration="3486000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - ThinzarPhyoWai">
       <option name="closed" value="true" />
@@ -620,7 +603,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762439693812</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="update files">
+      <option name="closed" value="true" />
+      <created>1762444981323</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1762444981323</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -690,7 +681,7 @@
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetCitiesByContinent_Empty.ic" NAME="ReportsUnitTest.testGetCitiesByContinent_Empty Coverage Results" MODIFIED="1761372298318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest.ic" NAME="ReportsIntegrationTest Coverage Results" MODIFIED="1761378608856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest.ic" NAME="ReportsIntegrationTest Coverage Results" MODIFIED="1762445623148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
   </component>

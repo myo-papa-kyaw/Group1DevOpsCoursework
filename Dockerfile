@@ -1,7 +1,6 @@
 FROM amazoncorretto:23
-WORKDIR /app
-COPY ./target/devops.jar .
-# Create a folder for report output
-RUN mkdir -p /app/reports
 
-ENTRYPOINT ["java", "-jar", "devops.jar", "world-db:33060", "10000"]
+COPY ./target/devops.jar /tmp
+
+WORKDIR /tmp
+ENTRYPOINT ["java", "-jar", "devops.jar", "world-db:3306", "10000","com.mysql.cj.jdbc.Driver"]

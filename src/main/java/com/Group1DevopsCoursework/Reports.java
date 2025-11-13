@@ -663,7 +663,7 @@ public class Reports {
 
 // ---------- Helper methods for markdown formatting ----------
 
-    private void appendCountriesMarkdown(StringBuilder sb, ArrayList<Country> countries) {
+    void appendCountriesMarkdown(StringBuilder sb, ArrayList<Country> countries) {
         if (countries == null || countries.isEmpty()) {
             sb.append("_No countries found._\n\n");
             return;
@@ -679,7 +679,7 @@ public class Reports {
         sb.append("\n");
     }
 
-    private void appendCitiesMarkdown(StringBuilder sb, ArrayList<City> cities) {
+    void appendCitiesMarkdown(StringBuilder sb, ArrayList<City> cities) {
         if (cities == null || cities.isEmpty()) {
             sb.append("_No cities found._\n\n");
             return;
@@ -694,7 +694,7 @@ public class Reports {
         sb.append("\n");
     }
 
-    private void appendCapitalsMarkdown(StringBuilder sb, ArrayList<CapitalCity> capitals) {
+    void appendCapitalsMarkdown(StringBuilder sb, ArrayList<CapitalCity> capitals) {
         if (capitals == null || capitals.isEmpty()) {
             sb.append("_No capitals found._\n\n");
             return;
@@ -709,7 +709,7 @@ public class Reports {
         sb.append("\n");
     }
 
-    private void appendPopulationsMarkdown(StringBuilder sb, ArrayList<Population> populations) {
+    void appendPopulationsMarkdown(StringBuilder sb, ArrayList<Population> populations) {
         if (populations == null || populations.isEmpty()) {
             sb.append("_No population data found._\n\n");
             return;
@@ -726,7 +726,7 @@ public class Reports {
         sb.append("\n");
     }
 
-    private void appendLanguagesMarkdown(StringBuilder sb, ArrayList<Language> languages) {
+    void appendLanguagesMarkdown(StringBuilder sb, ArrayList<Language> languages) {
         if (languages == null || languages.isEmpty()) {
             sb.append("_No language data found._\n\n");
             return;
