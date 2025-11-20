@@ -2,7 +2,7 @@
 
 ## The aim of coursework
 
-The aim of coursework is to work for an organisation that requires reporting on population information.
+The aim of coursework is to work for an organisation that requires reporting on population information. 
 Group 1 have been tasked with designing and implementing a new system to allow easy access to this population information.
 
 ## License
@@ -25,7 +25,7 @@ Group 1 have been tasked with designing and implementing a new system to allow e
 
 # Requirements Checklist
 
-32 requirements have been implemented, which is 100%.
+ 32 requirements have been implemented, which is 100%.
 
 ## Country Reports
 
