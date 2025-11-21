@@ -2,9 +2,7 @@
 
 ### Group 1 — DevOps Coursework Team Project
 
-This report was collaboratively created by **Group 1** as part of our DevOps coursework.
-
-## 1. All Countries in the World
+This report was collaboratively created by **Group 1** as part of our DevOps coursework.## 1. All Countries in the World
 
 | Code | Name | Continent | Region | Population | Capital |
 | --- | --- | --- | --- | --- | --- |

@@ -11,7 +11,6 @@ body:
       value: |
         Thanks for taking the time to fill out this bug report!
 
-
   - type: textarea
     id: what-happened
     attributes:
@@ -38,8 +37,10 @@ body:
     id: logs
     attributes:
       label: Relevant log output or screenshots
-      description: Please copy and paste any relevant console output or error logs.
+      description: Please copy and paste any relevant console output, error logs, or attach screenshots.
       render: shell
+      placeholder: |
+        Paste logs here or drag & drop screenshots...
 
   - type: dropdown
     id: os
@@ -47,11 +48,20 @@ body:
       label: Operating System
       options:
         - Windows 11
-        - Ubuntu
+        - Windows 10
         - macOS
+        - Ubuntu
+        - Other Linux
         - Other
     validations:
       required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: What version are you using? (optional but helpful)
+      placeholder: e.g., v1.2.3, commit hash, or package version
 
   - type: checkboxes
     id: terms

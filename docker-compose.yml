@@ -2,11 +2,6 @@ version: '3'
 services:
   app:
     build: .
-    volumes:
-      - ./reports:/tmp/reports
-    depends_on:
-      - world-db
-    working_dir: /app
 
   world-db:
     build: ./world-db

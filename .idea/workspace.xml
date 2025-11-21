@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Updated reports file">
+      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/WorldReports.md" beforeDir="false" afterPath="$PROJECT_DIR$/reports/WorldReports.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,6 +170,7 @@
     &quot;JUnit.ReportsUnitTest.testWorldPopulation.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.ReportsUnit_Test.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.ReportsUnit_Test.testGetAllCountriesInWorld.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.com.Group1DevopsCoursework in Group1DevopsCoursework.executor&quot;: &quot;Coverage&quot;,
     &quot;Maven.Group1DevopsCoursework [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.Group1DevopsCoursework [compile].executor&quot;: &quot;Run&quot;,
     &quot;Maven.Group1DevopsCoursework [deploy].executor&quot;: &quot;Run&quot;,
@@ -191,7 +198,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -209,16 +216,9 @@
       <recent name="com.Group1DevopsCoursework" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
-    <configuration name="Group1DevopsCoursework in Group1DevopsCoursework" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Group1DevopsCoursework" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReportsUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="Reports" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.Reports" />
       <module name="Group1DevopsCoursework" />
       <extension name="coverage">
         <pattern>
@@ -226,9 +226,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsUnitTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -249,10 +246,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="com.Group1DevopsCoursework in Group1DevopsCoursework" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Group1DevopsCoursework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Group1DevopsCoursework.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
-          <option name="buildOnly" value="true" />
           <option name="sourceFilePath" value="Dockerfile" />
         </settings>
       </deployment>
@@ -280,11 +290,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ReportsUnitTest.testGetAllCountriesInWorld" />
-        <item itemvalue="JUnit.ReportsUnitTest" />
-        <item itemvalue="JUnit.Group1DevopsCoursework in Group1DevopsCoursework" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Application.Reports" />
+        <item itemvalue="JUnit.com.Group1DevopsCoursework in Group1DevopsCoursework" />
+        <item itemvalue="JUnit.ReportsUnitTest.testGetAllCountriesInWorld" />
       </list>
     </recent_temporary>
   </component>
@@ -370,6 +380,15 @@
       <workItem from="1762444353207" duration="1181000" />
       <workItem from="1762763566449" duration="1475000" />
       <workItem from="1762922728943" duration="687000" />
+      <workItem from="1763610433825" duration="409000" />
+      <workItem from="1763610856194" duration="143000" />
+      <workItem from="1763611032425" duration="492000" />
+      <workItem from="1763611550369" duration="60000" />
+      <workItem from="1763611625777" duration="161000" />
+      <workItem from="1763611812697" duration="125000" />
+      <workItem from="1763611952488" duration="9788000" />
+      <workItem from="1763643799324" duration="52000" />
+      <workItem from="1763700988876" duration="2682000" />
     </task>
     <task id="LOCAL-00016" summary="update files">
       <option name="closed" value="true" />
@@ -816,10 +835,10 @@
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testRunCityQuery_ValidResult.ic" NAME="ReportsIntegrationTest.testRunCityQuery_ValidResult Coverage Results" MODIFIED="1761833717921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetLanguageReport_PercentageCalculation.ic" NAME="ReportsUnitTest.testGetLanguageReport_PercentageCalculation Coverage Results" MODIFIED="1761377395368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetPopulationByRegion.ic" NAME="ReportsIntegrationTest.testGetPopulationByRegion Coverage Results" MODIFIED="1761800892889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetPopulationByRegion.ic" NAME="ReportsIntegrationTest.testGetPopulationByRegion Coverage Results" MODIFIED="1761800892889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetLanguageReport_PercentageCalculation.ic" NAME="ReportsUnitTest.testGetLanguageReport_PercentageCalculation Coverage Results" MODIFIED="1761377395368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testRunCityQueryWithInt_ValidResult.ic" NAME="ReportsIntegrationTest.testRunCityQueryWithInt_ValidResult Coverage Results" MODIFIED="1761834096789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
@@ -881,6 +900,9 @@
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testFullReportsWorkflow.ic" NAME="ReportsIntegrationTest.testFullReportsWorkflow Coverage Results" MODIFIED="1761834890756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$com_Group1DevopsCoursework_in_Group1DevopsCoursework.ic" NAME="com.Group1DevopsCoursework in Group1DevopsCoursework Coverage Results" MODIFIED="1763623671252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetCitiesByContinent_Print.ic" NAME="ReportsUnitTest.testGetCitiesByContinent_Print Coverage Results" MODIFIED="1761372359808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
