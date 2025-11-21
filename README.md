@@ -1,9 +1,9 @@
-# Group 1 Coursework
+# Software Engineering Methods
 
-## The aim of coursework
+## Git Workflow
 
-The aim of coursework is to work for an organisation that requires reporting on population information.
-Group 1 have been tasked with designing and implementing a new system to allow easy access to this population information.
+A Git workflow is a defined process that guides how developers collaborate, manage code changes, and release stable
+versions of software.
 
 ## License
 
@@ -24,8 +24,6 @@ Group 1 have been tasked with designing and implementing a new system to allow e
 [![codecov](https://codecov.io/gh/myo-papa-kyaw/Group1DevOpsCoursework/graph/badge.svg?token=YLZQV1RFST)](https://codecov.io/gh/myo-papa-kyaw/Group1DevOpsCoursework)
 
 # Requirements Checklist
-
-32 requirements have been implemented, which is 100%.
 
 ## Country Reports
 
