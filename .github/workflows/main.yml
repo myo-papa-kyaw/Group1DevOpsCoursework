@@ -1,23 +1,116 @@
-name: Group1DevOpsCoursework
+name: A workflow for my Group1CourseWork App
 on: push
 
+permissions:
+  contents: write
+
+
 jobs:
-  build:
-    name: Group1DevOpsCoursework action
+  UnitTests:
+    name: Unit Tests
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
       - name: Set up JDK 23
         uses: actions/setup-java@v2
         with:
           java-version: '23'
           distribution: 'adopt'
-      - name: Compile with Maven
-        run: mvn compile
-      - name: Build Docker Image
-        run: docker build -t devopsimage .
-      - name: Run image
-        run: docker run --name devopscontainer -d devopsimage
+
+      - name: Unit Tests
+        run: mvn -Dtest=com.Group1DevopsCoursework.ReportsUnitTest test
+      - name: List dirs
+        run: |
+          cd ./target/site/jacoco
+          pwd
+          ls
+
+      - name: CodeCov
+        uses: codecov/codecov-action@v5
+        with:
+          # token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          directory: ./target/site/jacoco
+          flags: Unit Tests
+          fail_ci_if_error: true
+          verbose: true
+
+  IntegrationTests:
+    name: Integration Tests
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Set up JDK 23
+        uses: actions/setup-java@v2
+        with:
+          java-version: '23'
+          distribution: 'adopt'
+
+      - name: Integration Tests
+        run: |
+          docker compose up -d world-db
+          mvn -Dtest=com.Group1DevopsCoursework.ReportsIntegrationTest test
+      - name: Shutdown
+        run: docker compose down
+
+      - name: CodeCov
+        uses: codecov/codecov-action@v5
+        with:
+          # token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          directory: ./target/site/jacoco
+          flags: Integration Tests
+          verbose: true
+
+  build:
+    name: Build Run in Docker and Deploy Release
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Set up JDK 23
+        uses: actions/setup-java@v2
+        with:
+          java-version: '23'
+          distribution: 'adopt'
+
+      - name: Package and Run docker compose
+        run: |
+          mvn package -DskipTests
+          docker compose up --abort-on-container-exit
       - name: view logs
-        run: docker logs devopscontainer
+        run: docker logs group1devopscoursework-app-1
+
+      - name: Copy Output
+        run: |
+          mkdir -p reports
+          docker container cp group1devopscoursework-app-1:./tmp/reports/. ./reports
+      - name: List dirs
+        run: |
+          pwd
+          ls
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: reports
+          folder: reports # The folder we are copying
+
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag_name: latest
+          files: |
+            ./target/*.jar
+          draft: false
+          prerelease: false
