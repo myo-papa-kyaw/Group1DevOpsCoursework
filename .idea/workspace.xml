@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Update pom file">
-      <changelist_data name="s" email="" automatic="false" />
+    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Update file">
       <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com.Group1DevopsCoursework/ReportsIntegrationTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com.Group1DevopsCoursework/ReportsUnitTest.java" beforeDir="false" />
     </list>
@@ -31,8 +27,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="s" />
         <option value="sandaraung35 &lt;40794409@live.napier.ac.uk&gt;" />
+        <option value="s" />
         <option value="Swe-Zin-Ei &lt;40804631@live.napier.ac.uk&gt;" />
         <option value="Thinzar-Phyo-Wai &lt;40804632@live.napier.ac.uk&gt;" />
       </list>
@@ -386,7 +382,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763801096359</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Update file">
+      <option name="closed" value="true" />
+      <created>1763814366237</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1763814366237</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,7 +425,8 @@
     <MESSAGE value="Update File" />
     <MESSAGE value="Update yml file" />
     <MESSAGE value="Update pom file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update pom file" />
+    <MESSAGE value="Update file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update file" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$Group1DevopsCoursework_in_Group1DevopsCoursework.ic" NAME="Group1DevopsCoursework in Group1DevopsCoursework Coverage Results" MODIFIED="1763743830546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
