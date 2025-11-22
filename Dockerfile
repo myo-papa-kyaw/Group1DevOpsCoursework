@@ -1,9 +1,7 @@
 # Use the official Eclipse Temurin JDK 23 image (OpenJDK 23 equivalent)
 FROM eclipse-temurin:23-jdk
-
 # Set working directory
 WORKDIR /tmp
-
 # Copy your built JAR file into the container
 COPY ./target/devops.jar /tmp/devops.jar
 
