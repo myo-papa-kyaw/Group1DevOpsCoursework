@@ -3,6 +3,8 @@ on: push
 
 permissions:
   contents: write
+
+
 jobs:
   UnitTests:
     name: Unit Tests
@@ -101,6 +103,8 @@ jobs:
         with:
           branch: reports
           folder: reports # The folder we are copying
+
+
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
