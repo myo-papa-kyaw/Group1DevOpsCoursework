@@ -9,5 +9,8 @@
         <module name="Group1DevopsCoursework" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Group1DevopsCoursework (1)" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
