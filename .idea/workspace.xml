@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="integration test update" />
+    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="integration test update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,44 +71,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Database_Connection.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.MainApp.executor": "Run",
-    "Application.Reports.executor": "Run",
-    "DefaultPlantUmlFileTemplate": "UML Use Case",
-    "Docker.Dockerfile.executor": "Run",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "Docker.world-db/Dockerfile.executor": "Run",
-    "JUnit.Group1DevopsCoursework in Group1DevopsCoursework.executor": "Coverage",
-    "JUnit.ReportsIntegrationTest.executor": "Run",
-    "JUnit.ReportsIntegrationTest.testGetCapitalCitiesByContinent_Valid.executor": "Run",
-    "JUnit.ReportsIntegrationTest.testGetPopulationByRegion.executor": "Run",
-    "JUnit.ReportsIntegrationTest.testGetTopNCitiesInDistrict_Valid.executor": "Run",
-    "Maven.Group1DevopsCoursework [clean].executor": "Run",
-    "Maven.Group1DevopsCoursework [compile].executor": "Run",
-    "Maven.Group1DevopsCoursework [package].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "develop",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/ENUni/DevOps/Group1DevopsCoursework/use-cases",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "E:/ENUni/DevOps/Group1DevopsCoursework/src/main/java/com/Group1DevopsCoursework/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Database_Connection.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Reports.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Use Case&quot;,
+    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.world-db/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Group1DevopsCoursework in Group1DevopsCoursework.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ReportsIntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testGetCapitalCitiesByContinent_Valid.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testGetPopulationByRegion.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReportsIntegrationTest.testGetTopNCitiesInDistrict_Valid.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Group1DevopsCoursework [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Group1DevopsCoursework [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Group1DevopsCoursework [package].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/ENUni/DevOps/Group1DevopsCoursework/use-cases&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;E:/ENUni/DevOps/Group1DevopsCoursework/src/main/java/com/Group1DevopsCoursework/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\ENUni\DevOps\Group1DevopsCoursework\use-cases" />
@@ -181,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ReportsIntegrationTest.testGetTopNCitiesInDistrict_Valid" />
         <item itemvalue="JUnit.Group1DevopsCoursework in Group1DevopsCoursework" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Application.Reports" />
-        <item itemvalue="JUnit.ReportsIntegrationTest.testGetTopNCitiesInDistrict_Valid" />
       </list>
     </recent_temporary>
   </component>
