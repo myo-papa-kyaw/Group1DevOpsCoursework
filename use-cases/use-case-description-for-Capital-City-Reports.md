@@ -60,7 +60,7 @@ Scheduled execution of capital city reports.
 
 ### EXTENSIONS
 2a. Invalid capital city ID found in country table:
-1. No data is shown 
+1. No data is shown
 2. Logs data integrity warning
 3. Continues processing other countries
 
