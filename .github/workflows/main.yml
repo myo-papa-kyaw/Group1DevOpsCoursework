@@ -28,7 +28,6 @@ jobs:
           cd ./target/site/jacoco
           pwd
           ls
-
       - name: CodeCov
         uses: codecov/codecov-action@v5
         with:

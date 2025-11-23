@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Updated Files in own branch">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Updated file">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +29,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="aye-chan-maw04 &lt;40804623@live.napier.ac.uk&gt;" />
         <option value="myo-papa-kyaw &lt;40804635@live.napier.ac.uk&gt;" />
         <option value="Thinzar-Phyo-Wai &lt;40804632@live.napier.ac.uk&gt;" />
       </list>
@@ -80,6 +81,7 @@
     "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
     "Docker.world-db/Dockerfile.executor": "Run",
     "JUnit.ExecuteAndDisplay_IntegrationTest.executor": "Run",
+    "JUnit.Group1DevopsCoursework in Group1DevOpsCoursework.executor": "Coverage",
     "JUnit.Group1DevopsCoursework in Group1DevopsCoursework.executor": "Coverage",
     "JUnit.ReportsIntegrationTest.executor": "Run",
     "JUnit.ReportsIntegrationTest.testAddCountry.executor": "Coverage",
@@ -164,6 +166,8 @@
     "JUnit.ReportsUnit_Test.executor": "Run",
     "JUnit.ReportsUnit_Test.testGetAllCountriesInWorld.executor": "Run",
     "JUnit.com.Group1DevopsCoursework in Group1DevopsCoursework.executor": "Coverage",
+    "Maven.Group1DevOpsCoursework [clean].executor": "Run",
+    "Maven.Group1DevOpsCoursework [package].executor": "Run",
     "Maven.Group1DevopsCoursework [clean].executor": "Run",
     "Maven.Group1DevopsCoursework [compile].executor": "Run",
     "Maven.Group1DevopsCoursework [deploy].executor": "Run",
@@ -178,17 +182,17 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "feature/ayechanmaw",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/ENUni/DevOps/Group1DevopsCoursework/use-cases",
+    "last_opened_file_path": "D:/Edinburgh Napier University/DevOps/Group1DevOpsCoursework",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "E:/ENUni/DevOps/Group1DevopsCoursework/src/main/java/com/Group1DevopsCoursework/Main.java",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager",
@@ -198,6 +202,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Edinburgh Napier University\DevOps\Group1DevOpsCoursework" />
       <recent name="E:\ENUni\DevOps\Group1DevopsCoursework\use-cases" />
       <recent name="E:\ENUni\DevOps\Group1DevopsCoursework" />
       <recent name="E:\ENUni\DevOps\Group1DevopsCoursework\src\main\java\com\Group1DevopsCoursework" />
@@ -209,22 +214,27 @@
       <recent name="com.Group1DevopsCoursework" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.MainApp" />
-      <module name="Group1DevopsCoursework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.Group1DevopsCoursework.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+  <component name="RunManager" selected="JUnit.Group1DevopsCoursework in Group1DevOpsCoursework">
+    <configuration name="Group1DevopsCoursework in Group1DevOpsCoursework" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Group1DevOpsCoursework" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Reports" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.Reports" />
+    <configuration name="Group1DevopsCoursework in Group1DevopsCoursework" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Group1DevopsCoursework" />
+      <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReportsIntegrationTest.testGetTopNCitiesInDistrict_Valid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Group1DevopsCoursework" />
       <extension name="coverage">
         <pattern>
@@ -232,6 +242,26 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
+      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsIntegrationTest" />
+      <option name="METHOD_NAME" value="testGetTopNCitiesInDistrict_Valid" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReportsUnitTest.testGetAllCountriesInWorld" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Group1DevopsCoursework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Group1DevopsCoursework.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
+      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsUnitTest" />
+      <option name="METHOD_NAME" value="testGetAllCountriesInWorld" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -239,6 +269,7 @@
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
+          <option name="containerName" value="" />
           <option name="sourceFilePath" value="Dockerfile" />
         </settings>
       </deployment>
@@ -256,29 +287,20 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="world-db/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="sourceFilePath" value="world-db/Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="Docker.Dockerfile" />
+      <item itemvalue="JUnit.Group1DevopsCoursework in Group1DevOpsCoursework" />
+      <item itemvalue="JUnit.ReportsIntegrationTest.testGetTopNCitiesInDistrict_Valid" />
+      <item itemvalue="JUnit.ReportsUnitTest.testGetAllCountriesInWorld" />
+      <item itemvalue="JUnit.Group1DevopsCoursework in Group1DevopsCoursework" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.world-db/Dockerfile" />
+        <item itemvalue="JUnit.Group1DevopsCoursework in Group1DevOpsCoursework" />
+        <item itemvalue="JUnit.ReportsIntegrationTest.testGetTopNCitiesInDistrict_Valid" />
+        <item itemvalue="JUnit.Group1DevopsCoursework in Group1DevopsCoursework" />
+        <item itemvalue="JUnit.ReportsUnitTest.testGetAllCountriesInWorld" />
         <item itemvalue="Docker.Dockerfile" />
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Application.Reports" />
-        <item itemvalue="Application.MainApp" />
       </list>
     </recent_temporary>
   </component>
@@ -379,30 +401,12 @@
       <workItem from="1763792179754" duration="1824000" />
       <workItem from="1763796322113" duration="32000" />
       <workItem from="1763796371047" duration="2646000" />
-    </task>
-    <task id="LOCAL-00021" summary="update files">
-      <option name="closed" value="true" />
-      <created>1761390130410</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1761390130410</updated>
-    </task>
-    <task id="LOCAL-00022" summary="update files">
-      <option name="closed" value="true" />
-      <created>1761391361572</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1761391361572</updated>
-    </task>
-    <task id="LOCAL-00023" summary="update files">
-      <option name="closed" value="true" />
-      <created>1761391628722</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1761391628722</updated>
+      <workItem from="1763808338444" duration="499000" />
+      <workItem from="1763817436089" duration="363000" />
+      <workItem from="1763874587711" duration="76000" />
+      <workItem from="1763875101208" duration="163000" />
+      <workItem from="1763875278814" duration="2367000" />
+      <workItem from="1763905100011" duration="3530000" />
     </task>
     <task id="LOCAL-00024" summary="update files">
       <option name="closed" value="true" />
@@ -772,7 +776,31 @@
       <option name="project" value="LOCAL" />
       <updated>1763798120712</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="Own Branch merges into Develop">
+      <option name="closed" value="true" />
+      <created>1763799876731</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1763799876732</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Updated file">
+      <option name="closed" value="true" />
+      <created>1763913780622</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1763913780623</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Updated file">
+      <option name="closed" value="true" />
+      <created>1763920482609</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1763920482609</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -808,7 +836,9 @@
     <MESSAGE value=" PMD Updated Files" />
     <MESSAGE value="Updated Files" />
     <MESSAGE value="Updated Files in own branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Files in own branch" />
+    <MESSAGE value="Own Branch merges into Develop" />
+    <MESSAGE value="Updated file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -828,10 +858,10 @@
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testRunCityQuery_ValidResult.ic" NAME="ReportsIntegrationTest.testRunCityQuery_ValidResult Coverage Results" MODIFIED="1761833717921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetPopulationByRegion.ic" NAME="ReportsIntegrationTest.testGetPopulationByRegion Coverage Results" MODIFIED="1761800892889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetLanguageReport_PercentageCalculation.ic" NAME="ReportsUnitTest.testGetLanguageReport_PercentageCalculation Coverage Results" MODIFIED="1761377395368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetLanguageReport_PercentageCalculation.ic" NAME="ReportsUnitTest.testGetLanguageReport_PercentageCalculation Coverage Results" MODIFIED="1761377395368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetPopulationByRegion.ic" NAME="ReportsIntegrationTest.testGetPopulationByRegion Coverage Results" MODIFIED="1761800892889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testRunCityQueryWithInt_ValidResult.ic" NAME="ReportsIntegrationTest.testRunCityQueryWithInt_ValidResult Coverage Results" MODIFIED="1761834096789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
@@ -840,6 +870,7 @@
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest.ic" NAME="ReportsIntegrationTest Coverage Results" MODIFIED="1761826781093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/Group1DevOpsCoursework$Group1DevopsCoursework_in_Group1DevOpsCoursework.ic" NAME="Group1DevopsCoursework in Group1DevOpsCoursework Coverage Results" MODIFIED="1763917444178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testAddCountry.ic" NAME="ReportsIntegrationTest.testAddCountry Coverage Results" MODIFIED="1761379828116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
@@ -867,7 +898,7 @@
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest_testGetLanguageReport_Print.ic" NAME="ReportsUnitTest.testGetLanguageReport_Print Coverage Results" MODIFIED="1761377260523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$Group1DevopsCoursework_in_Group1DevopsCoursework.ic" NAME="Group1DevopsCoursework in Group1DevopsCoursework Coverage Results" MODIFIED="1763792301558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$Group1DevopsCoursework_in_Group1DevopsCoursework.ic" NAME="Group1DevopsCoursework in Group1DevopsCoursework Coverage Results" MODIFIED="1763824394747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsIntegrationTest_testGetPopulationOfContinentWithName.ic" NAME="ReportsIntegrationTest.testGetPopulationOfContinentWithName Coverage Results" MODIFIED="1761800944441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.Group1DevopsCoursework.*</FILTER>
     </SUITE>
