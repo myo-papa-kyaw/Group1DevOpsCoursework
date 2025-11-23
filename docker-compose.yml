@@ -2,6 +2,9 @@ version: '3'
 services:
   app:
     build: .
+    volumes:
+      - ./reports:/tmp/reports
+
 
   world-db:
     build: ./world-db
