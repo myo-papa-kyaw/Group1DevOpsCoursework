@@ -5,13 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="ReadMe file update">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework/Reports.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code_of_conduct.md" beforeDir="false" afterPath="$PROJECT_DIR$/Code_of_conduct.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/WorldReports.md" beforeDir="false" afterPath="$PROJECT_DIR$/reports/WorldReports.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/test_report.md" beforeDir="false" afterPath="$PROJECT_DIR$/reports/test_report.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework/ReportsUnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="0" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -58,71 +66,60 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainApp.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Reports.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.world-db/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Group1DevopsCoursework in Group1DevopsCoursework.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.ReportsIntegrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ReportsIntegrationTest.testGetTopNCitiesInDistrict_Valid.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ReportsUnitTest.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Group1DevopsCoursework [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Group1DevopsCoursework [package].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;ToolWindow.Services.ShowToolbar&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/ayechanmaw&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/ayechanmaw/ENU/DevOps/DevOps_Labs/Group1DevopsCoursework/src/main/java/com/Group1DevopsCoursework&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;E:/ENUni/DevOps/Group1DevopsCoursework/src/main/java/com/Group1DevopsCoursework/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.MainApp.executor": "Run",
+    "Application.Reports.executor": "Run",
+    "Docker.Dockerfile.executor": "Run",
+    "Docker.docker-compose.yml.app: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "Docker.world-db/Dockerfile.executor": "Run",
+    "JUnit.Group1DevopsCoursework in Group1DevopsCoursework.executor": "Coverage",
+    "JUnit.ReportsIntegrationTest.executor": "Run",
+    "JUnit.ReportsIntegrationTest.testGetTopNCitiesInDistrict_Valid.executor": "Run",
+    "JUnit.ReportsUnitTest.executor": "Run",
+    "JUnit.com.Group1DevopsCoursework in Group1DevopsCoursework.executor": "Coverage",
+    "Maven.Group1DevopsCoursework [clean].executor": "Run",
+    "Maven.Group1DevopsCoursework [package].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "ToolWindow.Services.ShowToolbar": "false",
+    "git-widget-placeholder": "feature/ayechanmaw",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/ayechanmaw/ENU/DevOps/DevOps_Labs/Group1DevopsCoursework/src/main/java/com/Group1DevopsCoursework",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "E:/ENUni/DevOps/Group1DevopsCoursework/src/main/java/com/Group1DevopsCoursework/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.github/workflows" />
+      <recent name="$PROJECT_DIR$/.github" />
+      <recent name="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework" />
       <recent name="$PROJECT_DIR$/src/main/java/com/Group1DevopsCoursework" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework" />
-      <recent name="$PROJECT_DIR$/src/test/java" />
-      <recent name="$PROJECT_DIR$/use-cases" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.Group1DevopsCoursework" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.MainApp" />
-      <module name="Group1DevopsCoursework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.Group1DevopsCoursework.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.com.Group1DevopsCoursework in Group1DevopsCoursework">
     <configuration name="Group1DevopsCoursework in Group1DevopsCoursework" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Group1DevopsCoursework" />
       <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
@@ -160,6 +157,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="com.Group1DevopsCoursework in Group1DevopsCoursework" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Group1DevopsCoursework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Group1DevopsCoursework.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -169,24 +182,42 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
       <deployment type="dockerfile">
         <settings />
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yml.app: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="app" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Application.MainApp" />
+      <item itemvalue="Docker.docker-compose.yml.app: Compose Deployment" />
       <item itemvalue="Docker.Dockerfile" />
+      <item itemvalue="JUnit.com.Group1DevopsCoursework in Group1DevopsCoursework" />
       <item itemvalue="JUnit.Group1DevopsCoursework in Group1DevopsCoursework" />
       <item itemvalue="JUnit.ReportsIntegrationTest.testGetTopNCitiesInDistrict_Valid" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.com.Group1DevopsCoursework in Group1DevopsCoursework" />
+        <item itemvalue="Docker.docker-compose.yml.app: Compose Deployment" />
         <item itemvalue="JUnit.Group1DevopsCoursework in Group1DevopsCoursework" />
         <item itemvalue="JUnit.ReportsIntegrationTest.testGetTopNCitiesInDistrict_Valid" />
-        <item itemvalue="Docker.Dockerfile" />
-        <item itemvalue="Application.MainApp" />
         <item itemvalue="Docker.Dockerfile" />
       </list>
     </recent_temporary>
@@ -234,6 +265,13 @@
       <workItem from="1761768363291" duration="34041000" />
       <workItem from="1763294488501" duration="3008000" />
       <workItem from="1763614067070" duration="4746000" />
+      <workItem from="1763872904585" duration="61000" />
+      <workItem from="1763872972137" duration="50000" />
+      <workItem from="1763873029383" duration="9000" />
+      <workItem from="1763873062997" duration="3257000" />
+      <workItem from="1763877886347" duration="8045000" />
+      <workItem from="1763904839284" duration="2541000" />
+      <workItem from="1763911120517" duration="1799000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - ThinzarPhyoWai">
       <option name="closed" value="true" />
@@ -593,5 +631,8 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$Group1DevopsCoursework_in_Group1DevopsCoursework.ic" NAME="Group1DevopsCoursework in Group1DevopsCoursework Coverage Results" MODIFIED="1762330689522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Group1DevopsCoursework$com_Group1DevopsCoursework_in_Group1DevopsCoursework.ic" NAME="com.Group1DevopsCoursework in Group1DevopsCoursework Coverage Results" MODIFIED="1763911669564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.Group1DevopsCoursework.*</FILTER>
+    </SUITE>
   </component>
 </project>

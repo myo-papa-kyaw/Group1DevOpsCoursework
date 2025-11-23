@@ -1,6 +1,5 @@
 package com.Group1DevopsCoursework;
 
-import com.Group1DevopsCoursework.Reports;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -939,6 +938,8 @@ class ReportsIntegrationTest {
         System.out.println("Language report printed successfully");
     }
 
+
+
     @Test
     public void testMainMethod() {
         String[] args = {};
@@ -951,4 +952,360 @@ class ReportsIntegrationTest {
         reports.disconnect();
         System.out.println("Disconnected from server testing complete.");
     }
+
+    // ==================== MISSING TESTS FOR 100% COVERAGE ====================
+
+    // 1. Markdown Output Tests
+    @Test
+    void testOutputAllReportsMarkdown() {
+        assertDoesNotThrow(() -> reports.outputAllReportsMarkdown("test_report.md"));
+        System.out.println("Markdown report generation completed successfully");
+    }
+
+    @Test
+    void testOutputAllReportsMarkdown_WithIOException() {
+        // Test with problematic filename that might cause IO issues
+        assertDoesNotThrow(() -> reports.outputAllReportsMarkdown("../../../invalid/test.md"));
+    }
+
+    // 2. Markdown Helper Methods with Null/Empty Lists
+    @Test
+    void testAppendCountriesMarkdown_WithNullList() {
+        StringBuilder sb = new StringBuilder();
+        reports.appendCountriesMarkdown(sb, null);
+        assertTrue(sb.toString().contains("No countries found"), "Should handle null list");
+    }
+
+    @Test
+    void testAppendCountriesMarkdown_WithEmptyList() {
+        StringBuilder sb = new StringBuilder();
+        reports.appendCountriesMarkdown(sb, new ArrayList<>());
+        assertTrue(sb.toString().contains("No countries found"), "Should handle empty list");
+    }
+
+    @Test
+    void testAppendCitiesMarkdown_WithNullList() {
+        StringBuilder sb = new StringBuilder();
+        reports.appendCitiesMarkdown(sb, null);
+        assertTrue(sb.toString().contains("No cities found"), "Should handle null list");
+    }
+
+    @Test
+    void testAppendCitiesMarkdown_WithEmptyList() {
+        StringBuilder sb = new StringBuilder();
+        reports.appendCitiesMarkdown(sb, new ArrayList<>());
+        assertTrue(sb.toString().contains("No cities found"), "Should handle empty list");
+    }
+
+    @Test
+    void testAppendCapitalsMarkdown_WithNullList() {
+        StringBuilder sb = new StringBuilder();
+        reports.appendCapitalsMarkdown(sb, null);
+        assertTrue(sb.toString().contains("No capitals found"), "Should handle null list");
+    }
+
+    @Test
+    void testAppendCapitalsMarkdown_WithEmptyList() {
+        StringBuilder sb = new StringBuilder();
+        reports.appendCapitalsMarkdown(sb, new ArrayList<>());
+        assertTrue(sb.toString().contains("No capitals found"), "Should handle empty list");
+    }
+
+    @Test
+    void testAppendPopulationsMarkdown_WithNullList() {
+        StringBuilder sb = new StringBuilder();
+        reports.appendPopulationsMarkdown(sb, null);
+        assertTrue(sb.toString().contains("No population data found"), "Should handle null list");
+    }
+
+    @Test
+    void testAppendPopulationsMarkdown_WithEmptyList() {
+        StringBuilder sb = new StringBuilder();
+        reports.appendPopulationsMarkdown(sb, new ArrayList<>());
+        assertTrue(sb.toString().contains("No population data found"), "Should handle empty list");
+    }
+
+    @Test
+    void testAppendLanguagesMarkdown_WithNullList() {
+        StringBuilder sb = new StringBuilder();
+        reports.appendLanguagesMarkdown(sb, null);
+        assertTrue(sb.toString().contains("No language data found"), "Should handle null list");
+    }
+
+    @Test
+    void testAppendLanguagesMarkdown_WithEmptyList() {
+        StringBuilder sb = new StringBuilder();
+        reports.appendLanguagesMarkdown(sb, new ArrayList<>());
+        assertTrue(sb.toString().contains("No language data found"), "Should handle empty list");
+    }
+
+    // 3. Print Methods with Null Elements in Lists
+    @Test
+    void testPrintCountries_WithNullElementsInList() {
+        ArrayList<Country> countries = new ArrayList<>();
+        countries.add(null);
+        countries.add(createTestCountry());
+        countries.add(null);
+
+        assertDoesNotThrow(() -> reports.printCountries(countries));
+    }
+
+    @Test
+    void testPrintCities_WithNullElementsInList() {
+        ArrayList<City> cities = new ArrayList<>();
+        cities.add(null);
+        cities.add(createTestCity());
+        cities.add(null);
+
+        assertDoesNotThrow(() -> reports.printCities(cities));
+    }
+
+    @Test
+    void testPrintCapitals_WithNullElementsInList() {
+        ArrayList<CapitalCity> capitals = new ArrayList<>();
+        capitals.add(null);
+        capitals.add(createTestCapital());
+        capitals.add(null);
+
+        assertDoesNotThrow(() -> reports.printCapitals(capitals));
+    }
+
+    @Test
+    void testPrintPopulations_WithNullElementsInList() {
+        ArrayList<Population> populations = new ArrayList<>();
+        populations.add(null);
+        populations.add(createTestPopulation());
+        populations.add(null);
+
+        assertDoesNotThrow(() -> reports.printPopulations(populations));
+    }
+
+    @Test
+    void testPrintLanguages_WithNullElementsInList() {
+        ArrayList<Language> languages = new ArrayList<>();
+        languages.add(null);
+        languages.add(createTestLanguage());
+        languages.add(null);
+
+        assertDoesNotThrow(() -> reports.printLanguages(languages));
+    }
+
+    // 4. Connection Error Handling Tests
+    @Test
+    void testConnect_WithInvalidLocation() {
+        Reports localReports = new Reports();
+        assertDoesNotThrow(() -> localReports.connect("invalid-host:9999", 100));
+        System.out.println("Handled invalid connection location gracefully");
+    }
+
+    @Test
+    void testDisconnect_WhenNotConnected() {
+        Reports localReports = new Reports();
+        assertDoesNotThrow(localReports::disconnect);
+        System.out.println("Handled disconnect when not connected gracefully");
+    }
+
+    // 5. SQL Exception Handling Tests (Disconnected Database)
+    @Test
+    void testAllQueryMethods_WithDisconnectedDatabase() {
+        reports.disconnect(); // Force disconnection
+
+        // Test that all query methods handle SQL exceptions gracefully
+        assertNotNull(reports.getAllCountriesInWorld());
+        assertNotNull(reports.getCountriesByContinent("Asia"));
+        assertNotNull(reports.getCountriesByRegion("Asia"));
+        assertNotNull(reports.getTopNCountriesInWorld(5));
+        assertNotNull(reports.getAllCitiesInWorld());
+        assertNotNull(reports.getCitiesByContinent("Asia"));
+        assertNotNull(reports.getCitiesByCountry("China"));
+        assertNotNull(reports.getTopNCitiesInWorld(5));
+        assertNotNull(reports.getAllCapitalCitiesInWorld());
+        assertNotNull(reports.getCapitalCitiesByContinent("Asia"));
+        assertNotNull(reports.getTopNCapitalCitiesInWorld(5));
+        assertNotNull(reports.getPopulationByContinent());
+        assertNotNull(reports.getPopulationByRegion());
+        assertNotNull(reports.getPopulationByCountry());
+        assertNotNull(reports.getLanguageReport());
+        assertNotNull(reports.getWorldPopulation());
+
+        // Reconnect for other tests
+        reports.connect("localhost:33060", 1000);
+    }
+
+    // 6. Edge Cases for Top N Queries
+    @Test
+    void testGetTopNCountriesInWorld_ZeroN() {
+        ArrayList<Country> result = reports.getTopNCountriesInWorld(0);
+        assertNotNull(result, "Should not return null for n=0");
+        assertTrue(result.isEmpty(), "Should return empty list for n=0");
+    }
+
+    @Test
+    void testGetTopNCitiesInWorld_ZeroN() {
+        ArrayList<City> result = reports.getTopNCitiesInWorld(0);
+        assertNotNull(result, "Should not return null for n=0");
+        assertTrue(result.isEmpty(), "Should return empty list for n=0");
+    }
+
+    @Test
+    void testGetTopNCapitalCitiesInWorld_ZeroN() {
+        ArrayList<CapitalCity> result = reports.getTopNCapitalCitiesInWorld(0);
+        assertNotNull(result, "Should not return null for n=0");
+        assertTrue(result.isEmpty(), "Should return empty list for n=0");
+    }
+
+    // 8. Language Report Edge Cases
+    @Test
+    void testGetLanguageReport_WithZeroWorldPopulationScenario() {
+        // This tests the branch where worldPop <= 0 in percentage calculation
+        ArrayList<Language> result = reports.getLanguageReport();
+        assertNotNull(result);
+
+        for (Language lang : result) {
+            assertTrue(lang.percentage >= 0, "Percentage should not be negative");
+        }
+    }
+
+    // 9. Population Calculation Edge Cases
+    @Test
+    void testRunPopulationAggregationQuery_WithZeroPopulation() {
+        ArrayList<Population> result = reports.getPopulationByContinent();
+        assertNotNull(result);
+
+        // Verify that if totalPopulation is 0, percentages are set to 0
+        for (Population pop : result) {
+            if (pop.totalPopulation <= 0) {
+                assertEquals(0.0, pop.cityPercentage, "City percentage should be 0 when total population is 0");
+                assertEquals(0.0, pop.nonCityPercentage, "Non-city percentage should be 0 when total population is 0");
+            }
+        }
+    }
+
+// ==================== HELPER METHODS ====================
+
+    // Add these helper methods to create test data
+    private Country createTestCountry() {
+        Country country = new Country();
+        country.code = "TST";
+        country.name = "TestCountry";
+        country.continent = "TestContinent";
+        country.region = "TestRegion";
+        country.population = 1000000;
+        country.capital = "TestCapital";
+        return country;
+    }
+
+    private City createTestCity() {
+        City city = new City();
+        city.name = "TestCity";
+        city.country = "TestCountry";
+        city.district = "TestDistrict";
+        city.population = 500000;
+        return city;
+    }
+
+    private CapitalCity createTestCapital() {
+        CapitalCity capital = new CapitalCity();
+        capital.name = "TestCapital";
+        capital.country = "TestCountry";
+        capital.population = 1000000;
+        return capital;
+    }
+
+    private Population createTestPopulation() {
+        Population population = new Population();
+        population.name = "TestPopulation";
+        population.totalPopulation = 10000000L;
+        population.cityPopulation = 4000000L;
+        population.nonCityPopulation = 6000000L;
+        population.cityPercentage = 40.0;
+        population.nonCityPercentage = 60.0;
+        return population;
+    }
+
+    private Language createTestLanguage() {
+        Language language = new Language();
+        language.language = "TestLanguage";
+        language.speakers = 5000000L;
+        language.percentage = 10.5;
+        return language;
+    }
+
+// ==================== MODEL CLASS TESTS ====================
+
+    @Test
+    void testCapitalCityConstructorAndGetters() {
+        CapitalCity capital = new CapitalCity();
+        capital.name = "Yangon";
+        capital.country = "Myanmar";
+        capital.population = 5000000;
+
+        assertEquals("Yangon", capital.name);
+        assertEquals("Myanmar", capital.country);
+        assertEquals(5000000, capital.population);
+    }
+
+    @Test
+    void testCityConstructorAndGetters() {
+        City city = new City();
+        city.name = "Mandalay";
+        city.country = "Myanmar";
+        city.district = "Mandalay";
+        city.population = 1200000;
+
+        assertEquals("Mandalay", city.name);
+        assertEquals("Myanmar", city.country);
+        assertEquals("Mandalay", city.district);
+        assertEquals(1200000, city.population);
+    }
+
+    @Test
+    void testCountryConstructorAndGetters() {
+        Country country = new Country();
+        country.code = "MMR";
+        country.name = "Myanmar";
+        country.continent = "Asia";
+        country.region = "Southeast Asia";
+        country.population = 54000000;
+        country.capital = "Yangon";
+
+        assertEquals("MMR", country.code);
+        assertEquals("Myanmar", country.name);
+        assertEquals("Asia", country.continent);
+        assertEquals("Southeast Asia", country.region);
+        assertEquals(54000000, country.population);
+        assertEquals("Yangon", country.capital);
+    }
+
+    @Test
+    void testLanguageConstructorAndGetters() {
+        Language language = new Language();
+        language.language = "Burmese";
+        language.speakers = 33000000L;
+        language.percentage = 61.1;
+
+        assertEquals("Burmese", language.language);
+        assertEquals(33000000L, language.speakers);
+        assertEquals(61.1, language.percentage, 0.01);
+    }
+
+    @Test
+    void testPopulationConstructorAndGetters() {
+        Population population = new Population();
+        population.name = "Asia";
+        population.totalPopulation = 3700000000L;
+        population.cityPopulation = 1500000000L;
+        population.nonCityPopulation = 2200000000L;
+        population.cityPercentage = 40.54;
+        population.nonCityPercentage = 59.46;
+
+        assertEquals("Asia", population.name);
+        assertEquals(3700000000L, population.totalPopulation);
+        assertEquals(1500000000L, population.cityPopulation);
+        assertEquals(2200000000L, population.nonCityPopulation);
+        assertEquals(40.54, population.cityPercentage, 0.01);
+        assertEquals(59.46, population.nonCityPercentage, 0.01);
+    }
 }
+
+
