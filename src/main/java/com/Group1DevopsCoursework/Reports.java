@@ -207,8 +207,6 @@ public class Reports {
 
     // ----------------- CITY REPORTS -----------------------
 
-    // ----------------- CITY REPORTS -----------------------
-
     /**
      * Retrieves all cities in the world, ordered by population (descending).
      *

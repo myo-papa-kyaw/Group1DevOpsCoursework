@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="All files' changes">
+    <list default="true" id="980de2d2-dab6-4d5c-8b75-0440607e3c66" name="Changes" comment="Adding image files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +32,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="feature/swezinei" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,55 +63,55 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Database_Connection.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainApp.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Reports.executor&quot;: &quot;Coverage&quot;,
-    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.world-db/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CapitalCityTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.DatabaseConnectionDebugTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Group1DevopsCoursework in Group1DevopsCoursework.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.ReportsConnectionTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.ReportsConnectionTest.testConnectWithInvalidLocation.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.ReportsIntegrationTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.ReportsIntegrationTest.testDriverLoadFails.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.ReportsIntegrationTest.testDriverLoadsSuccessfully.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.ReportsIntegrationTest.testThrowsWhenSQLDriverMissing.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ReportsUnitTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.ReportsUnitTest.reportsNullConnectionTest.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.WorkingDatabaseReportsTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.com.Group1DevopsCoursework in Group1DevopsCoursework.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.java in Group1DevopsCoursework.executor&quot;: &quot;Coverage&quot;,
-    &quot;Maven.Group1DevopsCoursework [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Group1DevopsCoursework [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Group1DevopsCoursework [test].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/swezinei&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;E:/ENUni/DevOps/Group1DevopsCoursework/src/main/java/com/Group1DevopsCoursework/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Database_Connection.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MainApp.executor": "Run",
+    "Application.Reports.executor": "Coverage",
+    "Docker.Dockerfile.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "Docker.world-db/Dockerfile.executor": "Run",
+    "JUnit.CapitalCityTest.executor": "Coverage",
+    "JUnit.DatabaseConnectionDebugTest.executor": "Run",
+    "JUnit.Group1DevopsCoursework in Group1DevopsCoursework.executor": "Coverage",
+    "JUnit.ReportsConnectionTest.executor": "Coverage",
+    "JUnit.ReportsConnectionTest.testConnectWithInvalidLocation.executor": "Coverage",
+    "JUnit.ReportsIntegrationTest.executor": "Coverage",
+    "JUnit.ReportsIntegrationTest.testDriverLoadFails.executor": "Coverage",
+    "JUnit.ReportsIntegrationTest.testDriverLoadsSuccessfully.executor": "Coverage",
+    "JUnit.ReportsIntegrationTest.testThrowsWhenSQLDriverMissing.executor": "Run",
+    "JUnit.ReportsUnitTest.executor": "Coverage",
+    "JUnit.ReportsUnitTest.reportsNullConnectionTest.executor": "Debug",
+    "JUnit.WorkingDatabaseReportsTest.executor": "Run",
+    "JUnit.com.Group1DevopsCoursework in Group1DevopsCoursework.executor": "Coverage",
+    "JUnit.java in Group1DevopsCoursework.executor": "Coverage",
+    "Maven.Group1DevopsCoursework [clean].executor": "Run",
+    "Maven.Group1DevopsCoursework [package].executor": "Run",
+    "Maven.Group1DevopsCoursework [test].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "develop",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "E:/ENUni/DevOps/Group1DevopsCoursework/src/main/java/com/Group1DevopsCoursework/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -123,9 +123,9 @@
       <recent name="com.Group1DevopsCoursework" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Group1DevopsCoursework in Group1DevopsCoursework">
-    <configuration name="Reports" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.Reports" />
+  <component name="RunManager" selected="Application.MainApp">
+    <configuration name="Database_Connection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.Database_Connection" />
       <module name="Group1DevopsCoursework" />
       <extension name="coverage">
         <pattern>
@@ -137,15 +137,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Group1DevopsCoursework in Group1DevopsCoursework" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Group1DevopsCoursework" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java/com/Group1DevopsCoursework" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReportsIntegrationTest.testThrowsWhenSQLDriverMissing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.Main" />
       <module name="Group1DevopsCoursework" />
       <extension name="coverage">
         <pattern>
@@ -153,10 +146,19 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.Group1DevopsCoursework" />
-      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.ReportsIntegrationTest" />
-      <option name="METHOD_NAME" value="testThrowsWhenSQLDriverMissing" />
-      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Group1DevopsCoursework.MainApp" />
+      <module name="Group1DevopsCoursework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Group1DevopsCoursework.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -184,6 +186,7 @@
     <configuration name="world-db/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
+          <option name="contextFolderPath" value="$PROJECT_DIR$" />
           <option name="sourceFilePath" value="world-db/Dockerfile" />
         </settings>
       </deployment>
@@ -191,11 +194,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Group1DevopsCoursework in Group1DevopsCoursework" />
-        <item itemvalue="Application.Reports" />
-        <item itemvalue="Docker.Dockerfile" />
-        <item itemvalue="JUnit.ReportsIntegrationTest.testThrowsWhenSQLDriverMissing" />
         <item itemvalue="Docker.world-db/Dockerfile" />
+        <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="Application.MainApp" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Database_Connection" />
       </list>
     </recent_temporary>
   </component>
@@ -249,7 +252,7 @@
       <workItem from="1763605782746" duration="1332000" />
       <workItem from="1763607144072" duration="15728000" />
       <workItem from="1763638084573" duration="19759000" />
-      <workItem from="1763901624193" duration="76000" />
+      <workItem from="1763901624193" duration="6486000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - ThinzarPhyoWai">
       <option name="closed" value="true" />
@@ -603,7 +606,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763736982777</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Adding image files">
+      <option name="closed" value="true" />
+      <created>1763901953659</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1763901953659</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -621,7 +632,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changing pom file" />
     <MESSAGE value="Changes in Docker and pom file" />
     <MESSAGE value="Changes in Reports class" />
     <MESSAGE value="Changes in Docker file" />
@@ -646,23 +656,8 @@
     <MESSAGE value="Adding integration tests" />
     <MESSAGE value="Update pom" />
     <MESSAGE value="All files' changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="All files' changes" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.IllegalStateException" package="java.lang" />
-          <option name="timeStamp" value="3" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-    <watches-manager>
-      <configuration name="JUnit">
-        <watch expression="reportsNull" />
-        <watch expression="reportsNull" language="JAVA" />
-      </configuration>
-    </watches-manager>
+    <MESSAGE value="Adding image files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding image files" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Group1DevopsCoursework$ReportsUnitTest.ic" NAME="ReportsUnitTest Coverage Results" MODIFIED="1761721716573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
