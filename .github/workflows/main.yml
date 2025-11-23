@@ -23,7 +23,11 @@ jobs:
 
       - name: Unit Tests
         run: mvn -Dtest=com.Group1DevopsCoursework.ReportsUnitTest test
-
+      - name: List dirs
+        run: |
+          cd ./target/site/jacoco
+          pwd
+          ls
       - name: CodeCov
         uses: codecov/codecov-action@v5
         with:
@@ -88,7 +92,11 @@ jobs:
       - name: Copy Output
         run: |
           mkdir -p reports
-
+          docker container cp group1devopscoursework-app-1:./tmp/reports/. ./reports
+      - name: List dirs
+        run: |
+          pwd
+          ls
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:

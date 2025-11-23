@@ -1,4 +1,4 @@
-# World Popullation Reports
+# World Population Reports
 
 ### Group 1 — DevOps Coursework Team Project
 
