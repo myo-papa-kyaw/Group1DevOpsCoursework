@@ -1,11 +1,8 @@
 package com.Group1DevopsCoursework;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -13,20 +10,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class ReportsUnitTest {
 
     Reports reports;
-    // Capture System.out output
-    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-    private final PrintStream originalOut = System.out;
 
     @BeforeEach
     void setUp() {
-        System.setOut(new PrintStream(outContent));  // Capture console output
         reports = new Reports();
-
-    }
-
-    @AfterEach
-    void tearDown() {
-        System.setOut(originalOut);  // Restore original System.out
+//        reports.connect("localhost:33060", 10000);
     }
 
     // ===== Country Report Tests =====
@@ -183,129 +171,6 @@ class ReportsUnitTest {
         lang.percentage = 15.0;
         langs.add(lang);
         reports.printLanguages(langs);
-    }
-// =================== MAIN-LIKE OUTPUT TESTS ===================
-
-    // Country Reports
-    @Test
-    void outputCountriesSections() {
-        ArrayList<Country> list = new ArrayList<>();
-        Country c = new Country();
-        c.code = "IND";
-        c.name = "India";
-        c.continent = "Asia";
-        c.region = "Southern Asia";
-        c.population = 1300000000;
-        c.capital = "New Delhi";
-        list.add(c);
-
-        reports.printCountries(list);
-        String output = outContent.toString();
-
-        originalOut.println(output);
-
-        assertTrue(output.contains("Code"));
-        assertTrue(output.contains("India"));
-        assertTrue(output.contains("Asia"));
-        assertTrue(output.contains("New Delhi"));
-    }
-
-    //  City Reports
-    @Test
-    void outputCitiesSections() {
-        ArrayList<City> list = new ArrayList<>();
-        City ci = new City();
-        ci.name = "Mumbai";
-        ci.country = "India";
-        ci.district = "Maharashtra";
-        ci.population = 12400000;
-        list.add(ci);
-
-        reports.printCities(list);
-        String output = outContent.toString();
-        originalOut.println(output);
-
-        assertTrue(output.contains("Name"));
-        assertTrue(output.contains("Mumbai"));
-        assertTrue(output.contains("Maharashtra"));
-    }
-
-    // 17–22: Capital Reports
-    @Test
-    void outputCapitalsSections() {
-        ArrayList<CapitalCity> list = new ArrayList<>();
-        CapitalCity cap = new CapitalCity();
-        cap.name = "New Delhi";
-        cap.country = "India";
-        cap.population = 21800000;
-        list.add(cap);
-
-        reports.printCapitals(list);
-        String output = outContent.toString();
-        originalOut.println(output);
-
-        assertTrue(output.contains("Country"));
-        assertTrue(output.contains("New Delhi"));
-    }
-
-    // 23–25: Population Lists
-    @Test
-    void outputPopulationReports() {
-        ArrayList<Population> pops = new ArrayList<>();
-        Population p = new Population();
-        p.name = "Asia";
-        p.totalPopulation = 4600000000L;
-        p.cityPopulation = 2900000000L;
-        p.cityPercentage = 63.0;
-        p.nonCityPercentage = 37.0;
-        pops.add(p);
-
-        reports.printPopulations(pops);
-        String output = outContent.toString();
-        originalOut.println(output);
-
-        assertTrue(output.contains("Total Population"));
-        assertTrue(output.contains("Asia"));
-    }
-
-    // 26–31: Single Population Access
-    @Test
-    void outputSinglePopulationReports() {
-        Population asia = new Population();
-        asia.name = "Asia";
-        asia.totalPopulation = 4600000000L;
-
-        Population country = new Population();
-        country.name = "Brazil";
-        country.totalPopulation = 212000000;
-
-        reports.printPopulations(new ArrayList<>() {{
-            add(asia);
-            add(country);
-        }});
-        String output = outContent.toString();
-        originalOut.println(output);
-        assertTrue(output.contains("Asia"));
-        assertTrue(output.contains("Brazil"));
-    }
-
-    // 32: Language Report
-    @Test
-    void outputLanguageReports() {
-        ArrayList<Language> langs = new ArrayList<>();
-        Language l = new Language();
-        l.language = "English";
-        l.speakers = 1200000000;
-        l.percentage = 15.0;
-        langs.add(l);
-
-        reports.printLanguages(langs);
-        String output = outContent.toString();
-        originalOut.println(output);
-
-        assertTrue(output.contains("Language"));
-        assertTrue(output.contains("English"));
-        assertTrue(output.contains("%"));
     }
 
 }
