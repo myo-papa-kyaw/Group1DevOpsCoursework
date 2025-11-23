@@ -1,6 +1,11 @@
-FROM amazoncorretto:23
+# Use the official Eclipse Temurin JDK 23 image (OpenJDK 23 equivalent)
+FROM eclipse-temurin:23-jdk
 
-COPY ./target/devops.jar /tmp
-
+# Set working directory
 WORKDIR /tmp
-ENTRYPOINT ["java", "-jar", "devops.jar", "world-db:3306", "10000","com.mysql.cj.jdbc.Driver"]
+
+# Copy your built JAR file into the container
+COPY ./target/devops.jar /tmp/devops.jar
+
+# Run the app with arguments passed via CMD (default: world-db:3306, wait 10000ms)
+ENTRYPOINT ["java", "-jar", "devops.jar", "world-db:3306", "10000"]

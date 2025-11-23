@@ -9,6 +9,7 @@ package com.Group1DevopsCoursework;
  * - The population of the city
  * This class is used when generating city-based reports.
  */
+
 public class City {
 
     /** The name of the city. */

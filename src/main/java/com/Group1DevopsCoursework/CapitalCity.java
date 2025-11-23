@@ -9,6 +9,7 @@ package com.Group1DevopsCoursework;
  * This class is primarily used to support reporting queries that retrieve
  * capital cities in various scopes (world, continent, region, filtered lists, etc.).
  */
+
 public class CapitalCity {
 
     /** The name of the capital city. */
