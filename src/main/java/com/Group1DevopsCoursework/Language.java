@@ -8,6 +8,7 @@ package com.Group1DevopsCoursework;
  * - The percentage of the world population that speaks it
  * Used in the language reporting section.
  */
+
 public class Language {
 
     /** The name of the language */

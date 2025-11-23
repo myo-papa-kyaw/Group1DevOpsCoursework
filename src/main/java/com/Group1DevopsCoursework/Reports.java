@@ -13,6 +13,7 @@ import java.util.ArrayList;
  * - implements 32 report queries
  * - contains print methods for results
  */
+
 public class Reports {
 
     // Database connection object
@@ -23,6 +24,7 @@ public class Reports {
      * @param location host:port of the MySQL instance (e.g., "localhost:3306")
      * @param delay    initial delay before the first attempt (currently unused)
      */
+
     public void connect(final String location, final int delay) {
 
         // Attempt to load MySQL JDBC driver so the application can communicate with MySQL
@@ -72,6 +74,7 @@ public class Reports {
      * This method prevents resource leaks by ensuring the application does not hold
      * open database connections after finishing its operations.
      */
+
     public void disconnect() {
         if (con != null) {
             try {
@@ -95,6 +98,7 @@ public class Reports {
      *
      * @return a list of Country objects; an empty list if no results found.
      */
+
     public ArrayList<Country> getAllCountriesInWorld() {
         // Query returns all countries joined with their capital city name (LEFT JOIN keeps all countries)
         final String sql = """
@@ -114,6 +118,7 @@ public class Reports {
      * @param continent the name of the continent
      * @return a filtered list of Country objects in that continent
      */
+
     public ArrayList<Country> getCountriesByContinent(final String continent) {
         final String sql = """
             SELECT c.Code, c.Name, c.Continent, c.Region, c.Population, ci.Name AS Capital
@@ -134,6 +139,7 @@ public class Reports {
      * @param region the region name
      * @return a list of Country objects matching the region
      */
+
     public ArrayList<Country> getCountriesByRegion(final String region) {
         final String sql = """
             SELECT c.Code, c.Name, c.Continent, c.Region, c.Population, ci.Name AS Capital
@@ -152,6 +158,7 @@ public class Reports {
      * @param toplimitednumber the maximum number of countries to return
      * @return the top N Country objects sorted by population
      */
+
     public ArrayList<Country> getTopNCountriesInWorld(final int toplimitednumber) {
         final String sql = """
             SELECT c.Code, c.Name, c.Continent, c.Region, c.Population, ci.Name AS Capital
@@ -171,6 +178,7 @@ public class Reports {
      * @param toplimitednumber number of results to return
      * @return list of Country objects limited to N entries
      */
+
     public ArrayList<Country> getTopNCountriesInContinent(final String continent, final int toplimitednumber) {
         final String sql = """
             SELECT c.Code, c.Name, c.Continent, c.Region, c.Population, ci.Name AS Capital
@@ -191,6 +199,7 @@ public class Reports {
      * @param toplimitednumber the maximum number of results
      * @return a list of the top N countries within the region
      */
+
     public ArrayList<Country> getTopNCountriesInRegion(final String region, final int toplimitednumber) {
         final String sql = """
             SELECT c.Code, c.Name, c.Continent, c.Region, c.Population, ci.Name AS Capital
@@ -212,6 +221,7 @@ public class Reports {
      *
      * @return list of City objects
      */
+
     public ArrayList<City> getAllCitiesInWorld() {
         final String sql = """
             SELECT ci.Name, co.Name AS Country, ci.District, ci.Population
@@ -228,6 +238,7 @@ public class Reports {
      * @param continent continent name (e.g., "Asia")
      * @return list of cities within that continent
      */
+
     public ArrayList<City> getCitiesByContinent(final String continent) {
         final String sql = """
             SELECT ci.Name, co.Name AS Country, ci.District, ci.Population
@@ -245,6 +256,7 @@ public class Reports {
      * @param region region name (e.g., "Western Europe")
      * @return list of cities within that region
      */
+
     public ArrayList<City> getCitiesByRegion(final String region) {
         final String sql = """
             SELECT ci.Name, co.Name AS Country, ci.District, ci.Population
@@ -262,6 +274,7 @@ public class Reports {
      * @param countryName the name of the country
      * @return list of cities belonging to the specified country
      */
+
     public ArrayList<City> getCitiesByCountry(final String countryName) {
         final String sql = """
             SELECT ci.Name, co.Name AS Country, ci.District, ci.Population
@@ -279,6 +292,7 @@ public class Reports {
      * @param district district name
      * @return list of cities in that district
      */
+
     public ArrayList<City> getCitiesByDistrict(final String district) {
         final String sql = """
             SELECT ci.Name, co.Name AS Country, ci.District, ci.Population
@@ -296,6 +310,7 @@ public class Reports {
      * @param toplimitednumber number of cities to return
      * @return list of the top N cities in the world
      */
+
     public ArrayList<City> getTopNCitiesInWorld(final int toplimitednumber) {
         final String sql = """
             SELECT ci.Name, co.Name AS Country, ci.District, ci.Population
@@ -314,6 +329,7 @@ public class Reports {
      * @param toplimitednumber limit of returned rows
      * @return list of top N cities in the continent
      */
+
     public ArrayList<City> getTopNCitiesInContinent(final String continent, final int toplimitednumber) {
         final String sql = """
             SELECT ci.Name, co.Name AS Country, ci.District, ci.Population
@@ -333,6 +349,7 @@ public class Reports {
      * @param toplimitednumber number of cities to return
      * @return list of top N cities in the region
      */
+
     public ArrayList<City> getTopNCitiesInRegion(final String region, final int toplimitednumber) {
         final String sql = """
             SELECT ci.Name, co.Name AS Country, ci.District, ci.Population
@@ -352,6 +369,7 @@ public class Reports {
      * @param toplimitednumber number of cities to return
      * @return list of top N cities in that country
      */
+
     public ArrayList<City> getTopNCitiesInCountry(final String countryName, final int toplimitednumber) {
         final String sql = """
             SELECT ci.Name, co.Name AS Country, ci.District, ci.Population
@@ -371,6 +389,7 @@ public class Reports {
      * @param toplimitednumber number of cities to return
      * @return list of top N cities in that district
      */
+
     public ArrayList<City> getTopNCitiesInDistrict(final String district, final int toplimitednumber) {
         final String sql = """
             SELECT ci.Name, co.Name AS Country, ci.District, ci.Population
@@ -392,6 +411,7 @@ public class Reports {
      *
      * @return list of CapitalCity objects
      */
+
     public ArrayList<CapitalCity> getAllCapitalCitiesInWorld() {
         final String sql = """
             SELECT ci.Name, co.Name AS Country, ci.Population
@@ -408,6 +428,7 @@ public class Reports {
      * @param continent continent name
      * @return list of capital cities in the continent
      */
+
     public ArrayList<CapitalCity> getCapitalCitiesByContinent(final String continent) {
         final String sql = """
             SELECT ci.Name, co.Name AS Country, ci.Population
@@ -425,6 +446,7 @@ public class Reports {
      * @param region region name
      * @return list of capital cities in the region
      */
+
     public ArrayList<CapitalCity> getCapitalCitiesByRegion(final String region) {
         final String sql = """
             SELECT ci.Name, co.Name AS Country, ci.Population
@@ -442,6 +464,7 @@ public class Reports {
      * @param toplimitednumber number of capitals to return
      * @return list of top N capital cities globally
      */
+
     public ArrayList<CapitalCity> getTopNCapitalCitiesInWorld(final int toplimitednumber) {
         final String sql = """
             SELECT ci.Name, co.Name AS Country, ci.Population
@@ -460,6 +483,7 @@ public class Reports {
      * @param toplimitednumber max number of results
      * @return list of top N capital cities in the continent
      */
+
     public ArrayList<CapitalCity> getTopNCapitalCitiesInContinent(final String continent, final int toplimitednumber) {
         final String sql = """
             SELECT ci.Name, co.Name AS Country, ci.Population
@@ -479,6 +503,7 @@ public class Reports {
      * @param toplimitednumber number of capitals to return
      * @return list of top N capital cities in the region
      */
+
     public ArrayList<CapitalCity> getTopNCapitalCitiesInRegion(final String region, final int toplimitednumber) {
         final String sql = """
             SELECT ci.Name, co.Name AS Country, ci.Population
@@ -499,6 +524,7 @@ public class Reports {
      *
      * @return list of Population objects grouped by continent
      */
+
     public ArrayList<Population> getPopulationByContinent() {
         final String sql = """
             SELECT c.Continent AS name,
@@ -517,6 +543,7 @@ public class Reports {
      *
      * @return list of Population objects grouped by region
      */
+
     public ArrayList<Population> getPopulationByRegion() {
         final String sql = """
             SELECT c.Region AS name,
@@ -535,6 +562,7 @@ public class Reports {
      *
      * @return list of Population objects grouped by country
      */
+
     public ArrayList<Population> getPopulationByCountry() {
         final String sql = """
             SELECT c.Name AS name,
@@ -553,6 +581,7 @@ public class Reports {
      *
      * @return the sum of all country populations
      */
+
     public long getWorldPopulation() {
         final String sql = "SELECT SUM(Population) AS worldPop FROM country;";
         long worldPopulation = 0L;
@@ -577,6 +606,7 @@ public class Reports {
      * @param continent the continent name
      * @return Population object with total population value
      */
+
     public Population getPopulationOfContinentWithName(final String continent) {
         final Population totalpopulation = new Population();
         totalpopulation.name = continent;
@@ -603,6 +633,7 @@ public class Reports {
      * @param region region name
      * @return Population object for that region
      */
+
     public Population getPopulationOfRegionWithName(final String region) {
         final Population totalpopulation = new Population();
         totalpopulation.name = region;
@@ -629,6 +660,7 @@ public class Reports {
      * @param country country name
      * @return Population object representing that country
      */
+
     public Population getPopulationOfCountryWithName(final String country) {
         final Population totalpopulation = new Population();
         totalpopulation.name = country;
@@ -655,6 +687,7 @@ public class Reports {
      * @param district district name
      * @return Population object containing district population
      */
+
     public Population getPopulationOfDistrictWithName(final String district) {
         final Population totalpopulation = new Population();
         totalpopulation.name = district;
@@ -681,6 +714,7 @@ public class Reports {
      * @param city city name
      * @return Population object containing city population
      */
+
     public Population getPopulationOfCityWithName(final String city) {
         final Population totalpopulation = new Population();
         totalpopulation.name = city;
@@ -753,6 +787,7 @@ public class Reports {
      * population, and language reports.
      * @param filename the name of the Markdown file to write
      */
+
     public void outputAllReportsMarkdown(final String filename) {
 
         // Main Markdown builder used to accumulate the entire report content
@@ -898,6 +933,7 @@ public class Reports {
      * @param stringbuilder the active Markdown builder to append to
      * @param countries     list of Country objects to format
      */
+
     public void appendCountriesMarkdown(final StringBuilder stringbuilder, final ArrayList<Country> countries) {
         if (countries == null || countries.isEmpty()) {
             stringbuilder.append("_No countries found._\n\n");
@@ -922,6 +958,7 @@ public class Reports {
      * @param stringbuilder the active Markdown builder to append to
      * @param cities        list of City objects to format
      */
+
     public void appendCitiesMarkdown(final StringBuilder stringbuilder, final ArrayList<City> cities) {
         if (cities == null || cities.isEmpty()) {
             stringbuilder.append("_No cities found._\n\n");
@@ -945,6 +982,7 @@ public class Reports {
      * @param stringbuilder the active Markdown builder to append to
      * @param capitals      list of CapitalCity objects to format
      */
+
     public void appendCapitalsMarkdown(final StringBuilder stringbuilder, final ArrayList<CapitalCity> capitals) {
         if (capitals == null || capitals.isEmpty()) {
             stringbuilder.append("_No capitals found._\n\n");
@@ -969,6 +1007,7 @@ public class Reports {
      * @param stringbuilder the active Markdown builder to append to
      * @param populations   list of Population objects to format
      */
+
     public void appendPopulationsMarkdown(final StringBuilder stringbuilder, final ArrayList<Population> populations) {
         if (populations == null || populations.isEmpty()) {
             stringbuilder.append("_No population data found._\n\n");
@@ -994,6 +1033,7 @@ public class Reports {
      * @param stringbuilder the active Markdown builder to append to
      * @param languages     list of Language objects to format
      */
+
     public void appendLanguagesMarkdown(final StringBuilder stringbuilder, final ArrayList<Language> languages) {
         if (languages == null || languages.isEmpty()) {
             stringbuilder.append("_No language data found._\n\n");
@@ -1021,6 +1061,7 @@ public class Reports {
      * @param sql the SQL query to execute
      * @return a list of populated Country objects
      */
+
     private ArrayList<Country> runCountryQuery(final String sql) {
         final ArrayList<Country> list = new ArrayList<>();
         try (Statement stmt = con.createStatement();
@@ -1050,6 +1091,7 @@ public class Reports {
      * @param param string parameter to bind to the query
      * @return a filtered list of Country objects
      */
+
     private ArrayList<Country> runCountryQueryWithString(final String sql, final String param) {
         final ArrayList<Country> list = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
@@ -1080,6 +1122,7 @@ public class Reports {
      * @param toplimitednumber  integer parameter for limiting results
      * @return a list of Country objects
      */
+
     private ArrayList<Country> runCountryQueryWithInt(final String sql, final int toplimitednumber) {
         final ArrayList<Country> list = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
@@ -1101,6 +1144,7 @@ public class Reports {
         }
         return list;
     }
+
     /**
      * Executes a country query that includes both a string filter and an integer
      * limit parameter, used for queries such as “top N countries in a region”.
@@ -1110,6 +1154,7 @@ public class Reports {
      * @param toplimitednumber  number of results to return
      * @return a list of Country objects
      */
+
     private ArrayList<Country> runCountryQueryWithStringAndInt(final String sql, final String string, final int toplimitednumber) {
         final ArrayList<Country> list = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
@@ -1139,6 +1184,7 @@ public class Reports {
      * @param sql the SQL query to execute
      * @return list of City objects
      */
+
     private ArrayList<City> runCityQuery(final String sql) {
         final ArrayList<City> list = new ArrayList<>();
         try (Statement stmt = con.createStatement();
@@ -1156,6 +1202,7 @@ public class Reports {
         }
         return list;
     }
+
     /**
      * Executes a city query that includes one string parameter (e.g., region or country filters).
      *
@@ -1163,6 +1210,7 @@ public class Reports {
      * @param param filter to apply
      * @return list of City objects
      */
+
     private ArrayList<City> runCityQueryWithString(final String sql, final String param) {
         final ArrayList<City> list = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {

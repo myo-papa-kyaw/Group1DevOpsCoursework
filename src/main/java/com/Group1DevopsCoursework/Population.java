@@ -11,6 +11,7 @@ package com.Group1DevopsCoursework;
  * - The percentage of people not living in cities
  * This class is used in population aggregation queries.
  */
+
 public class Population {
 
     /** The name of the continent, region, or country. */
