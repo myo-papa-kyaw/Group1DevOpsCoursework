@@ -1,4 +1,4 @@
-# World Popullation Reports
+# World Population Reports
 
 ### Group 1 — DevOps Coursework Team Project
 
@@ -198,7 +198,6 @@ This report was collaboratively created by **Group 1** as part of our DevOps cou
 | FSM | Micronesia, Federated States of | Oceania | Micronesia | 119000 | Palikir |
 | VCT | Saint Vincent and the Grenadines | North America | Caribbean | 114000 | Kingstown |
 | ABW | Aruba | North America | Caribbean | 103000 | Oranjestad |
-| TST | TestLand | Asia | TestRegion | 100000 | null |
 | TON | Tonga | Oceania | Polynesia | 99000 | Nuku´alofa |
 | GRD | Grenada | North America | Caribbean | 94000 | Saint George´s |
 | VIR | Virgin Islands, U.S. | North America | Caribbean | 93000 | Charlotte Amalie |
@@ -302,7 +301,6 @@ This report was collaboratively created by **Group 1** as part of our DevOps cou
 | MAC | Macao | Asia | Eastern Asia | 473000 | Macao |
 | BRN | Brunei | Asia | Southeast Asia | 328000 | Bandar Seri Begawan |
 | MDV | Maldives | Asia | Southern and Central Asia | 286000 | Male |
-| TST | TestLand | Asia | TestRegion | 100000 | null |
 
 ## 3. Countries by Region: Eastern Europe
 
@@ -7226,7 +7224,7 @@ This report was collaboratively created by **Group 1** as part of our DevOps cou
 
 | Name | Total Population | City Population | % in Cities | % not in Cities |
 | --- | --- | --- | --- | --- |
-| Asia | 900937699400 | 697604103 | 0.08 | 99.92 |
+| Asia | 900937599400 | 697604103 | 0.08 | 99.92 |
 | North America | 95330838000 | 168250381 | 0.18 | 99.82 |
 | Europe | 55118944000 | 241942813 | 0.44 | 99.56 |
 | South America | 48533025000 | 172037859 | 0.35 | 99.65 |
@@ -7261,7 +7259,6 @@ This report was collaboratively created by **Group 1** as part of our DevOps cou
 | Melanesia | 6472000 | 484459 | 7.49 | 92.51 |
 | Polynesia | 936050 | 135925 | 14.52 | 85.48 |
 | Micronesia | 925000 | 102329 | 11.06 | 88.94 |
-| TestRegion | 100000 | 0 | 0.00 | 100.00 |
 | Antarctica | 0 | 0 | 0.00 | 0.00 |
 | Micronesia/Caribbean | 0 | 0 | 0.00 | 0.00 |
 
@@ -7461,7 +7458,6 @@ This report was collaboratively created by **Group 1** as part of our DevOps cou
 | Micronesia, Federated States of | 119000 | 30600 | 25.71 | 74.29 |
 | Saint Vincent and the Grenadines | 114000 | 17100 | 15.00 | 85.00 |
 | Aruba | 103000 | 29034 | 28.19 | 71.81 |
-| TestLand | 100000 | 0 | 0.00 | 100.00 |
 | Tonga | 99000 | 22400 | 22.63 | 77.37 |
 | Grenada | 94000 | 4621 | 4.92 | 95.08 |
 | Virgin Islands, U.S. | 93000 | 13000 | 13.98 | 86.02 |
@@ -7514,13 +7510,13 @@ This report was collaboratively created by **Group 1** as part of our DevOps cou
 
 | Area | Population |
 | --- | --- |
-| World | 6078849450 |
+| World | 6078749450 |
 
 ## 27. Population of Continent: Asia
 
 | Continent | Population |
 | --- | --- |
-| Asia | 3705125700 |
+| Asia | 3705025700 |
 
 ## 28. Population of Region: Eastern Asia
 
