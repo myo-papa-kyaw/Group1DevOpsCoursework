@@ -1,4 +1,4 @@
-# Code of Conduct & Team Ethics
+  # Code of Conduct & Team Ethics
 
 **Team:** `Group 1`
 
