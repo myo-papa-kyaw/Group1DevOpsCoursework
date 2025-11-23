@@ -168,7 +168,6 @@ public class Reports {
             LIMIT ?;
             """;
 
-
         return runCountryQueryWithInt(sql, toplimitednumber);
     }
 
