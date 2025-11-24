@@ -939,6 +939,8 @@ class ReportsIntegrationTest {
         System.out.println("Language report printed successfully");
     }
 
+
+
     @Test
     public void testMainMethod() {
         String[] args = {};
@@ -951,10 +953,6 @@ class ReportsIntegrationTest {
         reports.disconnect();
         System.out.println("Disconnected from server testing complete.");
     }
-
-
-
-
 
     // ==================== MISSING TESTS FOR 100% COVERAGE ====================
 
@@ -1310,3 +1308,5 @@ class ReportsIntegrationTest {
         assertEquals(59.46, population.nonCityPercentage, 0.01);
     }
 }
+
+
