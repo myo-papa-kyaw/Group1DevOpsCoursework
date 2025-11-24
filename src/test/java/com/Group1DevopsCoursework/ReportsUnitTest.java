@@ -10,6 +10,10 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Unit tests for the Reports class
+ * Tests various report printing methods with different input scenarios
+ */
 class ReportsUnitTest {
 
     Reports reports;
@@ -17,6 +21,11 @@ class ReportsUnitTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
 
+    /**
+     * Set up test environment before each test method
+     * Redirects System.out to capture console output
+     * Initializes Reports instance
+     */
     @BeforeEach
     void setUp() {
         System.setOut(new PrintStream(outContent));  // Capture console output
@@ -24,23 +33,40 @@ class ReportsUnitTest {
 
     }
 
+    /**
+     * Clean up after each test method
+     * Restores original System.out stream
+     */
     @AfterEach
     void tearDown() {
         System.setOut(originalOut);  // Restore original System.out
     }
 
     // ===== Country Report Tests =====
+
+    /**
+     * Test printing countries with null input
+     * Verifies method handles null input without crashing
+     */
     @Test
     void printCountriesNull() {
         reports.printCountries(null);
     }
 
+    /**
+     * Test printing countries with empty list
+     * Verifies method handles empty collections properly
+     */
     @Test
     void printCountriesEmpty() {
         ArrayList<Country> countries = new ArrayList<>();
         reports.printCountries(countries);
     }
 
+    /**
+     * Test printing countries list containing null element
+     * Verifies method handles null elements gracefully
+     */
     @Test
     void printCountriesContainsNull() {
         ArrayList<Country> countries = new ArrayList<>();
@@ -48,6 +74,10 @@ class ReportsUnitTest {
         reports.printCountries(countries);
     }
 
+    /**
+     * Test printing countries with valid data
+     * Verifies country information is displayed correctly
+     */
     @Test
     void printCountries() {
         ArrayList<Country> countries = new ArrayList<>();
@@ -63,17 +93,30 @@ class ReportsUnitTest {
     }
 
     // ===== City Report Tests =====
+
+    /**
+     * Test printing cities with null input
+     * Verifies method handles null input without crashing
+     */
     @Test
     void printCitiesNull() {
         reports.printCities(null);
     }
 
+    /**
+     * Test printing cities with empty list
+     * Verifies method handles empty collections properly
+     */
     @Test
     void printCitiesEmpty() {
         ArrayList<City> cities = new ArrayList<>();
         reports.printCities(cities);
     }
 
+    /**
+     * Test printing cities list containing null element
+     * Verifies method handles null elements gracefully
+     */
     @Test
     void printCitiesContainsNull() {
         ArrayList<City> cities = new ArrayList<>();
@@ -81,6 +124,10 @@ class ReportsUnitTest {
         reports.printCities(cities);
     }
 
+    /**
+     * Test printing cities with valid data
+     * Verifies city information is displayed correctly
+     */
     @Test
     void printCities() {
         ArrayList<City> cities = new ArrayList<>();
@@ -94,17 +141,30 @@ class ReportsUnitTest {
     }
 
     // ===== Capital Report Tests =====
+
+    /**
+     * Test printing capitals with null input
+     * Verifies method handles null input without crashing
+     */
     @Test
     void printCapitalsNull() {
         reports.printCapitals(null);
     }
 
+    /**
+     * Test printing capitals with empty list
+     * Verifies method handles empty collections properly
+     */
     @Test
     void printCapitalsEmpty() {
         ArrayList<CapitalCity> caps = new ArrayList<>();
         reports.printCapitals(caps);
     }
 
+    /**
+     * Test printing capitals list containing null element
+     * Verifies method handles null elements gracefully
+     */
     @Test
     void printCapitalsContainsNull() {
         ArrayList<CapitalCity> caps = new ArrayList<>();
@@ -112,6 +172,10 @@ class ReportsUnitTest {
         reports.printCapitals(caps);
     }
 
+    /**
+     * Test printing capitals with valid data
+     * Verifies capital city information is displayed correctly
+     */
     @Test
     void printCapitals() {
         ArrayList<CapitalCity> caps = new ArrayList<>();
@@ -124,17 +188,30 @@ class ReportsUnitTest {
     }
 
     // ===== Population Report Tests =====
+
+    /**
+     * Test printing populations with null input
+     * Verifies method handles null input without crashing
+     */
     @Test
     void printPopulationsNull() {
         reports.printPopulations(null);
     }
 
+    /**
+     * Test printing populations with empty list
+     * Verifies method handles empty collections properly
+     */
     @Test
     void printPopulationsEmpty() {
         ArrayList<Population> pops = new ArrayList<>();
         reports.printPopulations(pops);
     }
 
+    /**
+     * Test printing populations list containing null element
+     * Verifies method handles null elements gracefully
+     */
     @Test
     void printPopulationsContainsNull() {
         ArrayList<Population> pops = new ArrayList<>();
@@ -142,6 +219,10 @@ class ReportsUnitTest {
         reports.printPopulations(pops);
     }
 
+    /**
+     * Test printing populations with valid data
+     * Verifies population statistics are displayed correctly
+     */
     @Test
     void printPopulations() {
         ArrayList<Population> pops = new ArrayList<>();
@@ -156,17 +237,30 @@ class ReportsUnitTest {
     }
 
     // ===== Language Report Tests =====
+
+    /**
+     * Test printing languages with null input
+     * Verifies method handles null input without crashing
+     */
     @Test
     void printLanguagesNull() {
         reports.printLanguages(null);
     }
 
+    /**
+     * Test printing languages with empty list
+     * Verifies method handles empty collections properly
+     */
     @Test
     void printLanguagesEmpty() {
         ArrayList<Language> langs = new ArrayList<>();
         reports.printLanguages(langs);
     }
 
+    /**
+     * Test printing languages list containing null element
+     * Verifies method handles null elements gracefully
+     */
     @Test
     void printLanguagesContainsNull() {
         ArrayList<Language> langs = new ArrayList<>();
@@ -174,6 +268,10 @@ class ReportsUnitTest {
         reports.printLanguages(langs);
     }
 
+    /**
+     * Test printing languages with valid data
+     * Verifies language statistics are displayed correctly
+     */
     @Test
     void printLanguages() {
         ArrayList<Language> langs = new ArrayList<>();
@@ -184,9 +282,13 @@ class ReportsUnitTest {
         langs.add(lang);
         reports.printLanguages(langs);
     }
+
 // =================== MAIN-LIKE OUTPUT TESTS ===================
 
-    // Country Reports
+    /**
+     * Test country report output format and content
+     * Verifies that country reports display all required fields correctly
+     */
     @Test
     void outputCountriesSections() {
         ArrayList<Country> list = new ArrayList<>();
@@ -210,7 +312,10 @@ class ReportsUnitTest {
         assertTrue(output.contains("New Delhi"));
     }
 
-    //  City Reports
+    /**
+     * Test city report output format and content
+     * Verifies that city reports display all required fields correctly
+     */
     @Test
     void outputCitiesSections() {
         ArrayList<City> list = new ArrayList<>();
@@ -230,7 +335,10 @@ class ReportsUnitTest {
         assertTrue(output.contains("Maharashtra"));
     }
 
-    // 17–22: Capital Reports
+    /**
+     * Test capital city report output format and content
+     * Verifies that capital city reports display all required fields correctly
+     */
     @Test
     void outputCapitalsSections() {
         ArrayList<CapitalCity> list = new ArrayList<>();
@@ -248,7 +356,10 @@ class ReportsUnitTest {
         assertTrue(output.contains("New Delhi"));
     }
 
-    // 23–25: Population Lists
+    /**
+     * Test population report output format and content
+     * Verifies that population reports display demographic statistics correctly
+     */
     @Test
     void outputPopulationReports() {
         ArrayList<Population> pops = new ArrayList<>();
@@ -268,7 +379,10 @@ class ReportsUnitTest {
         assertTrue(output.contains("Asia"));
     }
 
-    // 26–31: Single Population Access
+    /**
+     * Test multiple population entries in report
+     * Verifies that reports can handle and display multiple population records
+     */
     @Test
     void outputSinglePopulationReports() {
         Population asia = new Population();
@@ -289,7 +403,10 @@ class ReportsUnitTest {
         assertTrue(output.contains("Brazil"));
     }
 
-    // 32: Language Report
+    /**
+     * Test language report output format and content
+     * Verifies that language reports display linguistic statistics correctly
+     */
     @Test
     void outputLanguageReports() {
         ArrayList<Language> langs = new ArrayList<>();
@@ -309,4 +426,3 @@ class ReportsUnitTest {
     }
 
 }
-

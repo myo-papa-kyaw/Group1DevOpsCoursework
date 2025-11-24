@@ -8,16 +8,29 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Integration tests for the Reports class
+ * Tests database connectivity, CRUD operations, and report generation functionality
+ * Verifies integration between application logic and database layer
+ */
 class ReportsIntegrationTest {
 
     Reports reports;
 
+    /**
+     * Set up test environment before each test method
+     * Initializes Reports instance and establishes database connection
+     */
     @BeforeEach
     void setUp() {
         reports = new Reports();
         reports.connect("localhost:33060", 1000);
     }
 
+    /**
+     * Test retrieving country by code from database
+     * Verifies database connectivity and data retrieval functionality
+     */
     @Test
     void testGetCountryByCode() {
         // Assuming a country with code "BRA" already exists in the DB
@@ -28,6 +41,10 @@ class ReportsIntegrationTest {
         System.out.println("Retrieved country: " + country.name);
     }
 
+    /**
+     * Test adding a new country to the database
+     * Verifies CRUD operations and data persistence
+     */
     @Test
     void testAddCountry() {
         // Create country object without capital
@@ -51,6 +68,11 @@ class ReportsIntegrationTest {
         assertNull(result.capital, "null");
         System.out.println("Added and retrieved country  " + result.name);
     }
+
+    /**
+     * Test retrieving all countries in world returns non-null result
+     * Verifies basic query functionality and null safety
+     */
     @Test
     void testGetAllCountriesInWorld_NotNull() {
         System.out.println("\n--- TestNull: getAllCountriesInWorld ---");
@@ -61,6 +83,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled non-null return correctly");
     }
 
+    /**
+     * Test retrieving all countries in world returns non-empty list
+     * Verifies database contains country data
+     */
     @Test
     void testGetAllCountriesInWorld_NotEmpty() {
         System.out.println("\n--- TestEmpty: getAllCountriesInWorld ---");
@@ -71,6 +97,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled non-empty result correctly");
     }
 
+    /**
+     * Test printing all countries in world
+     * Verifies report generation and output functionality
+     */
     @Test
     void testGetAllCountriesInWorld_PrintResults() {
         System.out.println("\n--- TestPrint: getAllCountriesInWorld ---");
@@ -88,6 +118,11 @@ class ReportsIntegrationTest {
 
 
     // -------------------- getCountriesByContinent() --------------------
+
+    /**
+     * Test getting countries by continent with null input
+     * Verifies null safety and graceful error handling
+     */
     @Test
     void testGetCountriesByContinent_Null() {
         System.out.println("\n--- TestNull: getCountriesByContinent ---");
@@ -99,6 +134,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled null continent safely");
     }
 
+    /**
+     * Test getting countries by non-existent continent
+     * Verifies empty result handling for invalid inputs
+     */
     @Test
     void testGetCountriesByContinent_Empty() {
         System.out.println("\n--- TestEmpty: getCountriesByContinent ---");
@@ -111,6 +150,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled empty result safely");
     }
 
+    /**
+     * Test getting countries by valid continent
+     * Verifies data filtering and continent-based query functionality
+     */
     @Test
     void testGetCountriesByContinent_WithValidContinent() {
         System.out.println("\n--- TestValid: getCountriesByContinent ---");
@@ -128,6 +171,11 @@ class ReportsIntegrationTest {
     }
 
     // -------------------- getCountriesByRegion() --------------------
+
+    /**
+     * Test getting countries by region with null input
+     * Verifies null safety for region-based queries
+     */
     @Test
     void testGetCountriesByRegion_Null() {
         System.out.println("\n--- TestNull: getCountriesByRegion ---");
@@ -139,6 +187,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled null region safely");
     }
 
+    /**
+     * Test getting countries by non-existent region
+     * Verifies empty result handling for invalid regions
+     */
     @Test
     void testGetCountriesByRegion_Empty() {
         System.out.println("\n--- TestEmpty: getCountriesByRegion ---");
@@ -150,6 +202,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled empty result safely");
     }
 
+    /**
+     * Test getting countries by valid region
+     * Verifies region-based filtering and data retrieval
+     */
     @Test
     void testGetCountriesByRegion_Valid() {
         System.out.println("\n--- TestValid: getCountriesByRegion ---");
@@ -167,6 +223,11 @@ class ReportsIntegrationTest {
     }
 
     // -------------------- getTopNCountriesInWorld() --------------------
+
+    /**
+     * Test getting top N countries with invalid N value
+     * Verifies error handling for invalid limit parameters
+     */
     @Test
     void testGetTopNCountriesInWorld_InvalidN() {
         System.out.println("\n--- TestInvalid: getTopNCountriesInWorld ---");
@@ -178,6 +239,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled invalid n safely");
     }
 
+    /**
+     * Test getting top N countries with valid N value
+     * Verifies ranking and limiting functionality
+     */
     @Test
     void testGetTopNCountriesInWorld_Valid() {
         System.out.println("\n--- TestValid: getTopNCountriesInWorld ---");
@@ -193,6 +258,11 @@ class ReportsIntegrationTest {
     }
 
     // -------------------- getTopNCountriesInContinent() --------------------
+
+    /**
+     * Test getting top N countries in continent with null continent
+     * Verifies null safety for continent-based top N queries
+     */
     @Test
     void testGetTopNCountriesInContinent_NullContinent() {
         System.out.println("\n--- TestNull: getTopNCountriesInContinent ---");
@@ -205,6 +275,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled null continent safely");
     }
 
+    /**
+     * Test getting top N countries in non-existent continent
+     * Verifies empty result handling for invalid continent names
+     */
     @Test
     void testGetTopNCountriesInContinent_EmptyContinent() {
         System.out.println("\n--- TestEmpty: getTopNCountriesInContinent ---");
@@ -217,6 +291,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled empty continent safely");
     }
 
+    /**
+     * Test getting top N countries in valid continent
+     * Verifies continent-based ranking and limiting functionality
+     */
     @Test
     void testGetTopNCountriesInContinent_Valid() {
         System.out.println("\n--- TestValid: getTopNCountriesInContinent ---");
@@ -235,6 +313,11 @@ class ReportsIntegrationTest {
     }
 
     // -------------------- getTopNCountriesInRegion() --------------------
+
+    /**
+     * Test getting top N countries in region with null region
+     * Verifies null safety for region-based top N queries
+     */
     @Test
     void testGetTopNCountriesInRegion_NullRegion() {
         System.out.println("\n--- TestNull: getTopNCountriesInRegion ---");
@@ -247,6 +330,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled null region safely");
     }
 
+    /**
+     * Test getting top N countries in non-existent region
+     * Verifies empty result handling for invalid region names
+     */
     @Test
     void testGetTopNCountriesInRegion_EmptyRegion() {
         System.out.println("\n--- TestEmpty: getTopNCountriesInRegion ---");
@@ -259,6 +346,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled empty region safely");
     }
 
+    /**
+     * Test getting top N countries in valid region
+     * Verifies region-based ranking and limiting functionality
+     */
     @Test
     void testGetTopNCountriesInRegion_Valid() {
         System.out.println("\n--- TestValid: getTopNCountriesInRegion ---");
@@ -278,6 +369,10 @@ class ReportsIntegrationTest {
 
     // ----------------- getCitiesByContinent -----------------------
 
+    /**
+     * Test getting cities by continent with null input
+     * Verifies null safety for continent-based city queries
+     */
     @Test
     void testGetCitiesByContinent_Null() {
         System.out.println("\n--- TestNull: getCitiesByContinent ---");
@@ -289,6 +384,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled null continent safely");
     }
 
+    /**
+     * Test getting cities by non-existent continent
+     * Verifies empty result handling for invalid continent names
+     */
     @Test
     void testGetCitiesByContinent_Empty() {
         System.out.println("\n--- TestEmpty: getCitiesByContinent ---");
@@ -300,6 +399,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled empty result safely");
     }
 
+    /**
+     * Test getting cities by valid continent
+     * Verifies continent-based city data retrieval
+     */
     @Test
     void testGetCitiesByContinent_Valid() {
         System.out.println("\n--- TestValid: getCitiesByContinent ---");
@@ -315,6 +418,10 @@ class ReportsIntegrationTest {
 
     // ----------------- getCitiesByRegion -----------------------
 
+    /**
+     * Test getting cities by region with null input
+     * Verifies null safety for region-based city queries
+     */
     @Test
     void testGetCitiesByRegion_Null() {
         System.out.println("\n--- TestNull: getCitiesByRegion ---");
@@ -326,6 +433,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled null region safely");
     }
 
+    /**
+     * Test getting cities by non-existent region
+     * Verifies empty result handling for invalid region names
+     */
     @Test
     void testGetCitiesByRegion_Empty() {
         System.out.println("\n--- TestEmpty: getCitiesByRegion ---");
@@ -337,6 +448,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled empty result safely");
     }
 
+    /**
+     * Test getting cities by valid region
+     * Verifies region-based city data retrieval
+     */
     @Test
     void testGetCitiesByRegion_Valid() {
         System.out.println("\n--- TestValid: getCitiesByRegion ---");
@@ -352,6 +467,10 @@ class ReportsIntegrationTest {
 
     // ----------------- getCitiesByCountry -----------------------
 
+    /**
+     * Test getting cities by country with null input
+     * Verifies null safety for country-based city queries
+     */
     @Test
     void testGetCitiesByCountry_Null() {
         System.out.println("\n--- TestNull: getCitiesByCountry ---");
@@ -363,6 +482,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled null country safely");
     }
 
+    /**
+     * Test getting cities by non-existent country
+     * Verifies empty result handling for invalid country names
+     */
     @Test
     void testGetCitiesByCountry_Empty() {
         System.out.println("\n--- TestEmpty: getCitiesByCountry ---");
@@ -374,6 +497,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled empty result safely");
     }
 
+    /**
+     * Test getting cities by valid country
+     * Verifies country-based city data retrieval
+     */
     @Test
     void testGetCitiesByCountry_Valid() {
         System.out.println("\n--- TestValid: getCitiesByCountry ---");
@@ -389,6 +516,10 @@ class ReportsIntegrationTest {
 
     // ----------------- getCitiesByDistrict -----------------------
 
+    /**
+     * Test getting cities by district with null input
+     * Verifies null safety for district-based city queries
+     */
     @Test
     void testGetCitiesByDistrict_Null() {
         System.out.println("\n--- TestNull: getCitiesByDistrict ---");
@@ -400,6 +531,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled null district safely");
     }
 
+    /**
+     * Test getting cities by non-existent district
+     * Verifies empty result handling for invalid district names
+     */
     @Test
     void testGetCitiesByDistrict_Empty() {
         System.out.println("\n--- TestEmpty: getCitiesByDistrict ---");
@@ -411,6 +546,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled empty result safely");
     }
 
+    /**
+     * Test getting cities by valid district
+     * Verifies district-based city data retrieval
+     */
     @Test
     void testGetCitiesByDistrict_Valid() {
         System.out.println("\n--- TestValid: getCitiesByDistrict ---");
@@ -425,6 +564,11 @@ class ReportsIntegrationTest {
     }
 
     // -------------------- getTopNCitiesInCountry() --------------------
+
+    /**
+     * Test getting top N cities in country with null country
+     * Verifies null safety for country-based top N city queries
+     */
     @Test
     void testGetTopNCitiesInCountry_NullCountry() {
         System.out.println("\n--- TestNull: getTopNCitiesInCountry ---");
@@ -437,6 +581,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled null country safely");
     }
 
+    /**
+     * Test getting top N cities in non-existent country
+     * Verifies empty result handling for invalid country names
+     */
     @Test
     void testGetTopNCitiesInCountry_EmptyCountry() {
         System.out.println("\n--- TestEmpty: getTopNCitiesInCountry ---");
@@ -449,6 +597,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled empty country safely");
     }
 
+    /**
+     * Test getting top N cities in valid country
+     * Verifies country-based city ranking and limiting functionality
+     */
     @Test
     void testGetTopNCitiesInCountry_Valid() {
         System.out.println("\n--- TestValid: getTopNCitiesInCountry ---");
@@ -467,6 +619,11 @@ class ReportsIntegrationTest {
     }
 
     // -------------------- getTopNCitiesInDistrict() --------------------
+
+    /**
+     * Test getting top N cities in district with null district
+     * Verifies null safety for district-based top N city queries
+     */
     @Test
     void testGetTopNCitiesInDistrict_NullDistrict() {
         System.out.println("\n--- TestNull: getTopNCitiesInDistrict ---");
@@ -479,6 +636,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled null district safely");
     }
 
+    /**
+     * Test getting top N cities in non-existent district
+     * Verifies empty result handling for invalid district names
+     */
     @Test
     void testGetTopNCitiesInDistrict_EmptyDistrict() {
         System.out.println("\n--- TestEmpty: getTopNCitiesInDistrict ---");
@@ -490,6 +651,11 @@ class ReportsIntegrationTest {
         assertTrue(result.isEmpty(), "List should be empty for unknown district");
         System.out.println("Handled empty district safely");
     }
+
+    /**
+     * Test getting top N cities in valid district
+     * Verifies district-based city ranking and limiting functionality
+     */
     @Test
     void testGetTopNCitiesInDistrict_Valid() {
         System.out.println("\n--- TestValid: getTopNCitiesInDistrict ---");
@@ -507,6 +673,10 @@ class ReportsIntegrationTest {
         reports.printCities(result);
     }
 
+    /**
+     * Test city query execution with valid results
+     * Verifies city data mapping and query execution
+     */
     @Test
     void testRunCityQuery_ValidResult() {
         System.out.println("\n--- TestValid: runCityQuery  ---");
@@ -520,6 +690,10 @@ class ReportsIntegrationTest {
         System.out.println("Valid data printed successfully (runCityQuery mapping confirmed)");
     }
 
+    /**
+     * Test city query with invalid integer parameter
+     * Verifies error handling for invalid limit parameters in city queries
+     */
     @Test
     void testRunCityQueryWithInt_EmptyResult() {
         System.out.println("\n--- TestEmpty: runCityQueryWithInt indirect via getTopNCitiesInWorld ---");
@@ -531,6 +705,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled empty result safely (runCityQueryWithInt returned empty list)");
     }
 
+    /**
+     * Test city query with valid integer parameter
+     * Verifies proper data retrieval with limit parameters
+     */
     @Test
     void testRunCityQueryWithInt_ValidResult() {
         System.out.println("\n--- TestValid: runCityQueryWithInt indirect via getTopNCitiesInWorld ---");
@@ -549,6 +727,10 @@ class ReportsIntegrationTest {
     // ----------------- CAPITAL CITY REPORTS ----------------
     // ----------------- getAllCapitalCitiesInWorld -----------------------
 
+    /**
+     * Test retrieving all capital cities returns non-null result
+     * Verifies basic capital city query functionality
+     */
     @Test
     void testGetAllCapitalCitiesInWorld_NotNull() {
         System.out.println("\n--- TestNull: getAllCapitalCitiesInWorld ---");
@@ -559,6 +741,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled non-null return safely");
     }
 
+    /**
+     * Test retrieving all capital cities returns non-empty list
+     * Verifies database contains capital city data
+     */
     @Test
     void testGetAllCapitalCitiesInWorld_NotEmpty() {
         System.out.println("\n--- TestEmpty: getAllCapitalCitiesInWorld ---");
@@ -569,6 +755,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled non-empty result safely");
     }
 
+    /**
+     * Test printing all capital cities
+     * Verifies capital city report generation and output
+     */
     @Test
     void testGetAllCapitalCitiesInWorld_PrintResults() {
         System.out.println("\n--- TestPrint: getAllCapitalCitiesInWorld ---");
@@ -584,6 +774,11 @@ class ReportsIntegrationTest {
 
 
     // -------------------- getCapitalCitiesByContinent() --------------------
+
+    /**
+     * Test getting capital cities by continent with null input
+     * Verifies null safety for continent-based capital city queries
+     */
     @Test
     void testGetCapitalCitiesByContinent_Null() {
         System.out.println("\n--- TestNull: getCapitalCitiesByContinent ---");
@@ -595,6 +790,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled null continent safely");
     }
 
+    /**
+     * Test getting capital cities by non-existent continent
+     * Verifies empty result handling for invalid continent names
+     */
     @Test
     void testGetCapitalCitiesByContinent_Empty() {
         System.out.println("\n--- TestEmpty: getCapitalCitiesByContinent ---");
@@ -606,6 +805,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled empty continent safely");
     }
 
+    /**
+     * Test getting capital cities by valid continent
+     * Verifies continent-based capital city data retrieval
+     */
     @Test
     void testGetCapitalCitiesByContinent_Valid() {
         System.out.println("\n--- TestValid: getCapitalCitiesByContinent ---");
@@ -625,6 +828,11 @@ class ReportsIntegrationTest {
 
 
     // -------------------- getCapitalCitiesByRegion() --------------------
+
+    /**
+     * Test getting capital cities by region with null input
+     * Verifies null safety for region-based capital city queries
+     */
     @Test
     void testGetCapitalCitiesByRegion_Null() {
         System.out.println("\n--- TestNull: getCapitalCitiesByRegion ---");
@@ -636,6 +844,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled null region safely");
     }
 
+    /**
+     * Test getting capital cities by non-existent region
+     * Verifies empty result handling for invalid region names
+     */
     @Test
     void testGetCapitalCitiesByRegion_Empty() {
         System.out.println("\n--- TestEmpty: getCapitalCitiesByRegion ---");
@@ -647,6 +859,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled empty region safely");
     }
 
+    /**
+     * Test getting capital cities by valid region
+     * Verifies region-based capital city data retrieval
+     */
     @Test
     void testGetCapitalCitiesByRegion_Valid() {
         System.out.println("\n--- TestValid: getCapitalCitiesByRegion ---");
@@ -665,6 +881,11 @@ class ReportsIntegrationTest {
     }
 
     // -------------------- getTopNCapitalCitiesInWorld() --------------------
+
+    /**
+     * Test getting top N capital cities in world
+     * Verifies global capital city ranking functionality
+     */
     @Test
     void testGetTopNCapitalCitiesInWorld() {
         System.out.println("\n--- Test: getTopNCapitalCitiesInWorld ---");
@@ -679,6 +900,11 @@ class ReportsIntegrationTest {
     }
 
     // -------------------- getTopNCapitalCitiesInContinent() --------------------
+
+    /**
+     * Test getting top N capital cities in continent with null continent
+     * Verifies null safety for continent-based capital city ranking
+     */
     @Test
     void testGetTopNCapitalCitiesInContinent_Null() {
         System.out.println("\n--- TestNull: getTopNCapitalCitiesInContinent ---");
@@ -691,6 +917,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled null continent safely");
     }
 
+    /**
+     * Test getting top N capital cities in non-existent continent
+     * Verifies empty result handling for invalid continent names
+     */
     @Test
     void testGetTopNCapitalCitiesInContinent_Empty() {
         System.out.println("\n--- TestEmpty: getTopNCapitalCitiesInContinent ---");
@@ -703,6 +933,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled empty continent safely");
     }
 
+    /**
+     * Test getting top N capital cities in valid continent
+     * Verifies continent-based capital city ranking functionality
+     */
     @Test
     void testGetTopNCapitalCitiesInContinent_Valid() {
         System.out.println("\n--- TestValid: getTopNCapitalCitiesInContinent ---");
@@ -718,6 +952,11 @@ class ReportsIntegrationTest {
     }
 
     // -------------------- getTopNCapitalCitiesInRegion() --------------------
+
+    /**
+     * Test getting top N capital cities in region with null region
+     * Verifies null safety for region-based capital city ranking
+     */
     @Test
     void testGetTopNCapitalCitiesInRegion_Null() {
         System.out.println("\n--- TestNull: getTopNCapitalCitiesInRegion ---");
@@ -730,6 +969,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled null region safely");
     }
 
+    /**
+     * Test getting top N capital cities in non-existent region
+     * Verifies empty result handling for invalid region names
+     */
     @Test
     void testGetTopNCapitalCitiesInRegion_Empty() {
         System.out.println("\n--- TestEmpty: getTopNCapitalCitiesInRegion ---");
@@ -742,6 +985,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled empty region safely");
     }
 
+    /**
+     * Test getting top N capital cities in valid region
+     * Verifies region-based capital city ranking functionality
+     */
     @Test
     void testGetTopNCapitalCitiesInRegion_Valid() {
         System.out.println("\n--- TestValid: getTopNCapitalCitiesInRegion ---");
@@ -759,6 +1006,11 @@ class ReportsIntegrationTest {
     // ----------------- POPULATION REPORTS -------------------
 
     // -------------------- getPopulationByContinent() --------------------
+
+    /**
+     * Test getting population data by continent
+     * Verifies continent-level population aggregation and reporting
+     */
     @Test
     void testGetPopulationByContinent() {
         System.out.println("\n--- Test: getPopulationByContinent ---");
@@ -773,6 +1025,11 @@ class ReportsIntegrationTest {
     }
 
     // -------------------- getPopulationByRegion() --------------------
+
+    /**
+     * Test getting population data by region
+     * Verifies region-level population aggregation and reporting
+     */
     @Test
     void testGetPopulationByRegion() {
         System.out.println("\n--- Test: getPopulationByRegion ---");
@@ -787,6 +1044,11 @@ class ReportsIntegrationTest {
     }
 
     // -------------------- getPopulationByCountry() --------------------
+
+    /**
+     * Test getting population data by country
+     * Verifies country-level population aggregation and reporting
+     */
     @Test
     void testGetPopulationByCountry() {
         System.out.println("\n--- Test: getPopulationByCountry ---");
@@ -801,6 +1063,11 @@ class ReportsIntegrationTest {
     }
 
     // -------------------- getWorldPopulation() --------------------
+
+    /**
+     * Test getting total world population
+     * Verifies global population aggregation functionality
+     */
     @Test
     void testGetWorldPopulation() {
         System.out.println("\n--- Test: getWorldPopulation ---");
@@ -811,6 +1078,11 @@ class ReportsIntegrationTest {
     }
 
     // -------------------- getPopulationOfContinentWithName() --------------------
+
+    /**
+     * Test getting population of specific continent by name
+     * Verifies continent-specific population data retrieval
+     */
     @Test
     void testGetPopulationOfContinentWithName() {
         System.out.println("\n--- Test: getPopulationOfContinentWithName ---");
@@ -822,6 +1094,10 @@ class ReportsIntegrationTest {
         System.out.println(result.name + " Population: " + result.totalPopulation);
     }
 
+    /**
+     * Test getting population of non-existent continent
+     * Verifies error handling for invalid continent names
+     */
     @Test
     void testGetPopulationOfContinentWithName_Empty() {
         System.out.println("\n--- TestEmpty: getPopulationOfContinentWithName ---");
@@ -834,6 +1110,11 @@ class ReportsIntegrationTest {
     }
 
     // -------------------- getPopulationOfRegionWithName() --------------------
+
+    /**
+     * Test getting population of specific region by name
+     * Verifies region-specific population data retrieval
+     */
     @Test
     void testGetPopulationOfRegionWithName() {
         System.out.println("\n--- Test: getPopulationOfRegionWithName ---");
@@ -845,6 +1126,10 @@ class ReportsIntegrationTest {
         System.out.println(result.name + " Population: " + result.totalPopulation);
     }
 
+    /**
+     * Test getting population of non-existent region
+     * Verifies error handling for invalid region names
+     */
     @Test
     void testGetPopulationOfRegionWithName_Empty() {
         System.out.println("\n--- TestEmpty: getPopulationOfRegionWithName ---");
@@ -857,6 +1142,11 @@ class ReportsIntegrationTest {
     }
 
     // -------------------- getPopulationOfCountryWithName() --------------------
+
+    /**
+     * Test getting population of specific country by name
+     * Verifies country-specific population data retrieval
+     */
     @Test
     void testGetPopulationOfCountryWithName() {
         System.out.println("\n--- Test: getPopulationOfCountryWithName ---");
@@ -868,6 +1158,10 @@ class ReportsIntegrationTest {
         System.out.println(result.name + " Population: " + result.totalPopulation);
     }
 
+    /**
+     * Test getting population of non-existent country
+     * Verifies error handling for invalid country names
+     */
     @Test
     void testGetPopulationOfCountryWithName_Empty() {
         System.out.println("\n--- TestEmpty: getPopulationOfCountryWithName ---");
@@ -880,6 +1174,11 @@ class ReportsIntegrationTest {
     }
 
     // -------------------- getPopulationOfDistrictWithName() --------------------
+
+    /**
+     * Test getting population of specific district by name
+     * Verifies district-specific population data retrieval
+     */
     @Test
     void testGetPopulationOfDistrictWithName() {
         System.out.println("\n--- Test: getPopulationOfDistrictWithName ---");
@@ -891,6 +1190,10 @@ class ReportsIntegrationTest {
         System.out.println(result.name + " Population: " + result.totalPopulation);
     }
 
+    /**
+     * Test getting population of non-existent district
+     * Verifies error handling for invalid district names
+     */
     @Test
     void testGetPopulationOfDistrictWithName_Empty() {
         System.out.println("\n--- TestEmpty: getPopulationOfDistrictWithName ---");
@@ -903,6 +1206,11 @@ class ReportsIntegrationTest {
     }
 
     // -------------------- getPopulationOfCityWithName() --------------------
+
+    /**
+     * Test getting population of specific city by name
+     * Verifies city-specific population data retrieval
+     */
     @Test
     void testGetPopulationOfCityWithName() {
         System.out.println("\n--- Test: getPopulationOfCityWithName ---");
@@ -914,6 +1222,10 @@ class ReportsIntegrationTest {
         System.out.println(result.name + " Population: " + result.totalPopulation);
     }
 
+    /**
+     * Test getting population of non-existent city
+     * Verifies error handling for invalid city names
+     */
     @Test
     void testGetPopulationOfCityWithName_Empty() {
         System.out.println("\n--- TestEmpty: getPopulationOfCityWithName ---");
@@ -926,6 +1238,10 @@ class ReportsIntegrationTest {
     }
 
 
+    /**
+     * Test generating and printing language report
+     * Verifies language data aggregation and report generation
+     */
     @Test
     void testGetLanguageReport_PrintResults() {
         System.out.println("\n--- TestPrint: getLanguageReport ---");
@@ -941,6 +1257,10 @@ class ReportsIntegrationTest {
 
 
 
+    /**
+     * Test main method execution
+     * Verifies application entry point functionality
+     */
     @Test
     public void testMainMethod() {
         String[] args = {};
@@ -948,6 +1268,10 @@ class ReportsIntegrationTest {
     }
 
 
+    /**
+     * Test database disconnection
+     * Verifies clean disconnect from database server
+     */
     @Test
     void testDisconnect() {
         reports.disconnect();
@@ -957,12 +1281,21 @@ class ReportsIntegrationTest {
     // ==================== MISSING TESTS FOR 100% COVERAGE ====================
 
     // 1. Markdown Output Tests
+
+    /**
+     * Test generating markdown reports with valid filename
+     * Verifies markdown report generation functionality
+     */
     @Test
     void testOutputAllReportsMarkdown() {
         assertDoesNotThrow(() -> reports.outputAllReportsMarkdown("test_report.md"));
         System.out.println("Markdown report generation completed successfully");
     }
 
+    /**
+     * Test generating markdown reports with problematic filename
+     * Verifies error handling for IO operations
+     */
     @Test
     void testOutputAllReportsMarkdown_WithIOException() {
         // Test with problematic filename that might cause IO issues
@@ -970,6 +1303,11 @@ class ReportsIntegrationTest {
     }
 
     // 2. Markdown Helper Methods with Null/Empty Lists
+
+    /**
+     * Test appending countries markdown with null list
+     * Verifies null safety in markdown generation
+     */
     @Test
     void testAppendCountriesMarkdown_WithNullList() {
         StringBuilder sb = new StringBuilder();
@@ -977,6 +1315,10 @@ class ReportsIntegrationTest {
         assertTrue(sb.toString().contains("No countries found"), "Should handle null list");
     }
 
+    /**
+     * Test appending countries markdown with empty list
+     * Verifies empty list handling in markdown generation
+     */
     @Test
     void testAppendCountriesMarkdown_WithEmptyList() {
         StringBuilder sb = new StringBuilder();
@@ -984,6 +1326,10 @@ class ReportsIntegrationTest {
         assertTrue(sb.toString().contains("No countries found"), "Should handle empty list");
     }
 
+    /**
+     * Test appending cities markdown with null list
+     * Verifies null safety for city data in markdown generation
+     */
     @Test
     void testAppendCitiesMarkdown_WithNullList() {
         StringBuilder sb = new StringBuilder();
@@ -991,6 +1337,10 @@ class ReportsIntegrationTest {
         assertTrue(sb.toString().contains("No cities found"), "Should handle null list");
     }
 
+    /**
+     * Test appending cities markdown with empty list
+     * Verifies empty list handling for city data in markdown generation
+     */
     @Test
     void testAppendCitiesMarkdown_WithEmptyList() {
         StringBuilder sb = new StringBuilder();
@@ -998,6 +1348,10 @@ class ReportsIntegrationTest {
         assertTrue(sb.toString().contains("No cities found"), "Should handle empty list");
     }
 
+    /**
+     * Test appending capitals markdown with null list
+     * Verifies null safety for capital data in markdown generation
+     */
     @Test
     void testAppendCapitalsMarkdown_WithNullList() {
         StringBuilder sb = new StringBuilder();
@@ -1005,6 +1359,10 @@ class ReportsIntegrationTest {
         assertTrue(sb.toString().contains("No capitals found"), "Should handle null list");
     }
 
+    /**
+     * Test appending capitals markdown with empty list
+     * Verifies empty list handling for capital data in markdown generation
+     */
     @Test
     void testAppendCapitalsMarkdown_WithEmptyList() {
         StringBuilder sb = new StringBuilder();
@@ -1012,6 +1370,10 @@ class ReportsIntegrationTest {
         assertTrue(sb.toString().contains("No capitals found"), "Should handle empty list");
     }
 
+    /**
+     * Test appending populations markdown with null list
+     * Verifies null safety for population data in markdown generation
+     */
     @Test
     void testAppendPopulationsMarkdown_WithNullList() {
         StringBuilder sb = new StringBuilder();
@@ -1019,6 +1381,10 @@ class ReportsIntegrationTest {
         assertTrue(sb.toString().contains("No population data found"), "Should handle null list");
     }
 
+    /**
+     * Test appending populations markdown with empty list
+     * Verifies empty list handling for population data in markdown generation
+     */
     @Test
     void testAppendPopulationsMarkdown_WithEmptyList() {
         StringBuilder sb = new StringBuilder();
@@ -1026,6 +1392,10 @@ class ReportsIntegrationTest {
         assertTrue(sb.toString().contains("No population data found"), "Should handle empty list");
     }
 
+    /**
+     * Test appending languages markdown with null list
+     * Verifies null safety for language data in markdown generation
+     */
     @Test
     void testAppendLanguagesMarkdown_WithNullList() {
         StringBuilder sb = new StringBuilder();
@@ -1033,6 +1403,10 @@ class ReportsIntegrationTest {
         assertTrue(sb.toString().contains("No language data found"), "Should handle null list");
     }
 
+    /**
+     * Test appending languages markdown with empty list
+     * Verifies empty list handling for language data in markdown generation
+     */
     @Test
     void testAppendLanguagesMarkdown_WithEmptyList() {
         StringBuilder sb = new StringBuilder();
@@ -1041,6 +1415,11 @@ class ReportsIntegrationTest {
     }
 
     // 3. Print Methods with Null Elements in Lists
+
+    /**
+     * Test printing countries with null elements in list
+     * Verifies graceful handling of null elements during printing
+     */
     @Test
     void testPrintCountries_WithNullElementsInList() {
         ArrayList<Country> countries = new ArrayList<>();
@@ -1051,6 +1430,10 @@ class ReportsIntegrationTest {
         assertDoesNotThrow(() -> reports.printCountries(countries));
     }
 
+    /**
+     * Test printing cities with null elements in list
+     * Verifies graceful handling of null elements during city printing
+     */
     @Test
     void testPrintCities_WithNullElementsInList() {
         ArrayList<City> cities = new ArrayList<>();
@@ -1061,6 +1444,10 @@ class ReportsIntegrationTest {
         assertDoesNotThrow(() -> reports.printCities(cities));
     }
 
+    /**
+     * Test printing capitals with null elements in list
+     * Verifies graceful handling of null elements during capital printing
+     */
     @Test
     void testPrintCapitals_WithNullElementsInList() {
         ArrayList<CapitalCity> capitals = new ArrayList<>();
@@ -1071,6 +1458,10 @@ class ReportsIntegrationTest {
         assertDoesNotThrow(() -> reports.printCapitals(capitals));
     }
 
+    /**
+     * Test printing populations with null elements in list
+     * Verifies graceful handling of null elements during population printing
+     */
     @Test
     void testPrintPopulations_WithNullElementsInList() {
         ArrayList<Population> populations = new ArrayList<>();
@@ -1081,6 +1472,10 @@ class ReportsIntegrationTest {
         assertDoesNotThrow(() -> reports.printPopulations(populations));
     }
 
+    /**
+     * Test printing languages with null elements in list
+     * Verifies graceful handling of null elements during language printing
+     */
     @Test
     void testPrintLanguages_WithNullElementsInList() {
         ArrayList<Language> languages = new ArrayList<>();
@@ -1092,6 +1487,11 @@ class ReportsIntegrationTest {
     }
 
     // 4. Connection Error Handling Tests
+
+    /**
+     * Test connecting with invalid server location
+     * Verifies error handling for connection failures
+     */
     @Test
     void testConnect_WithInvalidLocation() {
         Reports localReports = new Reports();
@@ -1099,6 +1499,10 @@ class ReportsIntegrationTest {
         System.out.println("Handled invalid connection location gracefully");
     }
 
+    /**
+     * Test disconnecting when not connected
+     * Verifies graceful handling of disconnect without active connection
+     */
     @Test
     void testDisconnect_WhenNotConnected() {
         Reports localReports = new Reports();
@@ -1107,6 +1511,11 @@ class ReportsIntegrationTest {
     }
 
     // 5. SQL Exception Handling Tests (Disconnected Database)
+
+    /**
+     * Test all query methods with disconnected database
+     * Verifies graceful error handling when database is not available
+     */
     @Test
     void testAllQueryMethods_WithDisconnectedDatabase() {
         reports.disconnect(); // Force disconnection
@@ -1134,6 +1543,11 @@ class ReportsIntegrationTest {
     }
 
     // 6. Edge Cases for Top N Queries
+
+    /**
+     * Test getting top N countries with zero N
+     * Verifies edge case handling for zero limit parameter
+     */
     @Test
     void testGetTopNCountriesInWorld_ZeroN() {
         ArrayList<Country> result = reports.getTopNCountriesInWorld(0);
@@ -1141,6 +1555,10 @@ class ReportsIntegrationTest {
         assertTrue(result.isEmpty(), "Should return empty list for n=0");
     }
 
+    /**
+     * Test getting top N cities with zero N
+     * Verifies edge case handling for zero limit parameter in city queries
+     */
     @Test
     void testGetTopNCitiesInWorld_ZeroN() {
         ArrayList<City> result = reports.getTopNCitiesInWorld(0);
@@ -1148,6 +1566,10 @@ class ReportsIntegrationTest {
         assertTrue(result.isEmpty(), "Should return empty list for n=0");
     }
 
+    /**
+     * Test getting top N capital cities with zero N
+     * Verifies edge case handling for zero limit parameter in capital queries
+     */
     @Test
     void testGetTopNCapitalCitiesInWorld_ZeroN() {
         ArrayList<CapitalCity> result = reports.getTopNCapitalCitiesInWorld(0);
@@ -1156,6 +1578,11 @@ class ReportsIntegrationTest {
     }
 
     // 8. Language Report Edge Cases
+
+    /**
+     * Test language report with zero world population scenario
+     * Verifies percentage calculation edge cases
+     */
     @Test
     void testGetLanguageReport_WithZeroWorldPopulationScenario() {
         // This tests the branch where worldPop <= 0 in percentage calculation
@@ -1168,6 +1595,11 @@ class ReportsIntegrationTest {
     }
 
     // 9. Population Calculation Edge Cases
+
+    /**
+     * Test population aggregation with zero population scenarios
+     * Verifies percentage calculation for edge cases
+     */
     @Test
     void testRunPopulationAggregationQuery_WithZeroPopulation() {
         ArrayList<Population> result = reports.getPopulationByContinent();
@@ -1185,6 +1617,11 @@ class ReportsIntegrationTest {
 // ==================== HELPER METHODS ====================
 
     // Add these helper methods to create test data
+
+    /**
+     * Helper method to create test country data
+     * @return Country object with test data
+     */
     private Country createTestCountry() {
         Country country = new Country();
         country.code = "TST";
@@ -1196,6 +1633,10 @@ class ReportsIntegrationTest {
         return country;
     }
 
+    /**
+     * Helper method to create test city data
+     * @return City object with test data
+     */
     private City createTestCity() {
         City city = new City();
         city.name = "TestCity";
@@ -1205,6 +1646,10 @@ class ReportsIntegrationTest {
         return city;
     }
 
+    /**
+     * Helper method to create test capital city data
+     * @return CapitalCity object with test data
+     */
     private CapitalCity createTestCapital() {
         CapitalCity capital = new CapitalCity();
         capital.name = "TestCapital";
@@ -1213,6 +1658,10 @@ class ReportsIntegrationTest {
         return capital;
     }
 
+    /**
+     * Helper method to create test population data
+     * @return Population object with test data
+     */
     private Population createTestPopulation() {
         Population population = new Population();
         population.name = "TestPopulation";
@@ -1224,6 +1673,10 @@ class ReportsIntegrationTest {
         return population;
     }
 
+    /**
+     * Helper method to create test language data
+     * @return Language object with test data
+     */
     private Language createTestLanguage() {
         Language language = new Language();
         language.language = "TestLanguage";
@@ -1234,6 +1687,10 @@ class ReportsIntegrationTest {
 
 // ==================== MODEL CLASS TESTS ====================
 
+    /**
+     * Test CapitalCity constructor and getter methods
+     * Verifies data model integrity for capital cities
+     */
     @Test
     void testCapitalCityConstructorAndGetters() {
         CapitalCity capital = new CapitalCity();
@@ -1246,6 +1703,10 @@ class ReportsIntegrationTest {
         assertEquals(5000000, capital.population);
     }
 
+    /**
+     * Test City constructor and getter methods
+     * Verifies data model integrity for cities
+     */
     @Test
     void testCityConstructorAndGetters() {
         City city = new City();
@@ -1260,6 +1721,10 @@ class ReportsIntegrationTest {
         assertEquals(1200000, city.population);
     }
 
+    /**
+     * Test Country constructor and getter methods
+     * Verifies data model integrity for countries
+     */
     @Test
     void testCountryConstructorAndGetters() {
         Country country = new Country();
@@ -1278,6 +1743,10 @@ class ReportsIntegrationTest {
         assertEquals("Yangon", country.capital);
     }
 
+    /**
+     * Test Language constructor and getter methods
+     * Verifies data model integrity for languages
+     */
     @Test
     void testLanguageConstructorAndGetters() {
         Language language = new Language();
@@ -1290,6 +1759,10 @@ class ReportsIntegrationTest {
         assertEquals(61.1, language.percentage, 0.01);
     }
 
+    /**
+     * Test Population constructor and getter methods
+     * Verifies data model integrity for population data
+     */
     @Test
     void testPopulationConstructorAndGetters() {
         Population population = new Population();
@@ -1308,5 +1781,4 @@ class ReportsIntegrationTest {
         assertEquals(59.46, population.nonCityPercentage, 0.01);
     }
 }
-
 
